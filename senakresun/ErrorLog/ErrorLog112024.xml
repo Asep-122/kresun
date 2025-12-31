@@ -1,0 +1,131 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-11-10 01.04.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-11-10 01.06.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-11-10 01.17.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-11-25 10.45.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-11-25 14.25.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-11-25 14.25.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-11-25 16.30.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-11-25 17.51.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-11-25 18.04.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-11-25 18.40.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>'ddlkelompokAgunan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ApprovalPusat.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-11-25 18.48.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-11-25 18.50.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-11-25 18.58.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-11-25 18.59.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-11-25 19.00.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-11-25 19.01.04</TglError>
+  </ErrorLog>
+</DocumentElement>

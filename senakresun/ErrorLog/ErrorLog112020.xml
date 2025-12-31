@@ -1,0 +1,885 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Procedure or function 'AE_PINJAMANKARYAWAN_Delete' expects parameter '@userlogin', which was not supplied.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-01 14.03.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Error converting data type varchar to smalldatetime.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-01 14.05.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Procedure or function 'AE_PINJAMANKARYAWAN_INSERT' expects parameter '@NamaKry', which was not supplied.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-01 14.12.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Procedure or function 'AE_PINJAMANKARYAWAN_INSERT' expects parameter '@NamaKry', which was not supplied.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-01 14.14.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Column 'NamaKry' does not belong to table Table.</ErrorText>
+    <FileError>TrnPembayaran.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-01 14.17.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Column 'NamaKry' does not belong to table Table.</ErrorText>
+    <FileError>TrnPembayaran.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-01 14.20.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Column 'NamaKry' does not belong to table Table.</ErrorText>
+    <FileError>TrnPembayaran.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-01 14.23.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Cannot insert the value NULL into column 'KodeBank', table 'PRODUCTDEVLIVE.dbo.ClhdrAR'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAngsuranKaryawan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-01 15.43.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'namaLgn'.</ErrorText>
+    <FileError>MasukTrnAngsuranKaryawan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-01 15.55.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AePinjamanTrn_1'. Cannot insert duplicate key in object 'dbo.AePinjamanTrn'. The duplicate key value is (DEMO01101000001, 101, 01).</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-01 18.22.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, &lt;, &lt;= , &gt;, &gt;= or when the subquery is used as an expression.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-07 12.28.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, &lt;, &lt;= , &gt;, &gt;= or when the subquery is used as an expression.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-07 12.28.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, &lt;, &lt;= , &gt;, &gt;= or when the subquery is used as an expression.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-07 12.29.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, &lt;, &lt;= , &gt;, &gt;= or when the subquery is used as an expression.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-07 12.31.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, &lt;, &lt;= , &gt;, &gt;= or when the subquery is used as an expression.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-07 12.34.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, &lt;, &lt;= , &gt;, &gt;= or when the subquery is used as an expression.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-07 12.34.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Column 'NonAktifFlag' does not belong to table Table.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-07 12.35.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Column 'NonAktifFlag' does not belong to table Table.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-07 12.39.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>RegistrasiNasabah.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-07 13.59.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>RegistrasiNasabah.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-07 14.00.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-09 15.14.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-09 15.20.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Procedure or function 'CL_Trn_AR_Insert_Memo_Internal' expects parameter '@notememo', which was not supplied.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-09 15.22.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Cannot insert the value NULL into column 'AddedBymc', table 'PRODUCTDEVLIVENOV.dbo.Armemohdr'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-09 15.42.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Cannot find column NoBukti.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 00.18.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Cannot find column NoBukti.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 00.18.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Cannot find column NoBukti.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 00.18.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'status'.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 00.20.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'kodelgn'.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 00.20.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 00.30.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 00.34.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'notememo'.</ErrorText>
+    <FileError>MemoInternalCustomerMikro.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 10.52.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Cannot find column no_memo.</ErrorText>
+    <FileError>MemoInternalCustomerMikroApprovePusat.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 16.47.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Cannot find column no_memo.</ErrorText>
+    <FileError>MemoInternalCustomerMikroApprovePusat.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 16.47.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MemoInternalCustomerMikroApprovePusat.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 20.33.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MemoInternalCustomerMikroApprovePusat.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 20.34.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Cannot insert the value NULL into column 'NoFaktur', table 'PRODUCTDEVLIVENOV.dbo.Artrn'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MemoInternalCustomerMikroApprovePusat.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-10 20.46.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Cannot open database "emas" requested by the login. The login failed.
+Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-11 15.57.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Cannot open database "emas" requested by the login. The login failed.
+Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-11 15.57.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Cannot open database "emas" requested by the login. The login failed.
+Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-11 15.57.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-11 16.01.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-11 16.07.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-11 16.13.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-11 16.15.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-11 16.30.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 01.42.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 11.20.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 12.05.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 12.05.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 12.05.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 12.05.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Cannot insert the value NULL into column 'statuspelunasan', table 'PRODUCTDEVLIVENOV.dbo.AePinjamanTrn'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 12.11.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>CetakSlipGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.15.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>CetakSlipGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.16.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>CetakSlipGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.17.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.21.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.22.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.26.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.36.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.37.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.39.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.40.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.41.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.42.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.46.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.47.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.48.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.59.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.59.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.59.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.59.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.59.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.59.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-14 13.59.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>'ddlpemb' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Purchasing.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-15 13.23.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>'ddlpemb' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Purchasing.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-15 13.24.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'HapusFlag'.</ErrorText>
+    <FileError>Purchasing.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-15 14.22.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-15 15.38.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>Cannot find column namalgn.</ErrorText>
+    <FileError>Purchasing.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-15 18.26.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>Cannot find column namalgn.</ErrorText>
+    <FileError>Purchasing.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-15 18.27.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-19 20.13.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-19 20.13.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-19 20.13.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-19 20.13.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>'ddlreq' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Purchasing.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-19 20.15.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>'ddlreq' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Purchasing.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-19 20.18.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>'ddlreq' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Purchasing.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-19 20.21.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.17.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.17.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.17.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.23.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.23.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.25.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.26.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.30.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.30.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.30.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.32.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.32.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.39.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 00.42.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>102</ID>
+    <ErrorText>Column 'KodeBagian' does not belong to table Table.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 01.20.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>103</ID>
+    <ErrorText>Conversion failed when converting the nvarchar value 'N3' to data type int.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 18.52.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>104</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 22.34.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>105</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 22.37.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>106</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 22.38.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>107</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-20 22.39.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>108</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_PwCabang'. Cannot insert duplicate key in object 'dbo.PwCabang'. The duplicate key value is (101, 01).</ErrorText>
+    <FileError>Cabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-28 14.12.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>109</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_PwCabang'. Cannot insert duplicate key in object 'dbo.PwCabang'. The duplicate key value is (101, 01).</ErrorText>
+    <FileError>Cabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-28 14.14.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>110</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_PwCabang'. Cannot insert duplicate key in object 'dbo.PwCabang'. The duplicate key value is (101, 01).</ErrorText>
+    <FileError>Cabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-11-28 14.17.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>111</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2020-11-30 14:34:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>112</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2020-11-30 14:35:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>113</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>Nico</FromUser>
+    <TglError>2020-11-30 14:35:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>114</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>Nico</FromUser>
+    <TglError>2020-11-30 14:35:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>115</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>Nico</FromUser>
+    <TglError>2020-11-30 14:36:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>116</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>Nico</FromUser>
+    <TglError>2020-11-30 14:36:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>117</ID>
+    <ErrorText>'ddlDebitCC' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>Nico</FromUser>
+    <TglError>2020-11-30 14:37:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>118</ID>
+    <ErrorText>'ddlDebitCC' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>Nico</FromUser>
+    <TglError>2020-11-30 14:37:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>119</ID>
+    <ErrorText>'ddlDebitCC' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>Nico</FromUser>
+    <TglError>2020-11-30 14:37:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>120</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>Nico</FromUser>
+    <TglError>2020-11-30 15:46:00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>121</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>Nico</FromUser>
+    <TglError>2020-11-30 15:48:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>122</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>Nico</FromUser>
+    <TglError>2020-11-30 15:48:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>123</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>Nico</FromUser>
+    <TglError>2020-11-30 15:49:02</TglError>
+  </ErrorLog>
+</DocumentElement>

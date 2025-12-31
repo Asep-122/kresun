@@ -1,0 +1,1208 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Login failed for user 'manage'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-08 11.14.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Login failed for user 'manage'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-08 11.14.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Login failed for user 'manage'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-08 11.14.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Login failed for user 'manage'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-08 11.14.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Login failed for user 'manage'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-08 11.14.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Login failed for user 'manage'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>Superadmin</FromUser>
+    <TglError>2025-04-08 11.15.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Login failed for user 'manage'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-08 11.15.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Login failed for user 'manage'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-08 11.15.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Login failed for user 'manage'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-08 11.15.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Login failed for user 'manage'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-08 11.16.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Login failed for user 'manage'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-08 11.16.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 11.22.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 11.27.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 11.27.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 11.28.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 11.29.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 11.30.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 11.32.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 14.52.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 14.58.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 15.01.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 15.07.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-08 15.15.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Memorewardnewmembers.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-09 22.24.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Memorewardnewmembers.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-09 22.24.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Memorewardnewmembers.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-09 22.25.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Memorewardnewmembers.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-09 22.27.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Memorewardnewmembers.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-09 22.59.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Memorewardnewmembers.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-09 23.02.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Dropping'.</ErrorText>
+    <FileError>Memorewardnewmembers.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-09 23.05.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Memorewardnewmembersverif.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-09 23.17.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Memorewardnewmembersverif.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-09 23.20.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Memorewardnewmembersverif.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-09 23.22.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Nama'.</ErrorText>
+    <FileError>MemorewardnewmembersApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-09 23.25.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MemofeerewardManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-10 11.03.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>@kodeproduk is not a parameter for procedure GetRekeningPerpanjangan.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-11 23.13.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Column 'tglupdate' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-14 23.13.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Column 'tglupdate' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-14 23.13.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Column 'tglupdate' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-14 23.13.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Column 'tglupdate' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-14 23.15.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Column 'tglupdate' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-04-14 23.16.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Column 'total_anggota' does not belong to table Table.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-14 23.16.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Column 'total_anggota' does not belong to table Table.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-14 23.16.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PinjamanManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 22.50.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PinjamanManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 22.50.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PinjamanManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 22.52.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PinjamanManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 22.57.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PinjamanManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 22.58.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PinjamanManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 23.00.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Could not find stored procedure 'AE_Trn_PM_Bayar'.</ErrorText>
+    <FileError>MasukTrnAngsuranPM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 23.06.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnAngsuranPM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 23.06.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Could not find stored procedure 'AE_Trn_PM_Bayar'.</ErrorText>
+    <FileError>MasukTrnAngsuranPM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 23.06.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnAngsuranPM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 23.06.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnAngsuranPM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 23.14.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnAngsuranPM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-15 23.17.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-16 14.27.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.19.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.19.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.21.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.21.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.21.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.26.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.27.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.28.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.28.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.28.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.28.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.28.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.28.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.28.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.29.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.29.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.29.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.30.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.30.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.30.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.33.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.33.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.34.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.34.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.35.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.35.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.35.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.35.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.35.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.36.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.36.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.36.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.37.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.37.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.37.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.37.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.39.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.39.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.40.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.40.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.41.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.41.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.42.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.42.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.42.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>102</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.42.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>103</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.42.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>104</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.42.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>105</ID>
+    <ErrorText>Could not find stored procedure 'AE_MEMO_KARYAWAN'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.43.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>106</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.43.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>107</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.43.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>108</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.43.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>109</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.44.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>110</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.44.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>111</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.46.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>112</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.46.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>113</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.48.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>114</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.48.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>115</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.48.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>116</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.48.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>117</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.49.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>118</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.49.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>119</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.52.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>120</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.57.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>121</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.57.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>122</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.58.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>123</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.58.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>124</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.58.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>125</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 08.58.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>126</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 11.18.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>127</ID>
+    <ErrorText>Could not find stored procedure 'DEV_REPAIR'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 11.18.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>128</ID>
+    <ErrorText>Could not find stored procedure 'DEV_REPAIR'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 11.18.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>129</ID>
+    <ErrorText>Could not find stored procedure 'DEV_REPAIR'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 11.18.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>130</ID>
+    <ErrorText>Could not find stored procedure 'DEV_REPAIR'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 11.18.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>131</ID>
+    <ErrorText>Could not find stored procedure 'DEV_REPAIR'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 11.18.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>132</ID>
+    <ErrorText>Could not find stored procedure 'DEV_REPAIR'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 11.18.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>133</ID>
+    <ErrorText>Could not find stored procedure 'DEV_REPAIR'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 11.18.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>134</ID>
+    <ErrorText>Could not find stored procedure 'DEV_REPAIR'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 11.19.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>135</ID>
+    <ErrorText>Could not find stored procedure 'DEV_REPAIR'.</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 11.19.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>136</ID>
+    <ErrorText>'ddlbosid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaru.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 21.01.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>137</ID>
+    <ErrorText>'ddlbosid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaru.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 21.02.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>138</ID>
+    <ErrorText>'ddlbosid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaru.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-17 21.03.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>139</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_SUREKAM'. Cannot insert duplicate key in object 'dbo.SUREKAM'. The duplicate key value is (10120250418022037, 101, 01).</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-18 14.20.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>140</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_SUREKAM'. Cannot insert duplicate key in object 'dbo.SUREKAM'. The duplicate key value is (10120250418022158, 101, 01).</ErrorText>
+    <FileError>RepairData.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-18 14.21.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>141</ID>
+    <ErrorText>A column named 'nomor' already belongs to this DataTable.</ErrorText>
+    <FileError>PinjamanManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-21 12.04.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>142</ID>
+    <ErrorText>Cannot insert the value NULL into column 'nik', table 'ERPHRMS.dbo.Aefeerewardbayardtl'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.28.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>143</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.47.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>144</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.53.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>145</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.54.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>146</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.54.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>147</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.54.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>148</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.54.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>149</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.54.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>150</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.54.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>151</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.55.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>152</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.55.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>153</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.55.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>154</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.55.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>155</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.55.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>156</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.57.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>157</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.57.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>158</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 21.58.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>159</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'kettypebayar'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 22.08.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>160</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'jlhfee'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 22.10.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>161</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'jlhfee'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 22.13.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>162</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'totalbm'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 22.14.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>163</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'penambahan'.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 22.15.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>164</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 22.26.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>165</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangFeeRewardNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-24 23.15.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>166</ID>
+    <ErrorText>@kodeproduk is not a parameter for procedure GetRekeningPerpanjangan.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-29 12.21.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>167</ID>
+    <ErrorText>@kodeproduk is not a parameter for procedure GetRekeningPerpanjangan.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-29 12.22.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>168</ID>
+    <ErrorText>'ddlrollover' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RubahBungasimpanan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-30 14.00.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>169</ID>
+    <ErrorText>'ddlrollover' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RubahBungasimpanan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-04-30 14.05.26</TglError>
+  </ErrorLog>
+</DocumentElement>

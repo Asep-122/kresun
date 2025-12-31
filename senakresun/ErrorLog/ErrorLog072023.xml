@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2023-07-03 21.31.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>Closing.aspx</FileError>
+    <FromUser>217AKT1</FromUser>
+    <TglError>2023-07-10 16.25.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>Closing.aspx</FileError>
+    <FromUser>217AKT1</FromUser>
+    <TglError>2023-07-10 16.31.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2023-07-10 16.40.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2023-07-21 15.22.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2023-07-27 21.55.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>314ADMIN1</FromUser>
+    <TglError>2023-07-28 13.58.13</TglError>
+  </ErrorLog>
+</DocumentElement>

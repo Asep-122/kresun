@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Cannot open database "MIKROKONSOL" requested by the login. The login failed.
+Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2023-09-17 19.42.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Cannot open database "MIKROKONSOL" requested by the login. The login failed.
+Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2023-09-17 19.47.10</TglError>
+  </ErrorLog>
+</DocumentElement>

@@ -1,0 +1,180 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Login failed for user 'SA'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-11-02 17.38.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Login failed for user 'SA'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-11-02 17.38.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_GlhdrBiayaAcrual'. Cannot insert duplicate key in object 'dbo.GlhdrBiayaAcrual'. The duplicate key value is (GL0301201000001, 01, 201).</ErrorText>
+    <FileError>MasukTrnBiayaAcrud.aspx</FileError>
+    <FromUser>201Akt1</FromUser>
+    <TglError>2021-11-08 16.18.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_GlhdrBiayaAcrual'. Cannot insert duplicate key in object 'dbo.GlhdrBiayaAcrual'. The duplicate key value is (GL0301201000001, 01, 201).</ErrorText>
+    <FileError>MasukTrnBiayaAcrud.aspx</FileError>
+    <FromUser>201Akt1</FromUser>
+    <TglError>2021-11-08 16.19.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_GlhdrBiayaAcrual'. Cannot insert duplicate key in object 'dbo.GlhdrBiayaAcrual'. The duplicate key value is (GL0301201000001, 01, 201).</ErrorText>
+    <FileError>MasukTrnBiayaAcrud.aspx</FileError>
+    <FromUser>201Akt1</FromUser>
+    <TglError>2021-11-08 16.24.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>'ddlkodebiaya' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnBiayaAcrud.aspx</FileError>
+    <FromUser>201Akt1</FromUser>
+    <TglError>2021-11-08 16.24.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>'ddlkodebiaya' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnBiayaAcrud.aspx</FileError>
+    <FromUser>201Akt1</FromUser>
+    <TglError>2021-11-08 16.29.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Column 'biayauangmuka' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-11 00.43.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Column 'cadangansebelumnya' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-11 01.54.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-11 18.55.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_ArKartuPinjamanDraft'. Cannot insert duplicate key in object 'dbo.ArKartuPinjamanDraft'. The duplicate key value is (80200517022, 8022021000030, 1, 01, 802).</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-12 12.38.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-12 14.23.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Cannot insert the value NULL into column 'NoFaktur', table 'MIKROGO.dbo.Artrn'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-12 14.25.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JlhDibayar', table 'MIKROGO.dbo.CltrnBayarAR'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-12 14.26.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JlhDibayar', table 'MIKROGO.dbo.CltrnBayarAR'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-12 14.28.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-25 23.15.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-26 02.48.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-26 02.49.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>JaminanMasuk.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-27 00.25.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>JaminanMasuk.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-27 00.25.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>JaminanMasuk.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-27 00.26.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>JaminanMasuk.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-27 00.27.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-27 10.40.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-27 10.42.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-11-27 10.43.31</TglError>
+  </ErrorLog>
+</DocumentElement>

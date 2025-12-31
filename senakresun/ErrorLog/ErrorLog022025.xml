@@ -1,0 +1,592 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>'ddlInstruktur' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2025-02-01 22.17.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-03 14.30.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-03 14.30.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-03 15.33.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-03 15.33.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-04 07.58.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-04 07.59.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-06 23.27.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-06 23.28.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-06 23.29.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 19.25.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 19.28.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 19.29.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 19.30.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 19.31.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 19.32.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 19.39.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 19.41.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 19.42.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 19.44.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 19.55.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 20.06.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 20.06.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 20.09.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 20.16.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 20.16.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 20.24.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 20.24.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 20.27.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.13.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.13.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.13.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.16.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.16.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.17.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.17.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.18.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.21.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.22.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.22.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.22.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.23.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.25.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.25.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.27.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.31.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.31.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.31.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.34.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.34.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.36.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.37.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.38.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.38.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.46.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.46.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.46.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.48.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.49.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.50.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.52.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-07 21.54.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-08 13.18.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Column 'txtwaktuacara' does not belong to table Table.</ErrorText>
+    <FileError>ReportUndanganRAT.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-08 13.18.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>Column 'txtwaktuacara' does not belong to table Table.</ErrorText>
+    <FileError>ReportUndanganRAT.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-08 13.18.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>Column 'txtwaktuacara' does not belong to table Table.</ErrorText>
+    <FileError>ReportUndanganRAT.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-08 13.21.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-08 13.24.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-08 13.26.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-08 13.36.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-08 13.36.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-13 07.46.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-13 07.46.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-13 07.52.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>214ADMIN1</FromUser>
+    <TglError>2025-02-13 11.42.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>214ADMIN1</FromUser>
+    <TglError>2025-02-13 11.49.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>214ADMIN1</FromUser>
+    <TglError>2025-02-13 11.56.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>214ADMIN1</FromUser>
+    <TglError>2025-02-13 11.57.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>214ADMIN1</FromUser>
+    <TglError>2025-02-13 11.58.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>214ADMIN1</FromUser>
+    <TglError>2025-02-13 12.03.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-24 23.00.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-24 23.01.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-24 23.01.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-24 23.08.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-02-24 23.08.06</TglError>
+  </ErrorLog>
+</DocumentElement>

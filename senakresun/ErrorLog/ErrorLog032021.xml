@@ -1,0 +1,721 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>'ddldiajukan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ApprovalPR.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-23 11:59:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-25 15:55:07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-26 10:40:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Cannot insert the value NULL into column 'NoFaktur', table 'GIGAKU.dbo.Artrn'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-26 13:14:31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-26 14:28:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_GEPlafonSTL'. Cannot insert duplicate key in object 'dbo.GEPlafonSTL'. The duplicate key value is (LM - 24   , 24        ).</ErrorText>
+    <FileError>PlafonSTL.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 09:48:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:00:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:03:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:05:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:10:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:10:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:10:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:10:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:14:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:16:32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:36:07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:41:32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:43:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:44:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:50:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:50:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:50:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:53:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 11:55:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 12:01:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 12:13:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 12:17:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:22:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:28:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:29:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:29:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:29:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:31:27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:37:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:39:12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:44:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:53:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:55:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 13:57:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 14:28:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 14:30:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 14:32:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 14:59:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:08:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:08:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:15:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:15:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:18:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:18:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:18:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:28:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_GlCCenter'. Cannot insert duplicate key in object 'dbo.GlCCenter'. The duplicate key value is (01, 002, 102).</ErrorText>
+    <FileError>CostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:30:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:33:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_GlKategori'. Cannot insert duplicate key in object 'dbo.GlKategori'. The duplicate key value is (M, 01, 102).</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:35:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_GlKategori'. Cannot insert duplicate key in object 'dbo.GlKategori'. The duplicate key value is (M, 01, 102).</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:37:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-29 15:37:12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 09:05:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 09:21:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 09:46:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 10:10:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 10:11:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 11:42:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 12:14:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 12:15:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>There are not enough fields in the Structured type.  Structured types must have at least one field.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 12:16:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 12:17:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 12:21:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 13:15:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 13:54:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:00:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:01:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:11:31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:18:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:21:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:23:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:26:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:27:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:30:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:31:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>Column 'nama_nasabah' does not belong to table dtOutput.</ErrorText>
+    <FileError>MasukTrnBayarGadai.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:34:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:35:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:42:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-30 14:48:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>Conversion failed when converting the varchar value '2B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 09:12:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>'ddlKodeSales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 10:23:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 10:31:07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>'ddlKodeSales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 10:39:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 10:39:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>'ddlKodeSales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 10:47:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>'ddlNoFaktur' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 11:46:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>'ddlKodeSales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 11:47:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>'ddlKodeSales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 11:47:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>'ddlKodeSales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 11:48:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 11:48:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>'ddlKodeSales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 11:48:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>'ddlKodeSales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 11:48:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 11:58:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 13:18:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 14:28:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 14:28:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-03-31 15:37:40</TglError>
+  </ErrorLog>
+</DocumentElement>

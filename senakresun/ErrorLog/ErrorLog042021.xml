@@ -1,0 +1,791 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 08:38:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 08:43:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_GlKategori'. Cannot insert duplicate key in object 'dbo.GlKategori'. The duplicate key value is (M, 01, 102).</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 11:20:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_GlKategori'. Cannot insert duplicate key in object 'dbo.GlKategori'. The duplicate key value is (M, 01, 102).</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 11:20:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_GlKategori'. Cannot insert duplicate key in object 'dbo.GlKategori'. The duplicate key value is (N, 01, 102).</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 11:21:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 12:03:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 12:53:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 13:19:31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 13:50:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 13:50:27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 13:51:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 13:51:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 13:51:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>'ddlNoFaktur' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-01 16:48:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>'ddlNoFaktur' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-02 15:52:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PengisianAktivaAwal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-02 21:09:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Login failed for user 'LIVEMIKRO'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:36:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Login failed for user 'LIVEMIKRO'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:36:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Login failed for user 'LIVEMIKRO'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:36:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Login failed for user 'LIVEMIKRO'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:36:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Login failed for user 'LIVEMIKRO'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:36:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Login failed for user 'LIVEMIKRO'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:37:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Login failed for user 'LIVEMIKRO'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:37:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:38:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:38:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:38:27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:38:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:38:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:38:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:38:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:38:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:38:40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:39:31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:39:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:40:33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:40:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:40:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:40:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:41:56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:41:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:41:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>The EXECUTE permission was denied on the object 'MF_SPLoginMenu', database 'MIKRO', schema 'dbo'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-03 00:42:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-05 09:07:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-05 09:49:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-05 10:14:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-05 10:49:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-05 11:16:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-05 11:21:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-05 13:41:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-05 14:27:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-05 16:52:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>'ddlNoFaktur' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-05 16:59:00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-06 07:43:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-06 09:13:07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>Conversion failed when converting the varchar value '6B' to data type int.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-06 09:22:32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-06 10:10:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-06 10:15:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-06 14:12:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>'ddldiajukan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ApprovalPR.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-07 11:28:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-07 11:31:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-07 11:40:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-07 11:40:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-07 11:49:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-07 15:09:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>'ddldiajukan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ApprovalPR.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-09 13:47:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>'ddlDebitCC' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-12 09:34:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>'ddldiajukan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PurchaseRequest.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-12 10:40:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>'ddldiajukan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ApprovalPR.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-12 10:45:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-12 16:00:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-12 16:01:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-12 16:01:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-12 16:01:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-13 10:07:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-13 13:29:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-13 13:29:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-13 15:08:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 08:41:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 08:42:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 08:47:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 08:48:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 09:20:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 09:20:27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 10:09:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 10:12:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 10:12:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 10:12:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 10:12:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 10:13:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 10:13:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 10:15:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 10:15:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 10:16:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>'ddlKreditCC5' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 15:37:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>'ddlKreditCC5' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 15:37:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>'ddlKreditCC5' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 15:39:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>'ddlKreditCC5' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 15:40:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>'ddlKreditCC5' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-14 15:40:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Int32.</ErrorText>
+    <FileError>Menu.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-15 13:34:00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>'ddlKreditCC5' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-16 10:41:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>'ddlKreditCC5' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-16 10:41:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>'ddlKreditCC5' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-16 10:43:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>102</ID>
+    <ErrorText>'ddlKreditCC5' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-16 10:44:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>103</ID>
+    <ErrorText>Exception of type 'System.OutOfMemoryException' was thrown.</ErrorText>
+    <FileError>MemoInternalCustomerMikroPelunasan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-16 19:43:07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>104</ID>
+    <ErrorText>Column 'TypePembayaran' does not belong to table Table.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-19 11:10:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>105</ID>
+    <ErrorText>Column 'TypePembayaran' does not belong to table Table.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-19 11:10:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>106</ID>
+    <ErrorText>Column 'TypePembayaran' does not belong to table Table.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-19 11:10:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>107</ID>
+    <ErrorText>Column 'TypePembayaran' does not belong to table Table.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-19 11:10:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>108</ID>
+    <ErrorText>Column 'TypePembayaran' does not belong to table Table.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-27 09:46:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>109</ID>
+    <ErrorText>Column 'TypePembayaran' does not belong to table Table.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-27 09:46:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>110</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-04-27 09:46:27</TglError>
+  </ErrorLog>
+</DocumentElement>

@@ -1,0 +1,110 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MemoInternalCustomerMikroPelunasan.aspx</FileError>
+    <FromUser>501admin1</FromUser>
+    <TglError>2022-04-06 08:48:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Invalid column name 'namaLgn'.</ErrorText>
+    <FileError>MemoInternalCustomerMikroPelunasanWO.aspx</FileError>
+    <FromUser>501admin1</FromUser>
+    <TglError>2022-04-07 10:11:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Invalid column name 'namaLgn'.</ErrorText>
+    <FileError>MemoInternalCustomerMikroPelunasanWO.aspx</FileError>
+    <FromUser>501admin1</FromUser>
+    <TglError>2022-04-07 10:11:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Invalid column name 'namaLgn'.</ErrorText>
+    <FileError>MemoInternalCustomerMikroPelunasanWO.aspx</FileError>
+    <FromUser>501admin1</FromUser>
+    <TglError>2022-04-07 10:11:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Invalid column name 'namaLgn'.</ErrorText>
+    <FileError>MemoInternalCustomerMikroPelunasanWO.aspx</FileError>
+    <FromUser>501admin1</FromUser>
+    <TglError>2022-04-07 10:11:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>501admin1</FromUser>
+    <TglError>2022-04-07 17:13:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>501admin1</FromUser>
+    <TglError>2022-04-07 17:14:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-04-21 10:09:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-04-21 10:11:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Invalid column name 'namaLgn'.</ErrorText>
+    <FileError>MemoInternalCustomerMikroBataldenda.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-04-21 11:07:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Invalid column name 'namaLgn'.</ErrorText>
+    <FileError>MemoInternalCustomerMikroBataldenda.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-04-21 11:07:40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>501akt1</FromUser>
+    <TglError>2022-04-25 14:04:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>501akt1</FromUser>
+    <TglError>2022-04-25 14:04:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>501akt1</FromUser>
+    <TglError>2022-04-25 14:05:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Invalid column name 'namaLgn'.</ErrorText>
+    <FileError>MemoInternalCustomerMikroPelunasanWO.aspx</FileError>
+    <FromUser>501admin1</FromUser>
+    <TglError>2022-04-26 16:48:25</TglError>
+  </ErrorLog>
+</DocumentElement>

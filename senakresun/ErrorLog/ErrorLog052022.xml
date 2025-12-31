@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Invalid column name 'namaLgn'.</ErrorText>
+    <FileError>MemoInternalCustomerMikroPelunasan.aspx</FileError>
+    <FromUser>501admin1</FromUser>
+    <TglError>2022-05-09 14:08:40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Invalid column name 'namaLgn'.</ErrorText>
+    <FileError>MemoInternalCustomerMikroPelunasan.aspx</FileError>
+    <FromUser>501admin1</FromUser>
+    <TglError>2022-05-09 14:08:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Invalid column name 'namaLgn'.</ErrorText>
+    <FileError>MemoInternalCustomerMikroPelunasanWO.aspx</FileError>
+    <FromUser>501admin1</FromUser>
+    <TglError>2022-05-12 12:27:07</TglError>
+  </ErrorLog>
+</DocumentElement>

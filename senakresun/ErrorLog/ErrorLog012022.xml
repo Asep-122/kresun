@@ -1,0 +1,568 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101Admin1</FromUser>
+    <TglError>2022-01-01 12:49:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101Admin1</FromUser>
+    <TglError>2022-01-01 12:49:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101Admin1</FromUser>
+    <TglError>2022-01-01 12:49:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_ArNasabah'. Cannot insert duplicate key in object 'dbo.ArNasabah'. The duplicate key value is (11300001).</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>113admin1</FromUser>
+    <TglError>2022-01-01 21:22:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_ArNasabah'. Cannot insert duplicate key in object 'dbo.ArNasabah'. The duplicate key value is (11300001).</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>113admin1</FromUser>
+    <TglError>2022-01-01 21:23:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_ArNasabah'. Cannot insert duplicate key in object 'dbo.ArNasabah'. The duplicate key value is (11300001).</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>113admin1</FromUser>
+    <TglError>2022-01-01 21:24:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_ArNasabah'. Cannot insert duplicate key in object 'dbo.ArNasabah'. The duplicate key value is (11300001).</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>113admin1</FromUser>
+    <TglError>2022-01-01 21:24:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>The added or subtracted value results in an un-representable DateTime.
+Parameter name: t</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>101Admin1</FromUser>
+    <TglError>2022-01-01 21:37:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>The added or subtracted value results in an un-representable DateTime.
+Parameter name: t</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>101Admin1</FromUser>
+    <TglError>2022-01-01 21:38:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>The added or subtracted value results in an un-representable DateTime.
+Parameter name: t</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>101Admin1</FromUser>
+    <TglError>2022-01-01 21:58:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnMasaManfaat.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-02 00:19:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnMasaManfaat.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-02 00:19:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnMasaManfaat.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-02 00:20:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-02 00:24:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-02 00:25:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-02 00:25:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnMasaManfaatAwal.aspx</FileError>
+    <FromUser>113akt1</FromUser>
+    <TglError>2022-01-02 00:26:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnMasaManfaatAwal.aspx</FileError>
+    <FromUser>113akt1</FromUser>
+    <TglError>2022-01-02 00:27:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Cannot insert the value NULL into column 'Jumlahangsuran', table 'MIKROSERAMBI.dbo.CltrnBayarAR'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-02 01:01:27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>113akt1</FromUser>
+    <TglError>2022-01-02 21:55:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>113akt1</FromUser>
+    <TglError>2022-01-02 21:56:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>113akt1</FromUser>
+    <TglError>2022-01-03 10:28:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>Unclosing.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-03 11:25:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Cannot insert the value NULL into column 'Jumlahangsuran', table 'MIKROSERAMBI.dbo.CltrnBayarAR'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>101tl1</FromUser>
+    <TglError>2022-01-03 11:28:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Cannot insert the value NULL into column 'Jumlahangsuran', table 'MIKROSERAMBI.dbo.CltrnBayarAR'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>101tl1</FromUser>
+    <TglError>2022-01-03 11:29:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukHutangPajakSewaBangunan.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-03 16:09:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukHutangPajakSewaBangunan.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-03 16:09:31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnTranfer.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-03 16:11:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnTranfer.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-03 16:11:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnTranferantarbank.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-03 16:13:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-03 16:18:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnBiayaAcrud.aspx</FileError>
+    <FromUser>113akt1</FromUser>
+    <TglError>2022-01-03 16:22:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-03 16:23:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-03 16:23:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnMasaManfaat.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-03 16:37:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JlhDebit', table 'MIKROSERAMBI.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>KeluarAnggotaKoperasi.aspx</FileError>
+    <FromUser>101tl1</FromUser>
+    <TglError>2022-01-04 09:13:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JlhDebit', table 'MIKROSERAMBI.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>KeluarAnggotaKoperasi.aspx</FileError>
+    <FromUser>101tl1</FromUser>
+    <TglError>2022-01-04 09:14:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Error converting data type numeric to numeric.</ErrorText>
+    <FileError>MasukTrnTranfer.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-04 11:43:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Arithmetic overflow error converting numeric to data type numeric.
+The data for table-valued parameter "@GL_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8115, state: 8
+The statement has been terminated.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-04 11:45:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Arithmetic overflow error converting numeric to data type numeric.
+The data for table-valued parameter "@GL_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8115, state: 8
+The statement has been terminated.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-04 11:45:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Value was either too large or too small for an Int32.</ErrorText>
+    <FileError>MasukTrnMasaManfaatAwal.aspx</FileError>
+    <FromUser>113AKT1</FromUser>
+    <TglError>2022-01-04 12:01:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Adding a value to a 'smalldatetime' column caused an overflow.</ErrorText>
+    <FileError>MasukTrnMasaManfaatAwal.aspx</FileError>
+    <FromUser>113AKT1</FromUser>
+    <TglError>2022-01-04 12:01:22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnMasaManfaat.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-04 12:02:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MemoInternalCustomerMikroDiscountMingguan.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-05 09:47:32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_Arbiayahdr'. Cannot insert duplicate key in object 'dbo.Arbiayahdr'. The duplicate key value is (DEMO01113000001, 01, 113).</ErrorText>
+    <FileError>BiayaRequest.aspx</FileError>
+    <FromUser>113akt1</FromUser>
+    <TglError>2022-01-07 08:42:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-07 17:32:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-07 17:32:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>113tl1</FromUser>
+    <TglError>2022-01-07 17:36:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:51:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:51:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:51:33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:51:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:51:40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:51:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:52:07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:52:22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:52:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:52:27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:52:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-12 14:53:40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-13 14:19:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-01-13 14:19:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>501AKT1</FromUser>
+    <TglError>2022-01-25 19:48:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-25 19:49:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>501AKT1</FromUser>
+    <TglError>2022-01-25 19:50:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>501AKT1</FromUser>
+    <TglError>2022-01-25 19:50:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>501akt1</FromUser>
+    <TglError>2022-01-26 10:01:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>501akt1</FromUser>
+    <TglError>2022-01-26 10:01:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-26 10:03:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>GenerateNeraca.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-26 10:04:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>GenerateNeraca.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-26 10:04:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-26 10:05:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-26 16:28:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-26 16:29:00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>GenerateNeraca.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-27 15:05:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>GenerateNeraca.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-27 16:10:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>'ddltahun' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Unclosing.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-31 16:19:22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-31 16:52:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>Cannot insert the value NULL into column 'KodeBank', table 'MIKROPATI05.dbo.Cltrn'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>TrnPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-01-31 16:54:23</TglError>
+  </ErrorLog>
+</DocumentElement>

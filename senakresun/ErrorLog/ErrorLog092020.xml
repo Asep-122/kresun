@@ -1,0 +1,1283 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_ApJurnal'. Cannot insert duplicate key in object 'dbo.ApJurnal'. The duplicate key value is (sssss, 01, 101).</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-01 15:02:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-02 14:47:33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Cannot find table 0.</ErrorText>
+    <FileError>BudgetCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-03 13:21:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Could not find stored procedure ''.</ErrorText>
+    <FileError>BudgetCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-03 13:21:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Could not find stored procedure ''.</ErrorText>
+    <FileError>BudgetCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-03 13:35:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Could not find stored procedure ''.</ErrorText>
+    <FileError>BudgetCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-03 13:35:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Could not find stored procedure ''.</ErrorText>
+    <FileError>BudgetCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-03 13:38:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Could not find stored procedure ''.</ErrorText>
+    <FileError>BudgetCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-03 13:40:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Could not find stored procedure ''.</ErrorText>
+    <FileError>BudgetCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-04 12:42:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Could not find stored procedure ''.</ErrorText>
+    <FileError>BudgetCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-04 12:50:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Could not find stored procedure ''.</ErrorText>
+    <FileError>BudgetCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-04 12:52:00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-04 14:46:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-04 14:46:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-04 14:47:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-04 15:23:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-11 13:05:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_MF_BranchUserMapping'. Cannot insert duplicate key in object 'dbo.MF_BranchUserMapping'. The duplicate key value is (superadmin, 101, 01).</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-14 15:08:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>'ddlfiskaltahunini' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Cabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-14 15:08:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_MF_BranchUserMapping'. Cannot insert duplicate key in object 'dbo.MF_BranchUserMapping'. The duplicate key value is (pasmi, 101, 01).</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-14 16:22:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-14 16:31:12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-14 16:36:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-14 16:37:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-14 16:38:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-19 00:11:33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:24:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:26:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:28:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:31:40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:35:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:40:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:42:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:42:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:46:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:49:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:52:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:52:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 16:54:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 17:08:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 17:09:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'TutupBukuFlag'.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-20 19:23:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Invalid column name 'Alamat1'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'Alamat1'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'SaldoGiro'.</ErrorText>
+    <FileError>PembayaranPiutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-21 10:42:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Failed to convert parameter value from a HtmlForm to a String.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 16:11:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Cannot insert the value NULL into column 'Nomor', table 'EMAS.dbo.CltrnBayarAP'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 16:14:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 16:29:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 18:42:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 20:27:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 20:28:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>DistribusiUangMukaAP.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 20:28:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Cannot find column KodeLgn.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 20:30:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'namabank'.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 20:50:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Procedure or function 'CL_Trn_AP_Insert_Retur_Distribusi_Advance' expects parameter '@Form', which was not supplied.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 22:39:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Procedure or function 'CL_Trn_AP_Insert_Retur_Distribusi_Advance' expects parameter '@Form', which was not supplied.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 22:39:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 22:42:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 22:52:33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 22:52:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 22:52:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 22:54:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 22:55:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 22:58:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 23:00:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 23:00:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-22 23:01:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 01:13:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 01:15:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 01:18:12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 01:24:07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>Cannot find column KodeBank.</ErrorText>
+    <FileError>ViewHutangSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 02:01:56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>'ddlDebitGL' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 11:45:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>'ddlDebitCC' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 11:45:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>'ddlDebitCC' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 11:49:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>'ddlDebitGL' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 11:49:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>'ddlDebitCC' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 11:51:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>'ddlDebitGL' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 11:51:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>Cannot find column TypeJournal.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 16:14:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>Cannot find column TypeJournal.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 16:17:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>Cannot find column x.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 16:19:33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>Cannot find column x.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 16:21:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 16:47:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 16:47:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 18:49:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 18:50:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 18:52:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:00:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>Column 'KodeJurnal' does not belong to table dtOutput.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:12:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:14:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>Column 'KodeJurnal' does not belong to table dtOutput.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:15:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>@ErrMsg is not a parameter for procedure CL_KodeJurnal.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:20:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:21:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>Column 'kodejurnal' does not belong to table dtOutput.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:22:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>Column 'kodejurnal' does not belong to table dtOutput.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:24:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:26:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:27:31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:36:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:43:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:57:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:57:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:59:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 19:59:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 20:00:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-23 20:01:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 09:54:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>102</ID>
+    <ErrorText>Procedure or function 'CL_CekJournal' expects parameter '@sumber', which was not supplied.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:02:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>103</ID>
+    <ErrorText>Procedure or function 'CL_CekJournal' expects parameter '@sumber', which was not supplied.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:03:12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>104</ID>
+    <ErrorText>Procedure or function 'CL_CekJournal' expects parameter '@sumber', which was not supplied.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:05:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>105</ID>
+    <ErrorText>Procedure or function 'CL_CekJournal' expects parameter '@sumber', which was not supplied.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:08:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>106</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:08:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>107</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:09:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>108</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:18:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>109</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:19:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>110</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:20:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>111</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:21:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>112</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:25:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>113</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:25:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>114</ID>
+    <ErrorText>Cannot find column 0.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:38:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>115</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:41:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>116</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:44:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>117</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:46:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>118</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:49:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>119</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:55:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>120</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:56:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>121</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 10:58:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>122</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 11:02:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>123</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 11:06:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>124</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 11:51:00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>125</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'namaLgn'.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 22:47:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>126</ID>
+    <ErrorText>Procedure or function 'CL_Trn_CL_Insert_Lain' expects parameter '@KodeCrc', which was not supplied.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 22:50:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>127</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 22:53:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>128</ID>
+    <ErrorText>Procedure or function 'CL_Trn_CL_Insert_Lain' expects parameter '@KursStd', which was not supplied.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 22:56:07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>129</ID>
+    <ErrorText>Procedure or function 'CL_Trn_CL_Insert_Lain' expects parameter '@Kodelgn', which was not supplied.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 22:57:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>130</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:01:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>131</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:02:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>132</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:03:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>133</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:13:33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>134</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:16:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>135</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:16:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>136</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:17:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>137</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:18:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>138</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_Clhdr'. Cannot insert duplicate key in object 'dbo.Clhdr'. The duplicate key value is (CL05011010000000199, 01, 101).</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:21:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>139</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:23:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>140</ID>
+    <ErrorText>Procedure or function 'CL_Trn_CL_Delete_Lain' expects parameter '@KodeCrc', which was not supplied.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:26:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>141</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:28:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>142</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:29:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>143</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:30:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>144</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:30:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>145</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:30:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>146</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:31:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>147</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:31:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>148</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JKreditBln', table 'EMAS.dbo.Clmst'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:32:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>149</ID>
+    <ErrorText>'ddlJurnal' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:36:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>150</ID>
+    <ErrorText>'ddlTypeTrn' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:36:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>151</ID>
+    <ErrorText>'ddlJurnal' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:36:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>152</ID>
+    <ErrorText>'ddlTypeTrn' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnlain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-24 23:37:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>153</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-25 09:10:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>154</ID>
+    <ErrorText>'ddlbankid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-25 09:10:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>155</ID>
+    <ErrorText>There are not enough fields in the Structured type.  Structured types must have at least one field.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-25 11:21:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>156</ID>
+    <ErrorText>There are not enough fields in the Structured type.  Structured types must have at least one field.</ErrorText>
+    <FileError>MasukTrnAdvanceSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-25 11:25:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>157</ID>
+    <ErrorText>Cannot insert the value NULL into column 'SimpananWajib', table 'EMAS.dbo.ClhdrAR'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAdvanceCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-25 18:14:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>158</ID>
+    <ErrorText>Column 'NamaLgn' does not belong to table dtOutput.</ErrorText>
+    <FileError>MasukTrnAdvanceCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-25 18:16:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>159</ID>
+    <ErrorText>Column 'NamaLgn' does not belong to table dtOutput.</ErrorText>
+    <FileError>MasukTrnAdvanceCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-25 18:19:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>160</ID>
+    <ErrorText>Column 'NamaLgn' does not belong to table dtOutput.</ErrorText>
+    <FileError>MasukTrnAdvanceCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-25 18:21:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>161</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnAdvanceCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-25 18:21:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>162</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnAdvanceCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-25 18:22:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>163</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-25 22:37:56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>164</ID>
+    <ErrorText>Invalid column name 'SaldoJalan'.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-26 15:11:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>165</ID>
+    <ErrorText>Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.</ErrorText>
+    <FileError>MasukTrnAngsuranCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-27 17:24:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>166</ID>
+    <ErrorText>Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.</ErrorText>
+    <FileError>MasukTrnAngsuranCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-27 17:27:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>167</ID>
+    <ErrorText>Cannot insert the value NULL into column 'KodeGl', table 'EMAS.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAngsuranCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-27 17:29:40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>168</ID>
+    <ErrorText>Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>MasukTrnAngsuranCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-27 17:32:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>169</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_rekening'.</ErrorText>
+    <FileError>MasukTrnAngsuranCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-27 18:49:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>170</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pokok'.</ErrorText>
+    <FileError>MasukTrnAngsuranCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-27 19:01:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>171</ID>
+    <ErrorText>Procedure or function 'CL_Trn_AR_delete_Bayar_Angsuran' expects parameter '@KodeKonter', which was not supplied.</ErrorText>
+    <FileError>MasukTrnAngsuranCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-27 19:40:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>172</ID>
+    <ErrorText>Error converting data type varchar to numeric.</ErrorText>
+    <FileError>MasukTrnAngsuranCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-27 19:59:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>173</ID>
+    <ErrorText>Error converting data type varchar to numeric.</ErrorText>
+    <FileError>MasukTrnAngsuranCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-27 19:59:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>174</ID>
+    <ErrorText>Error converting data type varchar to numeric.</ErrorText>
+    <FileError>MasukTrnAngsuranCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-27 20:03:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>175</ID>
+    <ErrorText>Error converting data type varchar to numeric.</ErrorText>
+    <FileError>MasukTrnAngsuranCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-27 20:03:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>176</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-30 10:37:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>177</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-30 10:38:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>178</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-30 10:40:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>179</ID>
+    <ErrorText>Cannot insert the value NULL into column 'KodeBank', table 'PERAK.dbo.ClhdrAR'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrndendaCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-09-30 12:32:15</TglError>
+  </ErrorLog>
+</DocumentElement>

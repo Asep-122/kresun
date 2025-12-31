@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <UserLog>
+    <ID>1</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>104AKT1</FromUser>
+    <TglError>2025-12-09 11.26.43</TglError>
+  </UserLog>
+</DocumentElement>

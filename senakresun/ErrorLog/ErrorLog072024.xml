@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Cannot open database "ERPMIKRO_JULY_03" requested by the login. The login failed.
+Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-07-05 22.34.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Cannot open database "ERPMIKRO_JULY_03" requested by the login. The login failed.
+Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-07-05 22.34.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Cannot open database "ERPMIKRO_JULY_03" requested by the login. The login failed.
+Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-07-05 22.34.56</TglError>
+  </ErrorLog>
+</DocumentElement>

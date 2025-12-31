@@ -1,0 +1,795 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASI1'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-07 01:02:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASI1'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-07 01:03:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASI1'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-07 01:04:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASI1'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-07 01:04:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASI1'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-07 01:05:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASI1'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-07 01:06:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASI1'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-07 01:09:33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Could not find server '192.168.20.20' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.</ErrorText>
+    <FileError>User.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-13 11:42:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>@ErrMsg is not a parameter for procedure FA_report_bulan.</ErrorText>
+    <FileError>ReportDaftarPenyusutanBulan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-15 19.18.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>@ErrMsg is not a parameter for procedure FA_report_bulan.</ErrorText>
+    <FileError>ReportDaftarPenyusutanBulan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-15 19.20.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Could not find server '192.168.20.20' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.</ErrorText>
+    <FileError>User.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 09.51.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 14.17.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 14.17.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>The string was not recognized as a valid DateTime. There is an unknown word starting at index 0.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 14.19.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>The string was not recognized as a valid DateTime. There is an unknown word starting at index 0.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 14.20.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Procedure or function 'FA_report_golongan' expects parameter '@TglTrnawal', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 17.07.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Procedure or function 'FA_report_golongan' expects parameter '@TglTrnawal', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 17.08.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Procedure or function 'FA_report_golongan' expects parameter '@TglTrnawal', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 17.08.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Procedure or function 'FA_report_golongan' expects parameter '@TglTrnawal', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 17.12.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Procedure or function 'FA_report_golongan' expects parameter '@TglTrnawal', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 17.12.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Procedure or function 'FA_report_golongan' expects parameter '@TglTrnawal', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 17.13.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Procedure or function 'FA_report_golongan' expects parameter '@TglTrnawal', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 18.24.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Procedure or function 'FA_report_golongan' expects parameter '@TglTrnawal', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 18.26.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Procedure or function 'FA_report_golongan' expects parameter '@TglTrnawal', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 18.27.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 19.25.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 19.29.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 19.30.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 19.31.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 19.41.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 19.41.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 19.47.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 19.51.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 19.52.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 19.54.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 19.54.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 20.15.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 20.33.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 20.34.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 20.43.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 20.46.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 20.52.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 20.55.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 20.57.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 20.57.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 21.00.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 21.04.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 21.09.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 21.10.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 21.10.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 21.16.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 21.17.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 21.22.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-20 23.49.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.11.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.13.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.13.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.16.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Cannot find column value.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.17.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Cannot find column value.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.17.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>Procedure or function 'FA_report_dipose' expects parameter '@KodeAktivaawal', which was not supplied.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.19.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Cannot find column value.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.21.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Cannot find column value.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.23.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Cannot find column value.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.25.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Cannot find column value.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.26.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>Cannot find column value.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.31.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 03.32.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 10.46.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 10.46.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 10.48.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 10.50.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 11.01.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarPenyusutanGolongan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 11.02.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 11.02.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 11.10.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDiposePenjualan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 15.25.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>Could not find server '192.168.20.20' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.</ErrorText>
+    <FileError>User.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 17.31.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>Could not find stored procedure 'dbo.GetJenisKelamin()'.</ErrorText>
+    <FileError>RegistrasiNasabah.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 17.58.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>Could not find stored procedure 'dbo.GetJenisKelamin()'.</ErrorText>
+    <FileError>RegistrasiNasabah.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 20.39.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>ExecuteScalar requires an open and available Connection. The connection's current state is closed.</ErrorText>
+    <FileError>RegistrasiNasabah.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 20.46.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>ExecuteScalar requires an open and available Connection. The connection's current state is closed.</ErrorText>
+    <FileError>RegistrasiNasabah.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 20.50.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>Incorrect syntax near 'dbo.GetJenisKelamin()'.</ErrorText>
+    <FileError>RegistrasiNasabah.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 20.52.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>Incorrect syntax near 'dbo.GetMasterProduct()'.</ErrorText>
+    <FileError>RegistrasiKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 20.52.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>A field or property with the name 'PostalCode' was not found on the selected data source.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 21.57.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>A field or property with the name 'Country' was not found on the selected data source.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 22.08.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 22.48.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 22.49.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 22.50.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 22.51.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 22.52.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 22.52.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 22.52.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 22.52.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 22.53.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-21 22.53.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-22 13.08.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>Could not find server '192.168.20.20' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.</ErrorText>
+    <FileError>User.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-22 13.08.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>admin</FromUser>
+    <TglError>2020-04-22 13.10.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>admin</FromUser>
+    <TglError>2020-04-22 13.10.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-22 13.22.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-22 13.22.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_ArAnggota'. Cannot insert duplicate key in object 'dbo.ArAnggota'. The duplicate key value is (101000000000016).</ErrorText>
+    <FileError>RegistrasiKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-23 12.19.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>102</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_ArAnggota'. Cannot insert duplicate key in object 'dbo.ArAnggota'. The duplicate key value is (101000000000016).</ErrorText>
+    <FileError>RegistrasiKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-23 12.25.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>103</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-23 12.32.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>104</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-23 12.32.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>105</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAsset.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-28 14.25.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>106</ID>
+    <ErrorText>Failed to convert parameter value from a TextBox to a String.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-30 15.24.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>107</ID>
+    <ErrorText>Procedure or function 'AR_PERMOHONAN_KREDIT' expects parameter '@kode_cabang', which was not supplied.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-30 15.26.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>108</ID>
+    <ErrorText>Procedure or function 'AR_PERMOHONAN_KREDIT' expects parameter '@persen_gaji', which was not supplied.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-30 15.27.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>109</ID>
+    <ErrorText>Procedure or function 'AR_PERMOHONAN_KREDIT' expects parameter '@status_pencairan', which was not supplied.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-30 15.28.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>110</ID>
+    <ErrorText>Failed to convert parameter value from a TextBox to a String.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-30 15.29.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>111</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-30 15.45.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>112</ID>
+    <ErrorText>Cannot insert the value NULL into column 'kode_produk', table 'GIGAERP.dbo.ArPermohonanKredit'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-30 15.46.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>113</ID>
+    <ErrorText>Procedure or function AR_APPROVAL_HISTORY has too many arguments specified.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-04-30 15.27.35</TglError>
+  </ErrorLog>
+</DocumentElement>

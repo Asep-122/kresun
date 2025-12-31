@@ -1,0 +1,677 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>MemoKaryawanExisting.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 12.34.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>'ddlsttptkpV' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExisting.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 12.34.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>'ddlsttptkpV' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExisting.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 12.35.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>'ddlsttptkpV' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExisting.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 12.38.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>'ddlrekpersh' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExisting.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 12.39.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>'ddlpddkV' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExisting.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 12.41.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>'ddlpddkV' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExisting.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 12.44.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>'ddlpddkV' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExisting.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 12.45.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>'ddlbosidV' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExisting.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 12.47.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>'ddljabatan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>AefeeNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 12.59.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 19.50.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 19.52.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 19.53.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 19.55.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Column 'bos_id' does not belong to table Table.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 19.58.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Column 'bos_id' does not belong to table Table.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 19.58.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Column 'bos_id' does not belong to table Table.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 19.58.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Column 'bos_id' does not belong to table Table.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 19.58.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Column 'bos_id' does not belong to table Table.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 19.58.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>'ddlbosid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 19.59.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>'ddlbosid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.00.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>'ddlsales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.03.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.07.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.07.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.07.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.07.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.07.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.07.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.07.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.07.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.07.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@NamaKry', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.30.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@NamaKry', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.30.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@NamaKry', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.30.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@NamaKry', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.30.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@NamaKry', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.30.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@NamaKry', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.30.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@NamaKry', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.32.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@NamaKry', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.33.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@NamaKry', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.41.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@nobpjskesehatan', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.43.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@typebpjskesehatan', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.44.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Procedure or function 'AE_UPDATEMASTERKARYAWAN' expects parameter '@NIKKTP', which was not supplied.</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.45.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>'ddlsales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.47.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>'ddlsales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 20.50.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>'ddljab' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ViewUpdateMasterKaryawan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-01 21.00.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-03 23.32.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-03 23.51.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-03 23.53.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-03 23.56.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>'ddljabatan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>AefeeNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-09 10.17.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>'ddljabatan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>AefeeNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-09 10.18.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>'ddljabatan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>AefeeNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-09 10.18.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>'ddljabatan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>AefeeNonManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-09 10.20.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>'ddljabatan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>AefeeManagement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-09 10.31.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'cabang_nama'.</ErrorText>
+    <FileError>PengajuanLemburverif.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-09 14.53.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'cabang_nama'.</ErrorText>
+    <FileError>PengajuanLemburverif.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-09 14.54.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'cabang_nama'.</ErrorText>
+    <FileError>PengajuanLemburverif.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-09 14.56.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Cannot insert the value NULL into column 'JlhDebit', table 'ERPHRMSCLONE.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MemofeerewardNonManagementApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-10 12.03.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)</ErrorText>
+    <FileError>PengajuanLemburApprove.aspx</FileError>
+    <FromUser>123TL1</FromUser>
+    <TglError>2025-05-11 18.29.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)</ErrorText>
+    <FileError>PengajuanLemburApprove.aspx</FileError>
+    <FromUser>123TL1</FromUser>
+    <TglError>2025-05-11 18.29.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PengajuanLemburApprove.aspx</FileError>
+    <FromUser>123TL1</FromUser>
+    <TglError>2025-05-11 18.48.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PengajuanLemburApprove.aspx</FileError>
+    <FromUser>123TL1</FromUser>
+    <TglError>2025-05-11 18.48.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>301AKT1</FromUser>
+    <TglError>2025-05-11 22.33.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>'ddlsales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.27.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>'ddlrekpersh' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.27.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>'ddlsales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.28.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>'ddlrekpersh' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.28.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>'ddlsales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.31.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>'ddlrekpersh' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.31.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>'ddlsales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.33.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>'ddlrekpersh' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.33.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>'ddlsales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.33.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>'ddlrekpersh' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.33.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>'ddlsalesV' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExistingApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.35.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>'ddlsales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExistingApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.35.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>'ddlrekpersh' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExistingApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.35.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>'ddlsalesV' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExistingApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.42.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>'ddlsales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExistingApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.42.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>'ddlrekpersh' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanExistingApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 11.42.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>'ddlbosid' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 22.53.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>'ddlrekpersh' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MemoKaryawanBaruApprove.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-12 22.53.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukBayarReward.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-14 11.35.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukBayarReward.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-14 11.36.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>ViewBiayaApprovePusat.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-16 11.33.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>ViewBiayaApprovePusat.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-16 11.33.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>Cannot find column namatype.</ErrorText>
+    <FileError>ViewBiayaApprovePusat.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-16 11.36.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>Cannot find column namatype.</ErrorText>
+    <FileError>ViewBiayaApprovePusat.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-16 11.38.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>@kodeproduk is not a parameter for procedure GetRekeningPerpanjangan.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-05-16 13.05.11</TglError>
+  </ErrorLog>
+</DocumentElement>

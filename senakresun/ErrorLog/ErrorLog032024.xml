@@ -1,0 +1,609 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-02 22.07.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 10.21.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 10.21.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 10.48.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 10.48.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 10.48.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 10.48.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 10.48.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Procedure or function 'CL_VIEW_HT' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.37.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Procedure or function 'CL_VIEW_HT' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.37.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Procedure or function 'CL_VIEW_HT' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.39.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>'ddlbiayaapproval' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.39.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'namaNamabiaya'.</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.41.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>'ddlbiayaapproval' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.44.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>'ddlbiayaapproval' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.45.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>'ddlbiayaapproval' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.47.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Cannot find column Namabiaya.</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.53.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Cannot find column Namabiaya.</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.53.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>'ddlbiayaapproval' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.55.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>'ddlbiayaapproval' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.58.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>'ddlbiayaapproval' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 15.59.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ReportKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-03 16.33.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-04 09.36.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-04 09.36.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-04 09.36.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-04 09.36.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-04 09.36.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-04 09.36.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-04 09.36.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-04 09.36.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-04 09.38.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-04 09.38.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-04 09.38.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>The configuration section cannot contain a CDATA or text element. (D:\SourceApplication\GIGAMIKRO\MFLOS\web.config line 22)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-04 09.41.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.54.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.54.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.54.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.54.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.54.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.54.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.54.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.54.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.55.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.55.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.55.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.55.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.56.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Procedure or function 'AR_GET_KARTU' expects parameter '@norekening', which was not supplied.</ErrorText>
+    <FileError>ViewKartuangsuran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-09 23.57.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKartuangsuranDev.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-03-10 21.18.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>MasuktrnChangeSetoran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-11 16.17.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Failed to convert parameter value from a TextBox to a DateTime.</ErrorText>
+    <FileError>MasuktrnChangeSetoran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-11 16.34.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'KodeLgn'.</ErrorText>
+    <FileError>MasuktrnChangeSetoran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-11 16.35.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'KodeLgn'.</ErrorText>
+    <FileError>MasuktrnChangeSetoran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-11 16.36.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'KodeLgn'.</ErrorText>
+    <FileError>MasuktrnChangeSetoran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-11 16.36.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'KodeLgn'.</ErrorText>
+    <FileError>MasuktrnChangeSetoran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-11 16.39.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Plafon'.</ErrorText>
+    <FileError>MasuktrnChangeSetoran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-11 16.40.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Plafon'.</ErrorText>
+    <FileError>MasuktrnChangeSetoran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-11 16.40.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Procedure or function AR_UPDATE_Cadangan has too many arguments specified.</ErrorText>
+    <FileError>ViewUpdateRekening.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-15 22.01.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Cannot insert the value NULL into column 'nobaris', table 'ERPMIKRO.dbo.Arupdatepokokdev'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>ViewUpdateRekening.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-15 22.20.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnAdjust1.aspx</FileError>
+    <FromUser>PUSAT01</FromUser>
+    <TglError>2024-03-20 09.20.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnAdjust1.aspx</FileError>
+    <FromUser>PUSAT01</FromUser>
+    <TglError>2024-03-20 09.20.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnAdjust1.aspx</FileError>
+    <FromUser>PUSAT01</FromUser>
+    <TglError>2024-03-20 09.33.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnAdjust1.aspx</FileError>
+    <FromUser>PUSAT01</FromUser>
+    <TglError>2024-03-20 09.40.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Procedure or function MT_Trn_Adjust_Delete_Lain has too many arguments specified.</ErrorText>
+    <FileError>MasukTrnAdjust1.aspx</FileError>
+    <FromUser>PUSAT01</FromUser>
+    <TglError>2024-03-20 10.55.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'tgltrnapprove'.</ErrorText>
+    <FileError>MasukTrnPelunasanDsicount1.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-22 20.51.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'tgltrnapprove'.</ErrorText>
+    <FileError>MasukTrnPelunasanDsicount1.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-22 20.53.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'tgltrnapprove'.</ErrorText>
+    <FileError>MasukTrnPelunasanDsicount1.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-22 20.54.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Kodecabang'.</ErrorText>
+    <FileError>MasukTrnPelunasanDsicountApprove.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-22 21.22.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>Procedure or function 'CL_Trn_AR_Insert_Bayar_Angsuran_Discount_App_Pst' expects parameter '@KodeKonter', which was not supplied.</ErrorText>
+    <FileError>MasukTrnPelunasanDsicountApprove.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-22 21.32.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>Procedure or function 'CL_Trn_AR_Insert_Bayar_Angsuran_Discount_App_Pst' expects parameter '@KodeKonter', which was not supplied.</ErrorText>
+    <FileError>MasukTrnPelunasanDsicountApprove.aspx</FileError>
+    <FromUser>APPROVAL1</FromUser>
+    <TglError>2024-03-22 21.50.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-24 00.09.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-24 00.12.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-24 00.13.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-24 00.14.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'nobukti'.</ErrorText>
+    <FileError>MasukTrnAktivasiWO.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-24 02.48.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnAktivasiWO.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-03-24 19.55.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-27 21.10.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-27 21.11.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-29 22.24.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-29 22.24.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-03-29 22.31.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'AddedByAP'.</ErrorText>
+    <FileError>KeluarAnggotaKoperasiM1.aspx</FileError>
+    <FromUser>201MANAGER</FromUser>
+    <TglError>2024-03-31 01.43.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'AddedByAP'.</ErrorText>
+    <FileError>KeluarAnggotaKoperasiM1.aspx</FileError>
+    <FromUser>201MANAGER</FromUser>
+    <TglError>2024-03-31 01.43.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KeluarAnggotaKoperasiM1.aspx</FileError>
+    <FromUser>201MANAGER</FromUser>
+    <TglError>2024-03-31 01.43.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ajukanulang'.</ErrorText>
+    <FileError>MasukTrnPelunasanDsicountApprove.aspx</FileError>
+    <FromUser>APPROVAL1</FromUser>
+    <TglError>2024-03-31 19.47.14</TglError>
+  </ErrorLog>
+</DocumentElement>

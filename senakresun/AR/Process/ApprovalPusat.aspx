@@ -1,0 +1,2672 @@
+﻿<%@ Page Language="C#" EnableEventValidation="false" AutoEventWireup="true" CodeFile="ApprovalPusat.aspx.cs" Inherits="AR_Process_ApprovalPusat" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Approval Pusat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+     <!-- Plugins css-->
+    <link href="../../plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />
+
+    <!-- App css -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="../../assets/js/modernizr.min.js"></script>
+
+    <link href="../../assets/css/jquery-ui.css" rel="stylesheet" />
+
+    <link href="../../plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+
+    <!-- Sweet Alert css -->
+    <link href="../../plugins/sweet-alert/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- jQuery  -->
+    <script src="../../Javascript/jquery-1.12.0.min.js"></script>
+    <script src="../../assets/js/popper.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/jquery.slimscroll.js"></script>
+
+    <script src="../../Javascript/jquery-ui.js"></script>
+
+        <!-- Toastr css -->
+    <link href="../../plugins/jquery-toastr/jquery.toast.min.css" rel="stylesheet" />
+    
+        <!-- Modal -->
+    <link href="../../plugins/custombox/css/custombox.min.css" rel="stylesheet" />
+    
+    <!-- Tooltipster css -->
+    <link rel="stylesheet" href="../../plugins/tooltipster/tooltipster.bundle.min.css" />
+        <!-- DataTables -->
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- Responsive datatable examples -->
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+
+   
+   
+    <script type="text/javascript">
+        function jv_openModal_root() {
+            setTimeout(function () { $('#lnkopenGroup').click(); $("div").remove(".tooltip"); window.top.cekResize(); }, 200);
+        }
+         function Alert(h, t, p, i, fr) {
+            setTimeout(function () {
+                $.toast({
+                    heading: h,
+                    text: t,
+                    position: p,
+                    loaderBg: '#5ba035',
+                    icon: i,
+                    hideAfter: 2000,
+                    stack: 1,
+                    afterHidden: function () {
+                        if (fr == '1') {
+                            setTimeout(function () { <%=btnreload()%>; }, 50);    //Save dan Edit
+                        } 
+                    }
+                });
+            }, 0);
+
+        }
+        
+          function sweetAlerttolak(btnSimpanTolakan,errMsg) {
+            if (btnSimpanTolakan.dataset.confirmed) {
+                // The action was already confirmed by the user, proceed with server event
+                btnSimpanTolakan.dataset.confirmed = false;
+                return true;
+            } else {
+                // Ask the user to confirm/cancel the action
+                event.preventDefault();
+                swal({
+                    title: errMsg,
+                    confirmButtonClass: 'btn btn-confirm mt-2',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: "Yes",
+                    cancelButtonText: "No",
+                })
+                    .then(function () {
+                        // Set data-confirmed attribute to indicate that the action was confirmed
+                        btnSimpanTolakan.dataset.confirmed = true;
+                        btnSimpanTolakan.click();
+                  
+                    }).catch(function (reason) {
+                        // The action was canceled by the user
+                        return false
+                    });
+                }
+        }
+        
+            function sweetAlertsave(btnSimpan,errMsg) {
+            if (btnSimpan.dataset.confirmed) {
+                // The action was already confirmed by the user, proceed with server event
+                btnSimpan.dataset.confirmed = false;
+                return true;
+            } else {
+                // Ask the user to confirm/cancel the action
+                event.preventDefault();
+                swal({
+                    title: errMsg,
+                    confirmButtonClass: 'btn btn-confirm mt-2',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: "Yes",
+                    cancelButtonText: "No",
+                })
+                    .then(function () {
+                        // Set data-confirmed attribute to indicate that the action was confirmed
+                        btnSimpan.dataset.confirmed = true;
+                        btnSimpan.click();
+                  
+                    }).catch(function (reason) {
+                        // The action was canceled by the user
+                        return false
+                    });
+                }
+        }
+
+        function SweetAlert(errMsg) {
+
+            setTimeout(function () {
+                swal(
+                    {
+                        title: errMsg,
+                        confirmButtonClass: 'btn btn-confirm mt-2'
+                    }
+                ).catch(swal.noop)
+            }, 100);
+
+        }
+
+           function stringToArray(items) {
+            return items.replace(/'/g, '"');
+        } // "
+
+        function isnumerickey(e) {
+            if (window.event)
+                var txt = window.event.keyCode; // IE
+            else
+                var txt = e.which;
+
+            if (txt > 31 && (txt < 48 || txt > 57)) {
+
+                if (txt == 118) {
+                    return true;
+                }
+                //  else {
+                //alert("Input is Number only")
+                return false;
+                //  }
+
+            }
+            return true;
+        }
+
+        function Comma(Num) { //function to add commas to textboxes
+
+            Num += '';
+            Num = Num.replace(',', ''); Num = Num.replace(',', ''); Num = Num.replace(',', '');
+            Num = Num.replace(',', ''); Num = Num.replace(',', ''); Num = Num.replace(',', '');
+            x = Num.split('.');
+            x1 = x[0];
+            x2 = x.length > 1 ? '.' + x[1] : '';
+            var rgx = /(\d+)(\d{3})/;
+
+
+            while (rgx.test(x1))
+                x1 = x1.replace(rgx, '$1' + ',' + '$2');
+
+
+            return x1 + x2;
+
+        }
+
+        function checkTextField1(field) {
+            if (field.value == '' || field.value == 0 || field.value == '.') {
+                field.value = 0;
+            }
+
+
+            var nilai = field.value.split(',').join('');
+            var output = nilai;
+            if (parseFloat(nilai)) {
+                input = new String(nilai); // so you can perform string operations
+                var parts = input.split("."); // remove the decimal part
+                parts[0] = parts[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g, "$1").split("").reverse().join("");
+                output = parts.join(".");
+            }
+            field.value = output;
+        }
+
+        $(document).ready(InIEvent);
+        function InIEvent() {
+            $("div").remove(".tooltip");
+            $.getScript("../assets/js/jquery.core.js");
+
+            $('#LnkAdd').tooltipster({
+                animation: 'grow'
+            });
+
+              {
+                $('#<%=txtalasantolak.ClientID%>').prop('maxlength', 50);
+                
+            }
+
+            var tes1 = $('#GRTP').DataTable({
+                "order": [],
+                "paging": false,
+                screenX: true,
+                "columnDefs": [{
+                    "targets": 'no-sort',
+                    "orderable": false,
+                }]
+            });
+
+
+            var tes2 = $('#GRTS').DataTable({
+                "order": [],
+                "paging": false,
+                screenX: true,
+                "columnDefs": [{
+                    "targets": 'no-sort',
+                    "orderable": false,
+                }]
+            });
+            
+            
+            $('#txttglptkp').datepicker({
+                format: 'dd-mm-yyyy',
+                autoclose: true,
+                todayHighlight: true
+            });
+
+            $('.selectpicker').selectpicker();
+
+ 
+            
+            $(function () {
+                var table = $('#GRData').dataTable({
+                    "order": [],
+                    "columnDefs": [{ "targets": 'no-sort', "orderable": false }, { responsivePriority: 1, targets: 0 },
+                    { responsivePriority: 2, targets: -1 }],
+                    ordering: [[0, 'asc']],
+                    "scrollX": true,
+                    retrieve: true                     
+                });
+
+
+
+
+
+
+          });
+
+            $(".dataTables_scrollHeadInner").css({ "width": "100%" });
+
+            $(".table ").css({ "width": "100%" });
+
+            $('form').parsley();
+        }
+ 
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager> 
+        <script type="text/javascript">
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(InIEvent);
+        </script>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+        <ContentTemplate>
+            <asp:LinkButton ID="LinkButton1"  runat="server" OnClick="LinkButton1_Click"></asp:LinkButton>   <!-- delete  -->
+             <div class="container-fluid">
+                 <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="btn-group pull-right">
+                                <ol class="breadcrumb hide-phone p-0 m-0">
+                                    <li class="breadcrumb-item"><a href="#">Smart</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Kredit Mikro</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Process</a></li>
+                                    <li class="breadcrumb-item"><a href="ApprovalManagerCabang.aspx">Approval Manager Cabang</a></li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Approval Pusat</h4>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Panel Filter -->
+            <asp:Panel ID="pnlFilter" Visible="false" runat="server">
+                 <div class="row">
+                    <div class="col-12">
+                        <div class="card-box table-responsive">
+                            <h4 class="m-t-0 header-title">Filter</h4>
+                            <p class="text-muted font-14 m-b-30">
+                                KeyTable provides Excel like cell navigation on any table. Events (focus, blur, action etc) can be assigned to individual cells, columns, rows or all cells.
+                            </p>
+
+                            
+                        </div>
+                    </div>
+                </div>
+                </asp:Panel>
+                  
+                 <!-- Panel Front -->
+        <asp:Panel ID="PnlFront" runat="server">
+            <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-box">
+
+                            <h4 class="m-t-0 header-title">Data Approval Pusat</h4>                           
+                                     <div class="form-row">
+                                  <div class="form-group" style="width: 100%;">
+
+                                     <asp:GridView ID="GRData" runat="server" CssClass="table table-bordered table-bordered dt-responsive nowrap"  ShowHeaderWhenEmpty="True"  OnRowCommand="GRData_RowCommand"  AutoGenerateColumns="False" Width="887px">
+                                    <Columns>
+                                        <asp:TemplateField HeaderText="No. Urut">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblid" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "id")%>'></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField>
+                                         <asp:TemplateField HeaderText="Ajukan Ulang">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblajukan" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "ajukanulang")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="align-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                                 </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Tanggal Pengajuan">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblalamat2" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "tgldrop","{0:dd/MM/yyyy}")%>'></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField>
+
+                                         <asp:TemplateField HeaderText="Cabang">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblcabang_nama" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "cabang_nama")%>'></asp:Label>
+                                                <asp:Label ID="lblkodecabang" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "kode_cabang")%>'></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField>
+
+                                          <asp:TemplateField HeaderText="Kode Produk">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblnamacabang" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "kode_produk")%>'></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField>
+                                         <asp:TemplateField HeaderText="Tipe">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lbltipe" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "tipeperpanjangan")%>'></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="No. Anggota">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblnonasabah" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "no_nasabah")%>'></asp:Label>
+                                             </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="No. Register" Visible="false">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblRegister" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Idpermohonan")%>'></asp:Label>
+                                             </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField>
+                                         <asp:TemplateField HeaderText="Nama Anggota">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblnama" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "nama")%>'></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField>
+                                         <asp:TemplateField HeaderText="Usia">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblusia" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "usia")%>'></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField>
+                                      
+                                        <asp:TemplateField HeaderText="Permohonan Plafon">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblplafon" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "permohonan_plafon", "{0:N2}")%>'></asp:Label>
+                                             </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Jangka">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lbljangka" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "jangka")%>'></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField>
+                                           
+                                        <asp:TemplateField HeaderText="Action">
+                                                                            <HeaderStyle CssClass="text-center" Width="10%"></HeaderStyle>
+                                                                            <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                                                                            <ItemTemplate>
+                                                                                <asp:LinkButton ID="btnedit" runat="server" data-toggle="tooltip" data-placement="left" title="Edit" CommandName="SET" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="fa fa-edit"></i></asp:LinkButton>
+                                                                            </ItemTemplate>
+                                      </asp:TemplateField>
+                                    </Columns>
+                                </asp:GridView>
+                                                            
+                                </div>
+                            </div> 
+
+                        </div>
+                    </div>
+                </div>
+
+        </asp:Panel>
+      
+                      <!-- Panel Edit -->
+             <%--<asp:Panel ID="pnladd" Visible="false" runat="server">
+              <div class="row">
+                                        <div class="col-lg-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">DATA NASABAH</div>
+                                                       <p class="m-b-0"></p>
+ 
+                                                    <div class="form-row">
+                                                         
+                                                        <div class="form-group col-md-6">
+                                                        <asp:HiddenField ID="HDRegister" runat="server" />   
+                                                        <asp:HiddenField ID="HDStatusDebitur" runat="server" />	 
+                                                        <asp:HiddenField ID="HDKodePos" runat="server" />	 
+                                                        <asp:HiddenField ID="HDKodeArea" runat="server" />
+                                                        <asp:HiddenField ID="HDGender" runat="server" />
+                                                        <asp:HiddenField ID="HDNoNasabah" runat="server" />
+                                                        <asp:HiddenField ID="HDLamaKerja" runat="server" />
+                                                        <asp:HiddenField ID="HDid" runat="server" />
+                                                            
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label43" runat="server" class="col-form-label">No. Anggota</asp:label>
+																<asp:TextBox CssClass="form-control" ID="txtnoanggota"  Enabled="false" runat="server" ></asp:TextBox>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label44" runat="server" class="col-form-label">No.Rekening Tabungan</asp:label>
+																<asp:TextBox CssClass="form-control" ID="txtnorektabungan"  Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label1" runat="server" class="col-form-label">Nama Nasabah</asp:label>
+																<asp:TextBox CssClass="form-control" ID="txtnamanasabah"  Enabled="false" runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                           <div class="form-group">
+                                                                <asp:label ID="Label4" runat="server" class="col-form-label">Alamat</asp:label>
+																<asp:TextBox ID="txtalamat"  CssClass="form-control" Enabled="false" TextMode="MultiLine" Rows="4" runat="server" data-style="btn-custom" ></asp:TextBox>      
+                                                           </div>
+
+															<div class="form-group">
+                                                                <asp:label ID="Label2" runat="server" class="col-form-label">Kelurahan</asp:label>
+																<asp:TextBox CssClass="form-control" ID="txtkelurahan" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label45" runat="server" class="col-form-label">Kecamatan</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" ID="txtkecamatan" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label46" runat="server" class="col-form-label">Kota</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" ID="txtkota" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                           
+															
+                                                         
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label3" runat="server" class="col-form-label">Tempat Lahir</asp:label>
+																<asp:TextBox ID="txttempatlahir" CssClass="form-control" Enabled="false"  runat="server" ></asp:TextBox>
+															</div>
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label5" runat="server" class="col-form-label">Tanggal Lahir</asp:label> 
+                                                                <asp:TextBox CssClass="form-control" ID="txttgllahir"  Enabled="false" TextMode="DateTime" runat="server"></asp:TextBox> 
+                                                            </div> 
+                                                          
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label6" runat="server" class="col-form-label">No. KTP</asp:label> 
+                                                                <asp:TextBox ID="txtnoidentitas" Enabled="false" CssClass="form-control" onkeypress="return isnumerickey(event);"   runat="server"></asp:TextBox>
+                                                           </div> 
+                                                                 <div>
+                                                                  <asp:Image ID="imgktp" runat="server" Height="300px" Width="550px" />
+                                                            </div>
+                                                           <div class="form-group">
+                                                                    <asp:label id="Label22" runat="server"  class="col-form-label">Masa Berakhir KTP</asp:label>
+                                                                    <asp:TextBox ID="txtmasaberakhirKTP" Enabled="false" CssClass="form-control" runat="server"  TextMode="DateTime"></asp:TextBox>
+                                                           </div> 
+                                                            
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label11" runat="server" class="col-form-label">NPWP</asp:label>
+																  <asp:TextBox ID="txtNPWP" CssClass="form-control" Enabled="false"  runat="server" onkeypress="return isnumerickey(event);" ></asp:TextBox> 
+                                                           
+                                                            </div>  
+                                                           
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label13" runat="server" class="col-form-label">Agama</asp:label> 
+                                                                <asp:TextBox ID="txtAgama" CssClass="form-control" Enabled="false" runat="server"  ></asp:TextBox>
+                                                            </div>   
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label31" runat="server" class="col-form-label">No.HP</asp:label>
+																<asp:TextBox ID="txthp" CssClass="form-control" Enabled="false" onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>
+                                                            </div> 
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label88" runat="server" class="col-form-label">Jumlah Anak</asp:label>
+																<asp:TextBox ID="txtjumlahanak" CssClass="form-control" Enabled="false" onkeypress="return isnumerickey(event);"  required="required" runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                        </div>
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                           
+                                            <div class="hidden-print mt-4">
+                                                <div class="float-left mb-2"> 
+                                                   
+                                                    
+                                                        <asp:Button ID="btnCancel" align="right" class="btn btn-success waves-light text-white" runat="server" Text="BACK" OnClick="btnCancel_Click" />
+                                                        
+
+
+                                                    </div>
+                                                <div class="float-right mb-2 "> 
+                                                   
+                                                     <asp:Button ID="btnNext" align="right" CssClass="btn btn-success waves-light text-white" runat="server" Text="NEXT" OnClick="btnNext_Click" Width="65px" />
+
+
+                                                    </div>
+                                            </div> 
+                                               
+    
+            </asp:Panel>--%> 
+                 
+
+            <%--<asp:Panel ID="pnlPekerjaan" Visible="false" runat="server">
+              <div class="clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">DATA PEKERJAAN NASABAH</div>
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                         
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                              
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label7" runat="server" class="col-form-label">Kode Instansi</asp:label>
+																<asp:TextBox ID="txtkdinstansi" CssClass="form-control" Enabled= "false"  runat="server" ></asp:TextBox> 
+															 </div>
+															
+															<div class="form-group">
+                                                                <asp:label ID="Label8" runat="server" class="col-form-label">Pekerjaan</asp:label>
+																<asp:TextBox ID="txtPekerjaan" CssClass="form-control" Enabled= "false"  runat="server" ></asp:TextBox> 
+															</div>
+                                                             
+                                                            <div class="form-group">
+                                                                 <asp:label id="Label47" runat="server" class="col-form-label">Nama Perusahaan</asp:label>
+                                                                 <asp:TextBox ID="txtnamaPerusahaan"  CssClass="form-control" Enabled= "false"   runat="server"  ></asp:TextBox> 
+                                                            </div>   
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label12" runat="server" class="col-form-label">Alamat</asp:label>
+																<asp:TextBox ID="txtalamatperusahaan"  CssClass="form-control" Enabled="false" TextMode="MultiLine" Rows="4" runat="server" data-style="btn-custom" ></asp:TextBox>      
+                                                           </div>
+
+															<div class="form-group">
+                                                                <asp:label ID="Label14" runat="server" class="col-form-label">Kelurahan</asp:label>
+																<asp:TextBox CssClass="form-control" ID="txtkelurahanperusahaan" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label15" runat="server" class="col-form-label">Kecamatan</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" ID="txtkecamatanperusahaan" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label16" runat="server" class="col-form-label">Kota</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" ID="txtkotapekerjaan" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label17" runat="server" class="col-form-label">Kode Pos</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" ID="txtkodepospekerjaan" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+                                                           
+                                                         
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            
+
+                                                            <div class="form-group">
+                                                                 <asp:label id="Label9" runat="server"  class="col-form-label">Bidang Usaha Perusahaan</asp:label>
+                                                                 <asp:TextBox ID="txtBidangUsaha"  CssClass="form-control" Enabled= "false"   runat="server"   ></asp:TextBox>
+                                                            </div>   
+
+                                                              <div class="form-group">
+                                                                <asp:label ID="Label58" runat="server" class="col-form-label">Telepon</asp:label>
+																<asp:TextBox ID="txtteleponpekerjaan" CssClass="form-control" Enabled= "false" onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>
+                                                                 
+                                                              </div>
+                                                              <div class="form-group">
+                                                                <asp:label ID="Label59" runat="server" class="col-form-label">Fax</asp:label>
+																<asp:TextBox ID="txtFaxPekerjaan" CssClass="form-control"  Enabled= "false" onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>
+                                                    
+                                                              </div>
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label49" runat="server" class="col-form-label">Lama Usaha</asp:label>
+																<asp:TextBox ID="txtlamabekerja" CssClass="form-control"  Enabled= "false" onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>
+                                                                 
+                                                            </div> 
+                                                            
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label51" runat="server" class="col-form-label">Kepemilikan Tempat Usaha</asp:label>
+																 <asp:TextBox ID="txtkepemilikantempatusaha"  Enabled= "false"  CssClass="form-control" runat="server"   ></asp:TextBox> 
+                                                            </div> 
+                                                            
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label87" runat="server" class="col-form-label">Alamat Surat</asp:label>
+																 <asp:TextBox ID="txtalamatsurat"  Enabled= "false"  CssClass="form-control" runat="server"   ></asp:TextBox> 
+                                                                 
+                                                            </div> 
+
+                                                        </div>
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                            <div class="hidden-print mt-4">
+                                                <div class="float-left mb-2"> 
+                                                   
+                                                    
+                                                        <asp:Button ID="btnBackPekerjaan" align="right" class="btn btn-success waves-light text-white" runat="server" Text="BACK" OnClick="btnBackPekerjaan_Click" />
+                                                        
+
+
+                                                    </div>
+                                                <div class="float-right mb-2 "> 
+                                                   
+                                                     <asp:Button ID="btnNextPekerjaan" align="right" CssClass="btn btn-success waves-light text-white" runat="server" Text="NEXT" OnClick="btnNextPekerjaan_Click" Width="65px" />
+
+
+                                                    </div>
+                                            </div> 
+    
+                </span></span> 
+    
+            </asp:Panel>--%> 
+         <%--<asp:Panel ID="pnlTambahan" Visible="false" runat="server">
+                <div class="clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">DATA TAMBAHAN NASABAH</div>
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                         
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                              <div class="form-group">
+                                                                <asp:label ID="Label81" runat="server" class="col-form-label">Jenis Penggunaan</asp:label>
+																<asp:TextBox ID="txtjenispenggunaan" Enabled="false"  CssClass="form-control"  runat="server" ></asp:TextBox> 
+															  </div>
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label10" runat="server" class="col-form-label">Status dalam keluarga</asp:label>
+																<asp:TextBox ID="txtstatusdalamkeluarga" Enabled="false"  CssClass="form-control"    runat="server"  ></asp:TextBox> 
+                                                            </div>
+															
+															<div class="form-group">
+                                                                <asp:label ID="Label18" runat="server" Visible="false" class="col-form-label">Kondisi Sehat</asp:label>
+																<asp:TextBox ID="txtkondisisakit" Visible="false" Enabled="false"  CssClass="form-control"    runat="server"  ></asp:TextBox> 
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label68" runat="server" class="col-form-label">Golongan Debitur</asp:label>
+																<asp:TextBox ID="txtgolongandebitur" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+                                                             
+                                                     
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            
+                                                                 <div class="form-group">
+                                                                 <asp:label id="Label19" runat="server" Visible="false" class="col-form-label">Sakit yang pernah di derita (Opname)</asp:label>
+                                                                 <asp:TextBox ID="txtsakit" Enabled="false" Visible="false"  CssClass="form-control"    runat="server"  ></asp:TextBox> 
+                                                            </div>   
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label20" runat="server" Visible="false" class="col-form-label">Tahun sakit yg diderita (Opname)</asp:label>
+																<asp:TextBox ID="txttahunsakit" Enabled="false" Visible="false"  CssClass="form-control" runat="server" data-style="btn-custom" ></asp:TextBox>      
+                                                           </div>
+
+                                                            
+
+                                                            <div class="form-group">
+                                                                 <asp:label id="Label42" runat="server"  class="col-form-label">No KTP Penjamin</asp:label>
+                                                                 <asp:TextBox ID="txtktppenjamin"  Enabled ="false" CssClass="form-control" onkeypress="return isnumerickey(event);"    runat="server"   ></asp:TextBox>
+                                                            </div>   
+
+                                                              <div class="form-group">
+                                                                <asp:label ID="Label48" runat="server" class="col-form-label">Nama Penjamin</asp:label>
+																<asp:TextBox ID="TextBox13" Enabled ="false" CssClass="form-control"    runat="server" ></asp:TextBox>
+                                                                 
+                                                              </div>
+
+                                                              <div class="form-group">
+                                                                <asp:label ID="Label50" runat="server" class="col-form-label">Golongan Penjamin</asp:label>
+																<asp:TextBox ID="txtgolonganpenjamin" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label52" runat="server" class="col-form-label">Pendapatan/Bulan</asp:label>
+																<asp:TextBox ID="txtpendapatanperbulan" Enabled ="false" CssClass="form-control"      onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>
+                                                                 
+                                                            </div> 
+                                                            
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label53" runat="server" class="col-form-label">Fisik Jaminan</asp:label>
+																<asp:TextBox ID="txtfisikjaminan" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+                                                            
+                                                           
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label69" runat="server" class="col-form-label">Jaminan Tambahan</asp:label>
+																<asp:TextBox ID="TextBox1" CssClass="form-control"  Enabled ="false"   runat="server" ></asp:TextBox>
+                                                                 
+                                                            </div>
+
+															 
+
+                                                        </div>
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                            <div class="hidden-print mt-4">
+                                                <div class="float-left mb-2"> 
+                                                   
+                                                    
+                                                        <asp:Button ID="btnBackTambahan" align="right" class="btn btn-success waves-light text-white" runat="server" Text="BACK" OnClick="btnBackTambahan_Click" />
+                                                        
+
+                                                    </div>
+                                                <div class="float-right mb-2 "> 
+                                                   
+                                                     <asp:Button ID="btnNextTambahan" align="right" CssClass="btn btn-success waves-light text-white" runat="server" Text="NEXT" OnClick="btnNextTambahan_Click" Width="65px" />
+
+                                                    </div>
+                                            </div> 
+    
+                </span></span> 
+    
+            </asp:Panel>--%> 
+                 <%--<asp:Panel ID="pnlTambahan" Visible="false" runat="server">
+                <div class="clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">DATA TAMBAHAN NASABAH</div>
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                         
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                              
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label10" runat="server" class="col-form-label">Status dalam keluarga</asp:label>
+																<asp:TextBox ID="txtstatusdalamkeluarga" Enabled="false"  CssClass="form-control"    runat="server"  ></asp:TextBox> 
+                                                            </div>
+															
+															<div class="form-group">
+                                                                <asp:label ID="Label18" runat="server" class="col-form-label">Kondisi Sehat</asp:label>
+																<asp:TextBox ID="txtkondisisakit" Enabled="false"  CssClass="form-control"    runat="server"  ></asp:TextBox> 
+                                                            </div>
+                                                             
+                                                     
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            
+                                                                 <div class="form-group">
+                                                                 <asp:label id="Label19" runat="server" class="col-form-label">Sakit yang pernah di derita (Opname)</asp:label>
+                                                                 <asp:TextBox ID="txtsakit" Enabled="false"  CssClass="form-control"    runat="server"  ></asp:TextBox> 
+                                                            </div>   
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label20" runat="server" class="col-form-label">Tahun sakit yg diderita (Opname)</asp:label>
+																<asp:TextBox ID="txttahunsakit" Enabled="false"  CssClass="form-control" runat="server" data-style="btn-custom" ></asp:TextBox>      
+                                                           </div>
+
+															 
+
+                                                        </div>
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                            <div class="hidden-print mt-4">
+                                                <div class="float-left mb-2"> 
+                                                   
+                                                    
+                                                        <asp:Button ID="btnBackTambahan" align="right" class="btn btn-success waves-light text-white" runat="server" Text="BACK" OnClick="btnBackTambahan_Click" />
+                                                        
+
+                                                    </div>
+                                                <div class="float-right mb-2 "> 
+                                                   
+                                                     <asp:Button ID="btnNextTambahan" align="right" CssClass="btn btn-success waves-light text-white" runat="server" Text="NEXT" OnClick="btnNextTambahan_Click" Width="65px" />
+
+                                                    </div>
+                                            </div> 
+    
+                </span></span> 
+    
+            </asp:Panel>--%> 
+            <%--<asp:Panel ID="pnlPendapatan" Visible="false" runat="server">
+                <div class="row clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">DATA PENDAPATAN NASABAH</div>
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                         
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                              
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label21" runat="server" class="col-form-label">Pendapatan Bersih Usaha</asp:label>
+																<asp:TextBox ID="txtpendapatanbersih" Enabled="false"  onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);"   onblur="checkTextField1(this);" CssClass="form-control" runat="server" MaxLength="16" ></asp:TextBox>  
+                                                   
+                                                             </div>
+															
+															<div class="form-group">
+                                                                <asp:label ID="Label23" runat="server" class="col-form-label">Pendapatan Selain Usaha</asp:label>
+																<asp:TextBox ID="txtpendapatanselainusaha" Enabled="false"  onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control"    runat="server"   ></asp:TextBox> 
+
+															</div>
+
+                                                            <div class="form-group">
+                                                                 <asp:label id="lbltotalpendapatan" runat="server" class="col-form-label">Total Pendapatan</asp:label>
+                                                                 <asp:TextBox ID="txttotalpendapatan" Enabled="false"  onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control"    runat="server"  ></asp:TextBox> 
+                                                            </div>   
+                                                             
+                                                     
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            
+                                                            <div class="form-group">
+                                                                 <asp:label id="Label24" runat="server" class="col-form-label">Pengeluaran Rumah Tangga</asp:label>
+                                                                 <asp:TextBox ID="txtpengeluaranrumahtangga" Enabled="false" onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control" runat="server"  ></asp:TextBox>   
+                                                            
+                                                            </div>   
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label25" runat="server" class="col-form-label">Tagihan PLN, Listrik, PDAM, Telepon</asp:label>
+																<asp:TextBox ID="TextBox2" Enabled="false" onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);"  CssClass="form-control" runat="server" data-style="btn-custom" ></asp:TextBox>      
+                                                           </div>
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label27" runat="server" class="col-form-label">Pinjaman / Kewajiban Lainnya</asp:label>
+																<asp:TextBox ID="TextBox4" Enabled="false" onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control" runat="server" data-style="btn-custom" ></asp:TextBox>      
+                                                           </div>
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label28" runat="server" class="col-form-label">Rekomendasi Angsuran</asp:label>
+																<asp:TextBox ID="txtangsuran" Enabled="false"  onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control" runat="server" data-style="btn-custom"    ></asp:TextBox>      
+                                                           </div>
+
+                                                            
+                                                           <div class="form-group">
+                                                                <asp:label ID="lbltotalPengeluaran" runat="server" class="col-form-label"></asp:label>
+																<asp:TextBox ID="TextBox6" Enabled="false" onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control" runat="server" data-style="btn-custom" ></asp:TextBox>      
+                                                           </div>
+
+															 
+
+                                                            
+                                                           <div class="form-group">
+                                                                <asp:label ID="lblsisapenghasilan" runat="server" class="col-form-label"></asp:label>
+																<asp:TextBox ID="TextBox7" Enabled="false" onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control" runat="server" ></asp:TextBox>      
+                                                                
+                                                           </div>
+
+                                                        </div>
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                            <div class="hidden-print mt-4">
+                                                <div class="float-left mb-2"> 
+                                                   
+                                                    
+                                                        <asp:Button ID="btnBackPendapatan" align="right" class="btn btn-success waves-light text-white" runat="server" Text="BACK" OnClick="btnBackPendapatan_Click" />
+                                                        
+
+                                                    </div>
+                                                <div class="float-right mb-2 "> 
+                                                   
+                                                     <asp:Button ID="btnNextPendapatan" align="right" CssClass="btn btn-success waves-light text-white" runat="server" Text="NEXT" OnClick="btnNextPendapatan_Click" Width="65px" />
+
+                                                    </div>
+                                            </div> 
+    
+                </span></span> 
+    
+            </asp:Panel>--%> 
+
+                 <%--<asp:Panel ID="pnlLaba" Visible="false" runat="server">
+                 <div class="row clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">DATA LABA NASABAH</div>
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                         
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                              
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label26" runat="server" class="col-form-label">Pendapatan Usaha</asp:label>
+																<asp:TextBox ID="txtpendapatanusaha" Enabled="false"  onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);"   onblur="checkTextField1(this);" CssClass="form-control"  runat="server" MaxLength="16" ></asp:TextBox>  
+                                                   
+                                                             </div>
+															
+															<div class="form-group">
+                                                                <asp:label ID="Label29" runat="server" class="col-form-label">Harga Pokok</asp:label>
+																<asp:TextBox ID="txthargapokok" Enabled="false"   onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control"    runat="server"  ></asp:TextBox> 
+
+															</div>
+
+                                                            <div class="form-group">
+                                                                 <asp:label id="lbllabakotor" runat="server" class="col-form-label">Laba Kotor</asp:label>
+                                                                 <asp:TextBox ID="txtlabakotor" Enabled="false"  onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control"    runat="server"  ></asp:TextBox> 
+                                                            </div>   
+                                                             
+                                                     
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            
+                                                            <div class="form-group">
+                                                                 <asp:label id="Label32" runat="server" class="col-form-label">Biaya Pegawai</asp:label>
+                                                                 <asp:TextBox ID="txtbiayapegawai" Enabled="false"  onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control" runat="server"  ></asp:TextBox>        
+                                                            
+                                                            </div>   
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label33" runat="server" class="col-form-label">Biaya Lain-lain</asp:label>
+																<asp:TextBox ID="txtbiayalain" Enabled="false"  onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);"  CssClass="form-control" runat="server" data-style="btn-custom"></asp:TextBox>      
+                                                           </div>
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="lbltotalbiaya" runat="server" class="col-form-label">Total Biaya</asp:label>
+																<asp:TextBox ID="txttotalbiaya" Enabled="false" onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control" runat="server" data-style="btn-custom" ></asp:TextBox>      
+                                                           </div>
+                                                             
+                                                              <div class="form-group">
+                                                                <asp:label ID="lbllabasebelumpajak" runat="server" class="col-form-label">Laba Bersih Sebelum Pajak</asp:label>
+																<asp:TextBox ID="txtlababersihsebelumpajak" Enabled="false" onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control" runat="server" data-style="btn-custom"   ></asp:TextBox>      
+                                                           </div>
+
+                                                            
+                                                           <div class="form-group">
+                                                                <asp:label ID="Label36" runat="server" class="col-form-label">Pajak Penghasilan</asp:label>
+																<asp:TextBox ID="txtpajakpenghasilan" Enabled="false"  Required ="required" onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control" runat="server" data-style="btn-custom" ></asp:TextBox>      
+                                                           </div> 
+
+                                                           <div class="form-group">
+                                                                <asp:label ID="lbllababersih" runat="server" class="col-form-label">Laba Bersih Setelah Pajak</asp:label>
+																<asp:TextBox ID="txtlababersihsetelahpajak" Enabled="false" onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" onblur="checkTextField1(this);" CssClass="form-control" runat="server" ></asp:TextBox>      
+                                                                
+                                                           </div>
+
+                                                        </div>
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                            <div class="hidden-print mt-4">
+                                                <div class="float-left mb-2"> 
+                                                   
+                                                    
+                                                        <asp:Button ID="btnBackLaba" align="right" class="btn btn-success waves-light text-white" runat="server" Text="BACK" OnClick="btnBackLaba_Click" />
+                                                        
+
+                                                    </div>
+                                                <div class="float-right mb-2 "> 
+                                                   
+                                                     <asp:Button ID="btnNextLaba" align="right" CssClass="btn btn-success waves-light text-white" runat="server" Text="NEXT" OnClick="btnNextLaba_Click" Width="65px" />
+
+                                                    </div>
+                                            </div> 
+    
+                </span></span> 
+    
+            </asp:Panel>--%> 
+
+          <%--<asp:Panel ID="pnlPengajuan" Visible="false" runat="server">
+              <div class="clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">DATA PENGAJUAN KREDIT NASABAH</div>
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                         
+                                                       <asp:HiddenField ID="HDJenisPinjaman" runat="server"/> 
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label30" Visible="false" runat="server" class="col-form-label">No. Rekening Lama</asp:label>
+																<asp:TextBox ID="txtnoreklama" Enabled="false"  Visible="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+															
+															<div class="form-group">
+                                                                <asp:label ID="Label34" runat="server" class="col-form-label">Jenis Kredit</asp:label>
+																<asp:TextBox ID="txtjeniskredit" Enabled="false"  CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                            
+                                                             
+                                                            <div class="form-group">
+                                                                 <asp:label id="Label35" runat="server" class="col-form-label">Tanggal Realisasi</asp:label>
+                                                                 <asp:TextBox CssClass="form-control" Enabled="false"  ID="txttglrealisasi" TextMode="DateTime" runat="server"></asp:TextBox>
+                                                            </div>   
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label37" Visible="false" runat="server" class="col-form-label">Jenis Pinjaman</asp:label>
+																<asp:TextBox ID="txtjenispinjaman" Visible="false" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label55" Visible="false" runat="server" class="col-form-label">Program Pinjaman</asp:label>
+																<asp:TextBox ID="txtprogrampinjaman" Visible="false" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label56" runat="server" Visible="false" class="col-form-label">Sumber Dana</asp:label>
+																<asp:TextBox ID="txtsumberdana" Visible="false" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															  </div>
+
+															<div class="form-group">
+                                                                <asp:label ID="Label38" runat="server" class="col-form-label">Plafon</asp:label>
+																<asp:TextBox CssClass="form-control" Enabled ="false" ID="txtplafon" runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label39" runat="server" class="col-form-label">Jangka Waktu</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Enabled ="false" ID="txtjangka"  runat="server"  ></asp:TextBox>
+                                                            </div> 
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label40" runat="server" class="col-form-label">Bunga</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Enabled ="false" ID="txtbunga"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label41" runat="server" class="col-form-label">Persen Provisi</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Enabled ="false" ID="txtProvisi"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                             
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label65" runat="server" Visible="false" class="col-form-label">Ref Non AO</asp:label>
+																<asp:TextBox ID="txtNonAO" Enabled ="false" Visible="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label67" runat="server" Visible="false" class="col-form-label">No Tabungan Lain</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Visible="false" ID="txttablain" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+                                                           
+                                                            
+                                                         
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label66" runat="server" Visible="false" class="col-form-label">Sektor Ekonomi</asp:label>
+																<asp:TextBox ID="txtsektorekonomi" Visible="false" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															  </div>
+                                                             
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label70" runat="server" class="col-form-label">Biaya Cadangan</asp:label>
+																<asp:TextBox ID="TextBox3" CssClass="form-control" Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label71" runat="server" Visible="false" class="col-form-label">Nilai Taksasi</asp:label>
+																<asp:TextBox ID="TextBox5" CssClass="form-control" Visible="false" Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label72" runat="server" class="col-form-label">Jatuh Tempo</asp:label>
+																<asp:TextBox ID="txtjttempo" CssClass="form-control"  Enabled="false"    runat="server" ></asp:TextBox>
+                                                                 
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label73" runat="server" Visible="false" class="col-form-label">Angsuran Dimuka</asp:label>
+																<asp:TextBox ID="txtangsurandimuka" Visible="false" CssClass="form-control"  Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div>  
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label74" runat="server" class="col-form-label">Biaya Materai</asp:label>
+																<asp:TextBox ID="txtbymaterai" CssClass="form-control"  Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label57" runat="server" class="col-form-label">Nominal Provisi</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Enabled ="false" ID="txtnominalprovisi"    runat="server" ></asp:TextBox>
+                                                            </div> 
+                                                            
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label60" runat="server" class="col-form-label">Angsuran Perbulan</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Enabled ="false" ID="txtangsuranperbulan"    runat="server" ></asp:TextBox>
+                                                            </div> 
+                                                            
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label61" runat="server" Visible="false" class="col-form-label">Admin Pencairan</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Visible="false" Enabled ="false" ID="txtadminPencairan"    runat="server" ></asp:TextBox>     
+                                                            </div> 
+                                                            
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label62" runat="server" Visible="false" class="col-form-label">Admin Angsuran</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Visible="false" Enabled ="false" ID="txtadminangsuran"   runat="server" ></asp:TextBox>     
+                                                            </div> 
+                                                           
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label63" runat="server" Visible="false" class="col-form-label">Sifat</asp:label>
+																<asp:TextBox ID="txtsifat" Enabled ="false" Visible="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label64" runat="server" class="col-form-label">AO</asp:label>
+																<asp:TextBox ID="txtAO" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															  </div>
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label75" runat="server" Visible="false" class="col-form-label">Biaya Asuransi</asp:label>
+																<asp:TextBox ID="txtbyasuransi" Visible="false" CssClass="form-control" Enabled="false"      onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label76" runat="server" Visible="false" class="col-form-label">Biaya Pelunasan</asp:label>
+																<asp:TextBox ID="txtbypelunasan" Visible="false" CssClass="form-control"  Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+
+                                                              <div class="form-group">
+                                                                <asp:label ID="Label77" runat="server" Visible="false" class="col-form-label">Biaya Notaris</asp:label>
+																<asp:TextBox ID="txtbynotaris" Visible="false" CssClass="form-control"  Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label78" runat="server" Visible="false" class="col-form-label">Blokir Angs</asp:label>
+																<asp:TextBox ID="TextBox14" Visible="false" CssClass="form-control" Enabled="false"      onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label79" runat="server" Visible="false" class="col-form-label">Nominal Blokir Angs</asp:label>
+																<asp:TextBox ID="TextBox15" Visible="false" CssClass="form-control"  Enabled="false"     onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label80" runat="server" Visible="false" class="col-form-label">Jenis Blokir</asp:label>
+																<asp:TextBox ID="txtjenisblokir" Visible="false" CssClass="form-control" Enabled ="false" runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                        </div>
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                            
+    
+                </span></span> 
+    
+            </asp:Panel>--%> 
+                 <%--<asp:Panel ID="pnlPengajuan" Visible="false" runat="server">
+              <div class="clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">DATA PENGAJUAN KREDIT NASABAH</div>
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                         
+                                                       <asp:HiddenField ID="HDJenisPinjaman" runat="server"/> 
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label30" runat="server" class="col-form-label">No. Rekening Lama</asp:label>
+																<asp:TextBox ID="txtnoreklama" Enabled="false"  CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+															
+															<div class="form-group">
+                                                                <asp:label ID="Label34" runat="server" class="col-form-label">Jenis Kredit</asp:label>
+																<asp:TextBox ID="txtjeniskredit" Enabled="false"  CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label81" runat="server" class="col-form-label">Jenis Penggunaan</asp:label>
+																<asp:TextBox ID="txtjenispenggunaan" Enabled="false"  CssClass="form-control"  runat="server" ></asp:TextBox> 
+															  </div>
+                                                             
+                                                            <div class="form-group">
+                                                                 <asp:label id="Label35" runat="server" class="col-form-label">Tanggal Realisasi</asp:label>
+                                                                 <asp:TextBox CssClass="form-control" Enabled="false"  ID="txttglrealisasi" TextMode="DateTime" runat="server"></asp:TextBox>
+                                                            </div>   
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label37" runat="server" class="col-form-label">Jenis Pinjaman</asp:label>
+																<asp:TextBox ID="txtjenispinjaman" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label55" runat="server" class="col-form-label">Program Pinjaman</asp:label>
+																<asp:TextBox ID="txtprogrampinjaman" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label56" runat="server" class="col-form-label">Sumber Dana</asp:label>
+																<asp:TextBox ID="txtsumberdana" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															  </div>
+
+															<div class="form-group">
+                                                                <asp:label ID="Label38" runat="server" class="col-form-label">Plafon</asp:label>
+																<asp:TextBox CssClass="form-control" Enabled ="false" ID="txtplafon" runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label39" runat="server" class="col-form-label">Jangka Waktu</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Enabled ="false" ID="txtjangka"  runat="server"  ></asp:TextBox>
+                                                            </div> 
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label40" runat="server" class="col-form-label">Bunga</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Enabled ="false" ID="txtbunga"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label41" runat="server" class="col-form-label">Persen Provisi</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Enabled ="false" ID="txtProvisi"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label57" runat="server" class="col-form-label">Nominal Provisi</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Enabled ="false" ID="txtnominalprovisi"    runat="server" ></asp:TextBox>
+                                                            </div> 
+                                                            
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label60" runat="server" class="col-form-label">Angsuran Perbulan</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" Enabled ="false" ID="txtangsuranperbulan"    runat="server" ></asp:TextBox>
+                                                            </div> 
+                                                            
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label61" runat="server" visible="false" class="col-form-label">Admin Pencairan</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" visible="false" Enabled ="false" ID="txtadminPencairan"    runat="server" ></asp:TextBox>     
+                                                            </div> 
+                                                            
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label62" runat="server" visible="false" class="col-form-label">Admin Angsuran</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" visible="false" Enabled ="false" ID="txtadminangsuran"   runat="server" ></asp:TextBox>     
+                                                            </div> 
+                                                           
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label63" runat="server" visible="false" class="col-form-label">Sifat</asp:label>
+																<asp:TextBox ID="txtsifat" Enabled ="false" visible="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label64" runat="server" class="col-form-label">AO</asp:label>
+																<asp:TextBox ID="txtAO" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															  </div>
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label65" runat="server" class="col-form-label">Ref Non AO</asp:label>
+																<asp:TextBox ID="txtNonAO" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label67" runat="server" visible="false" class="col-form-label">No Tabungan Lain</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" visible="false" ID="txttablain" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+                                                           
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label66" runat="server" class="col-form-label">Sektor Ekonomi</asp:label>
+																<asp:TextBox ID="txtsektorekonomi" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															  </div>
+                                                         
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label68" runat="server" class="col-form-label">Golongan Debitur</asp:label>
+																<asp:TextBox ID="txtgolongandebitur" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                            <div class="form-group">
+                                                                 <asp:label id="Label42" runat="server"  class="col-form-label">No KTP Penjamin</asp:label>
+                                                                 <asp:TextBox ID="txtktppenjamin"  Enabled ="false" CssClass="form-control" onkeypress="return isnumerickey(event);"    runat="server"   ></asp:TextBox>
+                                                            </div>   
+
+                                                              <div class="form-group">
+                                                                <asp:label ID="Label48" runat="server" class="col-form-label">Nama Penjamin</asp:label>
+																<asp:TextBox ID="TextBox13" Enabled ="false" CssClass="form-control"    runat="server" ></asp:TextBox>
+                                                                 
+                                                              </div>
+
+                                                              <div class="form-group">
+                                                                <asp:label ID="Label50" runat="server" class="col-form-label">Golongan Penjamin</asp:label>
+																<asp:TextBox ID="txtgolonganpenjamin" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label52" runat="server" class="col-form-label">Pendapatan/Bulan</asp:label>
+																<asp:TextBox ID="txtpendapatanperbulan" Enabled ="false" CssClass="form-control"      onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>
+                                                                 
+                                                            </div> 
+                                                            
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label53" runat="server" class="col-form-label">Fisik Jaminan</asp:label>
+																<asp:TextBox ID="txtfisikjaminan" Enabled ="false" CssClass="form-control"  runat="server" ></asp:TextBox> 
+															 </div>
+                                                            
+                                                           
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label69" runat="server" class="col-form-label">Jaminan Tambahan</asp:label>
+																<asp:TextBox ID="TextBox1" CssClass="form-control"  Enabled ="false"   runat="server" ></asp:TextBox>
+                                                                 
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label70" runat="server" class="col-form-label">Biaya Cadangan</asp:label>
+																<asp:TextBox ID="TextBox3" CssClass="form-control" Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label71" runat="server" visible="false" class="col-form-label">Nilai Taksasi</asp:label>
+																<asp:TextBox ID="TextBox5" CssClass="form-control" visible="false" Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label72" runat="server" class="col-form-label">Jatuh Tempo</asp:label>
+																<asp:TextBox ID="txtjttempo" CssClass="form-control"  Enabled="false"    runat="server" ></asp:TextBox>
+                                                                 
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label73" runat="server" visible="false" class="col-form-label">Angsuran Dimuka</asp:label>
+																<asp:TextBox ID="txtangsurandimuka" visible="false" CssClass="form-control"  Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div>  
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label74" runat="server" class="col-form-label">Biaya Materai</asp:label>
+																<asp:TextBox ID="txtbymaterai" CssClass="form-control"  Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div>
+
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label75" runat="server" visible="false" class="col-form-label">Biaya Asuransi</asp:label>
+																<asp:TextBox ID="txtbyasuransi" visible="false" CssClass="form-control" Enabled="false"      onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label76" runat="server" visible="false" class="col-form-label">Biaya Pelunasan</asp:label>
+																<asp:TextBox ID="txtbypelunasan" visible="false" CssClass="form-control"  Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+
+                                                              <div class="form-group">
+                                                                <asp:label ID="Label77" runat="server" visible="false" class="col-form-label">Biaya Notaris</asp:label>
+																<asp:TextBox ID="txtbynotaris" visible="false" CssClass="form-control"  Enabled="false"    onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label78" runat="server" visible="false" class="col-form-label">Blokir Angs</asp:label>
+																<asp:TextBox ID="TextBox14" visible="false" CssClass="form-control" Enabled="false"      onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label79" runat="server" visible="false" class="col-form-label">Nominal Blokir Angs</asp:label>
+																<asp:TextBox ID="TextBox15" CssClass="form-control" visible="false"  Enabled="false"     onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>     
+                                                                 
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label80" runat="server" visible="false" class="col-form-label">Jenis Blokir</asp:label>
+																<asp:TextBox ID="txtjenisblokir" visible="false" CssClass="form-control" Enabled ="false" runat="server" ></asp:TextBox> 
+															 </div>
+
+                                                        </div>
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                            
+    
+                </span></span> 
+    
+            </asp:Panel>--%> 
+
+            <%--<asp:Panel ID="pnlKeanggotaan" Visible="false" runat="server">
+              <div class="clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">DATA KEANGGOTAAN NASABAH</div>
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                          
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label85" runat="server" class="col-form-label">Simpanan Pokok</asp:label>
+																<asp:TextBox ID="txtsimpok" CssClass="form-control"  Enabled="false" runat="server" ></asp:TextBox> 
+															 </div>
+															
+															 
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label89" runat="server" class="col-form-label">Simpanan Wajib</asp:label>
+																<asp:TextBox ID="txtsimwa" CssClass="form-control"  Enabled="false" runat="server" ></asp:TextBox> 
+                                                             </div>
+
+                                                           
+
+                                                        </div>
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                       <div class="hidden-print mt-4">
+                                                <div class="float-left mb-2"> 
+                                                   
+                                                    
+                                                        <asp:Button ID="btnBackPengajuan" align="right" class="btn btn-success waves-light text-white" runat="server" Text="BACK" OnClick="btnBackPengajuan_Click" />
+                                                        
+
+                                                    </div>
+                                                <div class="float-right mb-2 "> 
+                                                   
+                                                     <asp:Button ID="btnNextPengajuan" align="right" CssClass="btn btn-success waves-light text-white" runat="server" Text="NEXT" OnClick="btnNextPengajuan_Click" Width="65px" />
+
+                                                    </div>
+                                            </div> 
+    
+                </span></span> 
+    
+            </asp:Panel>--%> 
+            <%--<asp:Panel ID="pnlJaminan" Visible="false" runat="server">
+              <div class="clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box"> 
+                                                    <div class="ribbon ribbon-custom">UPLOAD BUKTI JAMINAN</div>
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                          
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                           
+                                                            <div>
+                                                                 
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label54" runat="server" class="col-form-label">Keterangan Jaminan</asp:label>
+																<asp:TextBox ID="txtketeranganJaminan"  Enabled ="false" CssClass="form-control"  TextMode="MultiLine" Rows="5" runat="server" data-style="btn-custom" ></asp:TextBox>      
+                                                            
+                                                            </div> 
+
+                                                            </div>
+
+                                                          
+															
+															 
+                                                         
+                                                        </div>
+
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                           
+                                                            <div>
+                                                                  <asp:Image ID="imgjaminan" runat="server" Height="300px" Width="550px" />
+                                                            </div>
+
+                                                          
+															
+															 
+                                                         
+                                                        </div> 
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>         
+                </span></span> 
+    
+            </asp:Panel>--%> 
+            <%--<asp:Panel ID="pnlUsaha" Visible="false" runat="server">
+              <div class="clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">DATA KRITERIA USAHA NASABAH</div>
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                         
+                                                       <asp:HiddenField ID="HiddenField1" runat="server"/> 
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label82" runat="server" class="col-form-label">Kondisi Usaha Saat Ini</asp:label>
+																<asp:TextBox ID="txtkondisiusaha" CssClass="form-control" Enabled="false"  runat="server" ></asp:TextBox> 
+															 </div>
+															
+															<div class="form-group">
+                                                                <asp:label ID="Label83" runat="server" class="col-form-label">Karakter Anggota</asp:label>
+																<asp:TextBox ID="txtKarakterAnggota" CssClass="form-control" Enabled="false"  runat="server" ></asp:TextBox> 
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label84" runat="server" class="col-form-label">Info Anggota dari Pihak ke 3</asp:label>
+																<asp:TextBox ID="txtinfo" CssClass="form-control" Enabled="false"  runat="server" ></asp:TextBox> 
+                                                            </div>
+                                                              
+                                                         
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label103" runat="server" class="col-form-label">Kondisi Pesaing</asp:label>
+																<asp:TextBox ID="txtkondisipesaing" CssClass="form-control" Enabled="false"  runat="server" ></asp:TextBox> 
+                                                             </div>
+
+                                                             <div class="form-group">
+                                                                 <asp:label id="Label104" runat="server"  class="col-form-label">Resiko Usaha</asp:label>
+                                                                 <asp:TextBox ID="txtresikousaha" CssClass="form-control" Enabled="false"  runat="server" ></asp:TextBox> 
+                                                             </div>   
+
+                                                              <div class="form-group">
+                                                                <asp:label ID="Label105" runat="server" class="col-form-label">Upaya Mengatasi Resiko Usaha</asp:label>
+																<asp:TextBox ID="txtatasiresiko" CssClass="form-control"  Enabled="false"  runat="server" ></asp:TextBox>
+                                                                 
+                                                              </div>
+
+
+                                                        </div>
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                            <div class="hidden-print mt-4">
+                                                <div class="float-left mb-2"> 
+                                                   
+                                                    
+                                                        <asp:Button ID="btnBackUsaha" align="right" class="btn btn-success waves-light text-white" runat="server" Text="BACK" OnClick="btnBackUsaha_Click" />
+                                                        
+
+                                                    </div> 
+                                                 <div class="float-right mb-2 "> 
+                                                   
+                                                    <div class="button-list"> 
+                                                   
+                                                     <asp:Button ID="btnTolak" align="right" class="btn btn-success waves-light text-white" runat="server" Text="TOLAK" OnClick="btnTolak_Click" />
+                                                     <asp:Button ID="btnSetuju" align="right" class="btn btn-success waves-light text-white" runat="server" Text="SETUJU" OnClick="btnSetuju_Click"  OnClientClick="return sweetAlertsave(this,'Apakah anda yakin ingin menyetujui data ini ?');"/> 
+                                                     
+                                                    </div>
+                                                    </div>
+                                            </div> 
+    
+                </span></span> 
+    
+            </asp:Panel>--%> 
+
+            <%--<asp:Panel ID="pnlAlasanTolak" Visible="false" runat="server">
+              <div class="clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box"> 
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                          
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label86" runat="server" class="col-form-label">Alasan Tolak</asp:label>
+																<asp:TextBox ID="txtalasantolak" CssClass="form-control" TextMode="MultiLine" Rows="4" runat="server" >-</asp:TextBox> 
+															 </div>
+															
+															 
+                                                         
+                                                        </div> 
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                            <div class="hidden-print mt-4">
+                                                <div class="float-left mb-2"> 
+                                                   
+                                                    
+                                                        <asp:Button ID="btnBackTolak" align="right" class="btn btn-success waves-light text-white" runat="server" Text="BACK" OnClick="btnBackTolak_Click" />
+                                                        
+
+                                                 </div> 
+                                                 <div class="float-right mb-2 "> 
+                                                   
+                                                        <div class="button-list"> 
+                                                   
+                                                          <asp:Button ID="btnSimpanTolakan" align="right" class="btn btn-success waves-light text-white" runat="server" Text="SETUJU" OnClick="btnSimpanTolakan_Click"  OnClientClick="return sweetAlerttolak(this,'Apakah anda yakin ingin Menolak data ini ?');"/> 
+                                                     
+                                                        </div>
+                                                    </div>
+                                            </div> 
+    
+                </span></span> 
+    
+            </asp:Panel>--%> 
+                 
+
+                         <!-- Panel Edit -->
+            <asp:Panel ID="pnladd" Visible="false" runat="server">
+              <div class="row">
+                                        <div class="col-lg-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">DATA ANGGOTA</div>
+                                                       <p class="m-b-0"></p>
+ 
+                                                    <div class="form-row">
+                                                         
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                        <asp:HiddenField ID="HDStatusDebitur" runat="server" />	 
+                                                        <asp:HiddenField ID="HDKodePos" runat="server" />	 
+                                                        <asp:HiddenField ID="HDKodeArea" runat="server" />
+                                                        <asp:HiddenField ID="HDGender" runat="server" />
+                                                        <asp:HiddenField ID="HDNoNasabah" runat="server" />
+                                                        <asp:HiddenField ID="HDLamaKerja" runat="server" />
+                                                             <asp:HiddenField ID="HDRegister" runat="server" />   
+                                                            <asp:HiddenField ID="HDid" runat="server" />
+                                                               <asp:HiddenField ID="HdnKodecabang" runat="server" />
+                                                            
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label43" runat="server" class="col-form-label">No. Anggota</asp:label>
+																<asp:TextBox CssClass="form-control" ID="txtnoanggota"  Enabled="false" runat="server" required="required"></asp:TextBox>
+                                                           <asp:TextBox CssClass="form-control" ID="txtnorektabungan" Visible="false"   runat="server" required="required"></asp:TextBox>
+                                                                </div>
+                                                           
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label1" runat="server" class="col-form-label">Nama Anggota</asp:label>
+																<asp:TextBox CssClass="form-control" ID="txtnamanasabah"  Enabled="false" runat="server" required="required"></asp:TextBox>
+                                                            </div> 
+
+                                                            <div class="form-row">
+                                                                 <div class="form-group col-md-4">
+                                                            
+                                                                        <asp:label ID="Label91" runat="server" class="col-form-label">Tanggal Bergabung</asp:label>
+																        <asp:TextBox ID="txttglbergabung" CssClass="form-control"  Enabled="false" runat="server" ></asp:TextBox> 
+												
+                                                                </div>
+                                                          
+                                                        <div class="form-group col-md-4">
+                                                           
+                                                            
+                                                                <asp:label ID="Label118" runat="server" class="col-form-label">Simpanan Pokok</asp:label>
+																<asp:TextBox ID="txtsimpok" CssClass="form-control"  Enabled="false" runat="server" ></asp:TextBox> 
+												
+															
+															 
+                                                        </div>
+                                                        <div class="form-group col-md-4">
+                                                            
+                                                      
+                                                                <asp:label ID="Label126" runat="server" class="col-form-label">Simpanan Wajib</asp:label>
+																<asp:TextBox ID="txtsimwa" CssClass="form-control"  Enabled="false" runat="server" ></asp:TextBox> 
+                                                  
+
+                                                           
+
+                                                        </div>
+
+
+													</div>
+                                                  
+                                                            <div class="form-row">
+                                                                 <div class="form-group col-md-4">
+                                                                <asp:label ID="Label44" runat="server" class="col-form-label">Pendidikan</asp:label>
+																<asp:DropDownList ID="ddlpendidikanktp" Enabled="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom"   ></asp:DropDownList>
+                                                            </div>
+                                                             <div class="form-group col-md-4">
+                                                                <asp:label ID="Label31" runat="server" class="col-form-label">No.HP</asp:label>
+																<asp:TextBox ID="txthpktp" CssClass="form-control" Enabled="false" onkeypress="return isnumerickey(event);"   runat="server" ></asp:TextBox>
+                                                            </div> 
+                                                               <div class="form-group col-md-4">
+                                                                <asp:label ID="Label11" runat="server" class="col-form-label">Email</asp:label>
+																<asp:TextBox ID="txtemailsktp" Enabled="false" CssClass="form-control" MaxLength="100"   runat="server"  ></asp:TextBox>
+                                                                 
+                                                            
+                                                            </div>
+                                                            </div>
+                                                            
+
+                                                           <div class="form-group">
+                                                                <asp:label ID="Label4" runat="server" class="col-form-label">Alamat</asp:label>
+																<asp:TextBox ID="txtalamatktp"  CssClass="form-control" Enabled="false" TextMode="MultiLine" Rows="4" runat="server" data-style="btn-custom" ></asp:TextBox>      
+                                                                <asp:TextBox CssClass="form-control" ID="txtrtktp" visible="false"  runat="server"></asp:TextBox>
+                                                                <asp:TextBox CssClass="form-control" ID="txtrwktp" visible="false"  runat="server"></asp:TextBox>
+                                                           </div>
+                                                     
+                                                         
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            
+                                                            <div class="form-group">
+                                                                <asp:label ID="Label6" runat="server" class="col-form-label">No. KTP</asp:label> 
+                                                                <asp:TextBox ID="txtnoidentitasktp" Enabled="false" CssClass="form-control" MaxLength="16" onkeypress="return isnumerickey(event);"   runat="server"></asp:TextBox>
+                                                           </div> 
+                                                           
+                                                          
+
+                                                        <div class="form-group">
+                                                        <!-- Simple card -->
+                                                        <div class="card m-b-30">
+                                                        <asp:Image ID="imgktp" runat="server" class="card-img-top img-fluid"   alt="Card image cap" />
+                                                        </div>
+                                                        </div>
+
+                                                        
+                                                            <div class="form-row">
+                                                            <div class="form-group col-md-4">
+                                                                <asp:label ID="Label127" runat="server" class="col-form-label">Jenis Kelamin</asp:label>
+																<asp:DropDownList ID="ddljenkelktp" Enabled="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" ></asp:DropDownList>
+                                                            </div>
+                                                            <div class="form-group col-md-4">
+                                                                <asp:label ID="Label3" runat="server" class="col-form-label">Tempat Lahir</asp:label>
+																<asp:TextBox ID="txttempatlahirktp" CssClass="form-control" Enabled="false"  runat="server" ></asp:TextBox>
+															</div>
+
+                                                            <div class="form-group col-md-4">
+                                                                <asp:label ID="Label5" runat="server" class="col-form-label">Tanggal Lahir</asp:label> 
+                                                                <asp:TextBox CssClass="form-control" ID="txttgllahirktp"  Enabled="false" TextMode="DateTime" runat="server"></asp:TextBox> 
+                                                            </div> 
+                                                            </div>
+                                                             <div class="form-row">
+                                                             <div class="form-group col-md-4">
+                                                                <asp:label ID="Label13" runat="server" class="col-form-label">Agama</asp:label>
+																<asp:DropDownList ID="ddlAgamaktp" Enabled="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom"   ></asp:DropDownList>
+                                                           
+                                                            </div>  
+
+                                                             <div class="form-group col-md-4">
+                                                                <asp:label ID="Label128" runat="server" class="col-form-label">Status Pernikahan</asp:label>
+																<asp:DropDownList ID="ddlstatusnikahktp" Enabled="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom"   ></asp:DropDownList>
+
+                                                             </div>
+                                                            <%--      <div class="form-group col-md-4">
+                                                                <asp:label ID="Label129" runat="server" class="col-form-label">Pekerjaan</asp:label>
+																<asp:DropDownList ID="ddlpekerjaanktp" Enabled="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" ></asp:DropDownList>
+                                                            </div>--%>
+                                                            </div>
+                                                                                                              <div class="form-row">
+                                                                <div class="form-group col-md-4">
+                                                                    <asp:label ID="Label158" runat="server" class="col-form-label">Pekerjaan</asp:label>
+																    <asp:DropDownList ID="ddlpekerjaanktp" Enabled="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" ></asp:DropDownList>
+                                                                </div>
+
+                                                             <div class="form-group col-md-4">
+                                                                <asp:label ID="Label159" runat="server" class="col-form-label">Sektor Usaha</asp:label>
+																<asp:DropDownList ID="ddlSektorUsahaKtp" Enabled="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom"   ></asp:DropDownList>
+
+                                                             </div>
+                                                                  <div class="form-group col-md-4">
+                                                                        <asp:label ID="Label160" runat="server" class="col-form-label">Jenis Usaha</asp:label>
+																        <asp:TextBox ID="txtjenisusahaKtp" Enabled="false" CssClass="form-control" Text="" MaxLength="50"  runat="server"  ></asp:TextBox>
+                                                                </div>
+                                                            </div>
+                                                              <div class="form-row">
+                                                                    <div class="form-group col-md-4">
+                                                                    <asp:label id="Label130" runat="server"  class="col-form-label">Kewarganegaraan</asp:label>
+                                                                      <asp:DropDownList ID="ddlkewarganegaraanktp" Enabled="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom"></asp:DropDownList>
+                                                           </div> 
+                                                            <div class="form-group col-md-4">
+                                                                    <asp:label id="Label22" runat="server"  class="col-form-label">Masa Berakhir KTP</asp:label>
+                                                                    <asp:TextBox ID="txtmasaberakhirKTP" Enabled="false" CssClass="form-control" runat="server"  TextMode="DateTime"></asp:TextBox>
+                                                           </div> 
+
+                                                        </div> 
+                                                            
+                                                                   <div class="form-row">
+                                                          <div class="form-group col-md-4">
+                                                                <asp:label ID="Label2" runat="server" class="col-form-label">Kelurahan</asp:label>
+																<asp:TextBox CssClass="form-control" ID="txtkelurahanktp" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                            <div class="form-group col-md-4">
+                                                                <asp:label ID="Label45" runat="server" class="col-form-label">Kecamatan</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" ID="txtkecamatanktp" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+
+                                                            <div class="form-group col-md-4">
+                                                                <asp:label ID="Label46" runat="server" class="col-form-label">Kota</asp:label>
+	                                                            <asp:TextBox CssClass="form-control" ID="txtkotaktp" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div> 
+                                                                  
+                                                            </div>
+															
+                                                            <div class="form-row">
+                                                             
+                                                            <div class="form-group col-md-4">
+                                                                <asp:label ID="Label125" runat="server" class="col-form-label">Provinsi</asp:label>
+																<asp:DropDownList ID="ddlpropinsiktp" enabled="false" CssClass="selectpicker show-tick"  runat="server" data-style="btn-custom"  ></asp:DropDownList>
+                                                            </div>
+                                                                 <div class="form-group col-md-4">
+                                                                <asp:label ID="Label132" runat="server" class="col-form-label">kode Pos</asp:label>
+																 <asp:TextBox CssClass="form-control" ID="txtkodeposktp" Enabled="false"  runat="server" ></asp:TextBox>
+                                                            </div>
+
+                                                                </div>
+                                                           
+															
+                                                            
+
+                                                           
+
+                                                        </div>
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                           
+                                    
+                                               
+    
+            </asp:Panel> 
+            <asp:Panel ID="pnlPengajuan" Visible="false" runat="server">
+              <div class="clearfix">
+                                        <div class="row">
+                                        <div class="col-lg-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">Detail Pencairan</div>
+                                                       <p class="m-b-0"></p>
+ 
+                                                    <div class="form-row">
+                                                         
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                       <form class="form-horizontal" role="form">
+                                                            <asp:DropDownList ID="ddlmajuhari" visible="false" runat="server" CssClass="form-control" data-style="btn-custom" >
+                                                                <asp:ListItem Value="0">0 Hari</asp:ListItem>
+                                                               <asp:ListItem  Value="1" >1 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="2">2 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="3">3 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="4">4 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="5">5 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="6">6 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="7">7 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="8">8 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="9">9 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="10">10 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="11">11 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="12">12 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="13">13 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="14">14 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="15">15 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="16">16 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="17">17 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="18">18 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="19">19 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="20">20 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="21">21 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="22">22 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="23">23 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="24">24 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="25">25 Hari</asp:ListItem>
+                                                                <asp:ListItem Value="26">26 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="27">27 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="28">28 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="29">29 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="30">30 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="31">31 Hari</asp:ListItem> 
+                                                                <asp:ListItem Value="32">32 Hari</asp:ListItem> 
+                                                                </asp:DropDownList>
+                                            <div class="form-group row" runat="server" visible="false">
+                                                <label class="col-3 col-form-label">No Anggota</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblNoAnggota" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row" runat="server" visible="false">
+                                                <label class="col-3 col-form-label" for="example-email">Nama Anggota</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblNama" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">KTP Penjamin</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblktppenjamin" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Nama Penjamin</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblnamapenjamin" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+
+                                           <div class="form-group row">
+                                                <label class="col-3 col-form-label">Pekerjaan Penjamin</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="Label7" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                    <asp:DropDownList ID="ddlPekerjaan" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" Enabled="false" ></asp:DropDownList>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Sektor Usaha Penjamin</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="Label8" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                    <asp:DropDownList ID="ddlsektorusahapenjamin" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" Enabled="false"   ></asp:DropDownList>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Jenis Usaha Penjamin</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="Label9" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                     <asp:TextBox ID="txtjenisusahapenjamin" CssClass="form-control" Text="" MaxLength="50"  runat="server" Enabled="false"  ></asp:TextBox>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group row">
+                                                <label class="col-4 col-form-label">Nama Ibu Kandung</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblnamaibukandung" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Jaminan Surat</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lbljaminansurat" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Jenis Permohonan</label>
+                                                <div class="col-8">
+                                                    <%--<asp:label ID="lbltipe" Visible="true" runat="server" class="col-form-label"></asp:label>--%>
+                                                     <asp:DropDownList ID="ddljenispermohonan" Enable="false" runat="server" CssClass="selectpicker show-tick" data-style="btn-custom" >
+                                                                                    <asp:ListItem Value="A">Normal</asp:ListItem>
+                                                                                    <asp:ListItem Value="B">UKM</asp:ListItem> 
+                                                                        </asp:DropDownList>
+                                                
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Kelompok Agunan</label>
+                                                <div class="col-8">
+                                                    <%--<asp:label ID="lbltipe" Visible="true" runat="server" class="col-form-label"></asp:label>--%>
+                                                     <asp:DropDownList ID="ddlkelompokAgunan" Enabled="false" runat="server" CssClass="selectpicker show-tick" data-style="btn-custom" >
+                                                                                    <asp:ListItem Value="A">SHM</asp:ListItem>
+                                                                                    <asp:ListItem Value="B">GIRIK (AJB)</asp:ListItem>  
+                                                                                    <asp:ListItem Value="C">BPKB</asp:ListItem>  
+                                                                                    <asp:ListItem Value="D">TABUNGAN/DEPOSITO</asp:ListItem>
+                                                                                    <asp:ListItem Value="E">ELEKTRONIK</asp:ListItem>
+                                                                                    <asp:ListItem Value="F">LOGAM MULIA</asp:ListItem>
+                                                                                    <asp:ListItem Value="G">INVENTORY</asp:ListItem>
+                                                                                    <asp:ListItem Value="Z">Agunan</asp:ListItem>
+                                                                        </asp:DropDownList>
+                                                
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Tujuan Pinjaman</label>
+                                                <div class="col-8">
+                                                    <%--<asp:label ID="lbltipe" Visible="true" runat="server" class="col-form-label"></asp:label>--%>
+                                                      <asp:DropDownList ID="ddltujuanpinjaman" Enabled="false" runat="server" CssClass="selectpicker show-tick" data-style="btn-custom" >
+                                                                                    <asp:ListItem Value="A">Modal Usaha</asp:ListItem>
+                                                                                    <asp:ListItem Value="B">Investasi</asp:ListItem>  
+                                                                                    <asp:ListItem Value="C">Konsumtif</asp:ListItem>  
+                                                                                    <asp:ListItem Value="Z">Lainnya</asp:ListItem>  
+                                                                        </asp:DropDownList>
+                                                
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Agunan</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblagunan" multiline="true" rows="2" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Kondisi Agunan</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblkondisiagunan" multiline="true" rows="2" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Taksasi</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="Lbltaksasi"  Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+
+                    
+                                            
+                                                  <div class="form-group row">
+                                                <label class="col-3 col-form-label">Account Officer</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblao" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Tanggal Realisasi</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lbltglRealisasi" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+
+                                               <div class="form-group row">
+                                                <label class="col-3 col-form-label">Jangka Waktu</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lbljangkawaktu" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                              <div class="form-group row">
+                                                <label class="col-3 col-form-label">Jatuh Tempo</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lbljthtempo" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Bunga</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblbunga" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+
+                                             <div class="form-group row">
+                                                <label class="col-3 col-form-label">Maju Hari Tagih</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblmajuhari" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                           <div class="form-group row">
+                                                <label class="col-3 col-form-label">cadangan sebelumnya</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblcadangansebelumnya" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+
+                                   
+                                        </form>
+                                                           
+															
+                                                         
+                                                        </div>
+
+                                                          <div class="form-group col-md-6">
+                                                            <form class="form-horizontal" role="form">
+                                                                <div class="form-group row">
+                                                                <label class="col-3 col-form-label">Jenis Kredit</label>
+                                                                <div class="col-8">
+                                                                <asp:label ID="lbljeniskredit" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                                </div>
+                                                                </div>
+                                                                                          <div class="fform-group row">
+                                                                <asp:label ID="Label89" runat="server" class="col-3 col-form-label">Jenis Permohonan</asp:label>
+																<div class="col-8">
+                                                                <asp:DropDownList ID="ddlpengajuan" Enabled="false" runat="server" CssClass="form-control" data-style="btn-custom" >
+                                                                    <asp:ListItem Value="B">Pinjaman Baru/Lama</asp:ListItem>
+                                                                    <asp:ListItem Value="X">Perpanjangan</asp:ListItem>  
+                                                                    </asp:DropDownList>
+                                                                </div>
+                                             </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Rekening Perpanjangan</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblrekeningperpanjangan" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+
+
+                                                                <div class="form-group row">
+                                                                <asp:label ID="lblangsuran" class="col-4 col-form-label" runat="server"></asp:label>
+                                                                <div class="col-8">
+                                                                <asp:label ID="lblangsuranbulan" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                                </div>
+                                                                </div>
+
+                                                                 <div class="form-group row">
+                                                <label class="col-4 col-form-label">Besar Pinjaman</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblbesarpinjaman" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+
+                                             <div class="form-group row">
+                                                <label class="col-3 col-form-label" >Potong / Biaya</label>
+                                               <%-- <div class="col-10">
+                                                    <asp:label ID="lblpotongbiaya" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>--%>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Administrasi 3%</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lbladministrasi" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                               <div class="form-group row">
+                                                <label class="col-3 col-form-label">Materai</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblmaterai" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                             <div class="form-group row">
+                                                <label class="col-4 col-form-label">Biaya Cadangan Angsuran</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="LblPotonganangsuran" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-4 col-form-label">Uang Muka</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lbluangmuka" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-3 col-form-label">Anggota</label>
+                                                <div class="col-8">
+                                                    <asp:label ID="LblAnggota" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-4 col-form-label">Total Potong /Biaya </label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblTotalPotongbiaya" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-4 col-form-label">Yang di terima Anggota </label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblygditerimaanggota" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-4 col-form-label">Pengembalian Biaya Cadangan </label>
+                                                <div class="col-8">
+                                                    <asp:label ID="lblkembalicadangan" Visible="true" runat="server" class="col-form-label"></asp:label>
+                                                </div>
+                                            </div>
+
+                                                            </form>
+                                                       
+                                                            </div>
+                                                           
+															
+                                                         
+                                                        </div>
+                                                        
+
+
+													</div>
+												</div>  
+
+              </div>
+                                         </div>        
+                  
+                                            
+    
+                </span></span> 
+    
+            </asp:Panel> 
+
+
+               
+        
+             <asp:panel ID="pnltrn" Visible ="false" runat ="server">
+
+
+        
+
+
+                   <div class="clearfix">
+                                        <div class="row">
+                                        <div class="col-lg-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">Rekening Koran Anggota</div>
+                                                       <p class="m-b-0"></p>
+ 
+                                                    <div class="form-row">
+                                        <div class="form-group" style="width: 100%;">
+                                            <%--<div class="card-box table-responsive">--%>
+                                            <asp:GridView ID="GRTP" ShowFooter="false" runat="server" CssClass="tes1 table-bordered table-bordered dt-responsive nowrap" ShowHeaderWhenEmpty="True" OnRowCommand="GRTP_RowCommand"  AutoGenerateColumns="False">
+                                             <Columns>
+                                               
+                                                 <asp:TemplateField HeaderText="Prd">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblnamacabang" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "kode_produk")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="Tgl Cair">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lbltglcair" runat="server" DateFormat="dd-mm-yyyy" Text='<%# Eval("tgl_drop", "{0:dd-MM-yyyy}")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                  
+                                                     <HeaderStyle Height="30px" CssClass="align-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
+
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="No. Anggota">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblnonasabah" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "no_nasabah")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+
+                                                 <asp:TemplateField Visible="false">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblno_bukti" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "no_bukti_pencairan")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="No. Rekening">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblno_rekening" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "no_rekening")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="Anggota CBS">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblnonasabahcbs" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "no_nasabah_cbs")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                  <asp:TemplateField HeaderText="WO" Visible="false">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblStatusWO" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "status_wo")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                  <asp:TemplateField HeaderText="Rekening CBS">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblno_rekeningcbs" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "no_rekening_cbs")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="Nama Anggota">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblnama" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "nama_nasabah")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="Nama Penjamin">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblnamaxt" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "namapenjamin")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="Sales">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblsales" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "kd_staff")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="Status">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblstatus" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "status")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 
+                                                 <%--<asp:TemplateField HeaderText="Jangka_ke">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lbljangka" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "jangka")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>--%>
+                                                 <asp:TemplateField HeaderText="Plafon">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblPokok" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "ttlpokok", "{0:N0}")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 
+                                                 <asp:TemplateField HeaderText="Mutasi Cadangan">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblcadangan" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "by_cadangan", "{0:N0}")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="View">
+                                                     <HeaderStyle CssClass="text-center" ></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                                                     <ItemTemplate>
+                                                        <asp:LinkButton ID="btnedit" visible="false" runat="server"  data-toggle="tooltip" data-placement="left" title="View" CommandName="SET" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="fa fa-edit"></i></asp:LinkButton>
+                                                        <asp:LinkButton ID="BtnSlip" runat="server" CausesValidation="True" UseSubmitBehavior="False" data-toggle="tooltip" data-placement="left" title="Slip" CommandName="SLIP" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="mdi mdi-printer-3d"></i></asp:LinkButton>
+                                                       </ItemTemplate>
+                                                 </asp:TemplateField>
+                                             </Columns>
+                                         </asp:GridView>
+                                            <%--</div>--%>
+                                        </div>
+
+                                    </div>
+                                                        
+
+
+													</div>
+												</div>  
+
+              </div>
+                                         </div>        
+                  
+                                            
+    
+                </span></span> 
+
+
+                 </asp:panel>   
+                 
+                 <asp:Panel ID="Pndetail" Visible="false" runat="server">
+                     
+                              <div class="clearfix">
+                                        <div class="row">
+                                        <div class="col-lg-12"> 
+                                                   <div class="card-box ribbon-box">
+                                                    <div class="ribbon ribbon-custom">Data Detail Rekening Pinjaman</div>
+                                                       <p class="m-b-0"></p>
+ 
+                                                    <div class="form-row">
+                                     <div class="form-group" style="width: 100%;">
+
+                                         <asp:GridView ID="GRTS" ShowFooter="false" runat="server" CssClass="tes1 table-bordered table-bordered dt-responsive nowrap" ShowHeaderWhenEmpty="True"  AutoGenerateColumns="False">
+                                             <Columns>
+                                      
+                                                 <asp:TemplateField HeaderText="Angs_Ke">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblnamacabang" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "angs_ke")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="Tgl JTP">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lbltglcair" runat="server" DateFormat="dd-mm-yyyy" Text='<%# Eval("tgl_jwl", "{0:dd-MM-yyyy}")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                  
+                                                     <HeaderStyle Height="30px" CssClass="align-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
+
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="Pokok">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblPokok" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "pokok", "{0:N0}")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                  
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="Bunga">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblPokok" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "bunga", "{0:N0}")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                    
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="Angsuran">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblPokok" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "total", "{0:N0}")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                    
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                                                 </asp:TemplateField>
+
+                                                 <asp:TemplateField HeaderText="Tgl Bayar">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lbltglcair" runat="server" DateFormat="dd-mm-yyyy" Text='<%# Eval("tgl_angs", "{0:dd-MM-yyyy}")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                   
+                                                     <HeaderStyle Height="30px" CssClass="align-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
+
+                                                 </asp:TemplateField>
+
+                                                 <asp:TemplateField HeaderText="Dibayar Dengan">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblnonasabah" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "dibayardengan")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+
+                                                   <asp:TemplateField HeaderText="No Resi">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblnonasabah" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "bukti_manual")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                 </asp:TemplateField>
+
+                                               
+                                             </Columns>
+                                         </asp:GridView>
+
+                                     </div>
+                                 </div>
+                                                        
+
+
+													</div>
+												</div>  
+
+              </div>
+                                         </div>        
+                  
+                                            
+    
+                </span></span> 
+
+        </asp:Panel>
+               
+                      
+                 
+                   <asp:Panel ID="Pnlfooter" Visible="false" runat="server">
+                      
+                  
+                                            <div class="hidden-print mt-4">
+                                                <div class="float-left mb-2"> 
+                                                   
+                                                    
+                                                        <asp:Button ID="btnCancel" align="right" class="btn btn-success waves-light text-white" runat="server" Text="BACK" OnClick="btnCancel_Click" />
+                                                        
+
+                                                    </div> 
+                                                 <div class="float-right mb-2 "> 
+                                                   
+                                                    <div class="button-list"> 
+                                                   
+                                                     <asp:Button ID="btnTolak" align="right" class="btn btn-success waves-light text-white" runat="server" Text="TOLAK" OnClick="btnTolak_Click" />
+                                                     <asp:Button ID="btnSetuju" align="right" class="btn btn-success waves-light text-white" runat="server" Text="SETUJU" OnClick="btnSetuju_Click" OnClientClick="return sweetAlertsave(this,'Apakah anda yakin ingin menyetujui data ini ?');"/> 
+                                                     
+                                                    </div>
+                                                    </div>
+                                            </div> 
+    
+                </span></span> 
+    
+            </asp:Panel>
+                 
+                 
+                 
+                 
+               <asp:Panel ID="pnlAlasanTolak" Visible="false" runat="server">
+              <div class="clearfix">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+                                                   <div class="card-box ribbon-box"> 
+                                                       <p class="m-b-0"></p>
+                                                    <div class="form-row">
+                                                          
+                                                        <div class="form-group col-md-6">
+                                                           
+                                                             <div class="form-group">
+                                                                <asp:label ID="Label86" runat="server" class="col-form-label">Alasan Tolak</asp:label>
+																<asp:TextBox ID="txtalasantolak" CssClass="form-control" TextMode="MultiLine" Rows="4" runat="server" >-</asp:TextBox> 
+															 </div>
+															
+															 
+                                                         
+                                                        </div> 
+
+
+													</div>
+												</div>  
+
+                                            </div>
+                                         </div>        
+                  
+                                            <div class="hidden-print mt-4">
+                                                <div class="float-left mb-2"> 
+                                                   
+                                                    
+                                                        <asp:Button ID="btnBackTolak" align="right" class="btn btn-success waves-light text-white" runat="server" Text="BACK" OnClick="btnBackTolak_Click" />
+                                                        
+
+                                                 </div> 
+                                                 <div class="float-right mb-2 "> 
+                                                   
+                                                        <div class="button-list"> 
+                                                   
+                                                          <asp:Button ID="btnSimpanTolakan" align="right" class="btn btn-success waves-light text-white" runat="server" Text="TOLAK" OnClick="btnSimpanTolakan_Click"   OnClientClick="return sweetAlerttolak(this,'Apakah anda yakin ingin Menolak data ini ?');"/> 
+                                                     
+                                                        </div>
+                                                    </div>
+                                            </div> 
+    
+                </span></span> 
+    
+            </asp:Panel> 
+
+              
+
+                 
+
+
+
+
+
+            </div> 
+
+        <!-- end wrapper -->
+        </ContentTemplate>
+             <Triggers>  
+                <asp:PostBackTrigger ControlID="btnTolak" />
+                <asp:PostBackTrigger ControlID="btnSimpanTolakan" />
+                <asp:PostBackTrigger ControlID="btnSetuju" />
+                <asp:PostBackTrigger ControlID="GRData" /> 
+        
+
+ 
+                 
+                <asp:PostBackTrigger ControlID="btnCancel" />
+  
+                <%--<asp:PostBackTrigger ControlID="btnNextLaba" />--%>
+           
+            </Triggers>
+        </asp:UpdatePanel>
+    </form>
+</body>
+  
+    
+    <!-- Parsley js -->
+    <script type="text/javascript" src="../../plugins/parsleyjs/parsley.min.js"></script>
+
+    <script src="../../plugins/bootstrap-select/js/bootstrap-select.js" type="text/javascript"></script>
+
+    <script src="../../plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- Sweet Alert Js  -->
+    <script src="../../plugins/sweet-alert/sweetalert2.min.js"></script>
+    <!-- Tooltipster js -->
+<script src="../../plugins/tooltipster/tooltipster.bundle.min.js"></script>
+
+<!-- Required datatable js -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Responsive examples -->
+<script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+<!-- App js -->
+<script src="../../assets/js/jquery.app.js"></script>
+
+
+
+<!-- Toastr js -->
+<script src="../../plugins/jquery-toastr/jquery.toast.min.js" type="text/javascript"></script>
+
+
+
+</html>

@@ -1,0 +1,88 @@
+﻿# ==============================
+# Visual Studio / Build Outputs
+# ==============================
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+publish/
+
+# ==============================
+# ASP.NET / IIS
+# ==============================
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vspscc
+*.vssscc
+.vs/
+
+# IIS Express
+.iisexpress/
+
+# ==============================
+# NuGet
+# ==============================
+packages/
+*.nupkg
+*.snupkg
+.nuget/NuGet.exe
+.nuget/NuGet.Config
+.nuget/NuGet.targets
+
+# ==============================
+# Logs & Temp
+# ==============================
+*.log
+*.tmp
+*.temp
+*.cache
+*.bak
+*.old
+
+# ==============================
+# Web Specific
+# ==============================
+App_Data/*.mdf
+App_Data/*.ldf
+App_Data/*.sdf
+App_Data/*.log
+
+# Uploaded files (jika ada)
+Uploads/
+wwwroot/uploads/
+Content/uploads/
+
+# ==============================
+# Local / Environment Specific
+# ==============================
+*.config.user
+Web.config.local
+Web.Debug.config
+Web.Release.config
+appsettings.local.json
+
+# ==============================
+# ReSharper / Rider
+# ==============================
+_ReSharper*/
+*.DotSettings.user
+
+# ==============================
+# VS Code
+# ==============================
+.vscode/
+.vs/
+*.vsidx
+
+# ==============================
+# OS Files
+# ==============================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,860 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>'ddlstatusanggota' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-01 19.48.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>'ddlstatusanggota' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-01 19.49.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Could not find stored procedure 'SN_SETORAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-02 21.51.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-02 21.51.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Parameters were not supplied for the function 'dbo.GetTujuanBukaRekening'.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-02 23.33.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Parameters were not supplied for the function 'dbo.GetTujuanBukaRekening'.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-02 23.35.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Parameters were not supplied for the function 'dbo.GetTujuanBukaRekening'.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-02 23.37.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Parameters were not supplied for the function 'dbo.GetTujuanBukaRekening'.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-02 23.37.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 21.12.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 21.14.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 21.15.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 21.15.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 21.35.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Could not find stored procedure 'SN_SETORAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 23.01.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 23.01.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 23.01.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 23.01.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Could not find stored procedure 'SN_SETORAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 23.03.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Could not find stored procedure 'SN_SETORAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 23.05.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Could not find stored procedure 'SN_SETORAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 23.05.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 23.17.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 23.21.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Could not find stored procedure 'SN_TARIKAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnTarikan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-05 23.53.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Could not find stored procedure 'SN_TARIKAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnTarikan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 09.14.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Could not find stored procedure 'SN_TARIKAN_ALOKASI_BERJANGKA'.</ErrorText>
+    <FileError>ViewMasukTrnBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 09.14.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Could not find stored procedure 'SN_TARIKAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnTarikan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 09.15.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Could not find stored procedure 'SN_TARIKAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnTarikan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 09.16.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Could not find stored procedure 'SN_PENCAIRAN_BERJANGKA_APPROVE'.</ErrorText>
+    <FileError>MasukTrnPencairanApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 09.26.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Could not find stored procedure 'SN_PENCAIRAN_BERJANGKA_APPROVE'.</ErrorText>
+    <FileError>MasukTrnPencairanApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 09.26.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Could not find stored procedure 'SN_Trn_BAYAR_PAJAK'.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 13.13.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 13.31.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 13.33.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 13.33.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 13.35.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 13.36.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Could not find stored procedure 'SN_Trn_BAYAR_PAJAK'.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 14.01.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Could not find stored procedure 'SN_Trn_BAYAR_PAJAK'.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 14.01.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Could not find stored procedure 'SN_Trn_BAYAR_BUNGA_Save'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 14.13.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Could not find stored procedure 'SN_Trn_BAYAR_BUNGA_Save'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 14.23.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 14.24.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 14.25.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Could not find stored procedure 'e'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 14.35.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Could not find stored procedure 'e'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 14.35.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Could not find stored procedure 'e'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 14.36.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Could not find stored procedure 'SM_TARIKAN_ALOKASI_BERJANGKA'.</ErrorText>
+    <FileError>ViewMasukTrnModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 17.49.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Cannot find column NoBukti.</ErrorText>
+    <FileError>MasukTrnPencairanBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 17.49.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Could not find stored procedure 'SN_PENUTUPAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenutupanBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 17.53.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Could not find stored procedure 'SN_PENUTUPAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenutupanBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 17.59.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Could not find stored procedure 'SN_PENUTUPAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenutupanBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 18.00.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnPenutupanBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 18.31.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnPenutupanBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 18.32.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnPenutupanBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 18.34.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>Could not find stored procedure 'SN_TARIKAN_ALOKASI_BERJANGKA'.</ErrorText>
+    <FileError>ViewMasukTrnBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 18.40.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>Could not find stored procedure 'SN_TARIKAN_ALOKASI_BERJANGKA'.</ErrorText>
+    <FileError>ViewMasukTrnBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 18.40.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>Cetakbillyet.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 20.39.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>Cetakbillyet.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 20.40.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Could not find stored procedure 'SM_Permohonan'.</ErrorText>
+    <FileError>PermohonanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 22.17.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Could not find stored procedure 'SM_Permohonan'.</ErrorText>
+    <FileError>PermohonanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-06 22.17.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Could not find stored procedure 'SM_Trn_BAYAR_BUNGA'.</ErrorText>
+    <FileError>MasukHutangBungaModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 13.45.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>Could not find stored procedure 'SM_Trn_BAYAR_BUNGA'.</ErrorText>
+    <FileError>MasukHutangBungaModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 13.45.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Could not find stored procedure 'SM_Trn_BAYAR_pajak'.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 13.45.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Could not find stored procedure 'SM_Trn_BAYAR_pajak'.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 13.45.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Could not find stored procedure 'SM_TARIKAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnTarikanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 13.45.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnTarikanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 13.45.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>Could not find stored procedure 'SM_TARIKAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnTarikanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 13.46.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnTarikanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 13.46.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>Could not find stored procedure 'SM_SETORAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenambahanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 13.48.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnPenambahanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 13.48.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>@No_Rekening is not a parameter for procedure SM_Permohonan.</ErrorText>
+    <FileError>PermohonanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 21.16.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>Could not find stored procedure 'SM_Trn_BAYAR_BUNGA'.</ErrorText>
+    <FileError>MasukHutangBungaModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 21.27.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>Could not find stored procedure 'SM_Trn_BAYAR_BUNGA'.</ErrorText>
+    <FileError>MasukHutangBungaModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 21.27.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>Could not find stored procedure 'SM_Trn_BAYAR_BUNGA'.</ErrorText>
+    <FileError>MasukHutangBungaModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 21.27.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>Could not find stored procedure 'SM_Trn_BAYAR_BUNGA'.</ErrorText>
+    <FileError>MasukHutangBungaModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 21.27.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>Could not find stored procedure 'SM_Trn_BAYAR_pajak'.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 21.59.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>Could not find stored procedure 'SM_Trn_BAYAR_pajak'.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 21.59.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>Could not find stored procedure 'SM_TARIKAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnTarikanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.12.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnTarikanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.12.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>Could not find stored procedure 'SM_TARIKAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnTarikanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.13.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnTarikanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.13.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>Could not find stored procedure 'SM_SETORAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenambahanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.31.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnPenambahanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.31.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>Could not find stored procedure 'SM_SETORAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenambahanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.31.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnPenambahanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.31.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>Could not find stored procedure 'SM_PENUTUPAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenutupanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.46.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>Could not find stored procedure 'SM_PENUTUPAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenutupanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.46.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>Could not find stored procedure 'SM_PENUTUPAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenutupanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.46.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>Could not find stored procedure 'SM_PENUTUPAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenutupanModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 22.46.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>Could not find stored procedure 'SM_TARIKAN_ALOKASI_BERJANGKA'.</ErrorText>
+    <FileError>ViewMasukTrnModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 23.00.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>Could not find stored procedure 'SM_TARIKAN_ALOKASI_BERJANGKA'.</ErrorText>
+    <FileError>ViewMasukTrnModal.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-07 23.02.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>Could not find stored procedure 'SS_Trn_BAYAR_BUNGA'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 13.36.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>Could not find stored procedure 'SS_TARIKAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnTarikan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 13.57.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>Could not find stored procedure 'SS_TARIKAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnTarikan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 13.57.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>Could not find stored procedure 'SS_SETORAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 14.16.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>Could not find stored procedure 'SS_PENUTUPAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenutupanBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 14.30.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>Could not find stored procedure 'SS_TARIKAN_ALOKASI_BERJANGKA'.</ErrorText>
+    <FileError>ViewMasukTrnSukarela.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 14.43.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>Could not find stored procedure 'SS_TARIKAN_ALOKASI_BERJANGKA'.</ErrorText>
+    <FileError>ViewMasukTrnSukarela.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 14.43.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 14.59.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 15.01.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 15.03.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 15.06.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 15.07.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>102</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 15.07.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>103</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 15.07.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>104</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 15.18.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>105</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 15.19.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>106</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-08 15.19.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>107</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>203AKT1</FromUser>
+    <TglError>2024-09-08 21.00.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>108</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PermohonanSukarela.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-09-12 22.57.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>109</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-09-18 13.27.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>110</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2024-09-18 13.29.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>111</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2024-09-18 13.29.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>112</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2024-09-18 13.29.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>113</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2024-09-18 13.30.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>114</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2024-09-18 13.32.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>115</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2024-09-18 13.33.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>116</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2024-09-18 13.33.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>117</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-09-18 13.33.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>118</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-09-18 13.33.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>119</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2024-09-18 13.34.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>120</ID>
+    <ErrorText>Invalid object name 'SnMasterKredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2024-09-18 13.34.59</TglError>
+  </ErrorLog>
+</DocumentElement>

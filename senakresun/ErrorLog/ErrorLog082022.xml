@@ -1,0 +1,109 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>501tl1</FromUser>
+    <TglError>2022-08-11 14:34:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-15 16:17:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:25:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:25:40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:25:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:25:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:25:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:25:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:26:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:26:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:26:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:26:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:26:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:28:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AeFeeRewardSmBulan'. Cannot insert duplicate key in object 'dbo.AeFeeRewardSmBulan'. The duplicate key value is (501, 01).</ErrorText>
+    <FileError>Newmembersbayar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2022-08-16 10:48:29</TglError>
+  </ErrorLog>
+</DocumentElement>

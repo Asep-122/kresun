@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=5; handshake=10411; </ErrorText>
+    <FileError>ReportUmurPerincian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-01-19 09:22:32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=5; handshake=10411; </ErrorText>
+    <FileError>ReportUmurPerincian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-01-19 09:22:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>'ddlKodeSales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-01-21 15:01:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>'ddlKodeSales' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-01-25 11:07:47</TglError>
+  </ErrorLog>
+</DocumentElement>

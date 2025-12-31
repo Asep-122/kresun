@@ -1,0 +1,364 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>{"status":true,"data":{"message_id":326388319},"message":"Pesan Berhasil Dikirim"}</ErrorText>
+    <FileError>Closing.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-08-01 12.42.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>{"status":true,"data":{"message_id":326388555},"message":"Pesan Berhasil Dikirim"}</ErrorText>
+    <FileError>Closing.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-08-01 12.52.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>{"status":true,"data":{"message_id":326388612},"message":"Pesan Berhasil Dikirim"}</ErrorText>
+    <FileError>Closing.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-08-01 12.55.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>{"status":true,"data":{"message_id":326388765},"message":"Pesan Berhasil Dikirim"}</ErrorText>
+    <FileError>Closing.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-08-01 13.02.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>'ddlkelompokAgunan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ApprovalPusat.aspx</FileError>
+    <FromUser>PUSAT01</FromUser>
+    <TglError>2024-08-09 22.46.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>'ddlkelompokAgunan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-08-24 11.18.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>'ddlkelompokAgunan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-08-24 11.18.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>'ddlkelompokAgunan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 13.57.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Failed to convert parameter value from a TextBox to a Decimal.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.19.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.49.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.49.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.50.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.50.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.51.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.51.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.51.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.51.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.52.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.52.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnKeanggotaan.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-08-24 21.55.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Could not find stored procedure 'SN_NASABAH'.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-08-24 23.19.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Could not find stored procedure 'SN_NASABAH'.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-08-24 23.19.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Could not find stored procedure 'SN_NASABAH'.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-25 18.46.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Could not find stored procedure 'SN_NASABAH'.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-25 18.48.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Could not find stored procedure 'SN_NASABAH'.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-25 18.55.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Could not find stored procedure 'SN_NASABAH'.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-25 19.07.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Could not find stored procedure 'SN_NASABAH'.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-25 19.09.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Could not find stored procedure 'SN_NASABAH'.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-25 19.11.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Could not find stored procedure 'SN_NASABAH'.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-25 19.13.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Cannot insert the value NULL into column 'no_nasabah', table 'ERPMIKROJULYAKHIR.dbo.SnNasabah'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-25 19.52.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Npwp'.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-25 19.55.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>Column 'no_anggota' does not belong to table Table.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-25 19.57.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Column 'no_anggota' does not belong to table Table.</ErrorText>
+    <FileError>RegistrasiNasabahSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-25 19.57.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Column 'Setoranx' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-08-27 22.08.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Column 'Setoranx' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-08-27 22.08.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Column 'Setoranx' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>999ADMIN1</FromUser>
+    <TglError>2024-08-27 22.08.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Could not find stored procedure 'SN_Permohonan'.</ErrorText>
+    <FileError>MasukTrnPencairanBungaApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 22.18.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Could not find stored procedure 'SN_PRODUK'.</ErrorText>
+    <FileError>Produk.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.26.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Produk.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.26.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Could not find stored procedure 'SN_Permohonan'.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.29.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.29.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Could not find stored procedure 'SN_Permohonan'.</ErrorText>
+    <FileError>MasukTrnPencairanBungaApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.29.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.31.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.31.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.31.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Could not find stored procedure 'SN_SETORAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.33.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.34.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Could not find stored procedure 'SN_TARIKAN_BERJANGKA'.</ErrorText>
+    <FileError>MasukTrnTarikan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.34.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnTarikan.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.34.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Cannot find column NoBukti.</ErrorText>
+    <FileError>MasukTrnPencairanBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.34.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnPencairanBerjangka.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-08-31 23.35.00</TglError>
+  </ErrorLog>
+</DocumentElement>

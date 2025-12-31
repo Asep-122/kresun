@@ -1,0 +1,139 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>'txtalasankeluar' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KeluarAnggotaKoperasi1.aspx</FileError>
+    <FromUser>999TL1</FromUser>
+    <TglError>2024-06-05 21.34.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Transaction (Process ID 75) was deadlocked on lock | communication buffer resources with another process and has been chosen as the deadlock victim. Rerun the transaction.</ErrorText>
+    <FileError>KeluarAnggotaKoperasi1.aspx</FileError>
+    <FromUser>416TL2 </FromUser>
+    <TglError>2024-06-13 11.20.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Column 'fiskal' does not belong to table Table.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>ITDEV</FromUser>
+    <TglError>2024-06-15 22.07.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Could not find stored procedure 'AR_Trn_AO_WO_Ajukan'.</ErrorText>
+    <FileError>PengajuanWOAO.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-22 21.44.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PengajuanWOAO.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-23 21.44.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PengajuanWOAOApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-23 22.11.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PengajuanWOAOApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-23 22.15.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PengajuanWOAOApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-23 22.16.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PengajuanWOAOApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-23 22.18.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PengajuanWOAOApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-23 22.18.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PengajuanWOAOApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-23 22.19.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PengajuanWOAOApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-23 22.20.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PengajuanWOAOApprove.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-23 22.21.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>TarikPusat.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-30 21.11.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>TarikPusat.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-06-30 21.34.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>TarikPusat.aspx</FileError>
+    <FromUser>211AKT1</FromUser>
+    <TglError>2024-06-30 21.52.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>TarikPusat.aspx</FileError>
+    <FromUser>211AKT1</FromUser>
+    <TglError>2024-06-30 21.53.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>TarikPusat.aspx</FileError>
+    <FromUser>211AKT1</FromUser>
+    <TglError>2024-06-30 21.55.07</TglError>
+  </ErrorLog>
+</DocumentElement>

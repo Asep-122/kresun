@@ -1,0 +1,425 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>S1</ErrorText>
+    <FileError>BayarPengeluaran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 00.52.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>S1</ErrorText>
+    <FileError>BayarPengeluaran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 00.52.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>S1</ErrorText>
+    <FileError>BayarPengeluaran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 00.54.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>S1</ErrorText>
+    <FileError>BayarPengeluaran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 00.54.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>S1</ErrorText>
+    <FileError>BayarPengeluaran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 00.55.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>S1</ErrorText>
+    <FileError>BayarPengeluaran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 00.56.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 09.48.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 09.48.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 09.52.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JumlahTrn'.</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.03.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.05.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.06.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.08.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.15.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.17.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.36.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.36.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.39.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.43.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.50.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.50.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>ReturMasukTrnCashAdvanceNonBiaya.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-14 13.51.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-15 16.31.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>BayarPengeluaran.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-16 21.22.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-16 21.31.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Cannot find column nobukti.</ErrorText>
+    <FileError>ViewMasukTrnCair_New.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2023-12-19 21.20.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Cannot find column nobukti.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-20 21.00.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Cannot find column nobukti.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-20 21.00.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-20 21.01.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-20 21.01.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-20 21.02.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-20 22.17.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-20 22.18.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-20 22.19.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-20 22.20.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-20 22.20.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-20 22.22.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-21 22.19.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-21 22.20.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Cannot find column nobukti.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-21 23.00.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Cannot find column Nobukti.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-21 23.20.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'jumlahmemo'.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-21 23.22.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'jumlahmemo'.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-21 23.23.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Bulan'.</ErrorText>
+    <FileError>ViewKasHeadTeller.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-23 23.47.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>ViewCadangan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 02.04.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnTranPengecekanKas.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 10.56.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnTranPengecekanKas.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 10.58.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnTranPengecekanKas.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 11.00.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnTranPengecekanKas.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 11.03.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Procedure or function 'CL_Trn_CL_Insert_Transfer_Head_Teller' expects parameter '@KodeBank', which was not supplied.</ErrorText>
+    <FileError>MasukTrnTranPengecekanKas.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 11.08.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnTranPengecekanKas.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 11.10.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Procedure or function 'CL_Trn_CL_Delete_Transfer_Head_Teller' expects parameter '@KodeBank', which was not supplied.</ErrorText>
+    <FileError>MasukTrnTranPengecekanKas.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 11.11.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>ViewSetoranWajib.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 13.34.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>ViewSetoranWajib.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 13.34.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>ViewSetoranWajib.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 13.34.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>ViewSetoranWajib.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 13.34.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>ViewSetoranWajib.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 13.34.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Column 'txttglpenutupan' does not belong to table Table.</ErrorText>
+    <FileError>ViewSetoranWajib.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-12-24 13.37.05</TglError>
+  </ErrorLog>
+</DocumentElement>

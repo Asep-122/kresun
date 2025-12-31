@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <UserLog>
+    <ID>1</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2025-10-21 14.05.25</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>2</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101MANAGER</FromUser>
+    <TglError>2025-10-21 15.10.47</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>3</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101MANAGER</FromUser>
+    <TglError>2025-10-21 15.13.02</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>4</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2025-10-21 15.15.57</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>5</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2025-10-21 15.58.22</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>6</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2025-10-22 10.49.43</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>7</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101MANAGER</FromUser>
+    <TglError>2025-10-22 11.03.59</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>8</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2025-10-22 11.29.11</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>9</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101MANAGER</FromUser>
+    <TglError>2025-10-22 14.47.44</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>10</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2025-10-22 14.49.11</TglError>
+  </UserLog>
+</DocumentElement>

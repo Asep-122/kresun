@@ -1,0 +1,1230 @@
+﻿using DefaultClass;
+using EntitiesClass;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Drawing;
+using System.Web.Script.Serialization;
+using System.Web.Services;
+using System.Text.RegularExpressions;
+using System.Globalization;
+
+public partial class AR_Process_PermohonanPinjamanKreditMultiguna : System.Web.UI.Page
+{
+    Global gb = new DefaultClass.Global();
+    GlobalEntities ge = new GlobalEntities();
+
+    DateTime tgl_libur, tgl_realisasi, tgldrop;
+    double angsuranperbulan = 0;
+    string nonasabah = "", agama = "", usia = "", pokok = "", bunga = "", namafileJaminan = "", fotopathJaminan = "";
+
+    public string SessLoginID
+    {
+        get { return Session["SessLoginID"].ToString(); }
+        set { ViewState["SessLoginID"] = value; }
+    }
+
+    public string SessBranchID
+    {
+        get { return Session["SessBranchID"].ToString(); }
+        set { ViewState["SessBranchID"] = value; }
+    }
+
+    private string SessKdpersh
+    {
+        get { return Session["SessKdpersh"].ToString(); }
+        set { ViewState["SessKdpersh"] = value; }
+    }
+
+    public string CultureName
+    {
+        get { return (string)ViewState["CultureName"]; }
+        set { ViewState["CultureName"] = value; }
+
+    }
+
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+
+            InsertCombo();
+            BindGridEntity();
+            txtkodecabang.Text = SessBranchID;
+            lbllabakotor.Font.Bold = true;
+            lbltotalbiaya.Font.Bold = true;
+            lbllabasebelumpajak.Font.Bold = true;
+            lbllababersih.Font.Bold = true;
+
+            ddlSurvey.Items.Add("Pilih Data");
+            ddlSurvey.Items.Add("Belum Dilakukan Survey");
+            ddlSurvey.Items.Add("Sudah Dilakukan Survey");
+
+            ddlbycad.Items.Add("Pilih Data");
+            ddlbycad.Items.Add("Dengan Cadangan Cadangan");
+            ddlbycad.Items.Add("Tanpa Cadangan Cadangan");
+        }
+        Page.Form.Attributes.Add("enctype", "multipart/form-data");
+
+
+        CultureName = CultureInfo.CurrentCulture.TextInfo.CultureName;
+        CultureName = "id-ID";
+
+        txttglrealisasi.Attributes["min"] = DateTime.Now.ToString("yyyy-MM-dd");
+
+    }
+
+    protected void ddlbycad_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+        if (ddlbycad.SelectedIndex == 1)
+        {
+            txtkalicadangan.Enabled = true;
+            txtkalicadangan.Focus();
+        }
+        else if (ddlbycad.SelectedIndex == 2)
+        {
+            txtkalicadangan.Enabled = false;
+            TextBox3.Text = "0";
+            txtkalicadangan.Text = "0";
+
+        }
+
+    }
+
+    protected string btnreload()
+    {
+        return Page.ClientScript.GetPostBackEventReference(btnCancel, string.Empty, true);
+    }
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("PermohonanPinjamanKreditMultiguna.aspx");
+    }
+
+    protected void btnNext_Click(object sender, EventArgs e)
+    {
+        pnladd.Visible = false;
+        pnlPekerjaan.Visible = true;
+    }
+    protected void btnNextPekerjaan_Click(object sender, EventArgs e)
+    {
+        if (ddlkodeinstansi.SelectedIndex == 0)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Kode Instansi belum di pilih!');", true);
+
+        }
+        else
+        {
+            pnladd.Visible = false;
+            pnlPekerjaan.Visible = false;
+            pnlTambahan.Visible = true;
+        }
+
+    }
+
+    protected void btnNextTambahan_Click(object sender, EventArgs e)
+    {
+        pnladd.Visible = false;
+        pnlPekerjaan.Visible = false;
+        pnlTambahan.Visible = false;
+        pnlPendapatan.Visible = true;
+
+        lbltotalPengeluaran.Text = "Total Pengeluaran";
+        lbltotalPengeluaran.Font.Bold = true;
+
+        lbltotalpendapatan.Text = "Total Pendapatan";
+        lbltotalpendapatan.Font.Bold = true;
+
+        lblsisapenghasilan.Text = "Sisa Penghasilan";
+        lblsisapenghasilan.Font.Bold = true;
+    }
+    protected void btnNextPendapatan_Click(object sender, EventArgs e)
+    {
+        pnladd.Visible = false;
+        pnlPekerjaan.Visible = false;
+        pnlTambahan.Visible = false;
+        pnlPendapatan.Visible = false;
+        pnlPendapatan.Visible = false;
+        pnlLaba.Visible = true;
+    }
+
+    protected void btnNextLaba_Click(object sender, EventArgs e)
+    {
+        pnladd.Visible = false;
+        pnlPekerjaan.Visible = false;
+        pnlTambahan.Visible = false;
+        pnlPendapatan.Visible = false;
+        pnlPendapatan.Visible = false;
+        pnlLaba.Visible = false;
+        pnlPengajuan.Visible = true;
+        pnlKeanggotaan.Visible = true;
+    }
+    protected void btnNextPengajuan_Click(object sender, EventArgs e)
+    {
+        pnladd.Visible = false;
+        pnlPekerjaan.Visible = false;
+        pnlTambahan.Visible = false;
+        pnlPendapatan.Visible = false;
+        pnlPendapatan.Visible = false;
+        pnlLaba.Visible = false;
+        pnlPengajuan.Visible = false;
+        pnlKeanggotaan.Visible = false;
+        pnlUsaha.Visible = true;
+
+        if (ddlSurvey.SelectedIndex == 1)
+        {
+            pnlJaminan.Visible = false;
+        }
+        else if (ddlSurvey.SelectedIndex == 2)
+        {
+            pnlJaminan.Visible = true;
+        }
+
+
+    }
+
+    protected void btnbackawal_Click(object sender, EventArgs e)
+    {
+        pnlFilter.Visible = true;
+        PnlFront.Visible = true;
+        pnladd.Visible = false;
+    }
+    protected void btnBackPekerjaan_Click(object sender, EventArgs e)
+    {
+        pnladd.Visible = true;
+        pnlPekerjaan.Visible = false;
+    }
+
+    protected void btnBackTambahan_Click(object sender, EventArgs e)
+    {
+        pnladd.Visible = false;
+        pnlPekerjaan.Visible = true;
+        pnlTambahan.Visible = false;
+
+    }
+    protected void btnBackPendapatan_Click(object sender, EventArgs e)
+    {
+        pnladd.Visible = false;
+        pnlPekerjaan.Visible = false;
+        pnlTambahan.Visible = true;
+        pnlPendapatan.Visible = false;
+    }
+    protected void btnBackLaba_Click(object sender, EventArgs e)
+    {
+        pnladd.Visible = false;
+        pnlPekerjaan.Visible = false;
+        pnlTambahan.Visible = false;
+        pnlPendapatan.Visible = true;
+        pnlLaba.Visible = false;
+    }
+    protected void btnBackPengajuan_Click(object sender, EventArgs e)
+    {
+        pnladd.Visible = false;
+        pnlPekerjaan.Visible = false;
+        pnlTambahan.Visible = false;
+        pnlPendapatan.Visible = false;
+        pnlLaba.Visible = true;
+        pnlPengajuan.Visible = false;
+        pnlKeanggotaan.Visible = false;
+    }
+    protected void btnBackUsaha_Click(object sender, EventArgs e)
+    {
+        pnladd.Visible = false;
+        pnlPekerjaan.Visible = false;
+        pnlTambahan.Visible = false;
+        pnlPendapatan.Visible = false;
+        pnlLaba.Visible = false;
+        pnlPengajuan.Visible = true;
+        pnlKeanggotaan.Visible = true;
+        pnlUsaha.Visible = false;
+        pnlJaminan.Visible = false;
+    }
+    protected void UploadFileJaminan(object sender, EventArgs e)
+    {
+        try
+        {
+            string folderPath = Server.MapPath("~/Files/Jaminan/");
+            DateTime now = DateTime.Now;
+
+            namafileJaminan = txtnoanggota.Text + "_" + now.ToString("ddMMyyyy") + "_" + "Jaminan";
+
+
+            //Check whether Directory (Folder) exists.
+            if (!Directory.Exists(folderPath))
+            {
+                //If Directory (Folder) does not exists. Create it.
+                Directory.CreateDirectory(folderPath);
+            }
+
+            //if (Path.GetFileNameWithoutExtension(fileuploadnpwp.FileName) != namafileNPWP)
+            //{
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Nama File harus berformat nonasabah_tanggal hari ini tanpa strip_File yg di upload, contoh : " + namafileNPWP + "');", true);
+
+            //}
+            //else
+            //{
+            //Save the File to the Directory (Folder).
+
+            fileuploadjaminan.SaveAs(folderPath + namafileJaminan + ".jpg");
+
+            ////Display the Picture in Image control.
+            //imagenpwp.ImageUrl = "~/Files/NPWP/" + Path.GetFileName(fileuploadnpwp.FileName);
+
+            fotopathJaminan = folderPath + namafileJaminan;
+
+            txtpathjaminan.Text = "~/Files/jaminan/" + namafileJaminan + ".jpg";
+
+            //Display the Picture in Image control.
+            imgjaminan.ImageUrl = "http://gigaku.kspserambidana.com/Files/Jaminan/" + namafileJaminan + ".jpg" + "?r=" + DateTime.Now.Ticks.ToString();
+
+        }
+
+        catch (Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString().Replace("'", "") + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+    }
+
+    protected void btnSimpan_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            string siklus = "";
+            if (ddlSurvey.SelectedIndex == 1)
+            {
+                txtpathjaminan.Text = "NULL";
+                siklus = "0";
+
+            }else if(ddlSurvey.SelectedIndex == 2)
+            {
+                siklus = "1";
+            }
+
+            string[] splitdata = txtnonasabah.Text.Split('-');
+            nonasabah = splitdata[0];
+
+            DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
+            var[0] = gb.CreateSPParameter("@nip", ParameterDirection.Input, SqlDbType.VarChar, 20, nonasabah, typeof(string));
+            var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTBYNONASABAH", typeof(string));
+            var[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+            ge.ListDataset = gb.GetDataJustOutPut("AR_PERMOHONAN_KREDIT", var, "constrmf");
+
+
+            string[] splitdata1 = txtAgama.Text.Split('-');
+            agama = splitdata1[0];
+
+            string angs_bulanan = txtangsuranperbulan.Text;
+            string gaji_bersih = txtlababersihsetelahpajak.Text.Replace(".", "");
+
+            usia = gb.HitungTahunUsia(txttgllahir.Text);
+
+
+            DateTime tgldrop = Convert.ToDateTime(txttglrealisasi.Text);
+            string datetgldrop = tgldrop.ToString("yyyy/MM/dd");
+
+            DateTime tgljt = Convert.ToDateTime(txtjttempo.Text);
+            string datetgljt = tgldrop.ToString("yyyy/MM/dd");
+
+
+
+            DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[53];
+            var1[0] = gb.CreateSPParameter("@kode_cabang", ParameterDirection.Input, SqlDbType.VarChar, 20, SessBranchID, typeof(string));
+            var1[1] = gb.CreateSPParameter("@nip", ParameterDirection.Input, SqlDbType.VarChar, 50, nonasabah, typeof(string));
+            var1[2] = gb.CreateSPParameter("@nama", ParameterDirection.Input, SqlDbType.VarChar, 250, txtnamanasabah.Text, typeof(string));
+            var1[3] = gb.CreateSPParameter("@alamat", ParameterDirection.Input, SqlDbType.VarChar, 200, txtalamat.Text, typeof(string));
+            var1[4] = gb.CreateSPParameter("@kelurahan", ParameterDirection.Input, SqlDbType.VarChar, 100, txtkelurahan.Text, typeof(string));
+            var1[5] = gb.CreateSPParameter("@kecamatan", ParameterDirection.Input, SqlDbType.VarChar, 250, txtkecamatan.Text, typeof(string));
+            var1[6] = gb.CreateSPParameter("@kota", ParameterDirection.Input, SqlDbType.VarChar, 100, txtkota.Text, typeof(string));
+            var1[7] = gb.CreateSPParameter("@kodepos", ParameterDirection.Input, SqlDbType.VarChar, 100, HDKodePos.Value, typeof(string));
+            var1[8] = gb.CreateSPParameter("@telepon", ParameterDirection.Input, SqlDbType.VarChar, 250, txthp.Text, typeof(string));
+            var1[9] = gb.CreateSPParameter("@kd_area", ParameterDirection.Input, SqlDbType.VarChar, 10, HDKodeArea.Value, typeof(string));
+            var1[10] = gb.CreateSPParameter("@tempat_lahir", ParameterDirection.Input, SqlDbType.VarChar, 250, txttempatlahir.Text, typeof(string));
+            var1[11] = gb.CreateSPParameter("@tgl_lahir", ParameterDirection.Input, SqlDbType.VarChar, 10, txttgllahir.Text, typeof(string));
+            var1[12] = gb.CreateSPParameter("@gender", ParameterDirection.Input, SqlDbType.VarChar, 250, HDGender.Value, typeof(string));
+            var1[13] = gb.CreateSPParameter("@no_registrasi", ParameterDirection.Input, SqlDbType.VarChar, 20, nonasabah, typeof(string));
+            var1[14] = gb.CreateSPParameter("@no_ktp", ParameterDirection.Input, SqlDbType.VarChar, 0, txtnoidentitas.Text, typeof(string));
+            var1[15] = gb.CreateSPParameter("@agama", ParameterDirection.Input, SqlDbType.VarChar, 250, agama, typeof(string));
+            var1[16] = gb.CreateSPParameter("@masa_kerja", ParameterDirection.Input, SqlDbType.VarChar, 250, HDLamaKerja.Value, typeof(string));
+            var1[17] = gb.CreateSPParameter("@kd_instansi", ParameterDirection.Input, SqlDbType.VarChar, 20, ddlkodeinstansi.SelectedValue, typeof(string));
+            var1[18] = gb.CreateSPParameter("@pekerjaan", ParameterDirection.Input, SqlDbType.VarChar, 50, txtPekerjaan.Text, typeof(string));
+            var1[19] = gb.CreateSPParameter("@status_debitur", ParameterDirection.Input, SqlDbType.VarChar, 250, HDStatusDebitur.Value, typeof(string));
+            var1[20] = gb.CreateSPParameter("@gaji_bersih", ParameterDirection.Input, SqlDbType.Decimal, 250, gaji_bersih, typeof(string));
+            var1[21] = gb.CreateSPParameter("@permohonan_plafon", ParameterDirection.Input, SqlDbType.Decimal, 250, txtplafon.Text, typeof(string));
+            var1[22] = gb.CreateSPParameter("@permohonan_jangka", ParameterDirection.Input, SqlDbType.Decimal, 250, txtjangka.Text, typeof(string));
+            var1[23] = gb.CreateSPParameter("@permohonan_bendahara", ParameterDirection.Input, SqlDbType.Decimal, 250, txtplafon.Text, typeof(string));
+            var1[24] = gb.CreateSPParameter("@angsuran_bulanan", ParameterDirection.Input, SqlDbType.Decimal, 250, angs_bulanan, typeof(string));
+            var1[25] = gb.CreateSPParameter("@tplafon", ParameterDirection.Input, SqlDbType.Decimal, 250, txtplafon.Text, typeof(string));
+            var1[26] = gb.CreateSPParameter("@plafon", ParameterDirection.Input, SqlDbType.Decimal, 250, txtplafon.Text, typeof(string));
+            var1[27] = gb.CreateSPParameter("@persen_gaji", ParameterDirection.Input, SqlDbType.VarChar, 250, "100", typeof(string));
+            var1[28] = gb.CreateSPParameter("@jangka", ParameterDirection.Input, SqlDbType.VarChar, 250, txtjangka.Text, typeof(string));
+            var1[29] = gb.CreateSPParameter("@bunga", ParameterDirection.Input, SqlDbType.VarChar, 250, txtbunga.Text, typeof(string));
+            var1[30] = gb.CreateSPParameter("@kdpersh1", ParameterDirection.Input, SqlDbType.VarChar, 250, ddlsumberdana.SelectedValue, typeof(string));
+            var1[31] = gb.CreateSPParameter("@biaya_provisi", ParameterDirection.Input, SqlDbType.Decimal, 250, txtnominalprovisi.Text, typeof(string));
+            var1[32] = gb.CreateSPParameter("@persen_prov", ParameterDirection.Input, SqlDbType.VarChar, 250, txtProvisi.Text, typeof(string));
+            var1[33] = gb.CreateSPParameter("@biaya_administrasi", ParameterDirection.Input, SqlDbType.Decimal, 250, txtadminPencairan.Text, typeof(string));
+            var1[34] = gb.CreateSPParameter("@meterai", ParameterDirection.Input, SqlDbType.Decimal, 250, txtbymaterai.Text, typeof(string));
+            var1[35] = gb.CreateSPParameter("@notaris", ParameterDirection.Input, SqlDbType.Decimal, 250, txtbynotaris.Text, typeof(string));
+            var1[36] = gb.CreateSPParameter("@asuransi", ParameterDirection.Input, SqlDbType.Decimal, 250, txtbyasuransi.Text, typeof(string));
+            var1[37] = gb.CreateSPParameter("@biaya_pelunasan", ParameterDirection.Input, SqlDbType.Decimal, 250, txtbypelunasan.Text, typeof(string));
+            var1[38] = gb.CreateSPParameter("@base_rate", ParameterDirection.Input, SqlDbType.VarChar, 250, txtbunga.Text, typeof(string));
+            var1[39] = gb.CreateSPParameter("@jaminan", ParameterDirection.Input, SqlDbType.VarChar, 250, txtketeranganJaminan.Text, typeof(string));
+            var1[40] = gb.CreateSPParameter("@usrupd", ParameterDirection.Input, SqlDbType.VarChar, 250, SessLoginID, typeof(string));
+            var1[41] = gb.CreateSPParameter("@kode_produk", ParameterDirection.Input, SqlDbType.VarChar, 250, ddlprodukpengajuan.SelectedValue, typeof(string));
+            var1[42] = gb.CreateSPParameter("@status_sk", ParameterDirection.Input, SqlDbType.VarChar, 250, ddlprogrampinjaman.SelectedValue, typeof(string));
+            var1[43] = gb.CreateSPParameter("@kd_reff2", ParameterDirection.Input, SqlDbType.VarChar, 250, ddlAO.SelectedValue, typeof(string));
+            var1[44] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "INSERT", typeof(string));
+            var1[45] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+            var1[46] = gb.CreateSPParameter("@jns_pgn", ParameterDirection.Input, SqlDbType.VarChar, 250, ddlPenggunaan.SelectedValue, typeof(string));
+            var1[47] = gb.CreateSPParameter("@jns_pinjaman", ParameterDirection.Input, SqlDbType.VarChar, 250, HDJenisPinjaman.Value, typeof(string));
+            var1[48] = gb.CreateSPParameter("@jenis_survey", ParameterDirection.Input, SqlDbType.VarChar, 250, ddlSurvey.SelectedIndex, typeof(string));
+            var1[49] = gb.CreateSPParameter("@plafon1", ParameterDirection.Input, SqlDbType.Decimal, 250, txtplafon.Text, typeof(string));
+            var1[50] = gb.CreateSPParameter("@usia", ParameterDirection.Input, SqlDbType.VarChar, 250, usia, typeof(string));
+            var1[51] = gb.CreateSPParameter("@tanggal_pengajuan", ParameterDirection.Input, SqlDbType.VarChar, 250, datetgldrop, typeof(string));
+            var1[52] = gb.CreateSPParameter("@filepathjaminan", ParameterDirection.Input, SqlDbType.VarChar, 250, txtpathjaminan.Text, typeof(string));
+
+
+            ge.ListDataset = gb.GetDataJustOutPut("AR_PERMOHONAN_KREDIT", var1, "constrmf");
+
+            DefaultClass.Global.SqlHelper[] var2 = new DefaultClass.Global.SqlHelper[52];
+            var2[0] = gb.CreateSPParameter("@kode_cabang", ParameterDirection.Input, SqlDbType.VarChar, 20, SessBranchID, typeof(string));
+            var2[1] = gb.CreateSPParameter("@no_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 50, nonasabah, typeof(string));
+            var2[2] = gb.CreateSPParameter("@kode_produk", ParameterDirection.Input, SqlDbType.VarChar, 250, ddlprodukpengajuan.SelectedValue, typeof(string));
+            var2[3] = gb.CreateSPParameter("@userid", ParameterDirection.Input, SqlDbType.VarChar, 200, SessLoginID, typeof(string));
+            var2[4] = gb.CreateSPParameter("@kondisi_kesehatan", ParameterDirection.Input, SqlDbType.VarChar, 20, ddlkondisisehat.SelectedValue, typeof(string));
+            var2[5] = gb.CreateSPParameter("@sakit_yang_pernah_diderita", ParameterDirection.Input, SqlDbType.VarChar, 50, txtsakit.Text, typeof(string));
+            var2[6] = gb.CreateSPParameter("@tahun_sakit_yang_diderita", ParameterDirection.Input, SqlDbType.VarChar, 250, txttahunsakit.Text, typeof(string));
+            var2[7] = gb.CreateSPParameter("@pendapatan_bersih_usaha", ParameterDirection.Input, SqlDbType.Decimal, 200, txtpendapatanbersih.Text, typeof(string));
+            var2[8] = gb.CreateSPParameter("@pendapatan_selain_usaha", ParameterDirection.Input, SqlDbType.Decimal, 20, txtpendapatanselain.Text, typeof(string));
+            var2[9] = gb.CreateSPParameter("@total_pendapatan", ParameterDirection.Input, SqlDbType.Decimal, 50, txttotalpendapatan.Text, typeof(string));
+            var2[10] = gb.CreateSPParameter("@pengeluaran_rumah_tangga", ParameterDirection.Input, SqlDbType.Decimal, 250, txtpengeluaranrumahtangga.Text, typeof(string));
+            var2[11] = gb.CreateSPParameter("@tagihan_pln_pam", ParameterDirection.Input, SqlDbType.Decimal, 200, txttagihanlistrik.Text, typeof(string));
+            var2[12] = gb.CreateSPParameter("@pinjaman_kewajiban_lain", ParameterDirection.Input, SqlDbType.Decimal, 20, txtpinjamanlain.Text, typeof(string));
+            var2[13] = gb.CreateSPParameter("@rekomendasi_angsuran", ParameterDirection.Input, SqlDbType.Decimal, 50, txtangsuran.Text, typeof(string));
+            var2[14] = gb.CreateSPParameter("@total_angsuran", ParameterDirection.Input, SqlDbType.Decimal, 250, txttotal.Text, typeof(string));
+            var2[15] = gb.CreateSPParameter("@pendapatan_usaha", ParameterDirection.Input, SqlDbType.Decimal, 200, txtpendapatanusaha.Text, typeof(string));
+            var2[16] = gb.CreateSPParameter("@harga_pokok", ParameterDirection.Input, SqlDbType.Decimal, 20, txthargapokok.Text, typeof(string));
+            var2[17] = gb.CreateSPParameter("@laba_kotor", ParameterDirection.Input, SqlDbType.Decimal, 50, txtlabakotor.Text, typeof(string));
+            var2[18] = gb.CreateSPParameter("@biaya_pegawai", ParameterDirection.Input, SqlDbType.Decimal, 250, txtbiayapegawai.Text, typeof(string));
+            var2[19] = gb.CreateSPParameter("@biaya_lain_lain", ParameterDirection.Input, SqlDbType.Decimal, 200, txtbiayalain.Text, typeof(string));
+            var2[20] = gb.CreateSPParameter("@total_biaya", ParameterDirection.Input, SqlDbType.Decimal, 20, txttotalbiaya.Text, typeof(string));
+            var2[21] = gb.CreateSPParameter("@laba_bersih_sebelum_pajak", ParameterDirection.Input, SqlDbType.Decimal, 50, txtlababersihsebelumpajak.Text, typeof(string));
+            var2[22] = gb.CreateSPParameter("@pajak_penghasilan", ParameterDirection.Input, SqlDbType.Decimal, 250, txtpajakpenghasilan.Text, typeof(string));
+            var2[23] = gb.CreateSPParameter("@laba_bersih_setelah_pajak", ParameterDirection.Input, SqlDbType.Decimal, 200, txtlababersihsetelahpajak.Text, typeof(string));
+            var2[24] = gb.CreateSPParameter("@sisa_penghasilan", ParameterDirection.Input, SqlDbType.Decimal, 20, TextBox7.Text, typeof(string));
+            var2[25] = gb.CreateSPParameter("@kondisi_usaha", ParameterDirection.Input, SqlDbType.VarChar, 50, txtkondisiusaha.Text, typeof(string));
+            var2[26] = gb.CreateSPParameter("@karakter_anggota", ParameterDirection.Input, SqlDbType.VarChar, 250, txtKarakterAnggota.Text, typeof(string));
+            var2[27] = gb.CreateSPParameter("@info_anggota_dari_pihak3", ParameterDirection.Input, SqlDbType.VarChar, 200, txtinfo.Text, typeof(string));
+            var2[28] = gb.CreateSPParameter("@kondisi_pesaing", ParameterDirection.Input, SqlDbType.VarChar, 20, txtkondisipesaing.Text, typeof(string));
+            var2[29] = gb.CreateSPParameter("@resiko_usaha", ParameterDirection.Input, SqlDbType.VarChar, 50, txtresikousaha.Text, typeof(string));
+            var2[30] = gb.CreateSPParameter("@upaya_mengatasi_resiko_usaha", ParameterDirection.Input, SqlDbType.VarChar, 250, txtatasiresiko.Text, typeof(string));
+            var2[31] = gb.CreateSPParameter("@tgl_drop", ParameterDirection.Input, SqlDbType.SmallDateTime, 200, datetgldrop, typeof(DateTime));
+            var2[32] = gb.CreateSPParameter("@tgl_jt", ParameterDirection.Input, SqlDbType.VarChar, 200, datetgljt, typeof(string));
+            var2[33] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "INSERT", typeof(string));
+            var2[34] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+            var2[35] = gb.CreateSPParameter("@sifat", ParameterDirection.Input, SqlDbType.VarChar, 20, ddlSifat.SelectedValue, typeof(string));
+            var2[36] = gb.CreateSPParameter("@sektor_ekonomi", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlsektorekonomi.SelectedValue, typeof(string));
+            var2[37] = gb.CreateSPParameter("@golongan_debitur", ParameterDirection.Input, SqlDbType.VarChar, 250, ddlgolongandebitur.SelectedValue, typeof(string));
+            var2[38] = gb.CreateSPParameter("@ktp_penjamin", ParameterDirection.Input, SqlDbType.VarChar, 200, txtktppenjamin.Text, typeof(string));
+            var2[39] = gb.CreateSPParameter("@nama_penjamin", ParameterDirection.Input, SqlDbType.VarChar, 100, TextBox13.Text, typeof(string));
+            var2[40] = gb.CreateSPParameter("@golongan_penjamin", ParameterDirection.Input, SqlDbType.VarChar, 250, ddlgolonganpenjamin.SelectedValue, typeof(string));
+            var2[41] = gb.CreateSPParameter("@pendapatan_bulan", ParameterDirection.Input, SqlDbType.Decimal, 100, txtpendapatanperbulan.Text, typeof(string));
+            var2[42] = gb.CreateSPParameter("@fisik_jaminan", ParameterDirection.Input, SqlDbType.VarChar, 100, ddlfisikjaminan.SelectedValue, typeof(string));
+            var2[43] = gb.CreateSPParameter("@jaminan_tambahan", ParameterDirection.Input, SqlDbType.VarChar, 250, TextBox1.Text, typeof(string));
+            var2[44] = gb.CreateSPParameter("@biaya_cadangan", ParameterDirection.Input, SqlDbType.Decimal, 10, TextBox3.Text, typeof(string));
+            var2[45] = gb.CreateSPParameter("@nilai_taksasi", ParameterDirection.Input, SqlDbType.Decimal, 250, TextBox5.Text, typeof(string));
+            var2[46] = gb.CreateSPParameter("@angsuran_dimuka", ParameterDirection.Input, SqlDbType.Decimal, 10, txtangsurandimuka.Text, typeof(string));
+            var2[47] = gb.CreateSPParameter("@blokir_angsuran", ParameterDirection.Input, SqlDbType.Decimal, 250, TextBox14.Text, typeof(string));
+            var2[48] = gb.CreateSPParameter("@nominal_blokir_angsuran", ParameterDirection.Input, SqlDbType.Decimal, 20, TextBox15.Text, typeof(string));
+            var2[49] = gb.CreateSPParameter("@jenis_blokir", ParameterDirection.Input, SqlDbType.VarChar, 5, ddljenisblokir.SelectedValue, typeof(string));
+            var2[50] = gb.CreateSPParameter("@status_dalam_keluarga", ParameterDirection.Input, SqlDbType.VarChar, 10, ddlstatuskawin.SelectedValue, typeof(string));
+            var2[51] = gb.CreateSPParameter("@Siklus", ParameterDirection.Input, SqlDbType.VarChar, 10, siklus, typeof(string));
+
+            ge.ListDataset = gb.GetDataJustOutPut("AR_APPROVAL_HISTORY", var2, "constrmf");
+
+            if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
+            {
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Save Done!','You successfully save this Project','top-right','success','1');", true);
+
+
+            }
+            else
+            {
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "');", true);
+                gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+            }
+
+        }
+
+        catch (Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString().Replace("'", "") + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+        Page_Load(this.Page, e);
+    }
+
+    protected string btnafterDelete()
+    {
+        return Page.ClientScript.GetPostBackEventReference(LinkButton1, string.Empty, true);
+    }
+
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("PermohonanPinjamanKreditMultiguna.aspx");
+    }
+    protected void txttglrealisasi_TextChanged(object sender, EventArgs e)
+    {
+        DateTime currentdate = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+        DateTime ToDat1e = DateTime.ParseExact(txttglrealisasi.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+        
+        if (ToDat1e < currentdate)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Tanggal Realisasi tidak boleh kurang dari Tanggal hari ini');", true);
+
+        }
+        else
+        { 
+
+        }
+ 
+
+    }
+
+        
+    protected void txtjangka_TextChanged(object sender, EventArgs e)
+    {
+        double nominal_provisi = 0;
+        int i = 0;
+        DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[3];
+        var1[0] = gb.CreateSPParameter("@no_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 50, txtnonasabah.Text, typeof(string));
+        var1[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECT", typeof(string));
+        var1[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+        ge.ListDataset = gb.GetDataJustOutPut("GetMasterKredit", var1, "constrmf");
+
+        ddlprogrampinjaman.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+
+        if (ge.ListDataset.Tables[0].DefaultView.Count == 0)
+        {
+            HDStatusDebitur.Value = "B";
+        }
+        else
+        {
+            HDStatusDebitur.Value = "-";
+        }
+
+        string kode_wilayah = "";
+
+        if (SessKdpersh == "01")
+        {
+            kode_wilayah = "I";
+        }
+        else if (SessKdpersh == "02")
+        {
+            kode_wilayah = "II";
+        }
+        else if (SessKdpersh == "03")
+        {
+            kode_wilayah = "III";
+        }
+        else if (SessKdpersh == "04")
+        {
+            kode_wilayah = "IV";
+        }
+        else if (SessKdpersh == "05")
+        {
+            kode_wilayah = "V";
+        }
+
+        DefaultClass.Global.SqlHelper[] var2 = new DefaultClass.Global.SqlHelper[8];
+        var2[0] = gb.CreateSPParameter("@KodeBank", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlsumberdana.SelectedValue, typeof(string));
+        var2[1] = gb.CreateSPParameter("@KodeProduk", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlprodukpengajuan.SelectedValue, typeof(string));
+        var2[2] = gb.CreateSPParameter("@Jangka", ParameterDirection.Input, SqlDbType.VarChar, 50, txtjangka.Text, typeof(string));
+        var2[3] = gb.CreateSPParameter("@Wilayah", ParameterDirection.Input, SqlDbType.VarChar, 50, kode_wilayah, typeof(string));
+        var2[4] = gb.CreateSPParameter("@StatusSK", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlprogrampinjaman.SelectedValue, typeof(string));
+        var2[5] = gb.CreateSPParameter("@statusDebitur", ParameterDirection.Input, SqlDbType.VarChar, 50, HDStatusDebitur.Value, typeof(string));
+        var2[6] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTSUKUBUNGA", typeof(string));
+        var2[7] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+        ge.ListDataset = gb.GetDataJustOutPut("GetSukuBungaProduk", var2, "constrmf");
+
+        if (ge.ListDataset.Tables[0].DefaultView.Count == 0)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Tidak ada sumber dana memenuhi kriteria pinjaman!');", true);
+            txtjangka.Text = "";
+            txtjangka.Focus();
+        }
+        else
+        {
+            txtbunga.Text = ge.ListDataset.Tables[0].Rows[0]["bunga"].ToString();
+            txtProvisi.Text = ge.ListDataset.Tables[0].Rows[0]["Provisi"].ToString();
+
+
+            nominal_provisi = double.Parse(txtplafon.Text.Replace(".", "").Replace(",00","")) * (double.Parse(txtProvisi.Text.ToString().Replace(".", ",").Trim())) / 100;
+            txtnominalprovisi.Text = nominal_provisi.ToString();
+
+            pokok = gb.GetPokok(int.Parse(txtjangka.Text), double.Parse(txtplafon.Text.Replace(".", "").Replace(",00", "")));
+            bunga = gb.GetNominalBunga(Double.Parse(txtbunga.Text.Trim().Replace(".", ",")), int.Parse(txtjangka.Text), double.Parse(txtplafon.Text.Replace(".", "").Replace(",00", "")), ddlprodukpengajuan.SelectedValue);
+
+            //txtangsuranperbulan.Text = gb.GetAdmProvisi(Double.Parse(txtbunga.Text.Trim().Replace(".", ",")), int.Parse(txtjangka.Text), double.Parse(txtplafon.Text));
+            angsuranperbulan = double.Parse(pokok) + double.Parse(bunga);
+            txtangsuranperbulan.Text = angsuranperbulan.ToString();
+
+            //HITUNG JATUH TEMPO BERDASARKAN JANGKA DAN HARI LIBUR
+
+            if (ddlprodukpengajuan.SelectedValue == "3C")
+            {
+                for (i = 0; i < int.Parse(txtjangka.Text); i++)
+                {
+                    if (i == 0)
+                    {
+                        tgl_realisasi = DateTime.Parse(txttglrealisasi.Text);
+                        tgl_libur = tgl_realisasi.AddDays(7);
+                    }
+                    else
+                    {
+                        tgl_libur = tgldrop.AddDays(7);
+                    }
+
+                    DefaultClass.Global.SqlHelper[] var3 = new DefaultClass.Global.SqlHelper[3];
+                    var3[0] = gb.CreateSPParameter("@tglLibur", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, tgl_libur, typeof(string));
+                    var3[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECT", typeof(string));
+                    var3[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+                    ge.ListDataset = gb.GetDataJustOutPut("GetTglLibur", var3, "constrmf");
+
+                    if (ge.ListDataset.Tables[0].DefaultView.Count == 0)
+                    {
+                        tgldrop = tgl_libur;
+                    }
+                    else
+                    {
+                        tgldrop = tgl_libur.AddDays(7);
+                    }
+
+                }
+
+                txtjttempo.Text = tgldrop.ToString("dd-MMM-yyyy");
+
+
+            }
+            else if (ddlprodukpengajuan.SelectedValue == "3B")
+            {
+                tgl_realisasi = DateTime.Parse(txttglrealisasi.Text);
+                tgl_libur = tgl_realisasi.AddMonths(int.Parse(txtjangka.Text));
+
+                txtjttempo.Text = tgl_libur.ToString("dd-MMM-yyyy");
+            }
+        }
+
+
+    }
+
+    protected void txtkalicadangan_TextChanged(object sender, EventArgs e)
+    {
+        double biayacadangan = 0;
+
+        biayacadangan = double.Parse(txtkalicadangan.Text) * double.Parse(txtangsuranperbulan.Text);
+        TextBox3.Text = gb.ToRupiah(biayacadangan.ToString());
+        TextBox3.Text = TextBox3.Text.Replace("Rp", "");
+    }
+
+    protected void ddlprodukpengajuan_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        String kode_program = "";
+
+        if (ddlprodukpengajuan.SelectedValue == "3B")
+        {
+            kode_program = "5";
+
+        }
+        else if (ddlprodukpengajuan.SelectedValue == "3C")
+        {
+            kode_program = "6";
+
+        }
+        else if (ddlprodukpengajuan.SelectedValue == "3D")
+        {
+            kode_program = "7";
+        }
+
+        DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[3];
+        var1[0] = gb.CreateSPParameter("@kode", ParameterDirection.Input, SqlDbType.VarChar, 50, kode_program, typeof(string));
+        var1[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECT", typeof(string));
+        var1[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+        ge.ListDataset = gb.GetDataJustOutPut("AR_PROGRAMPINJAMAN", var1, "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kode asc";
+
+        ddlprogrampinjaman.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlprogrampinjaman.DataTextField = "keterangan";
+        ddlprogrampinjaman.DataValueField = "kode";
+        ddlprogrampinjaman.DataBind();
+        ddlprogrampinjaman.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+
+        HDJenisPinjaman.Value = ge.ListDataset.Tables[0].Rows[0]["jns_pinjaman"].ToString();
+
+
+    }
+
+    protected void ddlprogrampinjaman_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        string kode_wilayah = "";
+
+        if (SessKdpersh == "01")
+        {
+            kode_wilayah = "I";
+        }
+        else if (SessKdpersh == "02")
+        {
+            kode_wilayah = "II";
+        }
+        else if (SessKdpersh == "03")
+        {
+            kode_wilayah = "III";
+        }
+        else if (SessKdpersh == "04")
+        {
+            kode_wilayah = "IV";
+        }
+        else if (SessKdpersh == "05")
+        {
+            kode_wilayah = "V";
+        }
+
+        DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[6];
+        var1[0] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+        var1[1] = gb.CreateSPParameter("@jns_pinjaman", ParameterDirection.Input, SqlDbType.VarChar, 50, HDJenisPinjaman.Value, typeof(string));
+        var1[2] = gb.CreateSPParameter("@KodeWilayah", ParameterDirection.Input, SqlDbType.VarChar, 50, kode_wilayah, typeof(string));
+        var1[3] = gb.CreateSPParameter("@KodeProduk", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlprodukpengajuan.SelectedValue, typeof(string));
+        var1[4] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECT", typeof(string));
+        var1[5] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+        ge.ListDataset = gb.GetDataJustOutPut("GetSumberDanaCabangBank", var1, "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kdpersh asc";
+
+        ddlsumberdana.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlsumberdana.DataTextField = "kode_sumberdana";
+        ddlsumberdana.DataValueField = "kdpersh";
+        ddlsumberdana.DataBind();
+        ddlsumberdana.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+
+    }
+
+    protected void txtbiayalain_TextChanged(object sender, EventArgs e)
+    {
+        double labakotor = 0, totalbiaya = 0, lababersih = 0;
+        labakotor = Convert.ToDouble(txtpendapatanusaha.Text) - Convert.ToDouble(txthargapokok.Text);
+        totalbiaya = Convert.ToDouble(txtbiayapegawai.Text) + Convert.ToDouble(txtbiayalain.Text);
+        lababersih = labakotor - totalbiaya;
+
+        txtlabakotor.Text = gb.ToRupiah(labakotor.ToString());
+        txtlabakotor.Text = txtlabakotor.Text.Replace("Rp", "");
+         
+        txttotalbiaya.Text = gb.ToRupiah(totalbiaya.ToString());
+        txttotalbiaya.Text = txttotalbiaya.Text.Replace("Rp", "");
+         
+        txtlababersihsebelumpajak.Text = gb.ToRupiah(lababersih.ToString());
+        txtlababersihsebelumpajak.Text = txtlababersihsebelumpajak.Text.Replace("Rp", "");
+        txtpajakpenghasilan.Focus();
+    }
+
+    protected void txtbiayapegawai_TextChanged(object sender, EventArgs e)
+    {
+        double labakotor = 0, totalbiaya = 0, lababersih = 0;
+        labakotor = Convert.ToDouble(txtpendapatanusaha.Text) - Convert.ToDouble(txthargapokok.Text);
+        totalbiaya = Convert.ToDouble(txtbiayapegawai.Text) + Convert.ToDouble(txtbiayalain.Text);
+        lababersih = labakotor - totalbiaya;
+
+        txtlabakotor.Text = gb.ToRupiah(labakotor.ToString());
+        txtlabakotor.Text = txtlabakotor.Text.Replace("Rp", "");
+
+        txttotalbiaya.Text = gb.ToRupiah(totalbiaya.ToString());
+        txttotalbiaya.Text = txttotalbiaya.Text.Replace("Rp", "");
+
+        txtlababersihsebelumpajak.Text = gb.ToRupiah(lababersih.ToString());
+        txtbiayalain.Focus();
+    }
+
+    protected void txtpendapatanusaha_TextChanged(object sender, EventArgs e)
+    {
+        double labakotor = 0, totalbiaya = 0, lababersih = 0;
+        labakotor = Convert.ToDouble(txtpendapatanusaha.Text) - Convert.ToDouble(txthargapokok.Text);
+        totalbiaya = Convert.ToDouble(txtbiayapegawai.Text) + Convert.ToDouble(txtbiayalain.Text);
+        lababersih = labakotor - totalbiaya;
+
+        txtlabakotor.Text = gb.ToRupiah(labakotor.ToString());
+        txtlabakotor.Text = txtlabakotor.Text.Replace("Rp", "");
+
+        txttotalbiaya.Text = totalbiaya.ToString();
+
+        txtlababersihsebelumpajak.Text = lababersih.ToString();
+        txthargapokok.Focus();
+    }
+
+    protected void txthargapokok_TextChanged(object sender, EventArgs e)
+    {
+        double labakotor = 0, totalbiaya = 0, lababersih = 0;
+        labakotor = Convert.ToDouble(txtpendapatanusaha.Text) - Convert.ToDouble(txthargapokok.Text);
+        totalbiaya = Convert.ToDouble(txtbiayapegawai.Text) + Convert.ToDouble(txtbiayalain.Text);
+        lababersih = labakotor - totalbiaya;
+
+        txtlabakotor.Text = gb.ToRupiah(labakotor.ToString());
+        txtlabakotor.Text = txtlabakotor.Text.Replace("Rp", "");
+
+        txttotalbiaya.Text = totalbiaya.ToString();
+
+        txtlababersihsebelumpajak.Text = lababersih.ToString();
+        txtbiayapegawai.Focus();
+    }
+
+    protected void txtpendapatanselain_TextChanged(object sender, EventArgs e)
+    {
+        double pendapatan = 0;
+        pendapatan = Convert.ToDouble(txtpendapatanbersih.Text) + Convert.ToDouble(txtpendapatanselain.Text.Replace(",", ""));
+
+        txttotalpendapatan.Text = gb.ToRupiah(pendapatan.ToString());
+        txttotalpendapatan.Text = txttotalpendapatan.Text.Replace("Rp", "");
+
+        HDNoNasabah.Value = pendapatan.ToString();
+        txtpengeluaranrumahtangga.Focus();
+    }
+
+    protected void txtpendapatanbersih_TextChanged(object sender, EventArgs e)
+    {
+        double pendapatan = 0;
+        pendapatan = Convert.ToDouble(txtpendapatanbersih.Text) + Convert.ToDouble(txtpendapatanselain.Text.Replace(",", ""));
+
+        txttotalpendapatan.Text = gb.ToRupiah(pendapatan.ToString());
+        txttotalpendapatan.Text = txttotalpendapatan.Text.Replace("Rp", "");
+
+        HDNoNasabah.Value = pendapatan.ToString();
+        txtpendapatanselain.Focus();
+    }
+
+
+    protected void txtpajakpenghasilan_TextChanged(object sender, EventArgs e)
+    {
+        double lababersih = 0;
+        lababersih = Convert.ToDouble(txtlababersihsebelumpajak.Text) - Convert.ToDouble(txtpajakpenghasilan.Text);
+
+        txtlababersihsetelahpajak.Text = gb.ToRupiah(lababersih.ToString());
+        txtlababersihsetelahpajak.Text = txtlababersihsetelahpajak.Text.Replace("Rp", "");
+
+    }
+    protected void txtangsuran_TextChanged(object sender, EventArgs e)
+    {
+        double pengeluaran = 0, grandtotal = 0;
+        pengeluaran = Convert.ToDouble(txtpengeluaranrumahtangga.Text) + Convert.ToDouble(txttagihanlistrik.Text) + Convert.ToDouble(txtpinjamanlain.Text) + Convert.ToDouble(txtangsuran.Text);
+
+        txttotal.Text = gb.ToRupiah(pengeluaran.ToString());
+        txttotal.Text = txttotal.Text.Replace("Rp", "");
+
+        grandtotal = Convert.ToDouble(HDNoNasabah.Value) - Convert.ToDouble(pengeluaran.ToString());
+        TextBox7.Text = gb.ToRupiah(grandtotal.ToString());
+        TextBox7.Text = TextBox7.Text.Replace("Rp", "");
+    }
+
+    protected void txtpinjamanlain_TextChanged(object sender, EventArgs e)
+    {
+        double pengeluaran = 0, grandtotal = 0;
+        pengeluaran = Convert.ToDouble(txtpengeluaranrumahtangga.Text) + Convert.ToDouble(txttagihanlistrik.Text) + Convert.ToDouble(txtpinjamanlain.Text) + Convert.ToDouble(txtangsuran.Text);
+
+        txttotal.Text = gb.ToRupiah(pengeluaran.ToString());
+        txttotal.Text = txttotal.Text.Replace("Rp", "");
+
+        grandtotal = Convert.ToDouble(HDNoNasabah.Value) - Convert.ToDouble(pengeluaran.ToString());
+        TextBox7.Text = gb.ToRupiah(grandtotal.ToString());
+        TextBox7.Text = TextBox7.Text.Replace("Rp", "");
+        txtangsuran.Focus();
+    }
+
+    protected void txttagihanlistrik_TextChanged(object sender, EventArgs e)
+    {
+        double pengeluaran = 0, grandtotal = 0;
+        pengeluaran = Convert.ToDouble(txtpengeluaranrumahtangga.Text) + Convert.ToDouble(txttagihanlistrik.Text) + Convert.ToDouble(txtpinjamanlain.Text) + Convert.ToDouble(txtangsuran.Text);
+
+        txttotal.Text = gb.ToRupiah(pengeluaran.ToString());
+        txttotal.Text = txttotal.Text.Replace("Rp", "");
+
+        grandtotal = Convert.ToDouble(HDNoNasabah.Value) - Convert.ToDouble(pengeluaran.ToString());
+        TextBox7.Text = gb.ToRupiah(grandtotal.ToString());
+        TextBox7.Text = TextBox7.Text.Replace("Rp", "");
+        txtpinjamanlain.Focus();
+    }
+
+    protected void txtpengeluaranrumahtangga_TextChanged(object sender, EventArgs e)
+    {
+        double pengeluaran = 0, grandtotal = 0;
+        pengeluaran = Convert.ToDouble(txtpengeluaranrumahtangga.Text) + Convert.ToDouble(txttagihanlistrik.Text) + Convert.ToDouble(txtpinjamanlain.Text) + Convert.ToDouble(txtangsuran.Text);
+
+        txttotal.Text = gb.ToRupiah(pengeluaran.ToString());
+        txttotal.Text = txttotal.Text.Replace("Rp", "");
+
+        grandtotal = Convert.ToDouble(HDNoNasabah.Value) - Convert.ToDouble(pengeluaran.ToString());
+        TextBox7.Text = gb.ToRupiah(grandtotal.ToString());
+        TextBox7.Text = TextBox7.Text.Replace("Rp", "");
+
+        txttagihanlistrik.Focus();
+    }
+
+    protected void btnSearch_Click(object sender, EventArgs e)
+    {
+        string no_rekening = "";
+
+        string[] splitdata = txtnonasabah.Text.Split('-');
+        string nonasabah = splitdata[0];
+
+
+        if (txtnonasabah.Text == "")
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('No. Nasabah belum di isi');", true);
+
+        }
+        else if (txtkodecabang.Text != txtnonasabah.Text.Substring(0, 3))
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('No. Nasabah yang di input tidak terdapat di cabang Anda');", true);
+
+        }
+        else if (ddlSurvey.SelectedIndex == 0)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Jenis Survey belum di pilih');", true);
+
+        }
+        else
+        {
+
+            DefaultClass.Global.SqlHelper[] var3 = new DefaultClass.Global.SqlHelper[3];
+            var3[0] = gb.CreateSPParameter("@no_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 50, nonasabah, typeof(string));
+            var3[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CEKKEANGGOTAAN", typeof(string));
+            var3[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+            ge.ListDataset = gb.GetDataJustOutPut("AR_NASABAH", var3, "constrmf");
+
+            if (ge.ListDataset.Tables[0].DefaultView.Count != 0)
+            {
+                DefaultClass.Global.SqlHelper[] var2 = new DefaultClass.Global.SqlHelper[3];
+                var2[0] = gb.CreateSPParameter("@nip", ParameterDirection.Input, SqlDbType.VarChar, 50, nonasabah, typeof(string));
+                var2[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTLUNAS", typeof(string));
+                var2[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+                ge.ListDataset = gb.GetDataJustOutPut("AR_PERMOHONAN_KREDIT", var2, "constrmf");
+
+                if (ge.ListDataset.Tables[0].DefaultView.Count == 0)
+                {
+
+                    pnladd.Visible = true;
+                    PnlFront.Visible = false;
+                    pnlFilter.Visible = false;
+
+                    DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
+                    var[0] = gb.CreateSPParameter("@no_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 50, nonasabah, typeof(string));
+                    var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTFORPERMOHONAN", typeof(string));
+                    var[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+                    ge.ListDataset = gb.GetDataJustOutPut("AR_NASABAH", var, "constrmf");
+
+                    //Panel Data nasabah 1
+                    txtnoanggota.Text = ge.ListDataset.Tables[0].Rows[0]["no_anggota"].ToString();
+                    txtnorektabungan.Text = ge.ListDataset.Tables[0].Rows[0]["no_rek_tabungan"].ToString();
+                    txtnamanasabah.Text = ge.ListDataset.Tables[0].Rows[0]["nama_nasabah"].ToString();
+                    txtalamat.Text = ge.ListDataset.Tables[0].Rows[0]["alamat"].ToString();
+                    txtkelurahan.Text = ge.ListDataset.Tables[0].Rows[0]["alamat_rumah_tinggal2"].ToString();
+                    txtkecamatan.Text = ge.ListDataset.Tables[0].Rows[0]["alamat_rumah_tinggal3"].ToString();
+                    txtkota.Text = ge.ListDataset.Tables[0].Rows[0]["kota"].ToString();
+                    txttempatlahir.Text = ge.ListDataset.Tables[0].Rows[0]["tempat_lahir"].ToString();
+                    txttgllahir.Text = ge.ListDataset.Tables[0].Rows[0]["tgl_lahir"].ToString();
+                    txtnoidentitas.Text = ge.ListDataset.Tables[0].Rows[0]["no_identitas"].ToString();
+                    txtmasaberakhirKTP.Text = ge.ListDataset.Tables[0].Rows[0]["berlaku_ktp"].ToString();
+                    txtNPWP.Text = ge.ListDataset.Tables[0].Rows[0]["no_npwp"].ToString();
+                    txtAgama.Text = ge.ListDataset.Tables[0].Rows[0]["agama"].ToString();
+                    txthp.Text = ge.ListDataset.Tables[0].Rows[0]["no_hp"].ToString();
+                    txtjumlahanak.Text = ge.ListDataset.Tables[0].Rows[0]["jumlah_anak"].ToString();
+
+                    //panel Data Pekerjaan Nasabah
+                    txtPekerjaan.Text = ge.ListDataset.Tables[0].Rows[0]["nama_pekerjaan"].ToString();
+                    txtnamaPerusahaan.Text = ge.ListDataset.Tables[0].Rows[0]["nama_perusahaan"].ToString();
+                    txtalamatperusahaan.Text = ge.ListDataset.Tables[0].Rows[0]["alamat_perusahaan1"].ToString();
+                    txtkelurahanperusahaan.Text = ge.ListDataset.Tables[0].Rows[0]["alamat_perusahaan2"].ToString();
+                    txtkecamatanperusahaan.Text = ge.ListDataset.Tables[0].Rows[0]["alamat_perusahaan3"].ToString();
+                    txtkotapekerjaan.Text = ge.ListDataset.Tables[0].Rows[0]["nama_provinsi"].ToString();
+                    txtkodepospekerjaan.Text = ge.ListDataset.Tables[0].Rows[0]["kode_pos"].ToString();
+                    txtBidangUsaha.Text = ge.ListDataset.Tables[0].Rows[0]["bidang_usaha"].ToString();
+                    txtteleponpekerjaan.Text = ge.ListDataset.Tables[0].Rows[0]["telepon"].ToString();
+                    txtFaxPekerjaan.Text = ge.ListDataset.Tables[0].Rows[0]["fax"].ToString();
+                    txtlamabekerja.Text = ge.ListDataset.Tables[0].Rows[0]["lama_kerja"].ToString();
+                    txtkepemilikantempatusaha.Text = ge.ListDataset.Tables[0].Rows[0]["kepemilikan_tempat_usaha"].ToString();
+                    txtalamatsurat.Text = ge.ListDataset.Tables[0].Rows[0]["alamat_surat"].ToString();
+
+                    HDKodePos.Value = ge.ListDataset.Tables[0].Rows[0]["kodepos"].ToString();
+                    HDKodeArea.Value = ge.ListDataset.Tables[0].Rows[0]["kode_area"].ToString();
+                    HDGender.Value = ge.ListDataset.Tables[0].Rows[0]["jenis_kelamin"].ToString();
+                    HDLamaKerja.Value = ge.ListDataset.Tables[0].Rows[0]["lama_kerja"].ToString();
+                    
+                    txtsimpok.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["simpok"].ToString())); 
+                    txtsimwa.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["simwa"].ToString()));
+
+
+
+                }
+                else
+                {
+
+                    no_rekening = ge.ListDataset.Tables[0].Rows[0]["no_rekening"].ToString();
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('No.Rekening =  " + no_rekening + " belum Lunas, Mohon Lunasi terlebih dahulu');", true);
+
+                }
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Nasabah Belum Menjadi Anggota Koperasi Atau Tidak Aktif/Tutup!');", true);
+
+            }
+
+
+
+
+
+
+        }
+    }
+
+    [WebMethod]
+    public static string GetNoNasabah(string InputText, string SessionBranchID)
+    {
+        List<string[]> listResult = new List<string[]>();
+
+        string no_nasabah = SessionBranchID + "" + InputText;
+
+        // empResult.Add(KDBRG);
+        DefaultClass.Global gb = new DefaultClass.Global();
+        EntitiesClass.GlobalEntities ge = new EntitiesClass.GlobalEntities();
+
+        DefaultClass.Global.SqlHelper[] Params = new DefaultClass.Global.SqlHelper[2];
+        //Params[0] = gb.CreateSPParameter("@WhereCond", ParameterDirection.Input, SqlDbType.VarChar, 0, InputText, typeof(String));
+        Params[0] = gb.CreateSPParameter("@kodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 3, SessionBranchID, typeof(String));
+        Params[1] = gb.CreateSPParameter("@no_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 50, no_nasabah, typeof(String));
+
+        ge.ListDataset = gb.GetDataJustOutPut("dbo.AR_GetNoNasabahForPermohonan", Params, "constrmf");
+
+        listResult = gb.ConvertTable(ge.ListDataset.Tables[0]);
+
+        var jsonSerialiser = new JavaScriptSerializer();
+        var json = jsonSerialiser.Serialize(listResult);
+
+        return json;
+
+    }
+
+    public void BindGridEntity()
+    {
+
+        DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
+        var[0] = gb.CreateSPParameter("@kode_cabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+        var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTLISTNASABAH", typeof(string));
+        var[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+
+        ge.ListDataset = gb.GetDataJustOutPut("AR_PERMOHONAN_KREDIT", var, "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "no_registrasi desc";
+
+
+        GRData.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        GRData.DataBind();
+
+        GRData.UseAccessibleHeader = true;
+
+        GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
+
+    }
+
+    public void InsertCombo()
+    {
+        // --- Combo Jenis Kelamin
+        DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
+        var[0] = gb.CreateSPParameter("@kodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+        var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECT", typeof(string));
+        var[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+        ge.ListDataset = gb.GetDataJustOutPut("GetArInstansi", var, "constrmf");
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kd_instansi asc";
+
+        ddlkodeinstansi.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlkodeinstansi.DataTextField = "instansi";
+        ddlkodeinstansi.DataValueField = "kd_instansi";
+        ddlkodeinstansi.DataBind();
+        ddlkodeinstansi.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // --- Combo Status Pernikahan
+        ge.ListDataset = gb.GetDataFunction("dbo.GetStatusNikah()", "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "id asc";
+
+        ddlstatuskawin.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlstatuskawin.DataTextField = "Keterangan";
+        ddlstatuskawin.DataValueField = "id";
+        ddlstatuskawin.DataBind();
+        ddlstatuskawin.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // --- Combo Status Kesehatan
+        ge.ListDataset = gb.GetDataFunction("dbo.GetArKesehatan()", "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "id asc";
+
+        ddlkondisisehat.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlkondisisehat.DataTextField = "Keterangan";
+        ddlkondisisehat.DataValueField = "id";
+        ddlkondisisehat.DataBind();
+        ddlkondisisehat.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // --- Combo  Jenis Kredit
+        ge.ListDataset = gb.GetDataFunction("dbo.GetProduk()", "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kode_produk asc";
+
+        ddlprodukpengajuan.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlprodukpengajuan.DataTextField = "produk";
+        ddlprodukpengajuan.DataValueField = "kode_produk";
+        ddlprodukpengajuan.DataBind();
+        ddlprodukpengajuan.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // --- Combo  Jenis Penggunaan
+        ge.ListDataset = gb.GetDataFunction("dbo.GetPenggunaan()", "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kode_penggunaan asc";
+
+        ddlPenggunaan.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlPenggunaan.DataTextField = "penggunaan";
+        ddlPenggunaan.DataValueField = "kode_penggunaan";
+        ddlPenggunaan.DataBind();
+        ddlPenggunaan.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // --- Combo Jenis Pinjaman
+
+        ddljenispinjaman.Items.Add("Pilih Data");
+        ddljenispinjaman.Items.Add("MIKRO");
+
+        // --- Combo Program Pinjaman
+        ge.ListDataset = gb.GetDataFunction("dbo.GetFisikJaminan()", "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kd_fisik asc";
+
+        ddlfisikjaminan.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlfisikjaminan.DataTextField = "ket_fisik";
+        ddlfisikjaminan.DataValueField = "kd_fisik";
+        ddlfisikjaminan.DataBind();
+        ddlfisikjaminan.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // --- Combo Golongan penjamin
+        ge.ListDataset = gb.GetDataFunction("dbo.GetGolonganPenjamin()", "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kode_penjamin asc";
+
+        ddlgolonganpenjamin.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlgolonganpenjamin.DataTextField = "keterangan";
+        ddlgolonganpenjamin.DataValueField = "kode_penjamin";
+        ddlgolonganpenjamin.DataBind();
+        ddlgolonganpenjamin.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // --- Combo Golongan Debitur
+        ge.ListDataset = gb.GetDataFunction("dbo.GetGolonganDebitur()", "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kode_gol_debitur asc";
+
+        ddlgolongandebitur.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlgolongandebitur.DataTextField = "keterangan";
+        ddlgolongandebitur.DataValueField = "kode_gol_debitur";
+        ddlgolongandebitur.DataBind();
+        ddlgolongandebitur.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // --- Combo Golongan Sifat
+        ge.ListDataset = gb.GetDataFunction("dbo.GetSifat()", "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kode_sifat asc";
+
+        ddlSifat.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlSifat.DataTextField = "keterangan";
+        ddlSifat.DataValueField = "kode_sifat";
+        ddlSifat.DataBind();
+        ddlSifat.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // --- Combo Sektor Ekonomi
+        ge.ListDataset = gb.GetDataFunction("dbo.GetSektorUsaha()", "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kode_sektor_usaha asc";
+
+        ddlsektorekonomi.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlsektorekonomi.DataTextField = "keterangan";
+        ddlsektorekonomi.DataValueField = "kode_sektor_usaha";
+        ddlsektorekonomi.DataBind();
+        ddlsektorekonomi.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // --- Combo Jenis Blokir
+        ge.ListDataset = gb.GetDataFunction("dbo.GetJenisBlokir()", "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "id asc";
+
+        ddljenisblokir.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddljenisblokir.DataTextField = "keterangan";
+        ddljenisblokir.DataValueField = "id";
+        ddljenisblokir.DataBind();
+        ddljenisblokir.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // Combo MO dan REF Non MO
+        DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[3];
+        var1[0] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+        var1[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTBYID", typeof(string));
+        var1[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+        ge.ListDataset = gb.GetDataJustOutPut("AR_MASTER_MO", var1, "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "NIK asc";
+
+        ddlAO.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlAO.DataTextField = "namaAO";
+        ddlAO.DataValueField = "NIK";
+        ddlAO.DataBind();
+        ddlAO.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+        // Combo MO dan REF Non MO
+        DefaultClass.Global.SqlHelper[] var2 = new DefaultClass.Global.SqlHelper[3];
+        var2[0] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+        var2[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTBYIDNONSALES", typeof(string));
+        var2[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+        ge.ListDataset = gb.GetDataJustOutPut("AR_MASTER_MO", var2, "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "NIK asc";
+
+        ddlnonao.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlnonao.DataTextField = "namaAO";
+        ddlnonao.DataValueField = "NIK";
+        ddlnonao.DataBind();
+        ddlnonao.Items.Insert(0, new ListItem("Pilih Data", "-"));
+
+
+
+    }
+
+}

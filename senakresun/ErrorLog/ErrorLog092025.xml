@@ -1,0 +1,1130 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Access to the path 'C:\inetpub\wwwroot\senakresun\UserLog\UserLog092025.xml' is denied.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>
+    </FromUser>
+    <TglError>2025-09-01 08.15.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Access to the path 'C:\inetpub\wwwroot\senakresun\UserLog\UserLog092025.xml' is denied.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>
+    </FromUser>
+    <TglError>2025-09-01 08.24.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Access to the path 'C:\inetpub\wwwroot\senakresun\UserLog\UserLog092025.xml' is denied.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>
+    </FromUser>
+    <TglError>2025-09-01 09.28.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Access to the path 'C:\inetpub\wwwroot\senakresun\UserLog\UserLog092025.xml' is denied.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>
+    </FromUser>
+    <TglError>2025-09-01 11.02.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-09-02 00.31.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-09-02 00.31.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-02 18.42.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditAsuransi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-02 18.42.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-02 19.41.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-02 20.41.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-02 20.42.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AshdrPengajuan'. Cannot insert duplicate key in object 'dbo.AshdrPengajuan'. The duplicate key value is (DEMO01101000001, 01, 101).</ErrorText>
+    <FileError>MasukTrnPengajuanPolis.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-02 21.31.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-03 17.36.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AshdrPengajuan'. Cannot insert duplicate key in object 'dbo.AshdrPengajuan'. The duplicate key value is (DEMO01101000001, 01, 101).</ErrorText>
+    <FileError>MasukTrnPengajuanPolis.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-04 14.43.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AshdrPengajuan'. Cannot insert duplicate key in object 'dbo.AshdrPengajuan'. The duplicate key value is (DEMO01101000001, 01, 101).</ErrorText>
+    <FileError>MasukTrnPengajuanPolis.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-04 14.44.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AshdrPengajuan'. Cannot insert duplicate key in object 'dbo.AshdrPengajuan'. The duplicate key value is (DEMO01101000001, 01, 101).</ErrorText>
+    <FileError>MasukTrnPengajuanPolis.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-04 14.46.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodesales'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'BatasKredit'.
+Invalid column name 'SaldoAwalPokok'.
+Invalid column name 'JBayarBungaBln'.
+Invalid column name 'JBayarPinjamanBln'.
+Invalid column name 'JBayarPokokBln'.
+Invalid column name 'SaldoJalanPokok'.
+Invalid column name 'SaldoJalanPokok'.
+Invalid column name 'JBayarBungaBln'.
+Invalid column name 'JBayarPinjamanBln'.
+Invalid column name 'JBayarPokokBln'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodecabang'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodecabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.</ErrorText>
+    <FileError>ReportSupplierBerdasarkanPembeli.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-04 17.22.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodesales'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'BatasKredit'.
+Invalid column name 'SaldoAwalPokok'.
+Invalid column name 'JBayarBungaBln'.
+Invalid column name 'JBayarPinjamanBln'.
+Invalid column name 'JBayarPokokBln'.
+Invalid column name 'SaldoJalanPokok'.
+Invalid column name 'SaldoJalanPokok'.
+Invalid column name 'JBayarBungaBln'.
+Invalid column name 'JBayarPinjamanBln'.
+Invalid column name 'JBayarPokokBln'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodecabang'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodecabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.</ErrorText>
+    <FileError>ReportSupplierBerdasarkanPembeli.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-04 17.27.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Column 'plafon' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-08 11.13.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Column 'plafon' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-08 11.13.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Column 'plafon' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-08 11.13.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Column 'plafon' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-08 11.14.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-08 15.00.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-08 15.06.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodesales'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'BatasKredit'.
+Invalid column name 'SaldoAwalPokok'.
+Invalid column name 'JBayarBungaBln'.
+Invalid column name 'JBayarPinjamanBln'.
+Invalid column name 'JBayarPokokBln'.
+Invalid column name 'SaldoJalanPokok'.
+Invalid column name 'SaldoJalanPokok'.
+Invalid column name 'JBayarBungaBln'.
+Invalid column name 'JBayarPinjamanBln'.
+Invalid column name 'JBayarPokokBln'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodecabang'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodecabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.</ErrorText>
+    <FileError>ReportSupplierBerdasarkanPembeli.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-08 15.51.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodesales'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'BatasKredit'.
+Invalid column name 'SaldoAwalPokok'.
+Invalid column name 'JBayarBungaBln'.
+Invalid column name 'JBayarPinjamanBln'.
+Invalid column name 'JBayarPokokBln'.
+Invalid column name 'SaldoJalanPokok'.
+Invalid column name 'SaldoJalanPokok'.
+Invalid column name 'JBayarBungaBln'.
+Invalid column name 'JBayarPinjamanBln'.
+Invalid column name 'JBayarPokokBln'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodecabang'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodecabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.</ErrorText>
+    <FileError>ReportSupplierBerdasarkanPembeli.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-08 15.56.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-10 14.01.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-10 14.09.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-10 14.09.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-12 09.41.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-12 09.52.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodesales'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'BatasKredit'.
+Invalid column name 'SaldoAwalPokok'.
+Invalid column name 'JBayarBungaBln'.
+Invalid column name 'JBayarPinjamanBln'.
+Invalid column name 'JBayarPokokBln'.
+Invalid column name 'SaldoJalanPokok'.
+Invalid column name 'SaldoJalanPokok'.
+Invalid column name 'JBayarBungaBln'.
+Invalid column name 'JBayarPinjamanBln'.
+Invalid column name 'JBayarPokokBln'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodecabang'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'KodeCrc'.
+Invalid column name 'kodecabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'KodeCabang'.
+Invalid column name 'Alamat2'.
+Invalid column name 'Alamat3'.</ErrorText>
+    <FileError>ReportStatement.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-12 10.58.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-12 16.50.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-12 16.50.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Trying to pass a table-valued parameter with 9 column(s) where the corresponding user-defined table type requires 10 column(s).</ErrorText>
+    <FileError>MasukTrnHutangAsuransi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-12 16.53.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 10.08.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 10.10.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 15.01.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 15.02.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 15.56.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 15.56.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 16.48.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 16.52.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 16.52.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Divide by zero error encountered.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 16.53.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Divide by zero error encountered.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 16.54.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 16.54.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 16.55.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 16.55.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Divide by zero error encountered.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 16.55.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 17.19.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-15 17.19.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-16 15.08.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-16 15.08.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-16 15.13.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-16 15.48.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-16 17.03.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-16 17.03.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-16 17.06.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-16 17.06.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_AshdrPengajuan'. Cannot insert duplicate key in object 'dbo.AshdrPengajuan'. The duplicate key value is (DEMO01101000001, 01, 101).</ErrorText>
+    <FileError>MasukTrnPengajuanPolis.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-17 10.40.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-18 11.48.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-18 12.41.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Invalid column name 'Kdpersh1'.</ErrorText>
+    <FileError>KantorBayar.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-18 13.29.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>'ddlAlamatSurat' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiDataPelengkap.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-19 10.00.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-19 10.38.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-19 10.38.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-19 10.38.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>Divide by zero error encountered.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-19 10.47.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>'ddlAlamatSurat' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiDataPelengkap.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-19 13.55.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>'ddlAlamatSurat' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiDataPelengkap.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-23 14.41.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-23 14.59.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-23 14.59.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-23 15.04.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>'ddlAlamatSurat' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiDataPelengkap.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-23 15.07.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-23 15.16.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-23 15.16.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-23 15.21.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-23 15.21.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnTransferpencairan.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-23 16.02.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>'ddlangsurandimuka' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-24 09.15.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>'ddlangsurandimuka' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-24 09.15.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>'ddlangsurandimuka' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-24 09.16.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>'ddlangsurandimuka' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-24 09.25.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>'ddlangsurandimuka' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-24 09.31.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>Cannot insert the value NULL into column 'kodeasuransi', table 'SENAKRESUN.dbo.KPMappingAsuransi'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnTransferNasabah.aspx</FileError>
+    <FromUser>101AKT1</FromUser>
+    <TglError>2025-09-25 10.13.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 08.42.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 08.43.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 08.55.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 08.56.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 08.56.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 09.02.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 09.02.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 09.04.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 09.16.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 09.16.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 09.17.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 13.36.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 13.36.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 13.37.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 13.38.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>102</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 13.39.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>103</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 13.46.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>104</ID>
+    <ErrorText>Error executing child request for UploadDokumenKunjunganAO.aspx.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 13.46.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>105</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 13.47.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>106</ID>
+    <ErrorText>Procedure or function 'SI_INSERT_DOKUMEN_KUNJUNGAN_AO' expects parameter '@action', which was not supplied.</ErrorText>
+    <FileError>UploadDokumenKunjunganAO.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 13.52.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>107</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 14.09.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>108</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 14.44.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>109</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 14.46.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>110</ID>
+    <ErrorText>'ddlAlamatSurat' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiDataPelengkap.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 15.01.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>111</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 15.05.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>112</ID>
+    <ErrorText>Divide by zero error encountered.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 15.21.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>113</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 16.32.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>114</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 16.33.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>115</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportValidasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 16.43.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>116</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportValidasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 16.43.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>117</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportValidasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 16.43.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>118</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportValidasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 16.44.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>119</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 17.04.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>120</ID>
+    <ErrorText>Column 'plafon' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 17.08.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>121</ID>
+    <ErrorText>Column 'plafon' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 17.08.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>122</ID>
+    <ErrorText>Divide by zero error encountered.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 17.08.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>123</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-29 17.12.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>124</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportValidasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-30 10.49.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>125</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportValidasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-30 10.51.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>126</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportValidasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2025-09-30 13.40.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>127</ID>
+    <ErrorText>Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-09-30 14.05.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>128</ID>
+    <ErrorText>Login failed for user 'sa'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2025-09-30 14.05.23</TglError>
+  </ErrorLog>
+</DocumentElement>

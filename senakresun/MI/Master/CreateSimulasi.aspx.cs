@@ -1,0 +1,2670 @@
+﻿using DefaultClass;
+using EntitiesClass;
+using System;
+using System.Data;
+using System.IO;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Globalization;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+
+public partial class MI_CreateSimulasi: System.Web.UI.Page
+{
+   
+    //String no_nasabah = "", nosebelumnya = "", updateno = "", CRNonasabah = "", STATE = "", kdpersh = "",
+    //       formatnumber = "", msg1 = "", msg2 = "", msg3 = "", msg4 = "", msg5 = "", msg6 = "", msg7 = "", namafileKTP = "", namafileKK = "",
+    //       namafileNPWP = "", namafileLainLain1 = "", namafileLainLain2 = "", namafilependukung = "";
+    int counter_nonasabah = 0;
+    long nosekarang = 0, nonasabah = 0;
+    Global gb = new DefaultClass.Global();
+    GlobalEntities ge = new GlobalEntities();
+    Global gb1 = new DefaultClass.Global();
+    GlobalEntities ge1 = new GlobalEntities();
+    Global gb2 = new DefaultClass.Global();
+    GlobalEntities ge2 = new GlobalEntities();
+    Global gb3 = new DefaultClass.Global();
+    GlobalEntities ge3 = new GlobalEntities();
+
+    public string fotopathktp = "", tanggal = "", fotopathnpwp = "", fotopathKK = "";
+    private string SessLoginID
+    {
+        get { return Session["SessLoginID"].ToString(); }
+        set { ViewState["SessLoginID"] = value;}
+    }
+    private string SessBranchID
+    {
+        get { return Session["SessBranchID"].ToString(); }
+        set { ViewState["SessBranchID"] = value; }
+    }
+    private string SessKdpersh
+    {
+        get { return Session["SessKdpersh"].ToString(); }
+        set { ViewState["SessKdpersh"] = value; }
+    }
+    public string CultureName
+    {
+        get { return (string)ViewState["CultureName"]; }
+        set { ViewState["CultureName"] = value; }
+
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+
+        try
+        {
+            CultureName = CultureInfo.CurrentCulture.TextInfo.CultureName;
+            //txtnote.Text = CultureName;
+            CultureName = "id-ID";
+            if (!Page.IsPostBack)
+            {
+                string ambilbranch = SessBranchID;
+                BindGridEntity();
+                pnladd.Visible = false;
+                InsertCombo();
+                pnlHeader.Visible = true;
+                PnlFront.Visible = true;
+
+                divtotalrequest.Visible = true;
+             
+              
+
+                //get tanggal server
+                DefaultClass.Global.SqlHelper[] varT = new DefaultClass.Global.SqlHelper[0];
+                ge.ListDataset = gb.GetDataJustOutPut("gettglsekarang", varT, "constrmf");
+                DateTime xtanggal = DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal"].ToString());
+                txtmtpensiun.Text = xtanggal.ToString("dd-MM-yyyy");
+                txttglrealisasi.Text = xtanggal.ToString("dd-MM-yyyy");
+                txttglentry.Text = xtanggal.ToString("dd-MM-yyyy");
+
+            }
+
+        }
+        catch (System.Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+
+
+    }
+
+    public void BindGridEntityx()
+    {
+        try
+        {
+          
+
+        string sign = txtSearch.Text.Trim().Contains("%") ? " like " : " = ";
+
+        var WhereCond = string.Format(" {0} ", txtSearch.Text.Trim() != "" ? ddlSearch.SelectedValue + sign + "'" + txtSearch.Text + "'" : "");
+
+
+        DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
+        var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LISTSIMULASI", typeof(string));
+        var[1] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+        var[2] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+        var[3] = gb.CreateSPParameter("@KdCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+
+            ge.ListDataset = gb.GetDataJustOutPut("KP_SIMULASI_KREDIT", var, "constrmf");
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "NoSimulasi asc";
+
+
+        GRData.DataSource = ge.ListDataset.Tables[0];
+        GRData.DataBind();
+
+
+        GRData.UseAccessibleHeader = true;
+        GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
+        }
+        catch (Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+    }
+
+    public void BindGridEntity()
+    {
+        try
+        {
+
+            DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
+            var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LISTSIMULASI", typeof(string));
+            var[1] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+            var[2] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+            var[3] = gb.CreateSPParameter("@kode_cabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+
+
+            ge.ListDataset = gb.GetDataJustOutPut("KP_SIMULASI_KREDIT_NEW_X", var, "constrmf");
+
+/*            ge.ListDataset.Tables[0].DefaultView.Sort = "NoSimulasi asc";*/
+
+
+            GRData.DataSource = ge.ListDataset.Tables[0];
+            GRData.DataBind();
+
+
+            GRData.UseAccessibleHeader = true;
+            GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
+            //divtotalpending.Visible = true;
+            //idjudulpending.Visible = true;
+        }
+        catch (Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+    }
+
+
+    private void ClearData()
+
+    {
+
+        try
+        {
+
+
+            //ddlpenerimapensiun.SelectedValue = "0";
+            //txtidktppp.Text = "";
+            //txtnamapp.Text = "";
+            //txttempatlahirpp.Text = "";
+            //txtalamatpp.Text = "";
+            //txtnamaaw.Text = "";
+            //txtnamaibukandungaw.Text = "";
+            //txthubunganaw.Text = "";
+            //txttempatlahiraw.Text = "";
+            //txtalamataw.Text = "";
+            txtnopen.Text = "";
+            txtnopen.Text = "";
+            //txtnamasesuaisk.Text = "";
+            //txtnosk.Text = "";
+            //txtnodapem.Text = "";
+            txtgajidisplay.Text = "0";
+            txtgajipokok.Text = "0";
+            ddljangkawaktu.Items.Insert(0, new ListItem("0", "0"));
+            ddljangkawaktu.SelectedValue = "0";
+            txtplafon.Text = "0";
+
+            ddlinstansi.SelectedValue = "";
+            txtnopen.Text = "";
+            txtnamapensiun.Text = "";
+            ddlstatusnikah.SelectedValue = "";
+            ddlpensiun.SelectedValue = "";
+            ddlkodejiwa.SelectedValue = "";
+            txttgllahir.Text = "";
+            txtgajidisplay.Text = "0";
+            txttgllahiranak1.Text = "";
+            txttgllahiranak2.Text = "";
+
+            ddlKantorBayar.SelectedValue = "";
+            //ddlsumberdana.SelectedValue = "-";
+            ddlprogrampinjaman.SelectedValue = "";
+            ddlproduk.SelectedValue = "";
+            ddlkategori.SelectedValue = "";
+            txtplafon.Text = "0";
+            ddlangsurandimukablokir.SelectedValue = "0";
+            txtpelunasan.Text = "0";
+            ddlangsurandimuka.SelectedValue = "0";
+            ddlangsurandimukaasuransi.SelectedValue = "0";
+            ddlmaterai.SelectedValue = "0";
+
+
+            //ddljeniskelaminpp.SelectedValue = "-";
+            //txttgllahirpp.Text = "";
+            //ddlagamapp.SelectedValue = "";
+            //txtnohppp.Text = "0";
+            //txtemailpp.Text = "";
+            //txtrtpp.Text = "0";
+            //txtrwpp.Text = "0"; ;
+            //txtkabupatenpp.Text = "-";
+            //txtkelurahanpp.Text = "-";
+            //txtkecamatanpp.Text = "-";
+            ////ddlprovinsipp.SelectedValue = "";
+            //txtkodepospp.Text = "0";
+            ////ddljeniskelaminaw.SelectedValue = "";
+            //txttgllahiraw.Text = "";
+            //txtnohpaw.Text = "0";
+            //txtemailaw.Text = "";
+            //txtrtaw.Text = "0";
+            //txtrwaw.Text = "0";
+            //txtkabupatenaw.Text = "-";
+            //txtkelurahanaw.Text = "-";
+            //txtkecamatanaw.Text = "-";
+            //ddlprovinsiaw.SelectedValue = "";
+            //txtkodeposaw.Text = "0";
+            //ddldatasimulasi.SelectedValue = "0";
+           
+
+           
+            txtnama.Text = "";
+            txtstatuspinjaman.Text = "";
+            txtusiapinjaman.Text = "0";
+            txtusiaasuransi.Text = "0";
+            txtusiaanak1.Text = "0";
+            txtusiaanak2.Text = "0";
+            txtplafonmax.Text = "0";
+            txtjangkawaktumax.Text = "0";
+            txtusiajthtempo.Text = "0";
+            txtrateasuransi.Text = "0";
+            txtratebungapinjaman.Text = "0";
+            txtangsuran.Text = "0";
+            txtpsnangsuran.Text = "0";
+            txtasuransi.Text = "0";
+            txtpersenasuransi.Text = "0";
+            txttotal.Text = "0";
+            txttotalpersen.Text = "0";
+            txtsisagaji.Text = "0";
+            txtsisagajipersen.Text = "0";
+            txtprovisi.Text = "0";
+            txtpersenprovisi.Text = "0";
+            txtadminbank.Text = "0";
+            txtpersenadminbank.Text = "0";
+            txtkeanggotaan.Text = "0";
+            txtmaterai.Text = "0";
+            ddljangkawaktu.SelectedValue = "0";
+            txtmateraipcs.Text = "0";
+            txtangsuranblokir.Text = "0";
+            txtangsuranblokirkali.Text = "0";
+            txtangsurandimuka.Text = "0";
+            txtangsurandimukakali.Text = "0";
+            txtangdimukaasuransi.Text = "0";
+            txtangdimukaasuransikali.Text = "0";
+            txtbiayaadmin.Text = "0";
+            txtpelunasanRp.Text = "0";
+            txtterimabersihrp.Text = "0";
+            txttgljatuhtempo.Text = "";
+            txtjangkatahun.Text = "0";
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ex.Message.ToString() + "','success','true');", true);
+            gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+    }
+
+    private void Opendata()
+
+    {
+       
+        txtnopen.Enabled = true;
+        txtnopen.Enabled = true;
+        txtnamapensiun.Enabled = true;
+       
+        txtgajidisplay.Enabled = true;
+        txtgajipokok.Enabled = true;
+        ddljangkawaktu.Enabled = true;
+        txtplafon.Enabled = true;
+
+
+        ddlinstansi.Enabled = true;
+        txtnopen.Enabled = true;
+        txtnamapensiun.Enabled = true;
+        ddlstatusnikah.Enabled = true;
+        ddlpensiun.Enabled = true;
+        ddlkodejiwa.Enabled = true;
+        txtmtpensiun.Enabled = true;
+        txttgllahir.Enabled = true;
+        txtgajidisplay.Enabled = true;
+        txttgllahiranak1.Enabled = true;
+        txttgllahiranak2.Enabled = true;
+        txttglrealisasi.Enabled = true;
+        ddlKantorBayar.Enabled = true;
+        ddlsumberdana.Enabled = true;
+        ddlprogrampinjaman.Enabled = true;
+        ddlproduk.Enabled = true;
+        ddlkategori.Enabled = true;
+        ddljangkawaktu.Enabled = true;
+        txtplafon.Enabled = true;
+        ddlangsurandimukablokir.Enabled = true;
+        txtpelunasan.Enabled = true;
+        ddlangsurandimuka.Enabled = true;
+        ddlangsurandimukaasuransi.Enabled = true;
+        ddlmaterai.Enabled = true;
+        ddlprovisi.Enabled = true;
+
+      
+        ddlmutasikantorbayar.Enabled = true;
+        
+    }
+
+
+
+
+    private void blockdata()
+
+    {
+        txtnopen.Enabled = false;
+        txtnopen.Enabled = false;
+        txtnamapensiun.Enabled = false;
+
+        txtgajidisplay.Enabled = false;
+        txtgajipokok.Enabled = false;
+        ddljangkawaktu.Enabled = false;
+        txtplafon.Enabled = false;
+
+
+        ddlinstansi.Enabled = false;
+        txtnopen.Enabled = false;
+        txtnamapensiun.Enabled = false;
+        ddlstatusnikah.Enabled = false;
+        ddlpensiun.Enabled = false;
+        ddlkodejiwa.Enabled = false;
+        txtmtpensiun.Enabled = false;
+        txttgllahir.Enabled = false;
+        txtgajidisplay.Enabled = false;
+        txttgllahiranak1.Enabled = false;
+        txttgllahiranak2.Enabled = false;
+        txttglrealisasi.Enabled = false;
+        ddlKantorBayar.Enabled = false;
+        ddlsumberdana.Enabled = false;
+        ddlprogrampinjaman.Enabled = false;
+        ddlproduk.Enabled = false;
+        ddlkategori.Enabled = false;
+        ddljangkawaktu.Enabled = false;
+        txtplafon.Enabled = false;
+        ddlangsurandimukablokir.Enabled = false;
+        txtpelunasan.Enabled = false;
+        ddlangsurandimuka.Enabled = false;
+        ddlangsurandimukaasuransi.Enabled = false;
+        ddlmaterai.Enabled = false;
+        ddlprovisi.Enabled = false;
+
+
+        ddlmutasikantorbayar.Enabled = false;
+
+    }
+
+
+
+    protected void GRData_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        ReportDocument rprt = new ReportDocument();
+        switch (e.CommandName)
+        {
+
+            case "SET":
+
+                try
+                {
+                    txtnosimulasi.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblrequest")).Text;
+
+                    blockdata();
+                    ClearData();
+
+                    DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[5];
+                    var[0] = gb.CreateSPParameter("@No_Simulasi", ParameterDirection.Input, SqlDbType.VarChar, 50, txtnosimulasi.Text, typeof(string));
+                    var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTSIMULASI", typeof(string));
+                    var[2] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+                    var[3] = gb.CreateSPParameter("@kode_cabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+                    var[4] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_SIMULASI_KREDIT_NEW_X", var, "constrmf");
+
+                   if (ge.ListDataset.Tables[0].DefaultView.Count == 0)
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Data tidak di temukan');", true);
+                        
+                    }
+                    else
+
+                    {
+
+                        pnlHeader.Visible = false;
+                        PnlFront.Visible = false;
+                        pnladd.Visible = true;
+                        Pnlsimulasi.Visible = true;
+                        idsimpanvisible.Visible = true;
+                        btnrequest.Visible = false;
+                        btndelete.Visible = false;
+
+                        //btnSimpan.Visible = true;
+
+
+                        txtusiajthtempo.Text = ge.ListDataset.Tables[0].Rows[0]["usiajatuhtempo"].ToString();
+
+
+                        ddlinstansi.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["Instansi"].ToString();
+                        
+                        txtnopen.Text = ge.ListDataset.Tables[0].Rows[0]["NomorPensiun"].ToString();
+                         txtnamapensiun.Text = ge.ListDataset.Tables[0].Rows[0]["namapensiun"].ToString();
+                        ddlstatusnikah.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["StatusNikah"].ToString();
+                        ddlpensiun.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["Pensiunan"].ToString();
+                        ddlkodejiwa.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["KodeJiwa"].ToString();
+                        txtmtpensiun.Text = Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["tmtpensiun"].ToString()).ToString("dd-MMMM-yyyy");
+                        txttgllahir.Text = Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["TglLahir"].ToString()).ToString("dd-MMMM-yyyy");
+                        txttgllahiranak1.Text = (!string.IsNullOrEmpty(ge.ListDataset.Tables[0].Rows[0]["TglLahirAnak1"].ToString()) ? Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["TglLahirAnak1"].ToString()).ToString("dd-MMMM-yyyy") : string.Empty);
+                        txttgllahiranak2.Text = (!string.IsNullOrEmpty(ge.ListDataset.Tables[0].Rows[0]["TglLahirAnak2"].ToString()) ? Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["TglLahirAnak2"].ToString()).ToString("dd-MMMM-yyyy") : string.Empty);
+                        txtgajidisplay.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["gajidisplay"].ToString()));
+                        txtgajipokok.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Gaji"].ToString()));
+
+                        txttglentry.Text = Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["TglSimulasi"].ToString()).ToString("dd-MMMM-yyyy");
+                        txttglrealisasi.Text = Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["Tglrealisasi"].ToString()).ToString("dd-MMMM-yyyy");
+
+                        txtkodesimulasi.Text = ge.ListDataset.Tables[0].Rows[0]["KodeSimulasi"].ToString();
+                        ddlKantorBayar.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["KantorBayar"].ToString();
+                        ddlsumberdana.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["SumberDana"].ToString();
+                        ddlprogrampinjaman.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["ProgramPinjaman"].ToString();
+                        ddlkategori.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["JenisKategori"].ToString();
+                        ddlproduk.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["JenisProduk"].ToString();
+
+                        txtplafon.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Plafon"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["permohonan_plafon"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtpelunasan.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Pelunasan"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["permohonan_pelunasan"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtjangkatahun.Text = ge.ListDataset.Tables[0].Rows[0]["JangkaWaktuTahun"].ToString();
+                        //                    txttunjangananak.Text = ge.ListDataset.Tables[0].Rows[0]["TunjAnak"].ToString() == "" ? "0,00" : string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["TunjAnak"].ToString()).ToString().Replace(",0000", "").Replace(",00", "")));
+                        var rtjangkawaktu = "0";
+                        string DATAKODEAOADA = "";
+                        string kodematerai = "";
+                        string AngsuranDimukaAsuransi = "";
+                        rtjangkawaktu = ge.ListDataset.Tables[0].Rows[0]["jangkawaktu"].ToString();
+                        kodematerai = ge.ListDataset.Tables[0].Rows[0]["materai"].ToString();
+                        AngsuranDimukaAsuransi = ge.ListDataset.Tables[0].Rows[0]["angsuranmukaasuransi"].ToString();
+                        if (ge.ListDataset.Tables[0].Rows[0]["MutasiKantorBayar"].ToString() == "" || ge.ListDataset.Tables[0].Rows[0]["MutasiKantorBayar"].ToString() == "Tidak")
+                        {
+                            ddlmutasikantorbayar.SelectedValue = "0";
+
+                        }
+                        else
+                        {
+
+                            ddlmutasikantorbayar.SelectedValue = "1";
+                        }
+                        //InsertCombo();
+                        //output
+                        txtnama.Text = ge.ListDataset.Tables[0].Rows[0]["StatusAnggota"].ToString();
+                        txtstatuspinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["StatusPinjaman"].ToString();
+                        txtusiapinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["UsiaPinjaman"].ToString();
+                        txtusiaasuransi.Text = ge.ListDataset.Tables[0].Rows[0]["UsiaAsuransi"].ToString();
+                        txtusiaanak1.Text = ge.ListDataset.Tables[0].Rows[0]["usiaanak1"].ToString();
+                        txtusiaanak2.Text = ge.ListDataset.Tables[0].Rows[0]["usiaanak2"].ToString();
+                      
+                        txtplafonmax.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PlafondMax"].ToString()));// string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["PlafondMax"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtjangkawaktumax.Text = ge.ListDataset.Tables[0].Rows[0]["JangkaWaktuMax"].ToString();
+                        txtrateasuransi.Text = ge.ListDataset.Tables[0].Rows[0]["RateAsuransi"].ToString();
+                        txtratebungapinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["RateBungaPinjaman"].ToString();
+
+
+                        //txtjangkatahun.Text = ge.ListDataset.Tables[0].Rows[0]["JthTempoThn"].ToString();
+                        //txtjangkawaktumax = ge.ListDataset.Tables[0].Rows[0]["JthTempoBln"].ToString();
+                        txtangsuran.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Angsuran"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["angsuranrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtasuransi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["CicilanAsuransi"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["asuransirp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txttotal.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Total"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["totalrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtsisagaji.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["SisaGaji"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["sisagajirp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Provisi"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["provisirp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtkeanggotaan.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Keanggotan"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["keanggotaan"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtmaterai.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["bymaterai"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["materairp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtangsuranblokir.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["AngsuranDiblokir"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["angsuranblokirrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtangsurandimuka.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["AngsuranDimuka"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["angsurandimukaangsuranrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtbiayaadmin.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["BiayaAdmin"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["biayaadminrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtpelunasanRp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Pelunasan"].ToString()));// Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["pelunasanrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["TerimaBersih"].ToString()));// Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["terimabersihrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtadminbank.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["AdminBank"].ToString())); //Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["adminbankrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtpersenasuransi.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenAsuransi"].ToString()));
+                        txtpsnangsuran.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenAngsuran"].ToString()));
+                        txtpersenprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenProvisi"].ToString())); //Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["PersenProvisi"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txttotalpersen.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenSisaGaji"].ToString())); // string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["PersenSisaGaji"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtpersenadminbank.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenAdminBank"].ToString())); //string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["PersenAdminBank"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtsisagajipersen.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenSisaGaji"].ToString()));
+
+                        txtangsuranblokirkali.Text = string.Format("{0:N0}", int.Parse(ge.ListDataset.Tables[0].Rows[0]["AngsBlokirKali"].ToString()));
+                        txtangsurandimukakali.Text = string.Format("{0:N0}", int.Parse(ge.ListDataset.Tables[0].Rows[0]["AngsDimukaKali"].ToString()));
+                        txtangdimukaasuransikali.Text = string.Format("{0:N0}", int.Parse(ge.ListDataset.Tables[0].Rows[0]["AngsDimukaAsuransiKali"].ToString()));
+
+                        txttgljatuhtempo.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgljatuhtempo"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();    
+
+                      
+
+
+
+                        DdlAngsurandimuka();
+                        ddlmaterai.SelectedValue = kodematerai;
+                        ddlprovisi.SelectedValue = txtpersenprovisi.Text;
+                        ddlangsurandimuka.SelectedValue = txtangsurandimukakali.Text;
+                        ddlangsurandimukablokir.SelectedValue = txtangsuranblokirkali.Text;
+                        txtmateraipcs.Text = kodematerai;
+
+                        if (AngsuranDimukaAsuransi == "0" || AngsuranDimukaAsuransi == "" || AngsuranDimukaAsuransi == "-")
+                        {
+                            ddlangsurandimukaasuransi.SelectedValue = "0";
+                        }
+                        else
+                        {
+                            ddlangsurandimukaasuransi.SelectedValue = AngsuranDimukaAsuransi;
+
+                        }
+                        
+
+                        ddljangkawaktu.Items.Clear();
+                        ddljangkawaktu.SelectedValue = null;
+                        ddljangkawaktu.Text = null;
+
+
+                        DefaultClass.Global.SqlHelper[] var1xx = new DefaultClass.Global.SqlHelper[4];
+                        var1xx[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "GETJANGKA", typeof(string));
+                        var1xx[1] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                        var1xx[2] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+                        var1xx[3] = gb.CreateSPParameter("@bukti", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlKantorBayar.SelectedValue, typeof(string));
+
+                        ge.ListDataset = gb.GetDataJustOutPut("KP_MASTER_PERMOHONAN_NEW", var1xx, "constrmf");
+
+                        ge.ListDataset.Tables[0].DefaultView.Sort = "jangkabulan asc";
+
+                        ddljangkawaktu.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+                        ddljangkawaktu.DataTextField = "jangkabulan";
+                        ddljangkawaktu.DataValueField = "jangkabulan";
+                        ddljangkawaktu.DataBind();
+
+                        ddljangkawaktu.SelectedValue = rtjangkawaktu;
+
+
+                    }
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
+
+
+                }
+                catch (Exception X)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+                    gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+                }
+                break;
+            case "DEL":
+                try
+                {
+
+
+                    txtnosimulasi.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblrequest")).Text;
+                    blockdata();
+                    ClearData();
+                    pnlHeader.Visible = false;
+                    PnlFront.Visible = false;
+                    pnladd.Visible = true;
+                    Pnlsimulasi.Visible = true;
+                    idsimpanvisible.Visible = true;
+                    btnrequest.Visible = false;
+                  
+
+                    DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[5];
+                    var[0] = gb.CreateSPParameter("@No_Simulasi", ParameterDirection.Input, SqlDbType.VarChar, 50, txtnosimulasi.Text, typeof(string));
+                    var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTSIMULASI", typeof(string));
+                    var[2] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+                    var[3] = gb.CreateSPParameter("@kode_cabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+                    var[4] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_SIMULASI_KREDIT_NEW_X", var, "constrmf");
+
+                    if (ge.ListDataset.Tables[0].DefaultView.Count == 0)
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Data tidak di temukan');", true);
+
+                    }
+                    else
+
+                    {
+
+                        pnlHeader.Visible = false;
+                        PnlFront.Visible = false;
+                        pnladd.Visible = true;
+                        Pnlsimulasi.Visible = true;
+                        idsimpanvisible.Visible = true;
+                        btnrequest.Visible = false;
+                        btndelete.Visible = true;
+                        //btndelete.Visible = false;
+
+                        //btnSimpan.Visible = true;
+
+
+                        txtusiajthtempo.Text = ge.ListDataset.Tables[0].Rows[0]["usiajatuhtempo"].ToString();
+
+
+                        ddlinstansi.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["Instansi"].ToString();
+
+                        txtnopen.Text = ge.ListDataset.Tables[0].Rows[0]["NomorPensiun"].ToString();
+                        txtnamapensiun.Text = ge.ListDataset.Tables[0].Rows[0]["namapensiun"].ToString();
+                        ddlstatusnikah.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["StatusNikah"].ToString();
+                        ddlpensiun.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["Pensiunan"].ToString();
+                        ddlkodejiwa.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["KodeJiwa"].ToString();
+                        txtmtpensiun.Text = Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["tmtpensiun"].ToString()).ToString("dd-MMMM-yyyy");
+                        txttgllahir.Text = Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["TglLahir"].ToString()).ToString("dd-MMMM-yyyy");
+                        txttgllahiranak1.Text = (!string.IsNullOrEmpty(ge.ListDataset.Tables[0].Rows[0]["TglLahirAnak1"].ToString()) ? Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["TglLahirAnak1"].ToString()).ToString("dd-MMMM-yyyy") : string.Empty);
+                        txttgllahiranak2.Text = (!string.IsNullOrEmpty(ge.ListDataset.Tables[0].Rows[0]["TglLahirAnak2"].ToString()) ? Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["TglLahirAnak2"].ToString()).ToString("dd-MMMM-yyyy") : string.Empty);
+                        txtgajidisplay.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["gajidisplay"].ToString()));
+                        txtgajipokok.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Gaji"].ToString()));
+
+                        txttglentry.Text = Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["TglSimulasi"].ToString()).ToString("dd-MMMM-yyyy");
+                        txttglrealisasi.Text = Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["Tglrealisasi"].ToString()).ToString("dd-MMMM-yyyy");
+
+                        txtkodesimulasi.Text = ge.ListDataset.Tables[0].Rows[0]["KodeSimulasi"].ToString();
+                        ddlKantorBayar.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["KantorBayar"].ToString();
+                        ddlsumberdana.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["SumberDana"].ToString();
+                        ddlprogrampinjaman.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["ProgramPinjaman"].ToString();
+                        ddlkategori.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["JenisKategori"].ToString();
+                        ddlproduk.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["JenisProduk"].ToString();
+
+                        txtplafon.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Plafon"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["permohonan_plafon"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtpelunasan.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Pelunasan"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["permohonan_pelunasan"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtjangkatahun.Text = ge.ListDataset.Tables[0].Rows[0]["JangkaWaktuTahun"].ToString();
+                        //                    txttunjangananak.Text = ge.ListDataset.Tables[0].Rows[0]["TunjAnak"].ToString() == "" ? "0,00" : string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["TunjAnak"].ToString()).ToString().Replace(",0000", "").Replace(",00", "")));
+                        var rtjangkawaktu = "0";
+                        string DATAKODEAOADA = "";
+                        string kodematerai = "";
+                        string AngsuranDimukaAsuransi = "";
+                        rtjangkawaktu = ge.ListDataset.Tables[0].Rows[0]["jangkawaktu"].ToString();
+                        kodematerai = ge.ListDataset.Tables[0].Rows[0]["materai"].ToString();
+                        AngsuranDimukaAsuransi = ge.ListDataset.Tables[0].Rows[0]["angsuranmukaasuransi"].ToString();
+                        if (ge.ListDataset.Tables[0].Rows[0]["MutasiKantorBayar"].ToString() == "" || ge.ListDataset.Tables[0].Rows[0]["MutasiKantorBayar"].ToString() == "Tidak")
+                        {
+                            ddlmutasikantorbayar.SelectedValue = "0";
+
+                        }
+                        else
+                        {
+
+                            ddlmutasikantorbayar.SelectedValue = "1";
+                        }
+                        //InsertCombo();
+                        //output
+                        txtnama.Text = ge.ListDataset.Tables[0].Rows[0]["StatusAnggota"].ToString();
+                        txtstatuspinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["StatusPinjaman"].ToString();
+                        txtusiapinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["UsiaPinjaman"].ToString();
+                        txtusiaasuransi.Text = ge.ListDataset.Tables[0].Rows[0]["UsiaAsuransi"].ToString();
+                        txtusiaanak1.Text = ge.ListDataset.Tables[0].Rows[0]["usiaanak1"].ToString();
+                        txtusiaanak2.Text = ge.ListDataset.Tables[0].Rows[0]["usiaanak2"].ToString();
+
+                        txtplafonmax.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PlafondMax"].ToString()));// string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["PlafondMax"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtjangkawaktumax.Text = ge.ListDataset.Tables[0].Rows[0]["JangkaWaktuMax"].ToString();
+                        txtrateasuransi.Text = ge.ListDataset.Tables[0].Rows[0]["RateAsuransi"].ToString();
+                        txtratebungapinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["RateBungaPinjaman"].ToString();
+
+
+                        //txtjangkatahun.Text = ge.ListDataset.Tables[0].Rows[0]["JthTempoThn"].ToString();
+                        //txtjangkawaktumax = ge.ListDataset.Tables[0].Rows[0]["JthTempoBln"].ToString();
+                        txtangsuran.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Angsuran"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["angsuranrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtasuransi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["CicilanAsuransi"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["asuransirp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txttotal.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Total"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["totalrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtsisagaji.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["SisaGaji"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["sisagajirp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Provisi"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["provisirp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtkeanggotaan.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Keanggotan"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["keanggotaan"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtmaterai.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["bymaterai"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["materairp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtangsuranblokir.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["AngsuranDiblokir"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["angsuranblokirrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtangsurandimuka.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["AngsuranDimuka"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["angsurandimukaangsuranrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtbiayaadmin.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["BiayaAdmin"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["biayaadminrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtpelunasanRp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Pelunasan"].ToString()));// Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["pelunasanrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["TerimaBersih"].ToString()));// Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["terimabersihrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtadminbank.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["AdminBank"].ToString())); //Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["adminbankrp"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtpersenasuransi.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenAsuransi"].ToString()));
+                        txtpsnangsuran.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenAngsuran"].ToString()));
+                        txtpersenprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenProvisi"].ToString())); //Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["PersenProvisi"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txttotalpersen.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenSisaGaji"].ToString())); // string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["PersenSisaGaji"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtpersenadminbank.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenAdminBank"].ToString())); //string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["PersenAdminBank"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtsisagajipersen.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenSisaGaji"].ToString()));
+
+                        txtangsuranblokirkali.Text = string.Format("{0:N0}", int.Parse(ge.ListDataset.Tables[0].Rows[0]["AngsBlokirKali"].ToString()));
+                        txtangsurandimukakali.Text = string.Format("{0:N0}", int.Parse(ge.ListDataset.Tables[0].Rows[0]["AngsDimukaKali"].ToString()));
+                        txtangdimukaasuransikali.Text = string.Format("{0:N0}", int.Parse(ge.ListDataset.Tables[0].Rows[0]["AngsDimukaAsuransiKali"].ToString()));
+
+                        txttgljatuhtempo.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgljatuhtempo"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();    
+
+
+
+
+
+                        DdlAngsurandimuka();
+                        ddlmaterai.SelectedValue = kodematerai;
+                        ddlprovisi.SelectedValue = txtpersenprovisi.Text;
+                        ddlangsurandimuka.SelectedValue = txtangsurandimukakali.Text;
+                        ddlangsurandimukablokir.SelectedValue = txtangsuranblokirkali.Text;
+                        txtmateraipcs.Text = kodematerai;
+
+                        if (AngsuranDimukaAsuransi == "0" || AngsuranDimukaAsuransi == "" || AngsuranDimukaAsuransi == "-")
+                        {
+                            ddlangsurandimukaasuransi.SelectedValue = "0";
+                        }
+                        else
+                        {
+                            ddlangsurandimukaasuransi.SelectedValue = AngsuranDimukaAsuransi;
+
+                        }
+
+
+                        ddljangkawaktu.Items.Clear();
+                        ddljangkawaktu.SelectedValue = null;
+                        ddljangkawaktu.Text = null;
+
+
+                        DefaultClass.Global.SqlHelper[] var1xx = new DefaultClass.Global.SqlHelper[4];
+                        var1xx[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "GETJANGKA", typeof(string));
+                        var1xx[1] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                        var1xx[2] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+                        var1xx[3] = gb.CreateSPParameter("@bukti", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlKantorBayar.SelectedValue, typeof(string));
+
+                        ge.ListDataset = gb.GetDataJustOutPut("KP_MASTER_PERMOHONAN_NEW", var1xx, "constrmf");
+
+                        ge.ListDataset.Tables[0].DefaultView.Sort = "jangkabulan asc";
+
+                        ddljangkawaktu.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+                        ddljangkawaktu.DataTextField = "jangkabulan";
+                        ddljangkawaktu.DataValueField = "jangkabulan";
+                        ddljangkawaktu.DataBind();
+
+                        ddljangkawaktu.SelectedValue = rtjangkawaktu;
+
+
+                    }
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
+
+
+                }
+                catch (Exception X)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+                    gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+                }
+
+                break;
+            case "RptDataNasabah":
+                try
+                {
+                    string NoSimulasi = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblrequest")).Text;
+                    DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
+                    var[0] = gb2.CreateSPParameter("@No_Simulasi", ParameterDirection.Input, SqlDbType.VarChar, 50, NoSimulasi, typeof(string));
+                    var[1] = gb2.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "VIEWDATANASABAH", typeof(string));
+                    var[2] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+                    var[3] = gb.CreateSPParameter("@KdCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+                    ge.ListDataTable = gb.GetDataJustOutPut("dbo.KP_SIMULASI_KREDIT_REPORT", var, "constrmf").Tables[0];
+
+                    if (ge.ListDataTable.Rows.Count > 0)
+                    {
+                        rprt.Load(Server.MapPath("~/MI/Report/CR/SimulasiDataNasabah.rpt"));
+                        rprt.SetDataSource(ge.ListDataTable);
+
+                        /*  rprt.SetParameterValue("STATE", "VIEWDATANASABAH");
+                        rprt.SetParameterValue("No_Simulasi", NoSimulasi);*/
+
+                        Response.ClearContent();
+                        Response.ClearHeaders();
+
+                        Response.ContentType = "application/pdf";
+                        rprt.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "ExportedFile");
+
+                        Response.End();
+
+
+                    }
+                }
+                catch(Exception ex)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+                    gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+                }
+                break;             
+            case "RptDataSimulasiCapital":
+                try
+                {
+                    string NoSimulasi = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblrequest")).Text;
+                    DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
+                    var[0] = gb2.CreateSPParameter("@No_Simulasi", ParameterDirection.Input, SqlDbType.VarChar, 50, NoSimulasi, typeof(string));
+                    var[1] = gb2.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "VIEWSIMULASI", typeof(string));
+                    var[2] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+                    var[3] = gb.CreateSPParameter("@KdCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+                    ge.ListDataTable = gb.GetDataJustOutPut("dbo.KP_SIMULASI_KREDIT_REPORT", var, "constrmf").Tables[0];
+
+                    if (ge.ListDataTable.Rows.Count > 0)
+                    {
+                        rprt.Load(Server.MapPath("~/MI/Report/CR/SimulasiCapital.rpt"));
+                        rprt.SetDataSource(ge.ListDataTable);
+
+
+                        Response.ClearContent();
+                        Response.ClearHeaders();
+
+                        Response.ContentType = "application/pdf";
+                        rprt.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "ExportedFile");
+
+                        Response.End();
+
+
+                    }
+                }
+                catch(Exception ex)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+                    gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+                }
+                break;            
+            case "RptDataDebitur":
+                try
+                {
+                    string NoSimulasi = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblrequest")).Text;
+                    DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
+                    var[0] = gb2.CreateSPParameter("@No_Simulasi", ParameterDirection.Input, SqlDbType.VarChar, 50, NoSimulasi, typeof(string));
+                    var[1] = gb2.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "VIEWDATADEBITUR", typeof(string));
+                    var[2] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+                    var[3] = gb.CreateSPParameter("@KdCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+                    ge.ListDataTable = gb.GetDataJustOutPut("dbo.KP_SIMULASI_KREDIT_REPORT", var, "constrmf").Tables[0];
+
+                    if (ge.ListDataTable.Rows.Count > 0)
+                    {
+                        rprt.Load(Server.MapPath("~/MI/Report/CR/SimulasiDataDebitur.rpt"));
+                        rprt.SetDataSource(ge.ListDataTable);
+                        Response.ClearContent();
+                        Response.ClearHeaders();
+
+                        Response.ContentType = "application/pdf";
+                        rprt.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "ExportedFile");
+
+                        Response.End();
+
+
+                    }
+                }
+                catch(Exception ex)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+                    gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+                }
+
+                break;
+
+            /* ADD BY DEDI 2025-09-24 */
+            case "UPLOAD":
+
+                upload_Document_Nasabah(sender, e);
+
+                break;
+            /* END ADD BY DEDI 2025-09-24 */
+        }
+
+
+    }
+
+    /* ADD BY DEDI 2025-09-24 */
+
+    protected void upload_Document_Nasabah(object sender, GridViewCommandEventArgs e)
+    {
+        try
+        {
+            string no_simulasi = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblrequest")).Text;
+            string no_pensiun = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnopen")).Text;
+            string nama_nasabah = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnama")).Text;
+            string plafon = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblplafond")).Text;
+
+			Response.Redirect(
+				"UploadDokumenKunjunganAO.aspx"
+				+ "?no_simulasi=" + Server.UrlEncode(no_simulasi)
+				+ "&no_pensiun=" + Server.UrlEncode(no_pensiun)
+				+ "&nama_nasabah=" + Server.UrlEncode(nama_nasabah)
+				+ "&plafon=" + Server.UrlEncode(plafon),
+				false
+			);
+			Context.ApplicationInstance.CompleteRequest();
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(),
+                "Javascript",
+                "javascript:SweetAlert('" + ex.Message.ToString() + "');",
+                true);
+
+            gb.SaveErroLog(ex.Message.ToString(),
+                Path.GetFileName(Request.Path),
+                SessLoginID,
+                Server.MapPath("~/ErrorLog/ErrorLog" +
+                    DateTime.Now.ToString("MM") +
+                    DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+        finally
+        {
+            reDraw_Table_GRData();
+        }
+    }
+
+    private void reDraw_Table_GRData() {
+        GRData.UseAccessibleHeader = true;
+        GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
+    }
+
+    /* END ADD BY DEDI 2025-09-24 */
+
+    protected void btnBack_ServerClick(object sender, EventArgs e)
+    {
+        Response.Redirect(Request.Url.AbsoluteUri);
+    }
+
+
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            //GetAutoNoSi();
+            pnlHeader.Visible = false;
+            PnlFront.Visible = false;
+            pnladd.Visible = true;
+            //pnlData.Visible = false;
+            Pnlsimulasi.Visible = true;
+            idsimpanvisible.Visible = true;
+            btndelete.Visible = false;
+            
+            ClearData();
+            Opendata();
+            btnrequest.Visible = true;
+        }
+        catch (Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+    }
+
+
+    protected string btnreload()
+    {
+
+        return Page.ClientScript.GetPostBackEventReference(LinkButton1, string.Empty, true);
+    }
+    protected void btnBackHome1_Click(object sender, EventArgs e)
+    {
+        //pnladd.Visible = true;
+        //pnlIdentitas.Visible = false;
+        Response.Redirect(Request.Url.AbsoluteUri);
+    }
+
+    
+
+
+
+    protected void lnkCari_Click(object sender, EventArgs e)
+    {
+        if (txtSearch.Text == "")
+        {
+            BindGridEntity();
+        }
+        else
+        {
+            BindGridEntityx();
+        }
+    }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        pnlHeader.Visible = true;
+        PnlFront.Visible = true;
+        pnladd.Visible = false;
+        //pnlData.Visible = false;
+        Pnlsimulasi.Visible = false;
+        idsimpanvisible.Visible = false;
+        btndelete.Visible = false;
+
+        ClearData();
+        Opendata();
+    }
+    protected string btnafterDelete()
+    {
+        return Page.ClientScript.GetPostBackEventReference(LinkButton1, string.Empty, true);
+    }
+
+    protected void txtnopen_TextChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            //lblnopenlama.
+           
+            if (Convert.ToInt32(txtnopen.Text.Length) < 11)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:WarningDate('Nomor Pensiun Anda kurang dari 11, silahkan di cek kembali');", true);
+            }
+            else if(txtnopen.Text != "")
+            {
+                DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[5];
+                var[0] = gb.CreateSPParameter("@nopen", ParameterDirection.Input, SqlDbType.VarChar, 20, txtnopen.Text, typeof(string));
+                var[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+                var[2] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+                var[3] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CEKNOPENKTP", typeof(string));
+                var[4] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+                ge.ListDataset = gb.GetDataJustOutPut("SI_Request", var, "constrmf");
+
+                if (ge.ListDataset.Tables[0].Rows.Count > 0)
+                {
+                    txtnama.Text = "Anggota Terdaftar";
+                    txtstatuspinjaman.Text = "LAMA";
+                    txtkeanggotaan.Text = string.Format("{0:N0}", "0");
+                   
+                }
+                else
+                {
+                    txtnama.Text = "Calon Anggota";
+                    txtstatuspinjaman.Text = "BARU";
+                    txtkeanggotaan.Text = string.Format("{0:N0}", 20000);
+                    //lblnopenbaru.Visible = true;
+                }
+
+
+                string instansi;
+                if (txtnopen.Text.Length == 11 || txtnopen.Text.Length == 15)
+                {
+                    instansi = "A";
+                }
+                else if (txtnopen.Text.Length == 12 || txtnopen.Text.Length == 14)
+                {
+                    instansi = "B";
+                }
+                else
+                {
+                    instansi = "NOPEN SALAH";
+                }
+
+                ddlinstansi.SelectedValue = instansi;
+                ddlinstansi.Enabled = false;
+                txtnamapensiun.Focus();
+            }
+            //fungsiAll();
+        }
+        catch(Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+
+    }
+  
+//    protected void txtusia_OnChange(object sender, EventArgs e)
+//    {
+//        try
+//        {
+//            //if (string.IsNullOrEmpty(ddlKantorBayar.SelectedValue))
+//            //{
+//            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Kantor Bayar terlebih dahulu');", true);
+//            //    txttgllahir.Text = string.Empty;
+//            //    return;
+//            //}
+//            //if (string.IsNullOrEmpty(ddlsumberdana.SelectedValue))
+//            //{
+//            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Sumber Dana terlebih dahulu');", true);
+//            //    txttgllahir.Text = string.Empty;
+//            //    return;
+//            //}
+//            //if (string.IsNullOrEmpty(ddlprogrampinjaman.SelectedValue))
+//            //{
+//            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Program Pinjam terlebih dahulu');", true);
+//            //    txttgllahir.Text = string.Empty;
+//            //    return;
+//            //}
+//            //if (string.IsNullOrEmpty(ddlkategori.SelectedValue))
+//            //{
+//            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Program Pinjam terlebih dahulu');", true);
+//            //    txttgllahir.Text = string.Empty;
+//            //    return;
+//            //}
+
+//            //if (string.IsNullOrEmpty(txtnopen.Text))
+//            //{
+//            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon di isi no pensiun terlebih dahulu');", true);
+//            //    txttgllahir.Text = string.Empty;
+//            //    return;
+//            //}
+//            //if (string.IsNullOrEmpty(ddlkodejiwa.SelectedValue))
+//            //{
+//            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Kode Jiwa terlebih dahulu');", true);
+//            //    txttgllahir.Text = string.Empty;
+//            //    return;
+//            //}
+//            //if (string.IsNullOrEmpty(ddlstatusnikah.SelectedValue))
+//            //{
+//            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Status Nikah terlebih dahulu');", true);
+//            //    txttgllahir.Text = string.Empty;
+//            //    return;
+//            //}
+//            //if (string.IsNullOrEmpty(ddlpensiun.SelectedValue))
+//            //{
+//            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Pensiun terlebih dahulu');", true);
+//            //    txttgllahir.Text = string.Empty;
+//            //    return;
+//            //}
+//            //lblnopenlama.
+
+//            if (txtnopen.Text != "")
+//            {
+//                DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
+//                var[0] = gb.CreateSPParameter("@tgllahir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttgllahir.Text, typeof(DateTime));
+//                var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CEKUSIAPENSIUNB", typeof(string));
+//                var[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+//                var[3] = gb.CreateSPParameter("@TglSimulasi", ParameterDirection.Input, SqlDbType.SmallDateTime, 8000, txttglsimulasi.Text, typeof(DateTime));
+
+//                ge.ListDataset = gb.GetDataJustOutPut("SI_Request", var, "constrmf");
+
+//                if (ge.ListDataset.Tables[0].Rows.Count > 0)
+//                {
+//                    txtusiapinjaman.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["usiapinjaman"].ToString());
+//                    txtusiaasuransi.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["usia"].ToString());
+
+//                    if(int.Parse(txtusiaasuransi.Text) < 50)
+//                    {
+//                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Usia minimal 50 tahun');", true);
+//                        txttgllahir.Text = string.Empty;
+//                        txtusiapinjaman.Text = string.Empty;
+//                        txtusiaasuransi.Text = string.Empty;
+//                        return;
+
+//                    }
+
+//                    if (txtkodesimulasi.Text == "B")
+//                    {
+
+                        
+//                        DateTime startDate = DateTime.Parse(txttgllahir.Text); // misalnya C15
+//                        DateTime endDate = DateTime.Parse(txttglsimulasi.Text);   // misalnya G6
+//                        txtjangkawaktumax.Text = JangkaWaktuMax(startDate, endDate);
+
+                        
+
+//                        fungsiAllB();
+
+//                    }
+//                    else
+//                    {
+//                        string result;
+
+
+
+//                        var reguler = TipeReguler(txtusiapinjaman.Text);
+
+//                        var platinum = TipePlatinum(txtusiapinjaman.Text);
+
+//                        if (int.Parse(ddlproduk.SelectedValue) == 1 || int.Parse(ddlproduk.SelectedValue) == 2)
+//                        {
+//                            result = reguler;
+//                        }
+//                        else if (int.Parse(ddlkategori.SelectedValue) == 3 || int.Parse(ddlkategori.SelectedValue) == 4)
+//                        {
+//                            result = platinum;
+//                        }
+//                        else
+//                        {
+//                            result = "0";//K93;
+//                        }
+
+//                        txtjangkawaktumax.Text = result;
+////                        fungsiAll();
+
+//                    }
+//                }
+//                else
+//                {
+//                    txtusiapinjaman.Text = string.Format("{0:N0}", "0");
+//                    txtusiaasuransi.Text = string.Format("{0:N0}", "0");
+//                    txtjangkawaktumax.Text = "0";
+//                    //lblnopenbaru.Visible = true;
+//                }
+//            }
+//        }
+//        catch (Exception X)
+//        {
+//            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+//            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+//        }
+
+//    }
+
+    protected void ddlkantorbayar_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+        DefaultClass.Global.SqlHelper[] var1xx = new DefaultClass.Global.SqlHelper[5];
+        var1xx[0] = gb.CreateSPParameter("@kodebank", ParameterDirection.Input, SqlDbType.VarChar, 20, ddlKantorBayar.SelectedValue, typeof(string));
+        var1xx[1] = gb.CreateSPParameter("@KodeSumberDana", ParameterDirection.Input, SqlDbType.VarChar,20, ddlproduk.SelectedValue, typeof(string));
+        var1xx[2] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LSTJANGKA", typeof(string));
+        var1xx[3] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+        var1xx[4] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+        ge.ListDataset = gb.GetDataJustOutPut("SI_Request", var1xx, "constrmf");
+
+        /*txtkodesimulasi.Text = ge.ListDataset.Tables[0].Rows[0]["kodesimulasi"].ToString();*/
+
+        ge.ListDataset.Tables[0].DefaultView.Sort = "jangka asc";
+
+
+        ddljangkawaktu.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddljangkawaktu.DataTextField = "jangka";
+        ddljangkawaktu.DataValueField = "jangka";
+        ddljangkawaktu.DataBind();
+
+        ddljangkawaktu.Items.Insert(0, new ListItem("Pilih Jangka", "-"));
+
+
+
+        DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
+        var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LISTPROVISI", typeof(string));
+        var[1] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+        var[2] = gb.CreateSPParameter("@kodebank", ParameterDirection.Input, SqlDbType.VarChar, 50, txtkodesimulasi.Text, typeof(string));
+        var[3] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+        ge.ListDataset = gb.GetDataJustOutPut("SI_Request", var, "constrmf");
+
+        ddlprovisi.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlprovisi.DataTextField = "provisi";
+        ddlprovisi.DataValueField = "provisi";
+        ddlprovisi.DataBind();
+        ddlprovisi.Items.Insert(0, new ListItem("Pilih Provisi", "0"));
+
+        DefaultClass.Global.SqlHelper[] var2 = new DefaultClass.Global.SqlHelper[4];
+        var2[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LISTMATERAI", typeof(string));
+        var2[1] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+        var2[2] = gb.CreateSPParameter("@kodebank", ParameterDirection.Input, SqlDbType.VarChar, 50, txtkodesimulasi.Text, typeof(string));
+        var2[3] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+        ge.ListDataset = gb.GetDataJustOutPut("SI_Request", var2, "constrmf");
+
+        DataTable dt = ge.ListDataset.Tables[0].Copy();
+        dt.Columns.Add("totalmaterai_format", typeof(string));
+
+        foreach (DataRow row in dt.Rows)
+        {
+
+                row["totalmaterai_format"] = string.Format("{0:N0}", row["totalmaterai"]);
+
+        }
+
+        ddlmaterai.DataSource = dt;
+        ddlmaterai.DataTextField = "totalmaterai_format";
+        ddlmaterai.DataValueField = "totalmaterai";
+        ddlmaterai.DataBind();
+        ddlmaterai.Items.Insert(0, new ListItem("Pilih Materai", "0"));
+
+    }
+
+
+
+
+    protected void txtusia_anak2_OnChange(object sender, EventArgs e)
+    {
+        try
+        {
+            //lblnopenlama.
+
+            if (txtnopen.Text != "")
+            {
+                DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
+                var[0] = gb.CreateSPParameter("@tgllahir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttgllahiranak2.Text, typeof(DateTime));
+                var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CEKUSIAPENSIUN", typeof(string));
+                var[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+                ge.ListDataset = gb.GetDataJustOutPut("SI_Request", var, "constrmf");
+
+                if (ge.ListDataset.Tables[0].Rows.Count > 0)
+                {
+                    txtusiaanak2.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["usia"].ToString());
+
+                }
+                else
+                {
+                    txtusiaanak2.Text = string.Format("{0:N0}", "0");
+
+
+                }
+            }
+            //fungsiAll();
+        }
+        catch (Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+
+    }
+    public void InsertCombo()
+    {
+        try
+        {
+
+            ge.ListDataset = gb.GetDataFunction("dbo.Getmasterkodejiwa()", "constrmf");
+
+            ge.ListDataset.Tables[0].DefaultView.Sort = "kode_jiwa asc";
+
+            ddlkodejiwa.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+            ddlkodejiwa.DataTextField = "kdjiwa";
+            ddlkodejiwa.DataValueField = "kode_jiwa";
+            ddlkodejiwa.DataBind();
+            ddlkodejiwa.Items.Insert(0, new ListItem("Pilih Kode Jiwa", ""));
+
+            ddljangkawaktu.Items.Insert(0, new ListItem("0", "0"));
+
+            // --- Combo Sumberdana
+            ge.ListDataset = gb.GetDataFunction("dbo.getsumberdana()", "constrmf");
+
+            ge.ListDataset.Tables[0].DefaultView.Sort = "NamaBank asc";
+
+            ddlsumberdana.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+            ddlsumberdana.DataTextField = "NamaBank";
+            ddlsumberdana.DataValueField = "KodeBank";
+            ddlsumberdana.DataBind();
+            ddlsumberdana.Items.Insert(0, new ListItem("Pilih Sumber Dana", ""));
+
+
+            ge.ListDataset = gb.GetDataFunction("dbo.getkantorbayar()", "constrmf");
+
+            ge.ListDataset.Tables[0].DefaultView.Sort = "NamaBank asc";
+
+            ddlKantorBayar.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+            ddlKantorBayar.DataTextField = "NamaBank";
+            ddlKantorBayar.DataValueField = "KodeBank";
+            ddlKantorBayar.DataBind();
+            ddlKantorBayar.Items.Insert(0, new ListItem("Pilih Kantor Bayar", ""));
+
+            ge.ListDataset = gb.GetDataFunction("dbo.getProdukGroup()", "constrmf");
+
+            ge.ListDataset.Tables[0].DefaultView.Sort = "kode asc";
+
+            ddlprogrampinjaman.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+            ddlprogrampinjaman.DataTextField = "namagroup";
+            ddlprogrampinjaman.DataValueField = "kode";
+            ddlprogrampinjaman.DataBind();
+            ddlprogrampinjaman.Items.Insert(0, new ListItem("Pilih Program Pinjaman", ""));
+
+            ge.ListDataset = gb.GetDataFunction("dbo.getprogrampinjam()", "constrmf");
+
+            ge.ListDataset.Tables[0].DefaultView.Sort = "kode asc";
+
+            ddlproduk.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+            ddlproduk.DataTextField = "keterangan";
+            ddlproduk.DataValueField = "kode";
+            ddlproduk.DataBind();
+            ddlproduk.Items.Insert(0, new ListItem("Pilih Produk Pinjaman", ""));
+            ddlproduk.SelectedValue = "1";
+        
+            ge.ListDataset = gb.GetDataFunction("dbo.getprodukkategori()", "constrmf");
+
+            ge.ListDataset.Tables[0].DefaultView.Sort = "kode asc";
+
+            ddlkategori.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+            ddlkategori.DataTextField = "nama";
+            ddlkategori.DataValueField = "kode";
+            ddlkategori.DataBind();
+            ddlkategori.Items.Insert(0, new ListItem("Pilih Kategori", ""));
+
+            ge.ListDataset = gb.GetDataFunction("dbo.getprodukinstansi()", "constrmf");
+
+            ge.ListDataset.Tables[0].DefaultView.Sort = "kode asc";
+
+            ddlinstansi.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+            ddlinstansi.DataTextField = "namajenis";
+            ddlinstansi.DataValueField = "kode";
+            ddlinstansi.DataBind();
+            ddlinstansi.Items.Insert(0, new ListItem("Pilih Instansi", ""));
+
+            // --- Combo  Jenis Kredit
+            ge.ListDataset = gb.GetDataFunction("dbo.GetProduk()", "constrmf");
+
+            ge.ListDataset.Tables[0].DefaultView.Sort = "kode_produk asc";
+
+            // --- Combo  Jenis Penggunaan
+            ge.ListDataset = gb.GetDataFunction("dbo.GetPenggunaan()", "constrmf");
+
+            ge.ListDataset.Tables[0].DefaultView.Sort = "kode_penggunaan asc";
+
+          
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+    }
+
+    //public void InsertCombo()
+    //{
+    //    try
+    //    {
+    //        //---Combo Kode Jiwa 
+    //        ge.ListDataset = gb.GetDataFunction("dbo.Getmasterkodejiwa()", "constrmf");
+
+    //        ge.ListDataset.Tables[0].DefaultView.Sort = "kode_jiwa asc";
+
+    //        ddlkodejiwa.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+    //        ddlkodejiwa.DataTextField = "kdjiwa";
+    //        ddlkodejiwa.DataValueField = "kode_jiwa";
+    //        ddlkodejiwa.DataBind();
+    //        ddlkodejiwa.Items.Insert(0, new ListItem("Pilih Kode Jiwa", ""));
+
+    //        // --- Combo Sumberdana
+    //        ge.ListDataset = gb.GetDataFunction("dbo.getsumberdana()", "constrmf");
+
+    //        ge.ListDataset.Tables[0].DefaultView.Sort = "NamaBank asc";
+
+    //        ddlsumberdana.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+    //        ddlsumberdana.DataTextField = "NamaBank";
+    //        ddlsumberdana.DataValueField = "KodeBank";
+    //        ddlsumberdana.DataBind();
+    //        ddlsumberdana.Items.Insert(0, new ListItem("Pilih Sumber Dana", ""));
+
+
+
+
+
+    //        ge.ListDataset = gb.GetDataFunction("dbo.getProdukGroup()", "constrmf");
+
+    //        ge.ListDataset.Tables[0].DefaultView.Sort = "kode asc";
+
+    //        ddlprogrampinjaman.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+    //        ddlprogrampinjaman.DataTextField = "namagroup";
+    //        ddlprogrampinjaman.DataValueField = "kode";
+    //        ddlprogrampinjaman.DataBind();
+    //        ddlprogrampinjaman.Items.Insert(0, new ListItem("Pilih Program Pinjaman", ""));
+
+
+    //        ge.ListDataset = gb.GetDataFunction("dbo.getprogrampinjam()", "constrmf");
+
+    //        ge.ListDataset.Tables[0].DefaultView.Sort = "kode asc";
+
+    //        ddlproduk.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+    //        ddlproduk.DataTextField = "keterangan";
+    //        ddlproduk.DataValueField = "kode";
+    //        ddlproduk.DataBind();
+    //        ddlproduk.Items.Insert(0, new ListItem("Pilih Produk Pinjaman", ""));
+    //        ddlproduk.SelectedValue = "1";
+    //        ddlproduk.Enabled = false;
+
+
+    //        ge.ListDataset = gb.GetDataFunction("dbo.getprodukkategori()", "constrmf");
+
+    //        ge.ListDataset.Tables[0].DefaultView.Sort = "kode asc";
+
+    //        ddlkategori.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+    //        ddlkategori.DataTextField = "nama";
+    //        ddlkategori.DataValueField = "kode";
+    //        ddlkategori.DataBind();
+    //        ddlkategori.Items.Insert(0, new ListItem("Pilih Kategori", ""));
+
+
+    //        ge.ListDataset = gb.GetDataFunction("dbo.getprodukinstansi()", "constrmf");
+
+    //        ge.ListDataset.Tables[0].DefaultView.Sort = "kode asc";
+
+    //        ddlinstansi.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+    //        ddlinstansi.DataTextField = "namajenis";
+    //        ddlinstansi.DataValueField = "kode";
+    //        ddlinstansi.DataBind();
+    //        ddlinstansi.Items.Insert(0, new ListItem("Pilih Instansi", ""));
+
+
+
+    //    }
+    //    catch (Exception X)
+    //    {
+    //        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+    //        gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+    //    }
+    //}
+
+
+    public string PersenAsuransi()
+    {
+        try
+        {
+            decimal hasil = 0;
+            if (decimal.Parse(txtasuransi.Text) == 0)
+            {
+                hasil = 0;
+            }
+            else
+            {
+                hasil = (decimal.Parse(txtasuransi.Text) / decimal.Parse(txtgajidisplay.Text))* 100;
+            }
+            txtpersenasuransi.Text = string.Format("{0:N2}", hasil);
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+        return txtpersenasuransi.Text;
+    }
+    public string PersenTotal()
+    {
+        try
+        {
+            decimal hasil = 0;
+            if (decimal.Parse(txttotal.Text) == 0)
+            {
+                hasil = 0;
+            }
+            else
+            {
+                hasil = (decimal.Parse(txttotal.Text) / decimal.Parse(txtgajidisplay.Text)) * 100;
+            }
+            txttotalpersen.Text = string.Format("{0:N2}", hasil);
+                
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+        return txttotalpersen.Text;
+    }
+
+    public string PersenSisaGaji()
+    {
+        try
+        {
+            decimal hasil = 0;
+            if (decimal.Parse(txtsisagaji.Text) == 0)
+            {
+                hasil = 0;
+            }
+            else
+            {
+                hasil = (decimal.Parse(txtsisagaji.Text) / decimal.Parse(txtgajidisplay.Text)) * 100;
+            }
+            txtsisagajipersen.Text = string.Format("{0:N2}", hasil);
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+        return txtsisagajipersen.Text;
+    }
+
+    public string PersenProvisi()
+    {
+        try
+        {
+            decimal hasil = 0;
+            if (decimal.Parse(txtprovisi.Text) == 0)
+            {
+                hasil = 0;
+            }
+            else
+            {
+                hasil = (decimal.Parse(txtprovisi.Text) / decimal.Parse(txtplafon.Text)) * 100;
+            }
+            txtpersenprovisi.Text = string.Format("{0:N2}", hasil);
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+        return txtpersenprovisi.Text;
+    }
+
+    public string Angsuranblokirkali()
+    {
+        try
+        {
+            decimal hasil = 0;
+            if (decimal.Parse(txtangsuranblokir.Text) == 0 || decimal.Parse(txtangsuran.Text) == 0)
+            {
+                hasil = 0;
+            }
+            else
+            {
+                hasil = decimal.Parse(txtangsuranblokir.Text) / decimal.Parse(txtangsuran.Text);
+            }
+            txtangsuranblokirkali.Text = string.Format("{0:N0}", hasil);
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+        return txtangsuranblokirkali.Text;
+    }
+    public string Angsurandimukakali()
+    {
+        try
+        {
+
+            txtangsurandimukakali.Text = ddlangsurandimuka.Text;
+            txtangdimukaasuransikali.Text = ddlangsurandimuka.Text;
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+        return txtangsurandimukakali.Text;
+    }
+    protected void ddljangkawaktu_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        try
+        {
+
+            decimal AmountSpent1 = decimal.Parse(ddljangkawaktu.SelectedValue) / 12;
+            decimal d = Math.Round(AmountSpent1, 0);
+            txtjangkatahun.Text = d.ToString();
+
+            Data_Formula(sender, e);
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+
+
+    }
+
+
+    protected void txtusia_anak1_OnChange(object sender, EventArgs e)
+    {
+        try
+        {
+            //lblnopenlama.
+
+            if (txtnopen.Text != "")
+            {
+                DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
+                var[0] = gb.CreateSPParameter("@tgllahir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttgllahiranak1.Text, typeof(DateTime));
+                var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CEKUSIAPENSIUN", typeof(string));
+                var[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+                ge.ListDataset = gb.GetDataJustOutPut("SI_Request", var, "constrmf");
+
+                if (ge.ListDataset.Tables[0].Rows.Count > 0)
+                {
+                    txtusiaanak1.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["usia"].ToString());
+                    //txtusia1.Text = txtusiaanak1.Text;
+                }
+                else
+                {
+                    txtusiaanak1.Text = string.Format("{0:N0}", "0");
+                    //txtusia1.Text = txtusiaanak1.Text;
+                    //lblnopenbaru.Visible = true;
+                }
+            }
+            //fungsiAll();
+        }
+        catch (Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+
+    }
+
+    protected void ddlprogrampinjaman_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        //DdlKodeProduk();
+        //ddlkantorbayar_SelectedIndexChanged(ddlKantorBayar.SelectedValue, EventArgs.Empty);
+        //fungsiAllB();
+        if (ddlprogrampinjaman.SelectedValue == "B")
+        {
+            txtpelunasan.Text = "0";
+            txtpelunasan.Enabled = true;
+
+        }
+        else
+        {
+            txtpelunasan.Text = "0";
+            txtpelunasan.Enabled = false;
+
+        }
+        Data_Formula(sender, e);
+
+    }
+
+
+
+    protected void ddlmaterai_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            if (ddlmaterai.SelectedValue == "")
+            {
+                txtmaterai.Text = "0";
+                txtmateraipcs.Text = "0";
+            }
+            else
+            {
+                txtmateraipcs.Text = ddlmaterai.SelectedValue;
+                txtmaterai.Text = string.Format("{0:N0}", decimal.Parse(ddlmaterai.SelectedItem.Text));
+
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ex.Message.ToString() + "','success','true');", true);
+            gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+    }
+
+    protected void ddlangsurandimukablokir_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            if (ddlangsurandimukablokir.SelectedValue == "0")
+            {
+                txtangsuranblokir.Text = "0";
+                txtangsuranblokirkali.Text = "0";
+            }
+            else
+            {
+                txtangsuranblokirkali.Text = ddlangsurandimukablokir.SelectedValue;
+                txtangsuranblokir.Text = string.Format("{0:N0}", decimal.Parse(ddlangsurandimukablokir.SelectedValue) * decimal.Parse(txtangsuran.Text));
+
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ex.Message.ToString() + "','success','true');", true);
+            gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+    }
+
+
+    protected void ddlangsurandimuka_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            if (ddlangsurandimuka.SelectedValue == "0")
+            {
+                txtangsurandimukakali.Text = "0";
+                txtangsurandimuka.Text = "0";
+            }
+            else
+            {
+                txtangsurandimukakali.Text = ddlangsurandimuka.SelectedValue;
+                txtangsurandimuka.Text = string.Format("{0:N0}", decimal.Parse(ddlangsurandimuka.SelectedValue) * decimal.Parse(txtangsuran.Text));
+
+            }
+
+            Data_Formula(sender, e);
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ex.Message.ToString() + "','success','true');", true);
+            gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+    }
+
+    protected void ddlangsurandimukaasuransi_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            if (ddlangsurandimukaasuransi.SelectedValue == "0")
+            {
+                txtangdimukaasuransi.Text = "0";
+                txtangdimukaasuransikali.Text = "0";
+            }
+            else
+            {
+                txtangdimukaasuransikali.Text = ddlangsurandimukaasuransi.SelectedValue;
+                txtangdimukaasuransi.Text = string.Format("{0:N0}", decimal.Parse(ddlangsurandimukaasuransi.SelectedValue) * decimal.Parse(txtasuransi.Text));
+
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ex.Message.ToString() + "','success','true');", true);
+            gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+    }
+
+    protected void ddlprovisi_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            if (ddlprovisi.SelectedValue == "-")
+            {
+                txtpersenprovisi.Text = "0";
+                txtprovisi.Text = "0";
+            }
+            else
+            {
+                txtpersenprovisi.Text = ddlprovisi.SelectedValue;
+                txtprovisi.Text = string.Format("{0:N0}", (decimal.Parse(ddlprovisi.SelectedValue) / 100) * decimal.Parse(txtplafon.Text));
+
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ex.Message.ToString() + "','success','true');", true);
+            gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+    }
+
+
+    public string DdlAngsurandimuka()
+    {
+        try
+        {
+
+            decimal hitung = 10000;
+            decimal x = 0;
+            ddlmaterai.Items.Clear();
+            for (int i = 1; i <= 5; i++)
+            {
+                x = i * hitung;
+                ddlmaterai.Items.Add(new ListItem(x.ToString(), i.ToString()));
+
+            }
+            ddlmaterai.Items.Insert(0, new ListItem("Pilih Materai", "0"));
+
+
+
+            ddlprovisi.Items.Clear();
+            for (int i = 3; i <= 8; i++)
+            {
+                ddlprovisi.Items.Add(new ListItem(i.ToString(), i.ToString()));
+
+            }
+            ddlprovisi.Items.Insert(0, new ListItem("Pilih Provisi", "0"));
+
+            ddlangsurandimuka.Items.Clear();
+            for (int i = 1; i <= 30; i++)
+            {
+                ddlangsurandimuka.Items.Add(new ListItem(i.ToString(), i.ToString()));
+
+            }
+            ddlangsurandimuka.Items.Insert(0, new ListItem("Pilih Angsuran Dimuka Angsuran", "0"));
+
+            ddlangsurandimukablokir.Items.Clear();
+            for (int i = 1; i <= 30; i++)
+            {
+                ddlangsurandimukablokir.Items.Add(new ListItem(i.ToString(), i.ToString()));
+
+            }
+            ddlangsurandimukablokir.Items.Insert(0, new ListItem("Pilih Angsuran Blokir", "0"));
+
+            ddlangsurandimukaasuransi.Items.Clear();
+            for (int i = 1; i <= 30; i++)
+            {
+                ddlangsurandimukaasuransi.Items.Add(new ListItem(i.ToString(), i.ToString()));
+
+            }
+            ddlangsurandimukaasuransi.Items.Insert(0, new ListItem("Pilih Angsuran Dimuka Asuransi", "0"));
+            ddlangsurandimukaasuransi.Enabled = false;
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+        return ddlangsurandimuka.Text;
+    }
+
+
+    protected void ddlkantor_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        try
+        {
+
+            DefaultClass.Global.SqlHelper[] var22s = new DefaultClass.Global.SqlHelper[3];
+            var22s[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SUMBERDANA", typeof(string));
+            var22s[1] = gb.CreateSPParameter("@kodeasuransi", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlKantorBayar.SelectedValue, typeof(string));
+            var22s[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+            ge.ListDataset = gb.GetDataJustOutPut("KP_MASTER_PERMOHONAN_NEW", var22s, "constrmf");
+
+            ge.ListDataset.Tables[0].DefaultView.Sort = "KodesumberDana asc";
+
+            ddlsumberdana.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+            ddlsumberdana.DataTextField = "NamaSumberDana";
+            ddlsumberdana.DataValueField = "KodesumberDana";
+            ddlsumberdana.DataBind();
+            ddlsumberdana.Items.Insert(0, new ListItem("Pilih Sumber Dana", "-"));
+
+            DefaultClass.Global.SqlHelper[] var1xx = new DefaultClass.Global.SqlHelper[4];
+            var1xx[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "GETJANGKA", typeof(string));
+            var1xx[1] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+            var1xx[2] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+            var1xx[3] = gb.CreateSPParameter("@bukti", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlKantorBayar.SelectedValue, typeof(string));
+            ge.ListDataset = gb.GetDataJustOutPut("KP_MASTER_PERMOHONAN_NEW", var1xx, "constrmf");
+
+            /*txtkodesimulasi.Text = ge.ListDataset.Tables[0].Rows[0]["kodesimulasi"].ToString();*/
+
+            ge.ListDataset.Tables[0].DefaultView.Sort = "jangkabulan asc";
+
+            ddljangkawaktu.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+            ddljangkawaktu.DataTextField = "jangkabulan";
+            ddljangkawaktu.DataValueField = "jangkabulan";
+            ddljangkawaktu.DataBind();
+            ddljangkawaktu.Items.Insert(0, new ListItem("0", "0"));
+            ddljangkawaktu.SelectedValue = "0";
+
+            if (ddlKantorBayar.SelectedValue == "A009")
+            {
+                ddlsumberdana.SelectedValue = ddlKantorBayar.SelectedValue;
+                ddlsumberdana.Enabled = false;
+                txtkodesimulasi.Text = "B";
+
+            }
+            else
+            {
+                ddlsumberdana.SelectedValue = "-";
+                ddlsumberdana.Enabled = true;
+                //DdlAngsurandimuka();
+                txtkodesimulasi.Text = "A";
+                //txtpersenadminbank.Text = "0";
+
+            }
+
+            DdlAngsurandimuka();
+
+
+            ddlmaterai.SelectedValue = "2";
+            ddlmaterai_SelectedIndexChanged(sender, e);
+
+            if (txtkodesimulasi.Text == "A")
+            {
+                ddlangsurandimukablokir.Enabled = false;
+                ddlPk.Enabled = false;
+                ddlkategori.SelectedValue = "A";
+                ddlkategori.Enabled = false;
+            }
+            else
+            {
+                ddlangsurandimukablokir.Enabled = true;
+                ddlPk.Enabled = true;
+                ddlkategori.Enabled = true;
+
+
+            }
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ex.Message.ToString() + "','success','true');", true);
+            gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+    }
+
+
+    protected void txtusia_OnChange(object sender, EventArgs e)
+    {
+        try
+        {
+
+            Data_Formula(sender, e);
+
+        }
+        catch (Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+
+    }
+
+    protected void Data_Formula(object sender, EventArgs e)
+    {
+        try
+        {
+
+
+            if (ddlinstansi.SelectedValue != "" && ddlkategori.SelectedValue != "" && ddlKantorBayar.SelectedValue != "" && ddlsumberdana.SelectedValue != "" && ddlpensiun.SelectedValue != "" && ddlprogrampinjaman.SelectedValue != "" && txttgllahir.Text != "" && ddljangkawaktu.SelectedValue != "0")
+            {
+
+                if (Convert.ToDecimal(txtgajidisplay.Text) == 0)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon isi gaji display terlebih dahulu');", true);
+                    txtplafon.Text = "0";
+                    return;
+                }
+
+                object tgltmt = CheckTglNull(txtmtpensiun.Text);
+                object tglrealisasi = CheckTglNull(txttglrealisasi.Text);
+                object tgllahir = CheckTglNull(txttgllahir.Text);
+
+
+                DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[21];
+                var[0] = gb.CreateSPParameter("@instansix", ParameterDirection.Input, SqlDbType.VarChar, 2, ddlinstansi.SelectedValue, typeof(string));
+                var[1] = gb.CreateSPParameter("@Tglrealisasi", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, tglrealisasi, typeof(DateTime));
+                var[2] = gb.CreateSPParameter("@C13Kategori", ParameterDirection.Input, SqlDbType.VarChar, 1, ddlkategori.SelectedValue, typeof(string));
+                var[3] = gb.CreateSPParameter("@C11KantorBayar", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlKantorBayar.SelectedValue, typeof(string));
+                var[4] = gb.CreateSPParameter("@F9SUMBERDANA", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlsumberdana.SelectedValue, typeof(string));
+                var[5] = gb.CreateSPParameter("@C17jangkawaktubulan", ParameterDirection.Input, SqlDbType.Int, 0, ddljangkawaktu.SelectedValue, typeof(string));
+                var[6] = gb.CreateSPParameter("@C21gajidiplay", ParameterDirection.Input, SqlDbType.Money, 0, txtgajidisplay.Text, typeof(string));
+                var[7] = gb.CreateSPParameter("@C19jenispensiun", ParameterDirection.Input, SqlDbType.VarChar, 1, ddlpensiun.SelectedValue, typeof(string));
+                var[8] = gb.CreateSPParameter("@C12ProdukGroup", ParameterDirection.Input, SqlDbType.VarChar, 1, ddlprogrampinjaman.SelectedValue, typeof(string));
+                var[9] = gb.CreateSPParameter("@G14Programpinjaman", ParameterDirection.Input, SqlDbType.VarChar, 1, ddlproduk.SelectedValue, typeof(string));
+                var[10] = gb.CreateSPParameter("@C20Statusnikah", ParameterDirection.Input, SqlDbType.VarChar, 1, ddlstatusnikah.SelectedValue, typeof(string));
+                var[11] = gb.CreateSPParameter("@C24tmtpensiun", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, tgltmt, typeof(DateTime));
+                var[12] = gb.CreateSPParameter("@C25Plafon", ParameterDirection.Input, SqlDbType.Money, 0, txtplafon.Text, typeof(string));
+                var[13] = gb.CreateSPParameter("@kodesimulasi", ParameterDirection.Input, SqlDbType.VarChar, 2, txtkodesimulasi.Text, typeof(string));
+                var[14] = gb.CreateSPParameter("@TglLahir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, tgllahir, typeof(DateTime));
+                var[15] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 5, SessKdpersh, typeof(string));
+                //var[16] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "KP_HITUNG_KANTOR_BAYAR_POS", typeof(string));
+                var[16] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                var[17] = gb.CreateSPParameter("@C25Pelunasan", ParameterDirection.Input, SqlDbType.Money, 0, txtpelunasan.Text, typeof(string));
+                var[18] = gb.CreateSPParameter("@no_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 30, txtnopen.Text, typeof(string));
+                var[19] = gb.CreateSPParameter("@PK", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlPk.SelectedValue, typeof(string));
+                var[20] = gb.CreateSPParameter("@TunjanganIstriAnak", ParameterDirection.Input, SqlDbType.Money, 30, txttunjistri.SelectedValue, typeof(string));
+                if (ddlKantorBayar.SelectedValue == "A014" && ddlpensiun.SelectedValue == "1")
+                {
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_POS", var, "constrmf");
+                }
+                else if (ddlKantorBayar.SelectedValue == "A009" && ddlsumberdana.SelectedValue == "A009" && ddlpensiun.SelectedValue == "1")
+                {
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_CAPITAL", var, "constrmf");
+                }
+                else if (ddlKantorBayar.SelectedValue == "A015" && ddlsumberdana.SelectedValue != "A009" && ddlpensiun.SelectedValue == "1")
+                {
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_Capital_A", var, "constrmf");
+                }
+                else if (ddlKantorBayar.SelectedValue == "A013" && ddlsumberdana.SelectedValue != "A009" && ddlpensiun.SelectedValue == "1")
+                {
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_MANTAP", var, "constrmf");
+                }
+                else if (ddlKantorBayar.SelectedValue == "A014" && (ddlpensiun.SelectedValue == "2" || ddlpensiun.SelectedValue == "3"))
+                {
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_JANDA_DUDA", var, "constrmf");
+                }
+                else if (ddlKantorBayar.SelectedValue == "A015" && ddlsumberdana.SelectedValue != "A009" && (ddlpensiun.SelectedValue == "2" || ddlpensiun.SelectedValue == "3"))
+                {
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_JANDA_DUDA", var, "constrmf");
+                }
+                else if (ddlKantorBayar.SelectedValue == "A013" && (ddlpensiun.SelectedValue == "2" || ddlpensiun.SelectedValue == "3"))
+                {
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_JANDA_DUDA", var, "constrmf");
+                }
+
+                if (ge.ListDataset.Tables[0].Rows.Count > 0)
+                {
+                    if (ge.ListDataset.Tables[0].Rows[0]["statusmsg"].ToString() == "1")
+                    {
+                        txtplafon.Text = "0";
+                        var datamsg = ge.ListDataset.Tables[0].Rows[0]["msg"].ToString();
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + datamsg + "');", true);
+                        return;
+                    }
+                    /*                    if(ge.ListDataset.Tables[0].Rows[0]["bungasenaefektif"].ToString() == "0")
+                                        {
+                                            txtplafon.Text = "0";
+                                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Rate Bunga Efektif tidak boleh 0 mohon di isi Master terlebih dahulu ');", true);
+                                            return;
+                                        }*/
+                    if (ge.ListDataset.Tables[0].Rows[0]["bungasenaflat"].ToString() == "0")
+                    {
+                        txtplafon.Text = "0";
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Rate Bunga Flat tidak boleh 0 mohon di isi Master terlebih dahulu ');", true);
+                        return;
+                    }
+
+                    if (decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["plafon"].ToString()) > decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Plafonmax"].ToString()))
+                    {
+
+                        txtplafon.Text = "0";
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Plafon tidak boleh lebih besar dari Palfon Max');", true);
+                        return;
+                    }
+
+                    else
+                    {
+                        if (txtkodesimulasi.Text == "A")
+                        {
+                            txtusiapinjaman.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["UsiaPeminjam"].ToString());
+                            txtusiaasuransi.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["Usiaasuransi"].ToString());
+                            txtjangkatahun.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["jangkawaktutahun"].ToString());
+                            txttgljatuhtempo.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgljatuhtempo"].ToString()));
+                            ddlangsurandimukablokir.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsurandiblokir"].ToString());
+                            ddlangsurandimuka.Enabled = true;
+                            ddlmaterai.Enabled = true;
+                            //                        ddlangsurandimuka.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsurandimuka"].ToString());
+                            //                        ddlangsurandimukaasuransi.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsuranAsuransidiblokir"].ToString());
+                            //                        ddlmaterai.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kalimaterai"].ToString());
+                            //                        ddlprovisi.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["persenProvisi"].ToString());
+                            //ddlmutasikantorbayar.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["@@I23persenProvisi"].ToString());
+                            txtnama.Text = ge.ListDataset.Tables[0].Rows[0]["ketanggota"].ToString();
+                            txtstatuspinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["ketrekening"].ToString();
+                            txtusiajthtempo.Text = ge.ListDataset.Tables[0].Rows[0]["usiajatuhtempo"].ToString();
+                            txtplafonmax.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Plafonmax"].ToString()));
+                            txtjangkawaktumax.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["jangkawaktumax"].ToString());
+                            txtratebungapinjaman.Text = string.Format("{0:N2}", ge.ListDataset.Tables[0].Rows[0]["bungasenaflat"].ToString());
+                            txtrateasuransi.Text = string.Format("{0:N2}", ge.ListDataset.Tables[0].Rows[0]["rateasuransi"].ToString());
+                            txtangsuran.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuran"].ToString()));
+                            txtpsnangsuran.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenangsuran"].ToString()));
+                            txtasuransi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["asuransi"].ToString()));
+                            txtpersenasuransi.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["rateasuransi"].ToString()));
+                            txttotal.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["total"].ToString()));
+                            txttotalpersen.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["totalpersen"].ToString()));
+                            txtsisagaji.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["sisagaji"].ToString()));
+                            txtsisagajipersen.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Persensisagaji"].ToString()));
+                            //                        txtprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["provisi"].ToString()));
+                            txtpersenprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenprovisi"].ToString()));
+                            txtadminbank.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["adminbank"].ToString()));
+                            txtpersenadminbank.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenadminbank"].ToString()));
+                            txtkeanggotaan.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["keanggotaan"].ToString()));
+                            //                        txtmaterai.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["materai"].ToString()));
+                            //txtmateraipcs.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kalimaterai"].ToString()));
+                            txtangsuranblokir.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuranblokir"].ToString()));
+                            txtangsuranblokirkali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsurandiblokir"].ToString()));
+                            //                        txtangsurandimuka.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimuka"].ToString()));
+                            //txtangsurandimukakali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsurandimuka"].ToString()));
+                            txtangdimukaasuransi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuranAsuransidiblokir"].ToString()));
+                            //txtangdimukaasuransikali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsuranAsuransidiblokir"].ToString()));
+                            txtbiayaadmin.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["tatalaksana"].ToString()));
+                            txtpelunasanRp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["pelunasanRp"].ToString()));
+                            //                        txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["terimabersih"].ToString()));
+                            decimal terimabersih = decimal.Parse(txtplafon.Text) - decimal.Parse(txtprovisi.Text) - decimal.Parse(txtadminbank.Text) - decimal.Parse(txtasuransi.Text) - decimal.Parse(txtkeanggotaan.Text) - decimal.Parse(txtangsuranblokir.Text) - decimal.Parse(txtangsurandimuka.Text) - decimal.Parse(txtangdimukaasuransi.Text) - decimal.Parse(txtmaterai.Text) - decimal.Parse(txtbiayaadmin.Text);
+                            txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(terimabersih.ToString()));
+
+                        }
+                        else
+                        {
+                            ddlangsurandimuka.Items.Clear();
+                            for (int i = 1; i <= 30; i++)
+                            {
+                                ddlangsurandimuka.Items.Add(new ListItem(i.ToString(), i.ToString()));
+
+                            }
+                            ddlangsurandimuka.Items.Insert(0, new ListItem("Pilih Angsuran Dimuka Angsuran", "0"));
+
+
+                            txtusiapinjaman.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["UsiaPeminjam"].ToString());
+                            txtusiaasuransi.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["Usiaasuransi"].ToString());
+                            txtjangkatahun.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["jangkawaktutahun"].ToString());
+                            txttgljatuhtempo.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgljatuhtempo"].ToString()));
+                            ddlangsurandimukablokir.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsurandiblokir"].ToString());
+                            ddlangsurandimukablokir.Enabled = false;
+                            ddlangsurandimuka.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsurandimuka"].ToString());
+                            ddlangsurandimuka.Enabled = false;
+                            ddlangsurandimukaasuransi.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsuranAsuransidiblokir"].ToString());
+                            ddlmaterai.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kalimaterai"].ToString());
+                            ddlmaterai.Enabled = false;
+                            string persenprovisi = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["persenProvisi"].ToString());
+                            ddlprovisi.Items.Clear();
+                            ddlprovisi.Items.Insert(0, new ListItem(persenprovisi, persenprovisi));
+
+                            ddlprovisi.SelectedValue = persenprovisi;
+                            //ddlmutasikantorbayar.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["@@I23persenProvisi"].ToString());
+                            txtnama.Text = ge.ListDataset.Tables[0].Rows[0]["ketanggota"].ToString();
+                            txtstatuspinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["ketrekening"].ToString();
+                            txtusiajthtempo.Text = ge.ListDataset.Tables[0].Rows[0]["usiajatuhtempo"].ToString();
+                            txtplafonmax.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Plafonmax"].ToString()));
+                            txtjangkawaktumax.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["jangkawaktumax"].ToString());
+                            txtratebungapinjaman.Text = string.Format("{0:N2}", ge.ListDataset.Tables[0].Rows[0]["bungasenaflat"].ToString());
+                            txtrateasuransi.Text = string.Format("{0:N2}", ge.ListDataset.Tables[0].Rows[0]["rateasuransi"].ToString());
+                            txtangsuran.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuran"].ToString()));
+                            txtpsnangsuran.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenangsuran"].ToString()));
+                            txtasuransi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["asuransi"].ToString()));
+                            txtpersenasuransi.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["rateasuransi"].ToString()));
+                            txttotal.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["total"].ToString()));
+                            txttotalpersen.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["totalpersen"].ToString()));
+                            txtsisagaji.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["sisagaji"].ToString()));
+                            txtsisagajipersen.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Persensisagaji"].ToString()));
+                            txtprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["provisi"].ToString()));
+                            txtpersenprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenprovisi"].ToString()));
+                            txtadminbank.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["adminbank"].ToString()));
+                            txtpersenadminbank.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenadminbank"].ToString()));
+                            txtkeanggotaan.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["keanggotaan"].ToString()));
+                            txtmaterai.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["materai"].ToString()));
+                            txtmateraipcs.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kalimaterai"].ToString()));
+                            txtangsuranblokir.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuranblokir"].ToString()));
+                            txtangsuranblokirkali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsurandiblokir"].ToString()));
+                            txtangsurandimuka.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimuka"].ToString()));
+                            txtangsurandimukakali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsurandimuka"].ToString()));
+                            txtangdimukaasuransi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuranAsuransidiblokir"].ToString()));
+                            txtangdimukaasuransikali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsuranAsuransidiblokir"].ToString()));
+                            txtbiayaadmin.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["tatalaksana"].ToString()));
+                            txtpelunasanRp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["pelunasanRp"].ToString()));
+                            txtgraceperiode.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["gracePeriode"].ToString()));
+                            //                            txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["terimabersih"].ToString()));
+                            decimal terimabersih = decimal.Parse(txtplafon.Text) - decimal.Parse(txtasuransi.Text) - decimal.Parse(txtprovisi.Text) - decimal.Parse(txtadminbank.Text) - decimal.Parse(txtkeanggotaan.Text) -
+                                decimal.Parse(txtangsuranblokir.Text) - decimal.Parse(txtangsurandimuka.Text) - decimal.Parse(txtmaterai.Text) - decimal.Parse(txtbiayaadmin.Text) - decimal.Parse(txtgraceperiode.Text);
+                            txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(terimabersih.ToString()));
+
+                        }
+
+
+
+                    }
+
+
+
+                }
+                else
+                {
+                    txtusiapinjaman.Text = string.Format("{0:N0}", "0");
+                    txtusiaasuransi.Text = string.Format("{0:N0}", "0");
+                    ddlangsurandimukablokir.SelectedValue = "0";
+                    ddlangsurandimuka.SelectedValue = "0";
+                    ddlangsurandimukaasuransi.SelectedValue = "0";
+                    ddlmaterai.SelectedValue = "0";
+                    txtnama.Text = "";
+                    txtstatuspinjaman.Text = "";
+                    txtusiapinjaman.Text = "0";
+                    txtusiaasuransi.Text = "0";
+                    txtusiaanak1.Text = "0";
+                    txtusiaanak2.Text = "0";
+                    txtplafonmax.Text = "0";
+                    txtjangkawaktumax.Text = "0";
+                    txtusiajthtempo.Text = "0";
+                    txtrateasuransi.Text = "0";
+                    txtratebungapinjaman.Text = "0";
+                    txtangsuran.Text = "0";
+                    txtpsnangsuran.Text = "0";
+                    txtasuransi.Text = "0";
+                    txtpersenasuransi.Text = "0";
+                    txttotal.Text = "0";
+                    txttotalpersen.Text = "0";
+                    txtsisagaji.Text = "0";
+                    txtsisagajipersen.Text = "0";
+                    txtprovisi.Text = "0";
+                    txtpersenprovisi.Text = "0";
+                    txtadminbank.Text = "0";
+                    txtpersenadminbank.Text = "0";
+                    txtkeanggotaan.Text = "0";
+                    txtmaterai.Text = "0";
+                    txtmateraipcs.Text = "0";
+                    txtangsuranblokir.Text = "0";
+                    txtangsuranblokirkali.Text = "0";
+                    txtangsurandimuka.Text = "0";
+                    txtangsurandimukakali.Text = "0";
+                    txtangdimukaasuransi.Text = "0";
+                    txtangdimukaasuransikali.Text = "0";
+                    txtbiayaadmin.Text = "0";
+                    txtpelunasanRp.Text = "0";
+                    txtterimabersihrp.Text = "0";
+
+
+                }
+
+
+
+            }
+
+            selectedprioritassumberdana();
+
+        }
+        catch (Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+
+    }
+    public object ChecknumberNull(string ParamTanggal)
+    {
+        object number;
+        if (string.IsNullOrWhiteSpace(ParamTanggal))
+        {
+            number = 0;
+        }
+        else
+        {
+            number = ParamTanggal;
+        }
+
+        return number;
+    }
+    protected void btnrequest_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (string.IsNullOrEmpty(ddlKantorBayar.SelectedValue))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Kantor Bayar terlebih dahulu');", true);
+                txttgllahir.Text = string.Empty;
+                return;
+            }
+            else if (string.IsNullOrEmpty(ddlsumberdana.SelectedValue))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Sumber Dana terlebih dahulu');", true);
+                txttgllahir.Text = string.Empty;
+                return;
+            }
+            else if(string.IsNullOrEmpty(ddlprogrampinjaman.SelectedValue))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Program Pinjam terlebih dahulu');", true);
+                txttgllahir.Text = string.Empty;
+                return;
+            }
+            else if(string.IsNullOrEmpty(txtnopen.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon di isi no pensiun terlebih dahulu');", true);
+                txttgllahir.Text = string.Empty;
+                return;
+            }
+            else if(string.IsNullOrEmpty(ddlkodejiwa.SelectedValue))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Kode Jiwa terlebih dahulu');", true);
+                txttgllahir.Text = string.Empty;
+                return;
+            }
+            else if(string.IsNullOrEmpty(ddlstatusnikah.SelectedValue))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Status Nikah terlebih dahulu');", true);
+                txttgllahir.Text = string.Empty;
+                return;
+            }
+            else if(string.IsNullOrEmpty(ddlpensiun.SelectedValue))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon pilih Pensiun terlebih dahulu');", true);
+                txttgllahir.Text = string.Empty;
+                return;
+            }
+            else if (decimal.Parse(txtgajidisplay.Text) == 0)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon di isi Gaji Display terlebih dahulu');", true);
+                txtgajidisplay.Focus();
+                return;
+            }
+            else if (decimal.Parse(txtplafon.Text) == 0)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon di isi Plafon terlebih dahulu');", true);
+                txtplafon.Focus();
+                return;
+            }
+            else if (ddljangkawaktu.SelectedValue == "0")
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon di isi Jangka Waktu terlebih dahulu');", true);
+                ddljangkawaktu.Focus();
+                return;
+            }
+            else if (ddlmutasikantorbayar.SelectedValue == "-")
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon di isi Mutasi Kantor terlebih dahulu');", true);
+                ddlmutasikantorbayar.Focus();
+                return;
+            }
+            else if (decimal.Parse(txtplafon.Text) > decimal.Parse(txtplafonmax.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Plafon tidak boleh lebih dari plafon max');", true);
+                txtplafon.Focus();
+                return;
+            }
+            else if (int.Parse(ddljangkawaktu.SelectedValue) > int.Parse(txtjangkawaktumax.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Jangka Waktu tidak boleh lebih dari Jangka Waktu max');", true);
+                ddljangkawaktu.Focus();
+                return;
+            }
+            else if (string.IsNullOrEmpty(txttgllahir.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon di isi Tanggal Lahir terlebih dahulu');", true);
+                txttgllahir.Text = string.Empty;
+                return;
+            }
+            else if (string.IsNullOrEmpty(txttglrealisasi.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon di isi Tanggal Realisaasi terlebih dahulu');", true);
+                txttgllahir.Text = string.Empty;
+                return;
+            }
+            else if (int.Parse(ddljangkawaktu.SelectedValue)> int.Parse(txtjangkawaktumax.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Jangka Waktu tidak boleh lebih dari jangka Waktu Maksimal');", true);
+                ddljangkawaktu.Focus();
+                return;
+            }
+            else if (decimal.Parse(txtplafon.Text) > decimal.Parse(txtplafonmax.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Plafon tidak boleh lebih dari Plafon Maksimal');", true);
+                txtplafon.Focus();
+                return;
+            }
+            else
+            {
+                object tglLahirAnak1Value = CheckTglNull(txttgllahiranak1.Text);
+                object tglLahirAnak2Value = CheckTglNull(txttgllahiranak2.Text);
+
+                object usia1 = ChecknumberNull(txtusiaanak1.Text);
+                object usia2 = ChecknumberNull(txtusiaanak2.Text);
+                string STATE = "INSERT";
+
+
+                DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[67];
+               
+                var1[0] = gb.CreateSPParameter("@Tgl_Simulasi", ParameterDirection.Input, SqlDbType.SmallDateTime, 0,txttglentry.Text, typeof(DateTime));
+                var1[1] = gb.CreateSPParameter("@Tglrealisasi", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglrealisasi.Text, typeof(DateTime));
+                var1[2] = gb.CreateSPParameter("@No_Simulasi", ParameterDirection.Input, SqlDbType.VarChar, 30, txtnosimulasi.Text, typeof(string));
+                var1[3] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 30, STATE, typeof(string));
+                var1[4] = gb.CreateSPParameter("@Kode_Simulasi", ParameterDirection.Input, SqlDbType.VarChar, 2, txtkodesimulasi.Text, typeof(string));
+                var1[5] = gb.CreateSPParameter("@Instansi", ParameterDirection.Input, SqlDbType.VarChar, 10, ddlinstansi.SelectedValue, typeof(string));
+                var1[6] = gb.CreateSPParameter("@Nomor_Pensiun", ParameterDirection.Input, SqlDbType.VarChar, 30, txtnopen.Text, typeof(string));
+                var1[7] = gb.CreateSPParameter("@Nama_Pensiun", ParameterDirection.Input, SqlDbType.VarChar, 80, txtnamapensiun.Text, typeof(string));
+                var1[8] = gb.CreateSPParameter("@Kode_Jiwa", ParameterDirection.Input, SqlDbType.VarChar, 10, ddlkodejiwa.SelectedValue, typeof(string));
+                var1[9] = gb.CreateSPParameter("@Status_Pernikahan", ParameterDirection.Input, SqlDbType.VarChar, 1, ddlstatusnikah.SelectedValue, typeof(string));
+                var1[10] = gb.CreateSPParameter("@Pensiunan", ParameterDirection.Input, SqlDbType.VarChar, 10, ddlpensiun.SelectedValue, typeof(string));
+                var1[11] = gb.CreateSPParameter("@TglLahir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttgllahir.Text, typeof(DateTime));
+                var1[12] = gb.CreateSPParameter("@TglLahirAnak1", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, tglLahirAnak1Value, typeof(DateTime));
+                var1[13] = gb.CreateSPParameter("@TglLahirAnak2", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, tglLahirAnak2Value, typeof(DateTime));
+                var1[14] = gb.CreateSPParameter("@TmtPensiun", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txtmtpensiun.Text, typeof(DateTime));
+                var1[15] = gb.CreateSPParameter("@GajiDisplay", ParameterDirection.Input, SqlDbType.Decimal, 0, txtgajidisplay.Text, typeof(decimal));
+                var1[16] = gb.CreateSPParameter("@Gaji", ParameterDirection.Input, SqlDbType.Decimal, 0, txtgajipokok.Text, typeof(decimal));
+
+
+                var1[17] = gb.CreateSPParameter("@Kantor_Bayar", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlKantorBayar.SelectedValue, typeof(string));
+                var1[18] = gb.CreateSPParameter("@Sumber_Dana", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlsumberdana.SelectedValue, typeof(string));
+                var1[19] = gb.CreateSPParameter("@Program_Pinjaman", ParameterDirection.Input, SqlDbType.VarChar, 5, ddlprogrampinjaman.SelectedValue, typeof(string));
+                var1[20] = gb.CreateSPParameter("@Jenis_Produk", ParameterDirection.Input, SqlDbType.VarChar, 10, ddlproduk.SelectedValue, typeof(string));
+                var1[21] = gb.CreateSPParameter("@Jenis_Kategori", ParameterDirection.Input, SqlDbType.VarChar, 10, ddlkategori.SelectedValue, typeof(string));
+                var1[22] = gb.CreateSPParameter("@JangkaWaktu", ParameterDirection.Input, SqlDbType.Int, 0, ddljangkawaktu.SelectedValue, typeof(int));
+                var1[23] = gb.CreateSPParameter("@JangkaWaktuTahun", ParameterDirection.Input, SqlDbType.Int, 0, txtjangkatahun.Text, typeof(int));
+                var1[24] = gb.CreateSPParameter("@tgljatuhtempo", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttgljatuhtempo.Text, typeof(DateTime));
+
+                var1[25] = gb.CreateSPParameter("@Plafon", ParameterDirection.Input, SqlDbType.Decimal, 0, txtplafon.Text, typeof(decimal));
+                var1[26] = gb.CreateSPParameter("@Pelunasan", ParameterDirection.Input, SqlDbType.Decimal, 0, txtpelunasan.Text, typeof(decimal));
+                var1[27] = gb.CreateSPParameter("@AngsBlokirkali", ParameterDirection.Input, SqlDbType.Int, 0, ddlangsurandimukablokir.SelectedValue, typeof(int));
+                var1[28] = gb.CreateSPParameter("@AngsDimukakali", ParameterDirection.Input, SqlDbType.Int, 0, ddlangsurandimuka.SelectedValue, typeof(int));
+                var1[29] = gb.CreateSPParameter("@AngsDimukaAsuransikali", ParameterDirection.Input, SqlDbType.Int, 0, ddlangsurandimukaasuransi.SelectedValue, typeof(int));
+                var1[30] = gb.CreateSPParameter("@Materaikali", ParameterDirection.Input, SqlDbType.Int, 0, ddlmaterai.SelectedValue, typeof(int));
+                var1[31] = gb.CreateSPParameter("@Provisikali", ParameterDirection.Input, SqlDbType.Int, 0, ddlprovisi.SelectedValue, typeof(int));
+                var1[32] = gb.CreateSPParameter("@MutasiKantorBayar", ParameterDirection.Input, SqlDbType.Int, 0, ddlmutasikantorbayar.SelectedValue, typeof(int));
+
+                var1[33] = gb.CreateSPParameter("@StatusAnggota", ParameterDirection.Input, SqlDbType.VarChar, 50, txtnama.Text, typeof(string));
+                var1[34] = gb.CreateSPParameter("@StatusPinjaman", ParameterDirection.Input, SqlDbType.VarChar, 50, txtstatuspinjaman.Text, typeof(string));
+                
+                var1[35] = gb.CreateSPParameter("@UsiaPinjaman", ParameterDirection.Input, SqlDbType.Int, 0, (string.IsNullOrEmpty(txtusiapinjaman.Text) ? null : txtusiapinjaman.Text), typeof(int)); // txtusiapinjaman.Text, typeof(int));
+                var1[36] = gb.CreateSPParameter("@UsiaAsuransi", ParameterDirection.Input, SqlDbType.Int, 0, (string.IsNullOrEmpty(txtusiaasuransi.Text) ? null : txtusiaasuransi.Text), typeof(int)); //, typeof(int));
+                var1[37] = gb.CreateSPParameter("@UsiaAnak1", ParameterDirection.Input, SqlDbType.Int, 0, usia1, typeof(int));
+                var1[38] = gb.CreateSPParameter("@UsiaAnak2", ParameterDirection.Input, SqlDbType.Int, 0, usia2, typeof(int));
+                
+                var1[39] = gb.CreateSPParameter("@PlafondMax", ParameterDirection.Input, SqlDbType.Decimal, 0, txtplafonmax.Text, typeof(decimal));
+                var1[40] = gb.CreateSPParameter("@JangkaWaktuMax", ParameterDirection.Input, SqlDbType.Int, 0, (string.IsNullOrEmpty(txtjangkawaktumax.Text) ? null : txtjangkawaktumax.Text), typeof(int));
+                var1[41] = gb.CreateSPParameter("@usiajatuhtempo", ParameterDirection.Input, SqlDbType.Int, 0, (string.IsNullOrEmpty(txtusiajthtempo.Text) ? null : txtusiajthtempo.Text), typeof(int));
+
+                var1[42] = gb.CreateSPParameter("@RateAsuransi", ParameterDirection.Input, SqlDbType.Decimal, 0, txtrateasuransi.Text, typeof(decimal));
+                var1[43] = gb.CreateSPParameter("@RateBungaPinjaman", ParameterDirection.Input, SqlDbType.Decimal, 0, txtratebungapinjaman.Text, typeof(decimal));
+                
+                var1[44] = gb.CreateSPParameter("@Angsuran", ParameterDirection.Input, SqlDbType.Decimal, 0, txtangsuran.Text, typeof(decimal));
+                var1[45] = gb.CreateSPParameter("@PersenAngsuran", ParameterDirection.Input, SqlDbType.Decimal, 0, txtpsnangsuran.Text, typeof(decimal));
+                var1[46] = gb.CreateSPParameter("@CicilanAsuransi", ParameterDirection.Input, SqlDbType.Decimal, 0, txtasuransi.Text, typeof(decimal));
+                var1[47] = gb.CreateSPParameter("@PersenAsuransi", ParameterDirection.Input, SqlDbType.Decimal, 0, txtpersenasuransi.Text, typeof(decimal));
+                var1[48] = gb.CreateSPParameter("@Total", ParameterDirection.Input, SqlDbType.Decimal, 0, txttotal.Text, typeof(decimal));
+                var1[49] = gb.CreateSPParameter("@PersenTotal", ParameterDirection.Input, SqlDbType.Decimal, 0, txttotalpersen.Text, typeof(decimal));
+                var1[50] = gb.CreateSPParameter("@SisaGaji", ParameterDirection.Input, SqlDbType.Decimal, 0, txtsisagaji.Text, typeof(decimal));
+                var1[51] = gb.CreateSPParameter("@PersenSisaGaji", ParameterDirection.Input, SqlDbType.Decimal, 0, txtsisagajipersen.Text, typeof(decimal));
+                var1[52] = gb.CreateSPParameter("@OutputProvisi", ParameterDirection.Input, SqlDbType.Decimal, 0, txtprovisi.Text, typeof(decimal));
+                var1[53] = gb.CreateSPParameter("@PersenProvisi", ParameterDirection.Input, SqlDbType.Decimal, 0, txtpersenprovisi.Text, typeof(decimal));
+                var1[54] = gb.CreateSPParameter("@OutputAdminBank", ParameterDirection.Input, SqlDbType.Decimal, 0, txtadminbank.Text, typeof(decimal));
+                var1[55] = gb.CreateSPParameter("@PersenAdminBank", ParameterDirection.Input, SqlDbType.Decimal, 0, txtpersenadminbank.Text, typeof(decimal));
+                var1[56] = gb.CreateSPParameter("@Keanggotaan", ParameterDirection.Input, SqlDbType.Decimal, 0, txtkeanggotaan.Text, typeof(decimal));
+                var1[57] = gb.CreateSPParameter("@OutputMaterai", ParameterDirection.Input, SqlDbType.Decimal, 0, txtmaterai.Text, typeof(decimal));
+                var1[58] = gb.CreateSPParameter("@AngsuranDiblokir", ParameterDirection.Input, SqlDbType.Decimal, 0, txtangsuranblokir.Text, typeof(decimal));
+                var1[59] = gb.CreateSPParameter("@AngsuranDimuka", ParameterDirection.Input, SqlDbType.Decimal, 0, txtangsurandimuka.Text, typeof(decimal));
+                var1[60] = gb.CreateSPParameter("@AngsuranDimukaAsuransi", ParameterDirection.Input, SqlDbType.Decimal, 0, txtangdimukaasuransi.Text, typeof(decimal));
+                var1[61] = gb.CreateSPParameter("@BiayaAdmin", ParameterDirection.Input, SqlDbType.Decimal, 0, txtbiayaadmin.Text, typeof(decimal));
+                var1[62] = gb.CreateSPParameter("@TerimaBersih", ParameterDirection.Input, SqlDbType.Decimal, 0, txtterimabersihrp.Text, typeof(decimal));
+                var1[63] = gb.CreateSPParameter("@UserEntry", ParameterDirection.Input, SqlDbType.VarChar, 30, SessLoginID, typeof(string));
+                var1[64] = gb.CreateSPParameter("@kode_cabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(string));
+                var1[65] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+                var1[66] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+                ge.ListDataset = gb.GetDataJustOutPut("KP_SIMULASI_KREDIT_NEW_X", var1, "constrmf");
+                if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
+                {
+                    //ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Save Done!','You successfully save this Simulasi','top-right','success','true');", true);
+                    //GetAutoNoSi();
+                    pnlHeader.Visible = true;
+                    PnlFront.Visible = true;
+                    pnladd.Visible = false;
+                    //pnlData.Visible = false;
+                    Pnlsimulasi.Visible = false;
+                    idsimpanvisible.Visible = false;
+                    btndelete.Visible = false;
+
+                    ClearData();
+                    Opendata();
+                    BindGridEntity();
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "','success','true');", true);
+
+                }
+            }
+
+        }
+        catch(Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ex.Message.ToString()+ "','success','true');", true);
+            gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+    }
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CreateMI.aspx");
+    }
+    public object CheckTglNull(string ParamTanggal)
+    {
+        object Tanggal;
+        if (string.IsNullOrWhiteSpace(ParamTanggal))
+        {
+            Tanggal = DBNull.Value;
+        }
+        else
+        {
+            DateTime parsedDate;
+            if (DateTime.TryParse(ParamTanggal, out parsedDate))
+            {
+                Tanggal = parsedDate;
+            }
+            else
+            {
+                Tanggal = DBNull.Value;
+            }
+        }
+
+        return Tanggal;
+    }
+
+
+    protected void btndelete_Click(object sender, EventArgs e)
+    {
+        try
+        {
+
+            DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[5];
+            var[0] = gb2.CreateSPParameter("@No_Simulasi", ParameterDirection.Input, SqlDbType.VarChar, 50, txtnosimulasi.Text, typeof(string));
+            var[1] = gb2.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "DELETESIMULASI", typeof(string));
+            var[2] = gb.CreateSPParameter("@kode_cabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(string));
+            var[3] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+            var[4] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+            ge2.ListDataset = gb2.GetDataJustOutPut("KP_SIMULASI_KREDIT_NEW_X", var, "constrmf");
+
+        if (ge2.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
+        {
+
+            pnlHeader.Visible = true;
+            PnlFront.Visible = true;
+            pnladd.Visible = false;
+            //pnlData.Visible = false;
+            Pnlsimulasi.Visible = false;
+            idsimpanvisible.Visible = false;
+            btndelete.Visible = false;
+
+            ClearData();
+            Opendata();
+            BindGridEntity();
+
+        }
+        else
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "','success','true');", true);
+        }
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ex.Message.ToString() + "','success','true');", true);
+            gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+    }
+
+    public void selectedprioritassumberdana()
+    {
+        try
+        {
+            if (Convert.ToDecimal(txtplafonmax.Text) > 0 && Convert.ToInt32(ddljangkawaktu.SelectedValue) > 0 && Convert.ToInt32(txtusiaasuransi.Text) > 0)
+            {
+                DefaultClass.Global.SqlHelper[] Params = new DefaultClass.Global.SqlHelper[10];
+                Params[0] = gb.CreateSPParameter("@kodesumberdana", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlsumberdana.SelectedValue, typeof(string));
+                Params[1] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+                Params[2] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "PRIORITASKRITERIA", typeof(string));
+                Params[3] = gb.CreateSPParameter("@plafon", ParameterDirection.Input, SqlDbType.Decimal, 0, txtplafonmax.Text, typeof(decimal));
+                Params[4] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 0, SessBranchID, typeof(string));
+                Params[5] = gb.CreateSPParameter("@jangkawaktu", ParameterDirection.Input, SqlDbType.Int, 0, txtjangkatahun.Text, typeof(int));
+                Params[6] = gb.CreateSPParameter("@rate", ParameterDirection.Input, SqlDbType.Float, 0, txtratebungapinjaman.Text, typeof(float));
+                Params[7] = gb.CreateSPParameter("@usia", ParameterDirection.Input, SqlDbType.Int, 0, txtusiaasuransi.Text, typeof(int));
+                Params[8] = gb.CreateSPParameter("@kantorbayar", ParameterDirection.Input, SqlDbType.VarChar, 0, ddlKantorBayar.SelectedValue, typeof(string));
+                Params[9] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                ge.ListDataset = gb.GetDataJustOutPut("KP_Mstr_Kriteria_SumberDana", Params, "constrmf");
+                if (ge.ListDataset.Tables[0].Rows.Count > 0)
+                {
+                    ddlsumberdana.SelectedValue = ge.ListDataset.Tables[0].Rows[0][0].ToString();
+                }
+            }
+
+
+        }
+        catch (Exception X)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString().Replace("'", "") + "');", true);
+            gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+    }
+}
+

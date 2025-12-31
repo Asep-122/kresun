@@ -1,0 +1,1954 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Column 'agama3' does not belong to table Table.</ErrorText>
+    <FileError>ListSurvey.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-01 11.15.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Column 'agama3' does not belong to table Table.</ErrorText>
+    <FileError>ListSurvey.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-01 11.23.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Column 'agama3' does not belong to table Table.</ErrorText>
+    <FileError>ListSurvey.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-01 11.25.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Column 'agama3' does not belong to table Table.</ErrorText>
+    <FileError>ListSurvey.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-01 11.25.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Column 'agama3' does not belong to table Table.</ErrorText>
+    <FileError>ListSurvey.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-01 11.26.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_anggota'.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 10.34.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Column 'NamaLgn' does not belong to table dtOutput.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 12.43.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Column 'NamaLgn' does not belong to table dtOutput.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 12.43.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Column 'NamaLgn' does not belong to table dtOutput.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 12.43.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Column 'NamaLgn' does not belong to table dtOutput.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 12.44.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Column 'NamaLgn' does not belong to table dtOutput.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 12.46.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Column 'NamaLgn' does not belong to table dtOutput.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 12.48.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Column 'tgl_lahir_pasangan' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 13.01.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>'ddlAgamaktp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 13.06.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>'ddlAgamaktp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 13.06.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>'ddlAgamaktp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 13.09.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Column 'tgl_lahir_pasangan' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 13.10.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Column 'file_pathktp1' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 13.10.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Column 'file_pathktp1' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 13.12.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Column 'kode_pospt' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 13.14.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Column 'teleponpekerjaan' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 13.16.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Column 'hubunganpihaklain' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 13.19.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Column 'Tlp' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 13.21.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Column 'no_anggota' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.03.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Column 'tgl_lahir' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.04.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Column 'berlaku_ktp' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.05.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Column 'alamat_surat1' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.37.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Column 'nama_produk' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.39.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Column 'tgl_realisasi' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.40.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Column 'tgl_drop' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.42.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Column 'ketprogram' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.42.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>Column 'ketprogram' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.43.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Column 'ketprogram' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.45.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Column 'tgl_jt' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.46.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Column 'tgl_jatuh_tempo' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.46.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Column 'lama_kerja' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.48.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>VerifikasiPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 20.48.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Column 'tgl_lahir' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 22.06.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Column 'tgl_lahir' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 22.36.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Column 'no_rek_tabungan_x' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 23.00.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Column 'no_rek_tabungan_x' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-02 23.00.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Cannot insert the value NULL into column 'bunga', table 'MIKROLIVE.dbo.ArMasterKredit'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 00.11.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Cannot insert the value NULL into column 'bunga', table 'MIKROLIVE.dbo.ArMasterKredit'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 00.11.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Cannot insert the value NULL into column 'bunga', table 'MIKROLIVE.dbo.ArMasterKredit'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 00.12.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Cannot insert the value NULL into column 'bunga', table 'MIKROLIVE.dbo.ArMasterKredit'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 00.12.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Cannot insert the value NULL into column 'bunga', table 'MIKROLIVE.dbo.ArMasterKredit'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 00.13.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Cannot insert the value NULL into column 'bunga', table 'MIKROLIVE.dbo.ArMasterKredit'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 00.14.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Cannot insert the value NULL into column 'bunga', table 'MIKROLIVE.dbo.ArMasterKredit'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 00.19.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Cannot insert the value NULL into column 'bunga', table 'MIKROLIVE.dbo.ArMasterKredit'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 00.20.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>'ddljaminan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 13.19.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>'ddljaminan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 13.20.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>'ddljaminan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 13.31.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>'ddljaminan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-03 13.33.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PembatalanPencairan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-04 12.54.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PembatalanPencairan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-04 12.56.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PembatalanPencairan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-04 12.57.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PembatalanPencairan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-04 12.59.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>The formal parameter "@Kdpersh" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>ReportDaftarAnggota.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-04 13.39.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>The formal parameter "@Kdpersh" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>ReportDaftarAnggota.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-04 13.40.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>The formal parameter "@Kdpersh" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>ReportDaftarAnggota.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-04 13.40.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>ReportDaftarAnggota.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-04 13.41.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>ReportDaftarAnggota.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-04 13.41.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>ReportDaftarAnggota.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-04 13.42.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>ReportDaftarAnggota.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-04 13.43.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>Index was outside the bounds of the array.</ErrorText>
+    <FileError>ReportDaftarAnggota.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-04 13.43.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>@form is not a parameter for procedure AR_SURAT_PERINGATAN.</ErrorText>
+    <FileError>MasuktrnSuratperingatan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-04 16.55.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>@form is not a parameter for procedure AR_SURAT_PERINGATAN.</ErrorText>
+    <FileError>MasuktrnSuratperingatan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-04 16.56.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>Could not find stored procedure 'CL_Trn_CL_Insert_Transfer_Biaya_Acrual'.</ErrorText>
+    <FileError>MasukTrnBiaya.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-05 16.30.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>Procedure or function 'CL_Trn_CL_Insert_Transfer_Biaya_Acrual' expects parameter '@KodeCrcTarget', which was not supplied.</ErrorText>
+    <FileError>MasukTrnBiaya.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-05 16.30.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>Procedure or function 'CL_Trn_CL_Insert_Transfer_Biaya_Acrual' expects parameter '@bankgiro', which was not supplied.</ErrorText>
+    <FileError>MasukTrnBiaya.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-05 16.31.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>Procedure or function 'CL_Trn_CL_Delete_Transfer_Biaya_Acrual' expects parameter '@KursStd', which was not supplied.</ErrorText>
+    <FileError>MasukTrnBiaya.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-05 16.32.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>Procedure or function 'CL_Trn_CL_Delete_Transfer_Biaya_Acrual' expects parameter '@KursStd', which was not supplied.</ErrorText>
+    <FileError>MasukTrnBiaya.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-05 16.33.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>Procedure or function 'CL_Trn_CL_Delete_Transfer_Biaya_Acrual' expects parameter '@bankgiro', which was not supplied.</ErrorText>
+    <FileError>MasukTrnBiaya.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-05 16.33.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>The COMMIT TRANSACTION request has no corresponding BEGIN TRANSACTION.</ErrorText>
+    <FileError>GenerateAcrual.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-05 20.22.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>GenerateAcrual.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-05 20.34.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'jmltax'.</ErrorText>
+    <FileError>JaminanMasuk.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-06 00.25.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>'ddlharitagih' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasuktrnSuratTugasApproval.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-06 12.08.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>'ddlharitagih' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasuktrnSuratTugasApproval.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-06 12.08.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>'ddlharitagih' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasuktrnSuratTugasApproval.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-06 12.17.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_anggota'.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-07 09.19.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_anggota'.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-07 09.19.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_anggota'.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-07 09.21.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_anggota'.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-07 09.24.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_anggota'.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-07 09.26.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_anggota'.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-07 09.28.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>'ddlPekerjaan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-08 06.31.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>'ddlPekerjaan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-08 06.35.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>'ddlPekerjaan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-08 06.35.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>'ddlPekerjaan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-08 06.35.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>Keyword not supported: 'commandtimeout'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-10 22.01.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>Keyword not supported: 'commandtimeout'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-10 22.01.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 11.21.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 11.23.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 11.25.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 11.27.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 11.50.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 11.52.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 11.57.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 12.22.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 12.23.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 12.24.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>102</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 12.25.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>103</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 12.25.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>104</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 12.26.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>105</ID>
+    <ErrorText>Column 'no_rekening' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 12.28.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>106</ID>
+    <ErrorText>Column 'alamat_keluarga' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 12.29.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>107</ID>
+    <ErrorText>Column 'statusantrian' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 12.33.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>108</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 13.34.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>109</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 13.41.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>110</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 13.48.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>111</ID>
+    <ErrorText>Cannot insert the value NULL into column 'NoBukti', table 'MIKROLIVE.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-12 13.52.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>112</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnTranferantarbank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-13 20.46.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>113</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnTranferantarbank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-13 20.47.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>114</ID>
+    <ErrorText>Cannot find column TglTrn.</ErrorText>
+    <FileError>MasukTrnChangeSales.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-13 23.45.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>115</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_ArChangeSales'. Cannot insert duplicate key in object 'dbo.ArChangeSales'. The duplicate key value is (DEMO01135000001, 01, 135).</ErrorText>
+    <FileError>MasukTrnChangeSales.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-14 01.56.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>116</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_rekening'.</ErrorText>
+    <FileError>MasukTrnChangeSales.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-14 02.00.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>117</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_ktp_pasangan'.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-14 15.12.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>118</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_ktp_pasangan'.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-14 15.14.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>119</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'no_ktp_pasangan'.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-14 15.21.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>120</ID>
+    <ErrorText>Cannot find column NoBukti.</ErrorText>
+    <FileError>MasukTrnCadanganPelunasan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-15 16.57.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>121</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Jumlahdendaplan'.</ErrorText>
+    <FileError>MasukTrnCadanganPelunasan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-15 17.04.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>122</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>KodeGaji.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-16 22.34.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>123</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-17 10.18.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>124</ID>
+    <ErrorText>Cannot insert the value NULL into column 'status_debitur', table 'MIKROGO.dbo.ArPermohonanKredit'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 11.30.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>125</ID>
+    <ErrorText>Column 'alamat' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.11.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>126</ID>
+    <ErrorText>Column 'alamat' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.23.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>127</ID>
+    <ErrorText>Column 'alamat' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.25.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>128</ID>
+    <ErrorText>'ddlpekerjaanktp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.29.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>129</ID>
+    <ErrorText>'ddlpekerjaanktp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.34.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>130</ID>
+    <ErrorText>Invalid column name 'jenis_identitas'.
+Invalid column name 'kode_area'.
+Invalid column name 'ktp_penjamin'.
+Invalid column name 'tanggal_asuransi'.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.38.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>131</ID>
+    <ErrorText>Invalid column name 'jenis_identitas'.
+Invalid column name 'kode_area'.
+Invalid column name 'ktp_penjamin'.
+Invalid column name 'tanggal_asuransi'.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.39.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>132</ID>
+    <ErrorText>Invalid column name 'jenis_identitas'.
+Invalid column name 'kode_area'.
+Invalid column name 'ktp_penjamin'.
+Invalid column name 'tanggal_asuransi'.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.53.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>133</ID>
+    <ErrorText>'ddlPekerjaan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.54.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>134</ID>
+    <ErrorText>Invalid column name 'alamat_rumah_tinggal2'.
+Invalid column name 'alamat_rumah_tinggal3'.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.56.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>135</ID>
+    <ErrorText>Invalid column name 'alamat_rumah_tinggal2'.
+Invalid column name 'alamat_rumah_tinggal3'.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.58.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>136</ID>
+    <ErrorText>Invalid column name 'alamat_rumah_tinggal2'.
+Invalid column name 'alamat_rumah_tinggal3'.</ErrorText>
+    <FileError>ApprovalKeanggotaan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 12.59.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>137</ID>
+    <ErrorText>Cannot insert the value NULL into column 'kode_ref', table 'MIKROGO.dbo.ArAnggota'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 13.30.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>138</ID>
+    <ErrorText>Column 'maju_hari' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 13.40.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>139</ID>
+    <ErrorText>Column 'nama_produk' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 13.45.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>140</ID>
+    <ErrorText>Column 'tgl_drop' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 13.50.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>141</ID>
+    <ErrorText>Column 'tgl_drop' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 13.51.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>142</ID>
+    <ErrorText>Column 'jns_pinjaman' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 13.56.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>143</ID>
+    <ErrorText>Column 'ketprogram' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 13.56.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>144</ID>
+    <ErrorText>Column 'biaya_angsuran' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 13.58.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>145</ID>
+    <ErrorText>Column 'sifat' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 14.04.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>146</ID>
+    <ErrorText>Column 'kode_area' does not belong to table Table.</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 14.05.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>147</ID>
+    <ErrorText>'ddlpekerjaanktp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 22.57.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>148</ID>
+    <ErrorText>'ddlpekerjaanktp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>ApprovalManagerCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-18 23.27.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>149</ID>
+    <ErrorText>Column 'alamat' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 00.45.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>150</ID>
+    <ErrorText>Column 'alamat' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 00.45.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>151</ID>
+    <ErrorText>Column 'alamat' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.00.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>152</ID>
+    <ErrorText>Column 'alamat' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.02.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>153</ID>
+    <ErrorText>Column 'simpananpokok' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.03.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>154</ID>
+    <ErrorText>Column 'jns_pgn' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.04.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>155</ID>
+    <ErrorText>'ddlPenggunaan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanPinjamanAntrian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.04.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>156</ID>
+    <ErrorText>'ddlPenggunaan' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanPinjamanAntrian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.04.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>157</ID>
+    <ErrorText>Column 'kode_area' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.05.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>158</ID>
+    <ErrorText>Column 'lama_bekerja' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.05.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>159</ID>
+    <ErrorText>Column 'alamat' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.15.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>160</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.23.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>161</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.23.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>162</ID>
+    <ErrorText>Column 'statusantrian' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjamanAntrianAdmin.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.47.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>163</ID>
+    <ErrorText>Column 'alamat' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.48.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>164</ID>
+    <ErrorText>Column 'alamat' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.49.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>165</ID>
+    <ErrorText>Column 'alamat' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.51.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>166</ID>
+    <ErrorText>Column 'simpananpokok' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.52.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>167</ID>
+    <ErrorText>Column 'jns_pgn' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.55.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>168</ID>
+    <ErrorText>Column 'tgl_drop' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.56.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>169</ID>
+    <ErrorText>Column 'ketprogram' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 01.59.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>170</ID>
+    <ErrorText>Column 'biaya_angsuran' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 02.01.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>171</ID>
+    <ErrorText>Column 'sifat' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 02.02.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>172</ID>
+    <ErrorText>Column 'nilai_taksasi' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 02.05.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>173</ID>
+    <ErrorText>Column 'angsuran_dimuka' does not belong to table Table.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 02.08.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>174</ID>
+    <ErrorText>Procedure or function 'GL_UPDATEADJUSTHARIAN' expects parameter '@tahun', which was not supplied.</ErrorText>
+    <FileError>AdjustHarian.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-19 19.57.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>175</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>ApprovalPusat.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 13.12.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>176</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'KursStd'.</ErrorText>
+    <FileError>MasukTrnBiayaAcrud.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 20.05.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>177</ID>
+    <ErrorText>Procedure or function GL_Trn_GL_Delete_Transfer_Biaya_Acrual has too many arguments specified.</ErrorText>
+    <FileError>MasukTrnBiayaAcrud.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 20.05.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>178</ID>
+    <ErrorText>Procedure or function GL_Trn_GL_Delete_Transfer_Biaya_Acrual has too many arguments specified.</ErrorText>
+    <FileError>MasukTrnBiayaAcrud.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 20.08.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>179</ID>
+    <ErrorText>Procedure or function GL_Trn_GL_Delete_Transfer_Biaya_Acrual has too many arguments specified.</ErrorText>
+    <FileError>MasukTrnBiayaAcrud.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 20.08.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>180</ID>
+    <ErrorText>Procedure or function GL_Trn_GL_Delete_Transfer_Biaya_Acrual has too many arguments specified.</ErrorText>
+    <FileError>MasukTrnBiayaAcrud.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 20.08.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>181</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'NoBukti'.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.01.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>182</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'bungabersih'.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.03.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>183</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.04.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>184</ID>
+    <ErrorText>Invalid column name 'form'.
+Invalid column name 'Form'.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-22 21.30.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>185</ID>
+    <ErrorText>Invalid column name 'form'.
+Invalid column name 'Form'.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-22 21.31.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>186</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.33.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>187</ID>
+    <ErrorText>Unable to cast object of type 'System.Web.UI.WebControls.Label' to type 'System.Web.UI.WebControls.TextBox'.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.33.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>188</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.36.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>189</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.36.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>190</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.37.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>191</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.37.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>192</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.38.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>193</ID>
+    <ErrorText>Cannot insert the value NULL into column 'Nomor', table 'MIKROGO.dbo.CltrnBayarBiaya'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.38.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>194</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.45.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>195</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.50.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>196</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.50.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>197</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.51.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>198</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.54.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>199</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-22 21.55.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>200</ID>
+    <ErrorText>'ddlstatusnikah' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201admin1</FromUser>
+    <TglError>2021-10-23 20.19.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>201</ID>
+    <ErrorText>'ddlstatusnikah' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201admin1</FromUser>
+    <TglError>2021-10-23 20.19.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>202</ID>
+    <ErrorText>'ddlstatusnikah' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201admin1</FromUser>
+    <TglError>2021-10-23 20.23.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>203</ID>
+    <ErrorText>'ddlstatusnikah' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201admin1</FromUser>
+    <TglError>2021-10-23 20.23.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>204</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201admin1</FromUser>
+    <TglError>2021-10-23 20.26.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>205</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201admin1</FromUser>
+    <TglError>2021-10-23 20.27.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>206</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-23 21.50.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>207</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-23 21.50.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>208</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-23 21.51.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>209</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-23 21.54.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>210</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-23 21.55.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>211</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-23 21.57.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>212</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>MasukTrnSimpokCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-23 21.58.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>213</ID>
+    <ErrorText>'ddlmarketing' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasuktrnSuratTugasApproval.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 10.45.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>214</ID>
+    <ErrorText>'ddlmarketing' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasuktrnSuratTugasApproval.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 10.46.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>215</ID>
+    <ErrorText>'ddlmarketing' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasuktrnSuratTugasApproval.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 10.47.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>216</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnCadanganPelunasan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 11.11.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>217</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 11.32.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>218</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 11.33.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>219</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 11.34.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>220</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 11.35.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>221</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 11.37.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>222</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnCadanganPelunasan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 12.39.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>223</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 12.42.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>224</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 12.43.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>225</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 12.44.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>226</ID>
+    <ErrorText>Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</ErrorText>
+    <FileError>MasukTrnDistribusiCustomer.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-24 12.47.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>227</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>AdjustHarian.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-25 10.31.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>228</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>AdjustHarian.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-25 10.32.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>229</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-25 12.21.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>230</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-25 12.22.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>231</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-25 12.23.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>232</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-25 12.27.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>233</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-25 12.27.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>234</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-25 12.28.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>235</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-27 14.15.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>236</ID>
+    <ErrorText>Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=340; handshake=14925; </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-28 16.20.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>237</ID>
+    <ErrorText>Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=618; handshake=14805; </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-28 16.21.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>238</ID>
+    <ErrorText>Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=618; handshake=14805; </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-28 16.21.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>239</ID>
+    <ErrorText>Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=203; handshake=14912; </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-28 16.22.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>240</ID>
+    <ErrorText>Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=320; handshake=14975; </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-28 16.23.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>241</ID>
+    <ErrorText>@note is not a parameter for procedure AR_Trn_Jaminan_Keluar_Save.</ErrorText>
+    <FileError>JaminanKeluarapproval.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-28 19.18.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>242</ID>
+    <ErrorText>Could not find stored procedure 'AR_Trn_Jaminan_Keluar_Approve'.</ErrorText>
+    <FileError>JaminanKeluarapproval.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-28 19.36.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>243</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'statusapp'.</ErrorText>
+    <FileError>JaminanKeluar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-28 19.59.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>244</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'statusapp'.</ErrorText>
+    <FileError>JaminanKeluar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-28 19.59.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>245</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'statusapp'.</ErrorText>
+    <FileError>JaminanKeluar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-28 19.59.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>246</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'statusapp'.</ErrorText>
+    <FileError>JaminanKeluar.aspx</FileError>
+    <FromUser>gaby</FromUser>
+    <TglError>2021-10-28 19.59.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>247</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'statusapp'.</ErrorText>
+    <FileError>JaminanKeluar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-28 20.02.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>248</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'statusapp'.</ErrorText>
+    <FileError>JaminanKeluar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-28 20.03.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>249</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'statusapp'.</ErrorText>
+    <FileError>JaminanKeluar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-28 20.06.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>250</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'statusapp'.</ErrorText>
+    <FileError>JaminanKeluar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-28 20.06.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>251</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-29 11.23.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>252</ID>
+    <ErrorText>'ddlkdsup' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnBiaya.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-29 11.24.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>253</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 00.03.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>254</ID>
+    <ErrorText>'ddlkdsup' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 00.07.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>255</ID>
+    <ErrorText>Cannot find column kodegl.</ErrorText>
+    <FileError>MasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 00.27.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>256</ID>
+    <ErrorText>Cannot find column kodegl.</ErrorText>
+    <FileError>MasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 00.29.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>257</ID>
+    <ErrorText>'ddlkdsup' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 00.29.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>258</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'KodeCrc'.</ErrorText>
+    <FileError>MasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 00.49.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>259</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'KodeCrc'.</ErrorText>
+    <FileError>MasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 00.50.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>260</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 00.51.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>261</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 00.52.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>262</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 00.54.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>263</ID>
+    <ErrorText>Failed to convert parameter value from a TextBox to a String.</ErrorText>
+    <FileError>ReturMasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 13.09.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>264</ID>
+    <ErrorText>Failed to convert parameter value from a TextBox to a String.</ErrorText>
+    <FileError>ReturMasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 13.11.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>265</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'KodeCrc'.</ErrorText>
+    <FileError>ReturMasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 13.25.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>266</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ReturMasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 13.25.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>267</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'noteadvance'.</ErrorText>
+    <FileError>ReturMasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 13.39.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>268</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ReturMasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 13.39.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>269</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ReturMasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 13.41.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>270</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ReturMasukTrnCashAdvance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-10-30 13.42.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>271</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>ReturMasukTrnCashAdvance.aspx</FileError>
+    <FromUser>nico</FromUser>
+    <TglError>2021-10-31 21.46.06</TglError>
+  </ErrorLog>
+</DocumentElement>

@@ -1,0 +1,2687 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-08 21:27:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-08 21:28:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-08 21:28:32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-08 21:28:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-08 21:28:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:41:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:41:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:41:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:41:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:41:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:41:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:41:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:42:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:43:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:44:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:44:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:44:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:45:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:45:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:45:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:45:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:45:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:45:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:45:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Could not find server '192.168.20.119' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+Could not use view or function 'dbo.MF_Get_User_Branch' because of binding errors.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 14:51:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Invalid column name 'BranchID'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 15:21:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Invalid column name 'BranchID'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 15:22:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Invalid column name 'BranchID'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 15:22:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 15:25:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 15:26:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Could not find server '192.168.20.20' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.</ErrorText>
+    <FileError>User.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-09 15:53:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-10 15:05:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-10 15:08:07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-10 15:08:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-10 15:16:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 08:36:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Cannot insert the value NULL into column 'kodecabang', table 'GIGAERP.dbo.Glhdr'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 13:01:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Cannot insert the value NULL into column 'NoBaris', table 'GIGAERP.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 13:04:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Cannot insert the value NULL into column 'Pk', table 'GIGAERP.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 13:05:33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Cannot insert the value NULL into column 'FlagHutang', table 'GIGAERP.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 13:06:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Procedure or function 'GL_costcenter' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ViewCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 13:19:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Procedure or function 'GL_costcenter' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ViewCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 13:20:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>ViewCardGL.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 13:51:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Procedure or function 'GL_costcenter' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ViewCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 13:59:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>'ddlNoAhirGrup' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 14:02:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Procedure or function 'GL_costcenter' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ViewCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 14:25:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Procedure or function 'GL_costcenter' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ViewCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 14:25:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Procedure or function 'GL_costcenter' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ViewCostCenter.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 14:27:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_Glhdr'. Cannot insert duplicate key in object 'dbo.Glhdr'. The duplicate key value is (01.2020.8.9, 01, 01).</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 15:37:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Procedure or function 'GL_GRIDTransaksiView' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>TransactionGLForm.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 15:42:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:01:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:01:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:01:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:01:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:09:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:09:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:09:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:09:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:09:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:10:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:16:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:17:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:18:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:19:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:19:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:24:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>Could not find stored procedure 'dbo.FA_LOKASIA'.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-13 16:25:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 08:56:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 08:56:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>Procedure or function GL_GetCurrencyReport has too many arguments specified.</ErrorText>
+    <FileError>ReportDaftarAkun.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 08:56:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>Column 'email' does not belong to table Table.</ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 14:36:40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>Column 'email' does not belong to table Table.</ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 14:39:33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 14:41:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 14:41:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 14:44:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 14:44:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 14:44:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 14:46:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 14:48:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 14:51:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>
+    </ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 15:01:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 17:11:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 17:39:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportDaftarAkunSaldo.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 17:40:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>Procedure or function 'GL_GetNoreference' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportBukuBesar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 20:07:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>Procedure or function 'GL_GetNoreference' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportBukuBesar.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-14 20:09:22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>Column 'SessTutupCabang' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:44:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>Column 'SessTutupCabang' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:44:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>Column 'SessTutupCabang' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:44:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>Column 'SessTutupCabang' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:46:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>Column 'SessTutupCabang' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:48:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>Invalid length for a Base-64 char array or string.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:49:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>Invalid length for a Base-64 char array or string.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:51:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>Invalid length for a Base-64 char array or string.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:52:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>Column 'UserName' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:54:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>Column 'UserName' does not belong to table Table.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:54:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>Column 'IsSuperClosing' does not belong to table Table.</ErrorText>
+    <FileError>ChangeBranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:56:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>Invalid length for a Base-64 char array or string.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:57:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>Invalid length for a Base-64 char array or string.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:58:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>Invalid length for a Base-64 char array or string.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 00:58:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>Reportsummary.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 01:11:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>102</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>Reportdetail.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 01:11:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>103</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportGL_RLBi.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 01:11:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>104</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>Reportsummary.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 02:33:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>105</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>Reportsummary.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 02:34:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>106</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>Reportsummary.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 02:35:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>107</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kdpersh', which was not supplied.</ErrorText>
+    <FileError>Reportsummary.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 02:51:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>108</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kdpersh', which was not supplied.</ErrorText>
+    <FileError>Reportsummary.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 02:52:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>109</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>Reportdetail.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 03:02:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>110</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportGL_RLBi.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 19:35:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>111</ID>
+    <ErrorText>Procedure or function 'GL_GetCoaReport' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>ReportGL_RLBiCC.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-15 20:32:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>112</ID>
+    <ErrorText>'ddlCurrency' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:04:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>113</ID>
+    <ErrorText>Cannot insert the value NULL into column 'MenuID', table 'PRODUCTDEV.dbo.MF_MsMenu'; column does not allow nulls. INSERT fails.
+The statement has been terminated.</ErrorText>
+    <FileError>Menu.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:13:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>114</ID>
+    <ErrorText>Cannot insert the value NULL into column 'MenuID', table 'PRODUCTDEV.dbo.MF_MsMenu'; column does not allow nulls. INSERT fails.
+The statement has been terminated.</ErrorText>
+    <FileError>Menu.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:14:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>115</ID>
+    <ErrorText>Cannot insert the value NULL into column 'MenuID', table 'PRODUCTDEV.dbo.MF_MsMenu'; column does not allow nulls. INSERT fails.
+The statement has been terminated.</ErrorText>
+    <FileError>Menu.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:14:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>116</ID>
+    <ErrorText>Cannot insert the value NULL into column 'MenuID', table 'PRODUCTDEV.dbo.MF_MsMenu'; column does not allow nulls. INSERT fails.
+The statement has been terminated.</ErrorText>
+    <FileError>Menu.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:14:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>117</ID>
+    <ErrorText>Procedure or function 'GL_GetCoa' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:15:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>118</ID>
+    <ErrorText>Procedure or function 'GL_GetCoa' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:15:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>119</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:18:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>120</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:18:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>121</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:18:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>122</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:18:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>123</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:19:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>124</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:19:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>125</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:19:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>126</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:20:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>127</ID>
+    <ErrorText>Invalid object name 'dbo.HCIS_DETAIL_EMPLOYEE'.</ErrorText>
+    <FileError>User.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:22:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>128</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:22:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>129</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:22:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>130</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:27:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>131</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:27:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>132</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:27:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>133</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:28:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>134</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:28:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>135</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:29:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>136</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:41:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>137</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 00:49:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>138</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:04:12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>139</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:04:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>140</ID>
+    <ErrorText>Invalid object name 'dbo.HCIS_DETAIL_EMPLOYEE'.</ErrorText>
+    <FileError>User.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:07:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>141</ID>
+    <ErrorText>Invalid object name 'dbo.HCIS_DETAIL_EMPLOYEE'.</ErrorText>
+    <FileError>User.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:08:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>142</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:08:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>143</ID>
+    <ErrorText>Invalid object name 'dbo.HCIS_DETAIL_EMPLOYEE'.</ErrorText>
+    <FileError>User.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:24:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>144</ID>
+    <ErrorText>Cannot insert the value NULL into column 'MenuID', table 'PRODUCTDEV.dbo.MF_MsMenu'; column does not allow nulls. INSERT fails.
+The statement has been terminated.</ErrorText>
+    <FileError>Menu.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:31:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>145</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:32:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>146</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:32:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>147</ID>
+    <ErrorText>Invalid object name 'dbo.HCIS_DETAIL_EMPLOYEE'.</ErrorText>
+    <FileError>User.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:33:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>148</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:36:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>149</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:39:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>150</ID>
+    <ErrorText>Invalid column name 'AddedByFK'.
+Invalid column name 'DateAdded'.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:55:12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>151</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:55:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>152</ID>
+    <ErrorText>Invalid column name 'AddedByFK'.
+Invalid column name 'DateAdded'.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:57:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>153</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:57:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>154</ID>
+    <ErrorText>Invalid column name 'AddedByFK'.
+Invalid column name 'DateAdded'.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:57:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>155</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 01:57:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>156</ID>
+    <ErrorText>Cannot find column KodeCabang.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 11:42:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>157</ID>
+    <ErrorText>Cannot find column KodeCabang.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 11:42:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>158</ID>
+    <ErrorText>Cannot find column KodeCabang.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 11:42:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>159</ID>
+    <ErrorText>Cannot find column KodeCabang.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 11:42:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>160</ID>
+    <ErrorText>Cannot find column KodeCabang.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 11:42:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>161</ID>
+    <ErrorText>Cannot find column KodeCabang.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 11:42:40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>162</ID>
+    <ErrorText>Invalid column name 'BranchID'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 11:48:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>163</ID>
+    <ErrorText>Invalid column name 'BranchID'.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 11:48:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>164</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>BeginningBalance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 13:36:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>165</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>BeginningBalance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 13:36:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>166</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>BeginningBalance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 13:41:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>167</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>BeginningBalance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 13:44:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>168</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>BeginningBalance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 13:46:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>169</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>BeginningBalance.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 13:48:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>170</ID>
+    <ErrorText>Procedure or function 'GL_GetCoa' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 14:18:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>171</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 14:19:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>172</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 14:19:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>173</ID>
+    <ErrorText>Procedure or function 'GL_GetCoa' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 14:19:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>174</ID>
+    <ErrorText>Procedure or function 'GL_GetCoa' expects parameter '@Kodecabang', which was not supplied.</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 14:19:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>175</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 14:37:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>176</ID>
+    <ErrorText>This constraint cannot be enabled as not all values have corresponding parent values.</ErrorText>
+    <FileError>Group.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 14:37:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>177</ID>
+    <ErrorText>Procedure or function 'MF_GetUserBranch' expects parameter '@kdpersh', which was not supplied.</ErrorText>
+    <FileError>BranchUser.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-16 14:37:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>178</ID>
+    <ErrorText>Procedure or function 'GL_GetPersh' expects parameter '@Kdpersh', which was not supplied.</ErrorText>
+    <FileError>GL_GenGlCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-19 11:58:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>179</ID>
+    <ErrorText>Procedure or function 'GL_GetPersh' expects parameter '@Kdpersh', which was not supplied.</ErrorText>
+    <FileError>GL_GenGlCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-19 11:58:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>180</ID>
+    <ErrorText>Procedure or function 'GL_GenerateCabang' expects parameter '@ErrMsg', which was not supplied.</ErrorText>
+    <FileError>GL_GenGlCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-19 12:02:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>181</ID>
+    <ErrorText>Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>GL_GenGlCabang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-19 12:24:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>182</ID>
+    <ErrorText>Procedure or function 'GL_Kategori' expects parameter '@kodecabang', which was not supplied.</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-19 14:35:12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>183</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-19 14:35:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>184</ID>
+    <ErrorText>Procedure or function 'GL_Kategori' expects parameter '@kodecabang', which was not supplied.</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-19 14:35:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>185</ID>
+    <ErrorText>Procedure or function 'GL_Kategori' expects parameter '@kodecabang', which was not supplied.</ErrorText>
+    <FileError>Glmst.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-19 14:39:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>186</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:13:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>187</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:14:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>188</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:17:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>189</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:18:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>190</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:19:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>191</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:20:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>192</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:22:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>193</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:23:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>194</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:24:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>195</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:25:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>196</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>ANDI</FromUser>
+    <TglError>2020-08-20 23:27:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>197</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:28:07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>198</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:28:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>199</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:28:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>200</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:29:22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>201</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:52:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>202</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-20 23:55:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>203</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Int32.</ErrorText>
+    <FileError>Kategori.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-21 00:14:30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>204</ID>
+    <ErrorText>Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-22 01:18:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>205</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-22 01:19:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>206</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-22 01:19:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>207</ID>
+    <ErrorText>'ddlKodeAkunGL' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:07:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>208</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>BrachAktif.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:10:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>209</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>BrachAktif.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:10:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>210</ID>
+    <ErrorText>Could not find stored procedure 'MF_BranchMapping'.</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:11:22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>211</ID>
+    <ErrorText>Could not find stored procedure 'MF_BranchMapping'.</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:11:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>212</ID>
+    <ErrorText>Could not find stored procedure 'MF_BranchMapping'.</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:11:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>213</ID>
+    <ErrorText>Could not find stored procedure 'MF_BranchMapping'.</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:13:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>214</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>BrachAktif.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:13:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>215</ID>
+    <ErrorText>Could not find stored procedure 'MF_BranchMapping'.</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:14:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>216</ID>
+    <ErrorText>Could not find stored procedure 'GS_CURRENCY'.</ErrorText>
+    <FileError>KodeCurrency.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:14:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>217</ID>
+    <ErrorText>Could not find stored procedure 'GS_CURRENCY'.</ErrorText>
+    <FileError>KodeCurrency.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:16:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>218</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>BrachAktif.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:16:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>219</ID>
+    <ErrorText>Could not find stored procedure 'MF_BranchMapping'.</ErrorText>
+    <FileError>BranchMapping.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 01:16:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>220</ID>
+    <ErrorText>Could not find stored procedure 'gettglsekarang'.</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 12:34:00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>221</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 12:58:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>222</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 12:59:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>223</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 12:59:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>224</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 13:04:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>225</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportSupplierBerdasarkanPembeli.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 13:07:32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>226</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>ReportDaftarSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-25 13:08:19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>227</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 12:24:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>228</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 12:27:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>229</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 12:29:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>230</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 12:33:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>231</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 12:40:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>232</ID>
+    <ErrorText>'ddlBankId' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 12:41:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>233</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 12:48:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>234</ID>
+    <ErrorText>'ddlBankId' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 12:48:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>235</ID>
+    <ErrorText>'ddlBankId' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 12:51:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>236</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 13:05:32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>237</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 13:07:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>238</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 13:10:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>239</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 13:13:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>240</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 13:41:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>241</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 13:47:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>242</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 13:51:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>243</ID>
+    <ErrorText>Failed to convert parameter value from a String to a DateTime.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 13:53:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>244</ID>
+    <ErrorText>Cannot convert a char value to money. The char value has incorrect syntax.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:03:27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>245</ID>
+    <ErrorText>Cannot convert a char value to money. The char value has incorrect syntax.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:05:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>246</ID>
+    <ErrorText>Cannot convert a char value to money. The char value has incorrect syntax.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:06:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>247</ID>
+    <ErrorText>Cannot convert a char value to money. The char value has incorrect syntax.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:09:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>248</ID>
+    <ErrorText>Cannot convert a char value to money. The char value has incorrect syntax.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:11:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>249</ID>
+    <ErrorText>Cannot convert a char value to money. The char value has incorrect syntax.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:15:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>250</ID>
+    <ErrorText>Cannot convert a char value to money. The char value has incorrect syntax.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:15:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>251</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:17:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>252</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:20:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>253</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:24:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>254</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:24:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>255</ID>
+    <ErrorText>Cannot convert a char value to money. The char value has incorrect syntax.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 14:25:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>256</ID>
+    <ErrorText>Could not find stored procedure 'gettglsekarang'.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 15:16:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>257</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 15:41:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>258</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 16:28:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>259</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 16:29:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>260</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 16:29:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>261</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 16:33:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>262</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 16:35:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>263</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 16:36:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>264</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 16:38:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>265</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 16:45:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>266</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 16:46:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>267</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-27 16:51:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>268</ID>
+    <ErrorText>Cannot find column KodeBank.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 11:26:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>269</ID>
+    <ErrorText>Cannot find column KodeBank.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 11:29:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>270</ID>
+    <ErrorText>Cannot find column KodeBank.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 11:31:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>271</ID>
+    <ErrorText>Cannot find column KodeKonter.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 11:31:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>272</ID>
+    <ErrorText>Cannot find column KodeKonter.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 11:34:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>273</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 12:52:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>274</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 13:06:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>275</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 13:30:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>276</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransaksiLain.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 13:34:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>277</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>KasBank.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 13:40:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>278</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 17:46:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>279</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 17:47:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>280</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 17:48:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>281</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 17:51:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>282</ID>
+    <ErrorText>Invalid column name 'KodeGroup'.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 19:38:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>283</ID>
+    <ErrorText>Invalid column name 'KodeGroup'.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 19:39:07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>284</ID>
+    <ErrorText>Invalid column name 'KodeGroup'.
+Invalid column name 'KodeGroup'.</ErrorText>
+    <FileError>KodePembeli.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 19:39:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>285</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodePembeli.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 19:39:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>286</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodePembeli.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 19:39:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>287</ID>
+    <ErrorText>Invalid column name 'KodeGroup'.
+Invalid column name 'KodeGroup'.</ErrorText>
+    <FileError>KodePembeli.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 19:39:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>288</ID>
+    <ErrorText>'ddlDebitCC' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:02:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>289</ID>
+    <ErrorText>'ddlDebitCC' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>KodeJurnal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:03:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>290</ID>
+    <ErrorText>Invalid column name 'KodeGroup'.
+Invalid column name 'KodeGroup'.</ErrorText>
+    <FileError>KodePembeli.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:05:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>291</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodePembeli.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:05:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>292</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodePembeli.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:05:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>293</ID>
+    <ErrorText>Invalid column name 'KodeGroup'.
+Invalid column name 'KodeGroup'.</ErrorText>
+    <FileError>KodePembeli.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:05:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>294</ID>
+    <ErrorText>Cannot find column KodeGroup.</ErrorText>
+    <FileError>KodePembeli.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:13:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>295</ID>
+    <ErrorText>Cannot find column KodeGroup.</ErrorText>
+    <FileError>KodePembeli.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:14:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>296</ID>
+    <ErrorText>Cannot insert the value NULL into column 'kdpersh', table 'ERPDEV.dbo.Apwilayah'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>KodeWilayah.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:16:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>297</ID>
+    <ErrorText>Invalid column name 'KodeGroup'.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:28:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>298</ID>
+    <ErrorText>Invalid column name 'KodeGroup'.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:28:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>299</ID>
+    <ErrorText>@kodecabang is not a parameter for procedure AP_KodeIdSupplier.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:44:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>300</ID>
+    <ErrorText>@kodecabang is not a parameter for procedure AP_KodeIdSupplier.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:44:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>301</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:49:28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>302</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:49:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>303</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:51:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>304</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:51:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>305</ID>
+    <ErrorText>Cannot find column KodeGroup.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 20:51:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>306</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>KodeIdSupplier.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-29 21:50:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>307</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 00:32:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>308</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 00:33:01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>309</ID>
+    <ErrorText>Failed to convert parameter value from a String to a Decimal.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 00:36:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>310</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 00:38:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>311</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:17:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>312</ID>
+    <ErrorText>Cannot convert a char value to money. The char value has incorrect syntax.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:17:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>313</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>TransactionAccountPayable.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:26:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>314</ID>
+    <ErrorText>Parameter '@Kdpersh' was supplied multiple times.</ErrorText>
+    <FileError>Posting.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:33:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>315</ID>
+    <ErrorText>Parameter '@Kdpersh' was supplied multiple times.</ErrorText>
+    <FileError>Posting.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:34:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>316</ID>
+    <ErrorText>Parameter '@Kdpersh' was supplied multiple times.</ErrorText>
+    <FileError>Posting.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:38:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>317</ID>
+    <ErrorText>Cannot find table 0.</ErrorText>
+    <FileError>Posting.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:39:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>318</ID>
+    <ErrorText>Parameter '@Kdpersh' was supplied multiple times.</ErrorText>
+    <FileError>Posting.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:39:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>319</ID>
+    <ErrorText>Parameter '@Kdpersh' was supplied multiple times.</ErrorText>
+    <FileError>Posting.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:40:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>320</ID>
+    <ErrorText>Parameter '@Kdpersh' was supplied multiple times.</ErrorText>
+    <FileError>Posting.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:41:17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>321</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>Posting.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:41:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>322</ID>
+    <ErrorText>Parameter '@Kdpersh' was supplied multiple times.</ErrorText>
+    <FileError>Posting.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:42:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>323</ID>
+    <ErrorText>Parameter '@Kdpersh' was supplied multiple times.</ErrorText>
+    <FileError>Posting.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:45:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>324</ID>
+    <ErrorText>Parameter '@Kdpersh' was supplied multiple times.</ErrorText>
+    <FileError>Posting.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 01:46:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>325</ID>
+    <ErrorText>The conversion of a varchar data type to a smalldatetime data type resulted in an out-of-range value.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 02:31:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>326</ID>
+    <ErrorText>The conversion of a varchar data type to a smalldatetime data type resulted in an out-of-range value.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 03:01:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>327</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 05:27:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>328</ID>
+    <ErrorText>The conversion of a varchar data type to a smalldatetime data type resulted in an out-of-range value.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 14:19:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>329</ID>
+    <ErrorText>Trying to pass a table-valued parameter with 9 column(s) where the corresponding user-defined table type requires 8 column(s).</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 14:48:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>330</ID>
+    <ErrorText>String or binary data would be truncated.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8152, state: 10
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 14:55:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>331</ID>
+    <ErrorText>String or binary data would be truncated.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8152, state: 10
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:04:51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>332</ID>
+    <ErrorText>Column 'nomor' does not belong to table TransactionBayar.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:12:06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>333</ID>
+    <ErrorText>Column 'nomor' does not belong to table TransactionBayar.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:14:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>334</ID>
+    <ErrorText>Column 'nomor' does not belong to table TransactionBayar.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:16:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>335</ID>
+    <ErrorText>Unable to cast object of type 'System.Web.UI.WebControls.TextBox' to type 'System.Web.UI.WebControls.Label'.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:18:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>336</ID>
+    <ErrorText>String or binary data would be truncated.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8152, state: 10
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:19:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>337</ID>
+    <ErrorText>String or binary data would be truncated.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8152, state: 10
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:22:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>338</ID>
+    <ErrorText>String or binary data would be truncated.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8152, state: 10
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:30:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>339</ID>
+    <ErrorText>String or binary data would be truncated.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8152, state: 10
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:34:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>340</ID>
+    <ErrorText>String or binary data would be truncated.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8152, state: 10
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:38:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>341</ID>
+    <ErrorText>Trying to pass a table-valued parameter with 6 column(s) where the corresponding user-defined table type requires 8 column(s).</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:44:48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>342</ID>
+    <ErrorText>Error converting data type nvarchar to numeric.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8114, state: 5
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 15:52:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>343</ID>
+    <ErrorText>Error converting data type nvarchar to numeric.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8114, state: 5
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 16:48:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>344</ID>
+    <ErrorText>Error converting data type nvarchar to numeric.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8114, state: 5
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 16:59:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>345</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 17:01:04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>346</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 17:07:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>347</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 17:07:16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>348</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 17:22:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>349</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 17:32:57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>350</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>pembayaranhutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 17:33:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>351</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>pembayaranhutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 17:35:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>352</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 17:59:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>353</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 18:02:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>354</ID>
+    <ErrorText>String or binary data would be truncated.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8152, state: 10
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 18:07:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>355</ID>
+    <ErrorText>String or binary data would be truncated.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8152, state: 10
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 18:08:58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>356</ID>
+    <ErrorText>String or binary data would be truncated.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 8152, state: 10
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 18:12:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>357</ID>
+    <ErrorText>Conversion failed when converting character string to smalldatetime data type.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 295, state: 3
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 18:17:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>358</ID>
+    <ErrorText>Conversion failed when converting character string to smalldatetime data type.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 295, state: 3
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 18:18:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>359</ID>
+    <ErrorText>Conversion failed when converting character string to smalldatetime data type.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 295, state: 3
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 18:20:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>360</ID>
+    <ErrorText>Conversion failed when converting character string to smalldatetime data type.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 295, state: 3
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 18:26:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>361</ID>
+    <ErrorText>Conversion failed when converting date and/or time from character string.
+The data for table-valued parameter "@AP_Transaction_Detail" doesn't conform to the table type of the parameter. SQL Server error is: 241, state: 1
+The statement has been terminated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 18:27:00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>362</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 19:32:56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>363</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 19:35:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>364</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 19:37:12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>365</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 19:43:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>366</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'JlhDibayar'.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 20:06:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>367</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'rownumber'.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 20:09:26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>368</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'KursStd'.</ErrorText>
+    <FileError>pembayaranhutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-30 20:09:53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>369</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>PembayaranHutang.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-31 11:26:31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>370</ID>
+    <ErrorText>Invalid column name 'Periode'.
+Invalid column name 'Periode'.
+Invalid column name 'Periode'.</ErrorText>
+    <FileError>KodeCurrency.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-31 15:07:39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>371</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-31 21:48:37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>372</ID>
+    <ErrorText>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2020-08-31 21:49:44</TglError>
+  </ErrorLog>
+</DocumentElement>

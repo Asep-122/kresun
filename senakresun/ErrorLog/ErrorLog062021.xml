@@ -1,0 +1,535 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-01 10:37:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-01 10:41:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranSimpanan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-06-01 14:20:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>C:\inetpub\wwwroot\gigaku\Files\NPWP\SN\2.jpg</ErrorText>
+    <FileError>RegistrasiNasabah.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-06-01 16:44:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>C:\inetpub\wwwroot\gigaku\Files\NPWP\SN\1.jpg</ErrorText>
+    <FileError>RegistrasiNasabah.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-06-01 16:44:15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-02 07:48:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Procedure or function 'SM_Trn_BAYAR_PAJAK_Save' expects parameter '@pathbuktitrn', which was not supplied.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-02 08:13:05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Procedure or function 'SM_Trn_BAYAR_PAJAK_Save' expects parameter '@pathbuktitrn', which was not supplied.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-02 08:14:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Procedure or function 'SM_Trn_BAYAR_PAJAK_Save' expects parameter '@pathbuktitrn', which was not supplied.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-02 08:39:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Procedure or function 'SM_Trn_BAYAR_PAJAK_Save' expects parameter '@pathbuktitrn', which was not supplied.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-02 08:54:25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Procedure or function 'SM_Trn_BAYAR_PAJAK_Save' expects parameter '@pathbuktitrn', which was not supplied.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-02 08:59:38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Procedure or function 'SN_Trn_BAYAR_PAJAK_Save' expects parameter '@pathbuktitrn', which was not supplied.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-02 09:30:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Procedure or function 'SM_Trn_BAYAR_PAJAK_Save' expects parameter '@pathbuktitrn', which was not supplied.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-02 14:12:03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Procedure or function 'SM_Trn_BAYAR_PAJAK_Save' expects parameter '@pathbuktitrn', which was not supplied.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-02 14:51:54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Procedure or function 'SM_Trn_BAYAR_PAJAK_Save' expects parameter '@pathbuktitrn', which was not supplied.</ErrorText>
+    <FileError>MasukHutangPajakModal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-06-02 15:02:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-02 15:21:13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranSimpanan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 08:27:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranSimpanan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 08:27:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-06-03 10:13:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-06-03 10:13:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-06-03 10:13:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranSimpanan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-06-03 10:25:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranSimpanan.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-06-03 10:26:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 12:12:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 12:18:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 13:01:29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 13:01:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-03 14:14:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-03 14:14:14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-03 14:14:18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-03 14:14:27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-03 14:14:47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 15:49:12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranModal.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-06-03 16:52:44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranSimpanan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 22:00:22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnSewaGedung.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 22:02:23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnSewaGedung.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 22:02:24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnSewaGedung.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 22:02:27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnBayarhutangcabang.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 22:04:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangPajakSewaBangunan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 22:05:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangPajakSewaBangunan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 22:05:46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnSewaGedung.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 22:05:50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnSewaGedung.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 22:05:52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-03 22:06:08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnSewaGedung.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 08:46:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnSewaGedung.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 08:46:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnSewaGedung.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 08:46:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranSimpanan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 08:52:02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnSewaGedung.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 10:38:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnSewaGedung.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 10:38:45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangPajakSewaBangunan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 10:38:49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnBayarhutangcabang.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 10:44:43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 11:21:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 13:10:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 13:10:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 13:10:59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnPenutupanModal.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 13:15:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 13:15:34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 13:15:36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 13:59:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 13:59:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 13:59:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnPenutupanModal.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 14:01:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnPenutupanModal.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 14:01:10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnPenutupanModal.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 14:01:11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnPenutupanModal.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 14:01:20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 14:03:09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnBayarhutangcabang.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 14:04:27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangPajakSewaBangunan.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 14:06:00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>The formal parameter "@ErrMsg" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.</ErrorText>
+    <FileError>MasukTrnSetoranModal.aspx</FileError>
+    <FromUser>APRIL</FromUser>
+    <TglError>2021-06-04 14:47:21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukHutangPajakBerjangka.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 14:57:41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnPenutupanModal.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 15:15:32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnPenutupanModal.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 15:15:35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnPenambahanSetoran.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 15:15:42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnBayarhutangcabang.aspx</FileError>
+    <FromUser>AIDA</FromUser>
+    <TglError>2021-06-04 15:19:55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'pathbuktitrn'.</ErrorText>
+    <FileError>MasukTrnSewaGedung.aspx</FileError>
+    <FromUser>superadmin</FromUser>
+    <TglError>2021-06-07 16.34.00</TglError>
+  </ErrorLog>
+</DocumentElement>

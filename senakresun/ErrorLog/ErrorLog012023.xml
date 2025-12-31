@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Could not find stored procedure 'dbo.AE_GetCabangReport'.</ErrorText>
+    <FileError>GenerateMaster.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2023-01-21 19.20.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranMikroPakaiCadangan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-01-21 21.54.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranMikroPakaiCadangan.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2023-01-21 21.56.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranMikroPakaiCadangan.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2023-01-21 21.56.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranMikroPakaiCadangan.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2023-01-21 21.57.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranMikroPakaiCadangan.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2023-01-21 22.01.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranMikroPakaiCadangan.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2023-01-21 22.02.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Cannot find column no_memo.</ErrorText>
+    <FileError>PembayaranMikroPakaiCadanganAngsAkhir.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-01-22 10.47.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PembayaranMikroPakaiCadanganAngsAkhir.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-01-22 10.47.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Could not find stored procedure 'CL_Trn_AR_Insert_Pakai_Cadangan_Akhir_CL'.</ErrorText>
+    <FileError>PembayaranMikroPakaiCadanganAngsAkhir.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-01-22 10.50.46</TglError>
+  </ErrorLog>
+</DocumentElement>

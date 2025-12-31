@@ -1,0 +1,229 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-01 12.47.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-01 12.54.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-01 12.55.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Cannot find column KodeBank.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-04 19.19.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Cannot find column KodeBank.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-04 19.19.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Cannot find column KodeBank.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-04 19.20.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>Cannot find column KodeBank.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-04 19.21.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Cannot find column KodeBank.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-04 19.21.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>Cannot find column KodeBank.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-04 19.22.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Cannot insert the value NULL into column 'KodeGl', table 'ERPMIKRO.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-04 19.30.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Cannot insert the value NULL into column 'KodeGl', table 'ERPMIKRO.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-04 19.30.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Cannot insert the value NULL into column 'KodeGl', table 'ERPMIKRO.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-04 19.31.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 08.52.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 08.52.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 08.52.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 08.52.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 08.53.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 08.54.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 08.58.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 08.59.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 09.00.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 09.01.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 09.02.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 09.23.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 09.59.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)</ErrorText>
+    <FileError>AnggotaPakaiCadangan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-05 18.48.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-24 17.01.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-24 17.17.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-24 17.18.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-24 17.20.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Specified argument was out of the range of valid values.
+Parameter name: index</ErrorText>
+    <FileError>MasukBayarBiayaCrude.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2023-11-24 21.43.57</TglError>
+  </ErrorLog>
+</DocumentElement>

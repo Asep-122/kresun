@@ -1,0 +1,284 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>The conversion of a varchar data type to a smalldatetime data type resulted in an out-of-range value.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>402ADMIN1</FromUser>
+    <TglError>2024-02-01 14.26.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>The conversion of a varchar data type to a smalldatetime data type resulted in an out-of-range value.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>402ADMIN1</FromUser>
+    <TglError>2024-02-01 14.34.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>The conversion of a varchar data type to a smalldatetime data type resulted in an out-of-range value.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>402ADMIN1</FromUser>
+    <TglError>2024-02-01 14.36.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-02-02 10.51.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-02-02 10.51.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-02-02 10.51.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>String or binary data would be truncated.</ErrorText>
+    <FileError>MasukTrnAngsuranTagihan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-02-02 10.51.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-03 09.27.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-15 15.38.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-15 15.39.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-15 15.41.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-15 15.43.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-15 15.55.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-15 15.55.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-15 15.59.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-15 16.01.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-15 16.05.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Column 'Kodejaminan' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-17 19.03.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Column 'Kodejaminan' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-17 19.03.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Column 'Kodejaminan' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-17 19.04.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Column 'kodejaminan' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-17 19.05.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Column 'kodejaminan' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-17 19.05.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Invalid column name 'listjaminan'.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-02-17 19.34.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Invalid column name 'listjaminan'.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-02-17 19.34.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Invalid column name 'listjaminan'.</ErrorText>
+    <FileError>PencairanPinjaman.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-02-17 19.39.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Invalid column name 'listjaminan'.</ErrorText>
+    <FileError>JaminanMasuk.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 20.05.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>JaminanMasuk.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 20.05.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Invalid column name 'listjaminan'.</ErrorText>
+    <FileError>JaminanMasuk.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 20.06.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>@nip is not a parameter for procedure AR_Tarik_Pusat_RL_001.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 21.57.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>@nip is not a parameter for procedure AR_Tarik_Pusat_RL_001.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 21.59.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Procedure or function AR_Tarik_Pusat_RL_001 has too many arguments specified.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 22.03.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>Procedure or function AR_Tarik_Pusat_RL_001 has too many arguments specified.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 22.04.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Procedure or function AR_Tarik_Pusat_RL_001 has too many arguments specified.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 22.05.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Procedure or function AR_Tarik_Pusat_RL_001 has too many arguments specified.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 22.06.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>@kodecabang is not a parameter for procedure AR_Tarik_Pusat_RL_001.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 22.07.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>@kodecabang is not a parameter for procedure AR_Tarik_Pusat_RL_001.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 22.08.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>@kodecabang is not a parameter for procedure AR_Tarik_Pusat_RL_001.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>201ADMIN1</FromUser>
+    <TglError>2024-02-18 22.09.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Column 'kode_ref' does not belong to table Table.</ErrorText>
+    <FileError>ViewUpdatePencairan.aspx</FileError>
+    <FromUser>201TL1</FromUser>
+    <TglError>2024-02-25 22.30.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-02-29 21.09.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Selisih Debit dan Credit</ErrorText>
+    <FileError>TransactionGeneralLedger.aspx</FileError>
+    <FromUser>201AKT1</FromUser>
+    <TglError>2024-02-29 21.14.45</TglError>
+  </ErrorLog>
+</DocumentElement>

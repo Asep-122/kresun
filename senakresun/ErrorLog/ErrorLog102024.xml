@@ -1,0 +1,328 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>'ddlprovinsiktp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahBlock.aspx</FileError>
+    <FromUser>401ADMIN1</FromUser>
+    <TglError>2024-10-06 08.40.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>'ddlprovinsiktp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahBlock.aspx</FileError>
+    <FromUser>401ADMIN1</FromUser>
+    <TglError>2024-10-06 08.45.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>'ddlprovinsiktp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>RegistrasiNasabahBlock.aspx</FileError>
+    <FromUser>401ADMIN1</FromUser>
+    <TglError>2024-10-06 08.46.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-22 09.47.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-22 09.47.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-22 09.51.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>'ddllamabekerja' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-22 10.07.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>'ddllamabekerja' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-22 10.07.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>'ddllamabekerja' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanSimpanan.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-22 10.16.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.34.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.34.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.34.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.34.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.34.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.34.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.34.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.34.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.36.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.36.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.37.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.38.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.38.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.38.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.38.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.39.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.39.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.39.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.40.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.40.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.40.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.40.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.42.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.42.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.43.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.43.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.44.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.44.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.44.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.44.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.45.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.45.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.46.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Invalid object name 'SdMasterKreditcabang'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.47.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'filename'.</ErrorText>
+    <FileError>MasukHutangBungaBerjangka.aspx</FileError>
+    <FromUser>999AKT1</FromUser>
+    <TglError>2024-10-24 10.50.28</TglError>
+  </ErrorLog>
+</DocumentElement>

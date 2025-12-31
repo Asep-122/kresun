@@ -1,0 +1,389 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    
+	
+
+
+    <title>Aplikasi Koperasi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="Aplikasi Koperasi" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/koperasi.ico">
+
+    <!-- Plugins css-->
+    <link href="plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />
+
+
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="assets/js/modernizr.min.js"></script>
+
+    <script src="Javascript/jquery-1.12.0.min.js"></script>
+
+    <script type="text/javascript">
+
+        function go(obj) {
+
+            var page = obj.href;
+
+            var elem = $(obj).find('label');
+
+            //  alert(elem.text());
+
+       
+            document.getElementById('<%=ltljudul1.ClientID %>').innerHTML = elem.text();
+
+            document.getElementById("MainContent_FormFrame").src = page; // on completion of fade out - change iframe src attribute
+
+
+            if ($(".navbar-toggle").css('display') == 'block') {
+                $('.navbar-toggle >').click();
+            }
+            // 
+
+            //alert($(".navbar-toggle").css('display'))
+
+            return false;
+        }
+
+
+        jQuery(document).ready(function ($) {
+
+
+            document.getElementById("MainContent_FormFrame").src = "Home.aspx";
+
+
+       
+     
+            document.getElementById('<%=ltljudul1.ClientID %>').innerHTML = 'Home';
+
+            $("#MainContent_FormFrame").each(function () {
+                //Using closures to capture each one
+                var iframe = $(this);
+                iframe.on("load", function () { //Make sure it is fully loaded   
+                    iframe.contents().click(function (event) {
+                        iframe.trigger("click");
+                    });
+                });
+
+            });
+
+            $("#LoginView1_HeadLoginStatus").append('<i class="fi-power"></i> <span>Logout</span>');
+
+            document.getElementById("LoginView1_lblEmail").innerHTML = '<%=Sessemail %>'
+            document.getElementById("LoginView1_lblBranchID").innerHTML = '<%=SessNamaProfil %>';
+            document.getElementById('<%=lblBranchID1.ClientID %>').innerHTML = '<%=SessNamaProfil %>';
+            document.getElementById("LoginView1_lblname").innerHTML = '<%=SessName %>';
+
+
+
+
+
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
+
+    <script type="text/javascript">
+        idleTime = 0;
+        $(document).ready(InIEvent);
+//        document.oncontextmenu = function () { return false; };
+        function InIEvent() {
+
+            $('.selectpicker').selectpicker();
+
+            $("<i class='mdi mdi-chevron-down'></i>").insertAfter(".filter-option");
+
+            //Increment the idle time counter every minute.
+            var idleInterval = setInterval(timerIncrement, 60000); // 1 minute = 60000
+
+            //Zero the idle timer on mouse movement.
+            $(document).mousemove(function (e) {
+                idleTime = 0;
+            });
+            $(document).keypress(function (e) {
+                idleTime = 0;
+            });
+
+        };
+
+        function SayMousemove(nmframe) {
+
+            $(document).ready(InIEvent);
+
+            function InIEvent() {
+
+                $('#' + nmframe).contents().on({
+                    mousedown: function () {
+                        idleTime = 0;
+
+                    },
+                    mouseup: function () {
+                        idleTime = 0;
+
+                    },
+                    mousemove: function () {
+                        idleTime = 0;
+
+                    },
+                    keyup: function () {
+                        idleTime = 0;
+
+                    }
+                });
+
+
+            };
+
+        }
+        function timerIncrement() {
+            idleTime = idleTime + 1;
+
+            if (idleTime > 29) { // 20 minutes
+                window.location.reload();
+            }
+        };
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <%
+       Response.Headers.Add("Content-Security-Policy", "upgrade-insecure-requests");
+    %>
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+        <header id="topnav">
+            <div class="topbar-main">
+                <div class="container-fluid">
+
+                    <!-- Logo container-->
+                    <div class="logo">
+                        <!-- Image Logo -->
+                        <a href="#" class="logo">
+                            <asp:Image ID="idimage1" runat="server" alt="" Height="30" class="logo-small"></asp:Image>
+                            <asp:Image ID="idimage2" runat="server" alt="" Height="40" class="logo-large"></asp:Image>
+                            <%--<img src="assets/images/logo_sm.png" alt="" height="30" class="logo-small">--%>
+                            <%--<img src="assets/images/logo.png" alt="" height="40" class="logo-large">--%>
+                        </a>
+                        <!-- Text Logo -->
+                        <!-- <a href="index.html" class="logo">
+                            <span class="logo-small"><i class="mdi mdi-radar"></i></span>
+                            <span class="logo-large"><i class="mdi mdi-radar"></i> Highdmin</span>
+                        </a> -->
+
+                        <a href="/" class="logo">&nbsp<span class="logo-small" id="idnama1" runat="server"><i class="mdi mdi-radar"></i></span>
+                            &nbsp<span class="logo-large" id="idnama2" runat="server"><i class="mdi mdi-radar"></i></span>
+                        </a>
+
+                    </div>
+                    <!-- End Logo container-->
+
+                    <div class="menu-extras topbar-custom">
+                        <ul class="list-unstyled topbar-right-menu float-right mb-0">
+                            <li class="menu-item">
+                                <!-- Mobile menu toggle-->
+                                <a class="navbar-toggle nav-link">
+                                    <div class="lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                                <!-- End mobile menu toggle-->
+                            </li>
+                            <li class="dropdown notification-list">
+                                <div style="margin: 12px;">
+                                    <asp:DropDownList ID="ddlMenuMaster" CssClass="selectpicker show-tick" data-style="btn-custom" AutoPostBack="True" runat="server" OnSelectedIndexChanged="ddlMenuMaster_SelectedIndexChanged">
+                                    </asp:DropDownList>
+                                </div>
+                            </li>
+                            <li class="dropdown notification-list">
+                                <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
+                                    <LoggedInTemplate>
+                                        <a class="nav-link dropdown-toggle waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+                                            aria-haspopup="false" aria-expanded="false">
+                                            <img src="assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle">
+                                            <span class="ml-1 pro-user-name">
+                                                <asp:LoginName class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ID="HeadLoginName" runat="server" />
+                                                <i class="mdi mdi-chevron-down"></i></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                            <!-- item-->
+                                            <div class="dropdown-item noti-title">
+                                                <h6 class="text-overflow m-0">Welcome!!!</h6>
+                                            </div>
+
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <i class="fi-head"></i>
+                                                <asp:Label ID="lblname" runat="server"></asp:Label>
+                                            </a>
+
+                                            <!-- item-->
+                                            <a href="MasterTemplate/ChangeBranchUser.aspx" onclick="return go(this);" class="dropdown-item notify-item">
+                                                <i class="fi-cog"></i>
+                                                <asp:Label ID="lblBranchID" runat="server"></asp:Label>
+                                            </a>
+
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <i class="mdi mdi-email"></i>
+                                                <asp:Label ID="lblEmail" runat="server"></asp:Label>
+                                            </a>
+                                            
+                                            <a href="MasterTemplate/Changepassword.aspx" onclick="return go(this)" class="dropdown-item notify-item">
+                                                <i class="fi-head"></i><span>Change Password</span>                                             
+                                            </a>
+                                            <!-- item-->
+
+                                            <asp:LoginStatus ID="HeadLoginStatus" CssClass="dropdown-item notify-item" runat="server" LogoutAction="Redirect" LogoutText="" LogoutPageUrl="~/" />
+
+
+                                        </div>
+                                    </LoggedInTemplate>
+                                </asp:LoginView>
+
+
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end menu-extras -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end topbar-main -->
+
+            <div class="navbar-custom">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+                            <li class="has-submenu">
+                                <a href="Home.aspx" onclick="return go(this);"><i class="icon-speedometer"></i><span>Home</span></a>
+                            </li>
+
+                            <asp:Literal ID="litMenu" runat="server"></asp:Literal>
+                        </ul>
+                        <!-- End navigation menu -->
+                    </div>
+                    <!-- end #navigation -->
+
+
+
+
+
+
+                </div>
+                <!-- end container -->
+
+            </div>
+            <!-- end navbar-custom -->
+            <div class="col-12">
+                <div class="btn-group pull-left">
+                    <asp:Label ID="ltljudul1" runat="server"></asp:Label>
+
+                </div>
+                <div class="btn-group pull-right">
+                    <div class="col-15">
+                        <asp:Label ID="lblBranchID1" runat="server"></asp:Label>
+                    </div>
+                    <div class="col-2">
+                        <a href='javascript:history.go(-1)'>
+                            <asp:Label ID="Label1" ForeColor="Black" Text="Back" runat="server"></asp:Label></a>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <div class="container-fluid">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <%--  <div class="btn-group pull-right">
+                                <ol class="breadcrumb hide-phone p-0 m-0">                                  
+                                     <li class="breadcrumb-item"><a href='javascript:history.go(-1)'>Back</a></li>
+                                </ol>
+                            </div>--%>
+                            <%--      <h4 class="page-title">
+                                <asp:Label ID="ltljudul" runat="server"></asp:Label></h4>--%>
+                            <div>
+                                <asp:LinkButton ID="LinkButton1" runat="server"></asp:LinkButton>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title end breadcrumb -->
+               <div class="row">
+                   <div class="col-sm-12">
+                        <div class="page-title-box">                            
+                        </div>
+                       <div class="page-title-box">                            
+                        </div>
+                    </div>
+              </div>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    <IFRAME ID="KeepAliveFrame" src="KeepSessionAlive.aspx" frameBorder="0" width="0" height="0" runat="server"></IFRAME>
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end wrapper -->
+    </form>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    2022 © ANDI TEAM
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- jQuery  -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/waves.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+
+    <script src="plugins/bootstrap-select/js/bootstrap-select.js" type="text/javascript"></script>
+
+    <!-- KNOB JS -->
+    <!--[if IE]>
+        <script type="text/javascript" src="plugins/jquery-knob/excanvas.js"></script>
+        <![endif]-->
+    <script src="plugins/jquery-knob/jquery.knob.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/jquery.core.js"></script>
+    <script src="assets/js/jquery.app.js"></script>
+</body>
+</html>
