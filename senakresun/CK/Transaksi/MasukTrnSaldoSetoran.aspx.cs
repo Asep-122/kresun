@@ -656,13 +656,13 @@ public partial class CL_Process_MasukTrnSaldoSetoran : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        //        Response.Redirect(Request.Url.AbsoluteUri);
-        pnlHeader.Visible = true;
-        PnlFront.Visible = true;
-        Pnlcustomer.Visible = false;
-        pnladd.Visible = false;
-        Pnlfooter4.Visible = false;
-        pnltrn.Visible = false;
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='MasukTrnSaldoSetoran.aspx';",
+            true
+        );
 
     }
     protected string btnreload()

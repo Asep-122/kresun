@@ -793,13 +793,6 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                             <asp:Label ID="lblkodecabang" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "kodecabang")%>'></asp:Label>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
-                                                    <asp:TemplateField visible="false">
-                                                        <HeaderStyle CssClass="align-center" ForeColor="Black" />
-                                                        <ItemStyle HorizontalAlign="Center" />
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="lblnonasabah" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "no_nasabah")%>'></asp:Label>
-                                                        </ItemTemplate>
-                                                    </asp:TemplateField>
                                                     <asp:TemplateField HeaderText="Nip">
                                                         <HeaderStyle CssClass="align-center" ForeColor="Black" />
                                                         <ItemStyle HorizontalAlign="Center" />
@@ -814,6 +807,13 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                             <asp:Label ID="lblkodesumberdana" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "kodesumberdana")%>'></asp:Label>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="No.Nasabah">
+                                                        <HeaderStyle CssClass="align-center" ForeColor="Black" />
+                                                        <ItemStyle HorizontalAlign="Center" />
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblnonasabah" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "no_nasabah")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
                                                     <asp:TemplateField HeaderText="Nama">
                                                         <HeaderStyle CssClass="align-center" ForeColor="Black" />
                                                         <ItemStyle HorizontalAlign="Center" />
@@ -821,7 +821,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                             <asp:Label ID="lblNama" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "nama_nasabah")%>'></asp:Label>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="No.RekTab">
+                                                    <asp:TemplateField HeaderText="No.RekTab" Visible="false">
                                                         <HeaderStyle CssClass="align-center" ForeColor="Black" />
                                                         <ItemStyle HorizontalAlign="Center" />
                                                         <ItemTemplate>

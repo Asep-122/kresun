@@ -1,0 +1,439 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>StatusMeninggalpdate.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-02 11.19.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>'ddlnonao' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanKreditSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-02 15.21.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>'ddlnonao' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanKreditSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-02 15.22.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>'ddlnonao' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanKreditSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-02 15.22.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanKreditSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-02 15.22.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>'ddlnonao' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PencairanKreditSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-02 15.23.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 10.13.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>Divide by zero error encountered.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 10.18.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 10.19.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>Divide by zero error encountered.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 10.19.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>Divide by zero error encountered.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 10.28.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>'ddlnonao' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 10.30.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Cannot insert the value NULL into column 'AngsuranPerbulanObs', table 'SENAKRESUN.dbo.KPMasterKredit'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 10.31.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>'ddlnonao' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 11.10.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>'ddlnonao' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 11.10.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 11.10.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalBank.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 11.11.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 11.25.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-05 11.27.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Cannot insert the value NULL into column 'angspokok', table 'SENAKRESUN.dbo.KPMasterKredit'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>PelunasanNasabahClaim.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-06 10.33.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Cannot insert the value NULL into column 'angspokok', table 'SENAKRESUN.dbo.KPMasterKredit'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>PelunasanNasabahClaim.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-06 10.34.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Cannot insert the value NULL into column 'angspokok', table 'SENAKRESUN.dbo.KPMasterKredit'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>PelunasanNasabahClaim.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-06 10.38.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Cannot insert the value NULL into column 'angspokok', table 'SENAKRESUN.dbo.KPMasterKredit'; column does not allow nulls. UPDATE fails.</ErrorText>
+    <FileError>PelunasanNasabahClaim.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-06 10.51.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Divide by zero error encountered.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-06 11.56.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-07 09.47.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditVerifikasiAM.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-07 09.48.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-07 10.19.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>'ddlAO' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditAsuransi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-13 17.13.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-19 14.10.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-20 09.52.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>@TunjanganIstriAnak is not a parameter for procedure KP_HITUNG_KANTOR_BAYAR_POS.</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-01-20 09.53.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnBayarAutoDebet.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 15.42.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnBayarAutoDebet.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 15.42.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnBayarAutoDebet.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 15.42.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnBayarAutoDebet.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 15.42.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>MasukTrnBayarAutoDebet.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 15.43.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Cannot insert the value NULL into column 'plafon', table 'SENAKRESUN.dbo.CltrnBayarAutodebet'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>MasukTrnBayarAutoDebet.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 16.08.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PelunasanLanjut.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 18.48.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Pelunasandipercepatnew.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 18.49.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>Pelunasandipercepatnew.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 18.54.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Invalid object name 'KPMastertabungan'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>TakeOver.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 10.28.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Invalid object name 'KPMastertabungan'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>TakeOver.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 10.30.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Invalid object name 'KPMastertabungan'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>TakeOver.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 10.31.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>'ddlKdBank' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>TakeOver.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 11.05.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Violation of PRIMARY KEY constraint 'PK_ClhdrTakeOver'. Cannot insert duplicate key in object 'dbo.ClhdrTakeOver'. The duplicate key value is (DEMO01000000001, 01, 000).</ErrorText>
+    <FileError>TakeOver.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 11.06.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Could not find stored procedure 'CL_Trn_AR_Delete_TakeOver'.</ErrorText>
+    <FileError>TakeOver.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 11.16.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Could not find stored procedure 'CL_Trn_AR_Delete_TakeOver'.</ErrorText>
+    <FileError>TakeOver.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 11.18.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 09.42.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 10.48.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 10.52.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 10.52.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 11.04.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 11.04.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 11.04.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 11.04.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>Cannot insert the value NULL into column 'kodecabang', table 'SENAKRESUN.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 11.05.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Cannot insert the value NULL into column 'kodecabang', table 'SENAKRESUN.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 11.06.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 11.18.21</TglError>
+  </ErrorLog>
+</DocumentElement>

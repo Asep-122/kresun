@@ -186,7 +186,7 @@ public partial class CL_Report_Filter_AutoDebetSD : System.Web.UI.Page
             string tanggal = now.ToString("dd-MM-yyyy");
 
             title = "Laporan Autodebet Sumber Dana";
-            path = "~/CL/Report/Report/CL/CL.AS.STD.RPT.008.rpt";
+            path = "~/CK/Report/Report/CL/CL.AS.STD.RPT.008.rpt";
 
             DefaultClass.Global.SqlHelper[] Paramsc = new DefaultClass.Global.SqlHelper[5];
             Paramsc[0] = gb.CreateSPParameter("@Dtetglawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txtStart.Text, typeof(DateTime));

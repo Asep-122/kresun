@@ -1,0 +1,360 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <UserLog>
+    <ID>1</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>APPROVAL01</FromUser>
+    <TglError>2026-01-19 10.30.10</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>2</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>APPROVAL01</FromUser>
+    <TglError>2026-01-19 11.27.07</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>3</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-19 11.31.43</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>4</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>APPROVAL01</FromUser>
+    <TglError>2026-01-19 11.37.09</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>5</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>ADMIN101</FromUser>
+    <TglError>2026-01-19 11.40.06</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>6</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-19 11.40.37</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>7</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-19 13.46.21</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>8</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>APPROVAL01</FromUser>
+    <TglError>2026-01-19 13.51.26</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>9</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>AS001</FromUser>
+    <TglError>2026-01-19 13.53.13</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>10</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-19 13.56.41</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>11</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>AS001</FromUser>
+    <TglError>2026-01-19 13.57.02</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>12</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-19 14.01.50</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>13</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-19 14.19.43</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>14</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-20 15.06.48</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>15</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-20 16.03.02</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>16</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-20 16.03.03</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>17</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 15.40.23</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>18</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 15.41.07</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>19</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 16.37.12</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>20</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 17.09.00</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>21</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 17.25.50</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>22</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-21 18.19.14</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>23</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 09.53.03</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>24</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 10.02.11</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>25</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 10.14.42</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>26</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 10.51.58</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>27</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 13.33.43</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>28</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 13.58.10</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>29</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 14.30.18</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>30</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-22 14.30.36</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>31</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 15.46.37</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>32</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-22 16.02.07</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>33</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-22 16.05.54</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>34</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-22 16.34.00</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>35</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-22 17.03.51</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>36</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 08.59.33</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>37</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 13.23.44</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>38</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 13.55.25</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>39</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-23 17.23.27</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>40</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>AS001</FromUser>
+    <TglError>2026-01-23 17.23.46</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>41</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-25 05.53.40</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>42</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-25 06.06.45</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>43</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-26 09.41.24</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>44</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-26 09.50.47</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>45</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-26 10.51.45</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>46</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-26 10.56.51</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>47</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-26 13.49.27</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>48</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-26 13.53.19</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>49</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-26 15.19.46</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>50</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-26 16.57.15</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>51</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-01-27 09.12.13</TglError>
+  </UserLog>
+</DocumentElement>

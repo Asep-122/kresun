@@ -663,7 +663,13 @@ public partial class CL_Process_MasukTrnHutangAutoDebet : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect(Request.Url.AbsoluteUri);
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='MasukTrnHutangAutoDebet.aspx';",
+            true
+        );
 
     }
     protected string btnreload()

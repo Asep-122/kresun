@@ -125,8 +125,8 @@ public partial class CL_Process_MasukTrnKantorBayar2 : System.Web.UI.Page
             }
 
 
-          
-            GRData.UseAccessibleHeader = true;
+
+                GRData.UseAccessibleHeader = true;
             GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
 
         }
@@ -613,7 +613,7 @@ public partial class CL_Process_MasukTrnKantorBayar2 : System.Web.UI.Page
                 btnSimpan.Visible = false;
                 //nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
 
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Delete Done!','zzzzzz','bottom-center','success','2');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Delete Done!','You successfully delete this list Kantor Bayar ','top-right','success','true');", true);
 
             }
 
@@ -642,7 +642,13 @@ public partial class CL_Process_MasukTrnKantorBayar2 : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect(Request.Url.AbsoluteUri);
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='MasukTrnKantorBayar2.aspx';",
+            true
+        );
 
     }
     protected string btnreload()
@@ -846,7 +852,7 @@ public partial class CL_Process_MasukTrnKantorBayar2 : System.Web.UI.Page
                     btnSimpan.Visible = false;
 
                     nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Save Done!','zzzzzz','bottom-center','success','1');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','You successfully save this list kantor bayar','top-right','success','true');", true);
 
                 }
 
@@ -1122,6 +1128,12 @@ public partial class CL_Process_MasukTrnKantorBayar2 : System.Web.UI.Page
             gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
 
         }
+    }
+    protected void GRTP_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+        GRTP.PageIndex = e.NewPageIndex;
+        ViewState["PageIndex"] = e.NewPageIndex;
+        btnSearch_Click(sender,e);
     }
 
     protected void btnSearch_Click(object sender, EventArgs e)

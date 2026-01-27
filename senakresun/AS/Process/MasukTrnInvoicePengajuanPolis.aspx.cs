@@ -719,7 +719,13 @@ public partial class AS_Process_MasukTrnInvoicePengajuanPolis : System.Web.UI.Pa
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect(Request.Url.AbsoluteUri);
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='MasukTrnInvoicePengajuanPolis.aspx';",
+            true
+        );
 
     }
     protected string btnreload()

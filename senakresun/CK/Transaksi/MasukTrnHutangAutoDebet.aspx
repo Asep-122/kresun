@@ -345,18 +345,36 @@ function sweetAlertsave(btnSimpan,errMsg) {
                     retrieve: true
 
                 });
-                var tableX = $('#GRTP').dataTable({
-                    "order": [],
-                    "columnDefs": [{
-                        "targets": 'no-sort',
-                        "orderable": false,
-                    }],
-                    ordering: [[0, 'asc']],
-                    "scrollX": true,
-                    retrieve: true
+                function initDT() {
+                    if (!$.fn.DataTable.isDataTable('#GRTP')) {
+                        tableX = $('#GRTP').DataTable({
+                            scrollX: true,
+                            retrieve: true
+                        });
+                    }
+                }
 
+                Sys.Application.add_load(function () {
+                    initDT();
                 });
-                        var tableX = $('#Grduangmuka').dataTable({
+
+                function savePageDT() {
+                    if (tableX) {
+                        sessionStorage.setItem('grtp_page', tableX.page());
+                    }
+                }
+
+                function restorePageDT() {
+                    var p = sessionStorage.getItem('grtp_page');
+                    if (p !== null && tableX) {
+                        tableX.page(parseInt(p)).draw(false);
+                    }
+                }
+
+                Sys.Application.add_load(function () {
+                    restorePageDT();
+                });
+                var tableX = $('#Grduangmuka').dataTable({
                     "order": [],
                     "columnDefs": [{
                         "targets": 'no-sort',
@@ -711,7 +729,9 @@ function sweetAlertsave(btnSimpan,errMsg) {
               </div>
               </asp:Panel>
      
-                 
+<asp:UpdatePanel ID="upGRTP" runat="server" UpdateMode="Conditional">
+    <ContentTemplate>
+
                  <asp:panel ID="pnltrn" Visible ="false" runat ="server">
                      <div class="row clearfix">
                             <div class="col-md-12"> 
@@ -748,7 +768,9 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                         <ItemTemplate>
                                                             <div class="form-group">
                                                                 <div class="form-line">                                                                                         
-                                                                    <asp:TextBox enabled="true" CssClass="form-control" ID="jlhdibayar" Text='<%#DataBinder.Eval(Container.DataItem, "JlhDibayar","{0:N2}")%>' Width="120" runat="server"  onkeypress="return isnumerickey(event);" required="required" onblur="checkTextField1(this);"  AutoPostBack="true" onkeyup="javascript:this.value=Comma(this.value);" OnTextChanged ="txtjlhbayar_TextChanged" ></asp:TextBox>
+                                                                    <asp:TextBox enabled="true" CssClass="form-control" ID="jlhdibayar" Text='<%#DataBinder.Eval(Container.DataItem, "JlhDibayar","{0:N2}")%>' Width="120" runat="server"  onkeypress="return isnumerickey(event);" required="required" onblur="checkTextField1(this);savePageDT();"  AutoPostBack="true" onkeyup="javascript:this.value=Comma(this.value);savePageDT();" OnTextChanged ="txtjlhbayar_TextChanged"
+                                                                        onfocus="savePageDT();"                                                                        
+                                                                        ></asp:TextBox>
                                                                     <%--<asp:TextBox CssClass="form-control" ID="jlhdibayar"  MaxLength="30" runat="server"  onkeypress="return isnumerickey(event);" required="required" onblur="checkTextField1(this);"  AutoPostBack="true" onkeyup="javascript:this.value=Comma(this.value);"></asp:TextBox>--%>
                                                                 </div>
                                                             </div>
@@ -887,19 +909,8 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                             <asp:Label ID="lblstatusnasabah" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "statusnasabah")%>'></asp:Label>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
-
-
-                                                   
-                                                  <%--  <asp:TemplateField HeaderText="Kurs Transaksi">
-                                                        <HeaderStyle CssClass="align-center" ForeColor="Black" />
-                                                        <ItemStyle HorizontalAlign="Center" />
-                                                        <ItemTemplate>
-                                                           <asp:Label ID="lblkurstrngrtp" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "KursStd","{0:N2}")%>'></asp:Label> 
-                                                        </ItemTemplate>
-                                                    </asp:TemplateField> --%>
                                                 </Columns>
                                             </asp:GridView>
-                                            <%--</div>--%>
                                         </div>
 
                                     </div>
@@ -907,8 +918,8 @@ function sweetAlertsave(btnSimpan,errMsg) {
                          </div>
                      </div>
                  </asp:panel>
-
-                         
+ </ContentTemplate>
+</asp:UpdatePanel>                        
                  
 
                  
@@ -942,7 +953,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
                 <asp:PostBackTrigger ControlID="GRData" />   
                 <asp:PostBackTrigger ControlID="ddlkdsup" />  
                  <%--<asp:PostBackTrigger ControlID="GRRP" />--%>
-                 <%--<asp:PostBackTrigger ControlID="GRTP" />--%>
+                <asp:PostBackTrigger ControlID="GRTP" />
              
                  
             </Triggers>

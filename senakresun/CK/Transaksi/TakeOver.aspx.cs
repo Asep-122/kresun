@@ -662,7 +662,7 @@ public partial class CL_Transaksi_TakeOver : System.Web.UI.Page
                     btnSimpan.Visible = false;
 
                     nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Delete Done!','zzzzzz','bottom-center','success','1');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Delete Done!','Data Berhasil Terhapus','bottom-center','success','1');", true);
 
                 }
 
@@ -689,7 +689,13 @@ public partial class CL_Transaksi_TakeOver : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect(Request.Url.AbsoluteUri);
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='TakeOver.aspx';",
+            true
+        );
 
     }
     protected string btnreload()
@@ -1000,7 +1006,7 @@ public partial class CL_Transaksi_TakeOver : System.Web.UI.Page
                     btnSimpan.Visible = false;
 
                     nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Save Done!','zzzzzz','bottom-center','success','1');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','Data Berhasil Tersimpan','bottom-center','success','true');", true);
 
                 }
 
@@ -1278,19 +1284,22 @@ public partial class CL_Transaksi_TakeOver : System.Web.UI.Page
     protected void OntextChanged_JlhTerima(object sender, System.EventArgs e)
     {
 
-        decimal selisih = decimal.Parse(txtTotTO.Text) - decimal.Parse(txtJlhPenerimaan.Text);
-        txtselisih.Text = string.Format("{0:N2}", selisih);
+        decimal totTO = decimal.Parse(txtTotTO.Text);
+        decimal jlhTerima = decimal.Parse(txtJlhPenerimaan.Text);
 
-        if(txtselisih.Text.Substring(0,1) == "-")
+        decimal selisih = jlhTerima-totTO  ;
+
+        txtselisih.Text = selisih.ToString("N2");
+
+        if (selisih < 0)
         {
             HDSelisihMinus.Value = selisih.ToString();
-            HDSelisihPlus.Value = "0,00";
+            HDSelisihPlus.Value = "0";
         }
         else
         {
-            HDSelisihMinus.Value = "0,00";
+            HDSelisihMinus.Value = "0";
             HDSelisihPlus.Value = selisih.ToString();
-
         }
     }
 

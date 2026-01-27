@@ -161,7 +161,7 @@ public partial class AR_Process_PermohonanPinjamanKreditApprovalSena1: System.We
         try
         {
 
-            DefaultClass.Global.SqlHelper[] var88 = new DefaultClass.Global.SqlHelper[16];
+            DefaultClass.Global.SqlHelper[] var88 = new DefaultClass.Global.SqlHelper[17];
             var88[0] = gb.CreateSPParameter("@userlogin", ParameterDirection.Input, SqlDbType.VarChar, 30, SessLoginID, typeof(string));
             var88[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
             var88[2] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 10, Hdnkodecabang.Value, typeof(string));
@@ -178,6 +178,7 @@ public partial class AR_Process_PermohonanPinjamanKreditApprovalSena1: System.We
             var88[13] = gb.CreateSPParameter("@provisibankpersen", ParameterDirection.Input, SqlDbType.Decimal, 0, txtprovisitfpsn.Text, typeof(string));
             var88[14] = gb.CreateSPParameter("@adminbankxrp", ParameterDirection.Input, SqlDbType.Money, 0, txtadminbanktf.Text, typeof(string));
             var88[15] = gb.CreateSPParameter("@adminbankxpersen", ParameterDirection.Input, SqlDbType.Decimal, 0, txtadminbanktfpsn.Text, typeof(string));
+            var88[16] = gb.CreateSPParameter("@terimabersihsumberdana", ParameterDirection.Input, SqlDbType.Decimal, 0, txtterimabersihtf.Text, typeof(string));
 
             ge.ListDataset = gb.GetDataJustOutPut("CL_Trn_KP_Insert_Cair_Kresun", var88, "constrmf");
 
@@ -5460,11 +5461,22 @@ public partial class AR_Process_PermohonanPinjamanKreditApprovalSena1: System.We
     {
         try
         {
-            decimal  xprovisi=0, xadminbank=0, xterimabersih = 0;
+            decimal  xprovisi=0, xadminbank=0, xterimabersih = 0,xasuransi = 0,xangsuranblokir = 0, xangsurandimukaasuransirp = 0;
 
             xprovisi =decimal.Parse(txtplafon.Text) * (decimal.Parse(txtprovisitfpsn.Text) / 100);
             xadminbank = decimal.Parse(txtplafon.Text) * (decimal.Parse(txtadminbanktfpsn.Text) / 100);
-            xterimabersih = decimal.Parse(txtplafon.Text) - (xprovisi + xadminbank);
+            xasuransi = decimal.Parse(txtasuransi.Text);
+            xangsuranblokir = decimal.Parse(txtangsuranblokir.Text);
+            xangsurandimukaasuransirp = decimal.Parse(txtangsurandimuka.Text);
+            if (ddlsumberdana.SelectedValue == "A009")
+            {
+                xterimabersih = decimal.Parse(txtplafon.Text) - (xadminbank + xasuransi + xangsuranblokir + xangsurandimukaasuransirp);
+
+            }
+            else
+            {
+                xterimabersih = decimal.Parse(txtplafon.Text) - (xprovisi + xadminbank);
+            }
             txtprovisitf.Text = string.Format("{0:N0}", xprovisi);
             txtadminbanktf.Text = string.Format("{0:N0}", xadminbank);
             txtterimabersihtf.Text = string.Format("{0:N0}", xterimabersih);

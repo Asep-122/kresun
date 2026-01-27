@@ -193,9 +193,21 @@ public partial class Kresun_Process_StatusMeninggalpdate : System.Web.UI.Page
                     //txtnosk.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblNoSK")).Text;
                     txttglsk.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblTglSK")).Text;
                     txtKeterangan.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblKeterangan")).Text;
-                    txtpathktp.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblPathFile")).Text;
+//                    txtpathktp.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblPathFile")).Text;
                     txtlink.Text = "View";
-                    txtlink.NavigateUrl = txtpathktp.Text + "?r=" + DateTime.Now.Ticks.ToString();
+//                    txtlink.NavigateUrl = txtpathktp.Text + "?r=" + DateTime.Now.Ticks.ToString();
+
+
+                    string folderPath = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblPathFile")).Text;
+
+                    string encrypted = gb.Encrypt(folderPath + ".pdf");
+
+                    string secureUrl = ResolveUrl("~/SecurePdf.ashx?f=" + encrypted);
+                    txtpathktp.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblPathFile")).Text;
+                    txtlink.NavigateUrl = secureUrl;
+
+                    txtlink.Attributes["onclick"] =
+                        "window.open(this.href, 'pdfWindow', 'toolbar=yes,scrollbars=yes,resizable=yes,width=900,height=850'); return false;";
                     //txtbayar.Text = string.Format("{0:N2}", decimal.Parse(((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblddlpembayaran")).Text));
                     //txtbayar.Enabled = false;
                     btnSimpan.Visible = true;
@@ -252,9 +264,17 @@ public partial class Kresun_Process_StatusMeninggalpdate : System.Web.UI.Page
                     //txtnosk.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblNoSK")).Text;
                     txttglsk.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblTglSK")).Text;
                     txtKeterangan.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblKeterangan")).Text;
-                    txtpathktp.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblPathFile")).Text;
                     txtlink.Text = "View";
-                    txtlink.NavigateUrl = txtpathktp.Text;
+                    string folderPath = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblPathFile")).Text;
+
+                    string encrypted = gb.Encrypt(folderPath + ".pdf");
+
+                    string secureUrl = ResolveUrl("~/SecurePdf.ashx?f=" + encrypted);
+                    txtpathktp.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblPathFile")).Text;
+                    txtlink.NavigateUrl = secureUrl;
+
+                    txtlink.Attributes["onclick"] =
+                        "window.open(this.href, 'pdfWindow', 'toolbar=yes,scrollbars=yes,resizable=yes,width=900,height=850'); return false;";
                     //txtbayar.Text = string.Format("{0:N2}", decimal.Parse(((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblddlpembayaran")).Text));
                     //txtbayar.Enabled = false;
                     btnSimpan.Visible =false;
@@ -479,7 +499,8 @@ public partial class Kresun_Process_StatusMeninggalpdate : System.Web.UI.Page
 
                         //    nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
                         //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Save Done!','zzzzzz','bottom-center','success','1');", true);
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Delete Done!','Delete Status Meninggal Done','top-right','success','1');", true);
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Delete Done!','Data Berhasil Terhapus','bottom-center','success','true');", true);
+
                     }
 
                     else
@@ -608,6 +629,11 @@ public partial class Kresun_Process_StatusMeninggalpdate : System.Web.UI.Page
                 bungajangka[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
                 bungajangka[3] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
                 ge.ListDataset = gb.GetDataJustOutPut("AS_Trn_Claim", bungajangka, "constrmf");
+                if (ge.ListDataset.Tables[0].Rows.Count == 0)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Eror','Asuransi Tidak Ada');", true);
+                    return;
+                }
                 decimal bunga = decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["bunga"].ToString());
                 var jangka = ge.ListDataset.Tables[0].Rows[0]["jangka"].ToString();
                 var palfon = ge.ListDataset.Tables[0].Rows[0]["plafon"].ToString();
@@ -659,11 +685,10 @@ public partial class Kresun_Process_StatusMeninggalpdate : System.Web.UI.Page
                     else if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
                     {
                         btnSimpan.Visible = false;
-                       
-                    //    nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                    //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Save Done!','zzzzzz','bottom-center','success','1');", true);
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Save Done!','Update Status Meninggal','top-right','success','1');", true);
-                }
+
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','Update Status Meninggal','bottom-center','success','true');", true);
+
+                    }
 
                     else
                     {

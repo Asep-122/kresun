@@ -51,6 +51,7 @@
     <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <!-- Responsive datatable examples -->
     <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
    
@@ -85,6 +86,26 @@
             }, 0);
 
         }
+
+        function AlertSuccess(h, t, p, i, fr) {
+            console.log(fr)
+            setTimeout(function () {
+
+
+                Swal.fire({
+                    title: h,
+                    text: t,
+                    icon: "success"
+                }).then((result) => {
+                    if (fr === 'true') {
+                        window.location.href = "PencairanKreditSumberDana2.aspx"
+                    }
+                });;
+            }, 100);
+
+        }
+
+
         function IsValid( args ) {
         if( args.value.length == 0 ) {
             return false;
@@ -593,9 +614,9 @@
                                     </div>
                                     </div>
                                     <div class="form-inline col-sm-6">
-                                        <label for="inputState" class="col-4 col-form-label">Jumlah Transaksi</label> 
+                                        <label for="inputState" class="col-4 col-form-label">Jumlah Transfer</label> 
                                     <div class="col-6">
-                                        <asp:TextBox runat="server" ID ="txtJmlTransaksi" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID ="txtJmlTransfer" CssClass="form-control" Enabled="true" onkeyup="javascript:this.value=Comma(this.value);" onkeypress="return isnumerickey(event);" OnTextChanged="txtJmlTransfer_TextChanged" AutoPostBack="true"> </asp:TextBox>
                                     </div>
                                     </div>
                                 </div>                               
@@ -604,7 +625,7 @@
                                     <div class="form-inline col-sm-6" >
                                         <label for="inputState" class="col-4 col-form-label">Selisih</label> 
                                     <div class="col-6">
-                                        <asp:TextBox runat="server" ID ="txtSelisih" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID ="txtSelisih" CssClass="form-control" Text="0" Enabled="false" onkeypress="return isnumerickey(event);"></asp:TextBox>
                                     </div>
                                     </div>
                                 </div>
@@ -675,9 +696,16 @@
                                             <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
                                             <ItemStyle HorizontalAlign="Left"></ItemStyle>
                                         </asp:TemplateField>
-                                         <asp:TemplateField HeaderText="Plafon">
+                                         <asp:TemplateField HeaderText="Plafon" Visible ="false">
                                             <ItemTemplate>
                                                 <asp:Label ID="lblplafon" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "plafon", "{0:N0}")%>'></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                                        </asp:TemplateField>
+                                         <asp:TemplateField HeaderText="Terima Bersih Sumber Dana">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblterimabersihsumberdana" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "terimabersihsumberdana", "{0:N0}")%>'></asp:Label>
                                             </ItemTemplate>
                                             <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
                                             <ItemStyle HorizontalAlign="Right"></ItemStyle>

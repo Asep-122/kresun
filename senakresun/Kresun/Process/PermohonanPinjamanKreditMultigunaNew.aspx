@@ -2270,7 +2270,7 @@
 
                                                                 </div>
                                                             </div>
-                                                            <div class ="form-row">
+                                                            <div class ="form-row" style="display:none">
                                                                 <div class="col-md-6">
                                                                     <p class="form-control">PK</p>
                                                                         <%--<asp:TextBox ID="TextBox6" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Tunjangan Makan" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 

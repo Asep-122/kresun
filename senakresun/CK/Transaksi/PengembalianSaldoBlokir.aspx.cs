@@ -518,7 +518,7 @@ public partial class CL_Process_PengSaldoBlokir : System.Web.UI.Page
 
                     DefaultClass.Global.SqlHelper[] Paramsc = new DefaultClass.Global.SqlHelper[5];
                     Paramsc[0] = gb.CreateSPParameter("@noBukti", ParameterDirection.Input, SqlDbType.VarChar, 50, nobukti, typeof(string));
-                    Paramsc[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SLIPAR", typeof(string));
+                    Paramsc[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SLIPARNEW", typeof(string));
                     Paramsc[2] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
                     Paramsc[3] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(string));
                     //Paramsc[4] = gb.CreateSPParameter("@typetrn", ParameterDirection.Input, SqlDbType.VarChar, 10, typetrn, typeof(string));
@@ -623,7 +623,7 @@ public partial class CL_Process_PengSaldoBlokir : System.Web.UI.Page
                     nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Delete Done!','Data Berhasil Terhapus','bottom-center','success','true');", true);
 
-                }
+               }
 
                 else
                 {
@@ -648,13 +648,13 @@ public partial class CL_Process_PengSaldoBlokir : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        //        Response.Redirect(Request.Url.AbsoluteUri);
-        pnlHeader.Visible = true;
-        PnlFront.Visible = true;
-        Pnlcustomer.Visible = false;
-        pnladd.Visible = false;
-        Pnlfooter4.Visible = false;
-        pnltrn.Visible = false;
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='PengembalianSaldoBlokir.aspx';",
+            true
+        );
 
     }
     protected string btnreload()

@@ -50,7 +50,7 @@
     <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <!-- Responsive datatable examples -->
     <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
    
    
@@ -91,6 +91,24 @@
                         confirmButtonClass: 'btn btn-confirm mt-2'
                     }
                 ).catch(swal.noop)
+            }, 100);
+
+        }
+
+        function AlertSuccess(h, t, p, i, fr) {
+            console.log(fr)
+            setTimeout(function () {
+
+
+                Swal.fire({
+                    title: h,
+                    text: t,
+                    icon: "success"
+                }).then((result) => {
+                    if (fr === 'true') {
+                        window.location.href = "MasukTrnKantorBayar2.aspx"
+                    }
+                });;
             }, 100);
 
         }
@@ -538,7 +556,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                                         <ItemStyle HorizontalAlign="Right"></ItemStyle>
                                                                         <ItemTemplate>
                                                                             
-                                                                            <asp:LinkButton ID="btndelete" runat="server" CausesValidation="True" OnClientClick="return sweetAlertConfirm(this,'Apakah anda yakin ingin menghapus data ini ?');" UseSubmitBehavior="False" data-toggle="tooltip" data-placement="left" title="Delete" CommandName="SETDEL" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="mdi mdi-close-circle"></i></asp:LinkButton>
+                                                                            <asp:LinkButton ID="btndelete" runat="server" CausesValidation="True" UseSubmitBehavior="False" data-toggle="tooltip" data-placement="left" title="Delete" CommandName="SETDEL" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="mdi mdi-close-circle"></i></asp:LinkButton>
                                                                             <%--<asp:LinkButton ID="btnedit" runat="server" data-toggle="tooltip" data-placement="left" OnClientClick="return sweetAlertConfirm(this,'Apakah anda yakin ingin merubah data ini ?');" title="Edit" CommandName="SET" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="fa fa-edit"></i></asp:LinkButton>--%>
                                                                             <asp:LinkButton ID="BtnExcel" runat="server" CausesValidation="True" UseSubmitBehavior="False" data-toggle="tooltip" data-placement="left" title="EXCEL" CommandName="SLIP" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="mdi mdi-printer-3d"></i></asp:LinkButton>
                                                                             <asp:LinkButton ID="BtnPDF" runat="server" CausesValidation="True" UseSubmitBehavior="False" data-toggle="tooltip" data-placement="left" title="PDF" CommandName="PDF" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="mdi mdi-printer-3d"></i></asp:LinkButton>
@@ -661,7 +679,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
 
 
 
-    <asp:panel ID="pnltrn" Visible ="false" runat ="server">
+    <asp:Panel ID="pnltrn" Visible ="false" runat ="server">
                      <div class="row clearfix">
                             <div class="col-md-12"> 
                                 <div class="card-box ribbon-box">  
@@ -700,7 +718,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                     <div class="form-row">
                                         <div class="form-group" style="width: 100%;">
                                             <%--<div class="card-box table-responsive">--%>
-                                            <asp:GridView ID="GRTP" runat="server" ShowFooter="True" AutoGenerateColumns="false" CssClass="table table-bordered table-striped table-hover js-basic-example dataTable" OnRowCommand="GRTP_RowCommand" OnRowDataBound="GRTP_RowDataBound" ShowHeaderWhenEmpty ="True" AllowSorting="True" PageSize="50">
+                                            <asp:GridView ID="GRTP" runat="server" ShowFooter="True" AutoGenerateColumns="false" CssClass="table table-bordered table-striped table-hover js-basic-example dataTable" OnRowCommand="GRTP_RowCommand" OnRowDataBound="GRTP_RowDataBound" ShowHeaderWhenEmpty ="True" AllowSorting="True" PageSize="50"  OnPageIndexChanging="GRTP_PageIndexChanging">
                                                 
                                                 <Columns>
                                                     
@@ -911,7 +929,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                 </div>
                          </div>
                      </div>
-                 </asp:panel>
+                 </asp:Panel>
 
                  
            

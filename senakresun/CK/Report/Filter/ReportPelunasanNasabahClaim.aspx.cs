@@ -169,7 +169,7 @@ public partial class CL_Report_Filter_ReportPelunasanNasabahClaim : System.Web.U
             if (ge.ListDataTable.Rows.Count > 0)
             {
 
-                rprt.Load(Server.MapPath("~/CL/Report/Report/CL/RptPelunasanNasabahClaim.rpt"));
+                rprt.Load(Server.MapPath("~/CK/Report/Report/CL/RptPelunasanNasabahClaim.rpt"));
                 rprt.SetDataSource(ge.ListDataTable);
                 // rprt.SetParameterValue("NamaPerusahaan", SessNamaProfil);
                 rprt.SetParameterValue("tanggalawal", txtStart.Text);

@@ -373,28 +373,13 @@ public partial class AR_Process_PencairanKreditSumberDana: System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        //Response.Redirect("PermohonanPinjamanKreditMultigunaNew.aspx");
-        pnladd.Visible = false;
-        pnlIdentitas.Visible = false;
-        PnlFront.Visible = true;
-        //pnlFilter.Visible = true;
-        //pnlJaminan.Visible = false;
-        //pnlPengajuan.Visible = false;
-      
-        //txtnonasabah.Text = "";
-        Pnlpenerima.Visible = false;
-        Pnlsimulasi.Visible = false;
-        PnlSKPensiun.Visible = false;
-        pnlpinjaman.Visible = false;
-        //PnlFooter.Visible = false;
-        pnlUpdAsuransi.Visible = false;
-        PNLKELUARGA.Visible = false;
-
-        pnlUpdAsuransi.Visible = false;
-        btnCancel.Visible = false;
-        pnlAlasanTolak.Visible = false;
-        PNLKARTU.Visible = false;
-        txtfocus.Focus();
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='PencairanKreditSumberDana.aspx';",
+            true
+        );
 
 
     }
@@ -3092,17 +3077,22 @@ public partial class AR_Process_PencairanKreditSumberDana: System.Web.UI.Page
                         string encrypted = gb.Encrypt(folderPath);
 
                         string secureUrl = ResolveUrl("~/SecurePdf.ashx?f=" + encrypted);
-
-
-                        // tampilkan nama file atau path di link
                         txtPdfSumberDana.Text = ge.ListDataset.Tables[0].Rows[0]["file_sumberdana"].ToString();
-                        txtPdfSumberDana.NavigateUrl = "#";
+                        txtPdfSumberDana.NavigateUrl = secureUrl;
 
-                        // pakai window.open agar buka popup
-                        txtPdfSumberDana.Attributes["onclick"] = string.Format(
-                            "window.open('{0}', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,width=900,height=850');",
-                            secureUrl
-                        );
+                        txtPdfSumberDana.Attributes["onclick"] =
+                            "window.open(this.href, 'pdfWindow', 'toolbar=yes,scrollbars=yes,resizable=yes,width=900,height=850'); return false;";
+
+
+                        /*                        // tampilkan nama file atau path di link
+                                                txtPdfSumberDana.Text = ge.ListDataset.Tables[0].Rows[0]["file_sumberdana"].ToString();
+                                                txtPdfSumberDana.NavigateUrl = "#";
+
+                                                // pakai window.open agar buka popup
+                                                txtPdfSumberDana.Attributes["onclick"] = string.Format(
+                                                    "window.open('{0}', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,width=900,height=850');",
+                                                    secureUrl
+                                                );*/
 
 
                         var kodeasuransi = ge.ListDataset.Tables[0].Rows[0]["kodeasuransi"].ToString();
@@ -3263,11 +3253,22 @@ public partial class AR_Process_PencairanKreditSumberDana: System.Web.UI.Page
     {
         try
         {
-            decimal xprovisi = 0, xadminbank = 0, xterimabersih = 0;
+            decimal xprovisi = 0, xadminbank = 0, xterimabersih = 0, xasuransi = 0, xangsuranblokir = 0, xangsurandimukaasuransirp = 0;
 
             xprovisi = decimal.Parse(txtplafon.Text) * (decimal.Parse(txtprovisitfpsn.Text) / 100);
             xadminbank = decimal.Parse(txtplafon.Text) * (decimal.Parse(txtadminbanktfpsn.Text) / 100);
-            xterimabersih = decimal.Parse(txtplafon.Text) - (xprovisi + xadminbank);
+            xasuransi = decimal.Parse(txtasuransi.Text);
+            xangsuranblokir = decimal.Parse(txtangsuranblokir.Text);
+            xangsurandimukaasuransirp = decimal.Parse(txtangsurandimuka.Text);
+            if (ddlsumberdana.SelectedValue == "A009")
+            {
+                xterimabersih = decimal.Parse(txtplafon.Text) - (xadminbank + xasuransi + xangsuranblokir + xangsurandimukaasuransirp);
+
+            }
+            else
+            {
+                xterimabersih = decimal.Parse(txtplafon.Text) - (xprovisi + xadminbank);
+            }
             txtprovisitf.Text = string.Format("{0:N0}", xprovisi);
             txtadminbanktf.Text = string.Format("{0:N0}", xadminbank);
             txtterimabersihtf.Text = string.Format("{0:N0}", xterimabersih);

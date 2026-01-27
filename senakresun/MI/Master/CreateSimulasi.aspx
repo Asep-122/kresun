@@ -877,7 +877,7 @@
 
                                                         </div>
                                                     </div>
-                                                    <div class ="form-row">
+                                                    <div class ="form-row" style="display:none">
                                                         <div class="col-md-6">
                                                             <p class="form-control">PK</p>
                                                                 <%--<asp:TextBox ID="TextBox6" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Tunjangan Makan" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
@@ -895,9 +895,9 @@
                                                                         <%--<asp:TextBox ID="TextBox6" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Tunjangan Makan" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <asp:DropDownList ID="txttunjistri" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom"  OnSelectedIndexChanged="Data_Formula">
-                                                                        <asp:ListItem Text="Ya" Value="1"></asp:ListItem>
-                                                                        <asp:ListItem Text="Tidak" Value="0"></asp:ListItem>
+                                                                    <asp:DropDownList runat="server" CssClass="selectpicker show-tick" ID="ddlTunjanganIstriAnak" data-style="btn-custom" AutoPostBack="true" OnSelectedIndexChanged="Data_Formula">
+                                                                        <asp:ListItem Text="Ya" Value="Ya"></asp:ListItem>
+                                                                        <asp:ListItem Text="Tidak" Value="Tidak"></asp:ListItem>
                                                                     </asp:DropDownList>
 
                                                                 </div>

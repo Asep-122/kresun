@@ -680,11 +680,13 @@ public partial class AS_Process_MasukTrnPengajuanPolis : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-            pnlHeader.Visible = true;
-            PnlFront.Visible = true;
-            pnladd.Visible = false;
-            Pnlfooter4.Visible = false;
-        pnltrn.Visible = false;
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='MasukTrnPengajuanPolis.aspx';",
+            true
+        );
     }
     protected string btnreload()
     {

@@ -684,7 +684,7 @@ public partial class CL_Process_MasukTrnBayarAutoDebet : System.Web.UI.Page
                     btnSimpan.Visible = false;
                     btnCancel.Visible = false;
                     nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Delete Done!','zzzzzz','bottom-center','success','1');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Delete Done!','zzzzzz','bottom-center','success','true');", true);
 
                 }
 
@@ -712,16 +712,19 @@ public partial class CL_Process_MasukTrnBayarAutoDebet : System.Web.UI.Page
     {
         Response.Redirect(Request.Url.AbsoluteUri);
     }
+
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        //        Response.Redirect(Request.Url.AbsoluteUri);
-        pnlHeader.Visible = true;
-        PnlFront.Visible = true;
-        pnladd.Visible = false;
-        Pnlfooter4.Visible = false;
-        pnltrn.Visible = false;
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='MasukTrnBayarAutoDebet.aspx';",
+            true
+        );
 
     }
+
     protected string btnreload()
     {
         return Page.ClientScript.GetPostBackEventReference(btnCancel, string.Empty, true);
@@ -1250,8 +1253,8 @@ public partial class CL_Process_MasukTrnBayarAutoDebet : System.Web.UI.Page
             //((TextBox)grow.FindControl("jlhdebit")).Enabled = true;
             //((TextBox)grow.FindControl("jlhkredit")).Enabled = false;
         }
-        GRTP.UseAccessibleHeader = true;
-        GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;
+/*        GRTP.UseAccessibleHeader = true;
+        GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;*/
     }
     protected void ddlbayar_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -1344,11 +1347,11 @@ public partial class CL_Process_MasukTrnBayarAutoDebet : System.Web.UI.Page
         {
             ((TextBox)grow.FindControl("jlhdibayar")).Text = "0";
                 ((TextBox)grow.FindControl("jlhdibayar")).Enabled = false;
-            }
+        }
 
         subgridAP_Click();
-        GRTP.UseAccessibleHeader = true;
-        GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;
+/*        GRTP.UseAccessibleHeader = true;
+        GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;*/
         }
 
     }
@@ -1386,8 +1389,8 @@ public partial class CL_Process_MasukTrnBayarAutoDebet : System.Web.UI.Page
         txttransAP.Text = formatted;
         //txtjmlhCL.Text = formatted;
 
-        GRTP.UseAccessibleHeader = true;
-        GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;
+/*        GRTP.UseAccessibleHeader = true;
+        GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;*/
 
 
     }

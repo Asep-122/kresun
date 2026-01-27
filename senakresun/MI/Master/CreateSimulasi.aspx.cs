@@ -999,16 +999,13 @@ public partial class MI_CreateSimulasi: System.Web.UI.Page
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        pnlHeader.Visible = true;
-        PnlFront.Visible = true;
-        pnladd.Visible = false;
-        //pnlData.Visible = false;
-        Pnlsimulasi.Visible = false;
-        idsimpanvisible.Visible = false;
-        btndelete.Visible = false;
-
-        ClearData();
-        Opendata();
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='CreateSimulasi.aspx';",
+            true
+        );
     }
     protected string btnafterDelete()
     {
@@ -1746,6 +1743,7 @@ public partial class MI_CreateSimulasi: System.Web.UI.Page
                 txtmaterai.Text = string.Format("{0:N0}", decimal.Parse(ddlmaterai.SelectedItem.Text));
 
             }
+            Data_Formula(sender, e);
 
 
         }
@@ -1773,7 +1771,7 @@ public partial class MI_CreateSimulasi: System.Web.UI.Page
                 txtangsuranblokir.Text = string.Format("{0:N0}", decimal.Parse(ddlangsurandimukablokir.SelectedValue) * decimal.Parse(txtangsuran.Text));
 
             }
-
+            Data_Formula(sender, e);
 
         }
         catch (Exception ex)
@@ -1829,13 +1827,31 @@ public partial class MI_CreateSimulasi: System.Web.UI.Page
                 txtangdimukaasuransi.Text = string.Format("{0:N0}", decimal.Parse(ddlangsurandimukaasuransi.SelectedValue) * decimal.Parse(txtasuransi.Text));
 
             }
-
+            Data_Formula(sender, e);
 
         }
         catch (Exception ex)
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ex.Message.ToString() + "','success','true');", true);
             gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+    }
+
+    private void TerimaBersih()
+    {
+        if(txtkodesimulasi.Text == "A")
+        {
+
+            decimal terimabersih = decimal.Parse(txtplafon.Text) - decimal.Parse(txtprovisi.Text) - decimal.Parse(txtadminbank.Text) - decimal.Parse(txtasuransi.Text) - decimal.Parse(txtkeanggotaan.Text) - decimal.Parse(txtangsuranblokir.Text) - decimal.Parse(txtangsurandimuka.Text) - decimal.Parse(txtangdimukaasuransi.Text) - decimal.Parse(txtmaterai.Text) - decimal.Parse(txtbiayaadmin.Text);
+            txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(terimabersih.ToString()));
+        }
+        else
+        {
+            decimal terimabersih = decimal.Parse(txtplafon.Text) - decimal.Parse(txtasuransi.Text) - decimal.Parse(txtprovisi.Text) - decimal.Parse(txtadminbank.Text) - decimal.Parse(txtkeanggotaan.Text) -
+            decimal.Parse(txtangsuranblokir.Text) - decimal.Parse(txtangsurandimuka.Text) - decimal.Parse(txtmaterai.Text) - decimal.Parse(txtbiayaadmin.Text) - decimal.Parse(txtgraceperiode.Text);
+            txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(terimabersih.ToString()));
 
         }
 
@@ -1857,7 +1873,7 @@ public partial class MI_CreateSimulasi: System.Web.UI.Page
 
             }
 
-
+            Data_Formula(sender, e);
         }
         catch (Exception ex)
         {
@@ -1865,7 +1881,6 @@ public partial class MI_CreateSimulasi: System.Web.UI.Page
             gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
 
         }
-
     }
 
 
@@ -1919,6 +1934,8 @@ public partial class MI_CreateSimulasi: System.Web.UI.Page
             }
             ddlangsurandimukaasuransi.Items.Insert(0, new ListItem("Pilih Angsuran Dimuka Asuransi", "0"));
             ddlangsurandimukaasuransi.Enabled = false;
+
+
         }
         catch (Exception ex)
         {
@@ -2076,7 +2093,7 @@ public partial class MI_CreateSimulasi: System.Web.UI.Page
                 var[17] = gb.CreateSPParameter("@C25Pelunasan", ParameterDirection.Input, SqlDbType.Money, 0, txtpelunasan.Text, typeof(string));
                 var[18] = gb.CreateSPParameter("@no_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 30, txtnopen.Text, typeof(string));
                 var[19] = gb.CreateSPParameter("@PK", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlPk.SelectedValue, typeof(string));
-                var[20] = gb.CreateSPParameter("@TunjanganIstriAnak", ParameterDirection.Input, SqlDbType.Money, 30, txttunjistri.SelectedValue, typeof(string));
+                var[20] = gb.CreateSPParameter("@TunjanganIstriAnak", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlTunjanganIstriAnak.SelectedValue, typeof(string));
                 if (ddlKantorBayar.SelectedValue == "A014" && ddlpensiun.SelectedValue == "1")
                 {
                     ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_POS", var, "constrmf");
@@ -2308,7 +2325,7 @@ public partial class MI_CreateSimulasi: System.Web.UI.Page
                 }
 
 
-
+                    
             }
 
             selectedprioritassumberdana();

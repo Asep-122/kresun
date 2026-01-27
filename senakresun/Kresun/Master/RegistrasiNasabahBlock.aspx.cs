@@ -60,12 +60,14 @@ public partial class FA_Master_RegistrasiNasabahBlock : System.Web.UI.Page
   
     protected void btnBack_Click(object sender, EventArgs e)
     {
-        pnlHeader.Visible = true;
-        pnlFilter.Visible = true;
-        PnlFront.Visible = true;
-        pnladd.Visible = false;
-        Pnlfooter4.Visible = false;
-    //    Response.Redirect("RegistrasiNasabahBlock.aspx");
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='RegistrasiNasabahBlock.aspx';",
+            true
+        );
+
     }
 
 

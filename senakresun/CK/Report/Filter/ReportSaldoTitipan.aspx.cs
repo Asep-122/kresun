@@ -169,7 +169,7 @@ public partial class CL_Report_Filter_ReportSaldoTitipan : System.Web.UI.Page
             if (ge.ListDataTable.Rows.Count > 0)
             {
                  
-                rprt.Load(Server.MapPath("~/CL/Report/Report/CL/RptSaldoTitipan.rpt"));
+                rprt.Load(Server.MapPath("~/CK/Report/Report/CL/RptSaldoTitipan.rpt"));
                 rprt.SetDataSource(ge.ListDataTable);
                 // rprt.SetParameterValue("NamaPerusahaan", SessNamaProfil);
                 rprt.SetParameterValue("tanggalawal", txtStart.Text);

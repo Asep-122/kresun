@@ -17,6 +17,7 @@ using System.Globalization;
 using CrystalDecisions.Shared;
 using CrystalDecisions.CrystalReports.Engine;
 using DocumentFormat.OpenXml.Math;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 
 
@@ -6886,7 +6887,7 @@ public partial class AR_Process_PencairanKreditSumberDana2: System.Web.UI.Page
 
                 decimal xterima = decimal.Parse(((TextBox)GRData.Rows[i].FindControl("jmlterima")).Text);
                 decimal xsisa = decimal.Parse(((Label)GRData.Rows[i].FindControl("lblsisa")).Text);
-                decimal xplafon = decimal.Parse(((Label)GRData.Rows[i].FindControl("lblplafon")).Text);
+                decimal xplafon = decimal.Parse(((Label)GRData.Rows[i].FindControl("lblterimabersihsumberdana")).Text);
                 int xjangka = int.Parse(((Label)GRData.Rows[i].FindControl("lbljangka")).Text);
                 DateTime Tanggal = DateTime.Parse(((Label)GRData.Rows[i].FindControl("lbltanggal")).Text);
 
@@ -6917,7 +6918,7 @@ public partial class AR_Process_PencairanKreditSumberDana2: System.Web.UI.Page
             Params[5] = gb.CreateSPParameter("@bank", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlkantorbayar2.SelectedValue, typeof(string));
             Params[6] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
             Params[7] = gb.CreateSPParameter("@JmlTerima", ParameterDirection.Input, SqlDbType.Decimal, 50, jmlterima.Text, typeof(decimal));
-            Params[8] = gb.CreateSPParameter("@JmlTransaksi", ParameterDirection.Input, SqlDbType.Decimal, 50, txtJmlTransaksi.Text, typeof(decimal));
+            Params[8] = gb.CreateSPParameter("@JmlTransaksi", ParameterDirection.Input, SqlDbType.Decimal, 50, txtJmlTransfer.Text, typeof(decimal));
             Params[9] = gb.CreateSPParameter("@JmlSelisih", ParameterDirection.Input, SqlDbType.Decimal, 50, txtSelisih.Text, typeof(decimal));
 
             ge.ListDataset = gb.GetDataJustOutPut("KP_Trn_Kantor_Pencairan_Save", Params, "constrmf");
@@ -6926,7 +6927,7 @@ public partial class AR_Process_PencairanKreditSumberDana2: System.Web.UI.Page
                 btnSimpan.Visible = false;
 
 
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Save Done!','zzzzzz','bottom-center','success','1');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','Data Has Been Save','bottom-center','success','true');", true);
 
             }
         }
@@ -6977,13 +6978,14 @@ public partial class AR_Process_PencairanKreditSumberDana2: System.Web.UI.Page
     protected void txtjlhbayar_TextChanged(object sender, EventArgs e)
     {
         int dgcount = GRData.Rows.Count;
-        GridViewRow grow = (GridViewRow)((Control)sender).NamingContainer;
+        GridViewRow grow = (GridViewRow)((System.Web.UI.Control)sender).NamingContainer;
+
         decimal terima, jumlahtrn, sumterima = 0, sumtrans = 0;
 
         for(int i = 0; i < dgcount; i++)
         {
             terima = decimal.Parse(((TextBox)GRData.Rows[i].FindControl("jmlterima")).Text);
-            jumlahtrn = decimal.Parse(((Label)GRData.Rows[i].FindControl("lblsisa")).Text);
+            jumlahtrn = decimal.Parse(((TextBox)GRData.Rows[i].FindControl("jmlterima")).Text);
 
             if (terima > 0)
             {
@@ -6999,7 +7001,7 @@ public partial class AR_Process_PencairanKreditSumberDana2: System.Web.UI.Page
         string formattedTransaksi = string.Format("{0:N2}", sumtrans);
 
         jmlterima.Text = formatted;
-        txtJmlTransaksi.Text = formattedTransaksi;
+        txtJmlTransfer.Text = formattedTransaksi;
         txtSelisih.Text = string.Format("{0:N2}", sumterima - sumtrans);
 
         GRData.UseAccessibleHeader = true;
@@ -7041,7 +7043,7 @@ public partial class AR_Process_PencairanKreditSumberDana2: System.Web.UI.Page
         string formattedTransaksi = string.Format("{0:N2}", sumtrans);
 
         jmlterima.Text = formatted;
-        txtJmlTransaksi.Text = formattedTransaksi;
+        txtJmlTransfer.Text = formattedTransaksi;
         txtSelisih.Text = string.Format("{0:N2}", sumjlhgl - sumtrans);
         //txtjmlhCL.Text = formatted;
 
@@ -7070,7 +7072,7 @@ public partial class AR_Process_PencairanKreditSumberDana2: System.Web.UI.Page
             }
 
             jmlterima.Text = terima.ToString("N2");
-            txtJmlTransaksi.Text = jmltransaksi.ToString("N2");
+            txtJmlTransfer.Text = jmltransaksi.ToString("N2");
             txtSelisih.Text = string.Format("{0:N2}", terima - jmltransaksi);
 
         }
@@ -7078,4 +7080,17 @@ public partial class AR_Process_PencairanKreditSumberDana2: System.Web.UI.Page
     }
 
 
+
+    protected void txtJmlTransfer_TextChanged(object sender, EventArgs e)
+    {
+        decimal jumlahterima = 0, jmltransfer = 0, selisih = 0;
+        jmltransfer = decimal.Parse(txtJmlTransfer.Text);
+        jumlahterima = decimal.Parse(jmlterima.Text);
+        selisih = jmltransfer - jumlahterima;
+
+        txtSelisih.Text = string.Format("{0:N2}", selisih);
+        GRData.UseAccessibleHeader = true;
+
+        GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
+    }
 }

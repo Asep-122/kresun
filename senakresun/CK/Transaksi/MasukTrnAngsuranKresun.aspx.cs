@@ -215,7 +215,7 @@ public partial class CL_Process_MasukTrnAngsuranKresun : System.Web.UI.Page
                     Paramsc[0] = gb.CreateSPParameter("@Nobukti", ParameterDirection.Input, SqlDbType.VarChar, 50, txtnobukti.Text, typeof(string));
                     Paramsc[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LISTINVOICE", typeof(string));
                     Paramsc[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
-                    Paramsc[3] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+                    Paramsc[3] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, txtkodecabang.Text, typeof(string));
                     Paramsc[4] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
                     Paramsc[5] = gb.CreateSPParameter("@form", ParameterDirection.Input, SqlDbType.VarChar, 50, form, typeof(string));
                     ge.ListDataTable = gb.GetDataJustOutPut("dbo.CL_Trn_Ofline_AR", Paramsc, "constrmf").Tables[0];
@@ -329,7 +329,7 @@ public partial class CL_Process_MasukTrnAngsuranKresun : System.Web.UI.Page
                     Paramsc[0] = gb.CreateSPParameter("@noBukti", ParameterDirection.Input, SqlDbType.VarChar, 50, nobukti, typeof(string));
                     Paramsc[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SLIPAR", typeof(string));
                     Paramsc[2] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
-                    Paramsc[3] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(string));
+                    Paramsc[3] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 10, txtkodecabang.Text, typeof(string));
                     Paramsc[4] = gb.CreateSPParameter("@typetrn", ParameterDirection.Input, SqlDbType.VarChar, 10, typetrn, typeof(string));
 
                     ge.ListDataTable = gb.GetDataJustOutPut("dbo.CL_Trn_Ofline_AR", Paramsc, "constrmf").Tables[0];
@@ -511,14 +511,13 @@ public partial class CL_Process_MasukTrnAngsuranKresun : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        //        Response.Redirect(Request.Url.AbsoluteUri);
-        pnlHeader.Visible = true;
-        PnlFront.Visible = true;
-        Pnlcustomer.Visible = false;
-        pnladd.Visible = false;
-        Pnlsaldo.Visible = false;
-        Pnlfooter4.Visible = false;
-        pnltrn.Visible = false;
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='MasukTrnAngsuranKresun.aspx';",
+            true
+        );
 
     }
     protected string btnreload()
@@ -667,7 +666,7 @@ public partial class CL_Process_MasukTrnAngsuranKresun : System.Web.UI.Page
                     Params[9] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
                     Params[10] = gb.CreateSPParameter("@Form", ParameterDirection.Input, SqlDbType.VarChar, 10, form, typeof(string));
                     Params[11] = gb.CreateSPParameter("@CL_AR_Kartu_Pinjaman", ParameterDirection.Input, SqlDbType.Structured, 0, dtBayar, typeof(DataTable));
-                    Params[12] = gb.CreateSPParameter("@Kodecabangf", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(string));
+                    Params[12] = gb.CreateSPParameter("@Kodecabangf", ParameterDirection.Input, SqlDbType.VarChar, 10, txtkodecabang.Text, typeof(string));
                     Params[13] = gb.CreateSPParameter("@SaldoTitipan", ParameterDirection.Input, SqlDbType.Decimal, 0, txtsaldotitipan.Text, typeof(decimal));
                     Params[14] = gb.CreateSPParameter("@KodeBank", ParameterDirection.Input, SqlDbType.VarChar, 30,"", typeof(string)); 
                     Params[15] = gb.CreateSPParameter("@hdnangs", ParameterDirection.Input, SqlDbType.Decimal, 0, decimal.Parse(HdnAngs.Value), typeof(decimal)); 
@@ -756,7 +755,7 @@ public partial class CL_Process_MasukTrnAngsuranKresun : System.Web.UI.Page
         var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CARIARMST", typeof(string));
         var[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
         var[3] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
-        var[4] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+        var[4] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, kodecabang, typeof(string));
         var[5] = gb.CreateSPParameter("@norekening", ParameterDirection.Input, SqlDbType.VarChar, 50, HDNoRekening.Value, typeof(string));
         ge.ListDataset = gb.GetDataJustOutPut("CL_Trn_Ofline_AR", var, "constrmf");
         if (ge.ListDataset.Tables[0].Rows.Count > 0)
@@ -766,7 +765,7 @@ public partial class CL_Process_MasukTrnAngsuranKresun : System.Web.UI.Page
             txtkodelgn.Text = kodelgn;
             txtNmSup.Text = ge.ListDataset.Tables[0].Rows[0]["NamaLgn"].ToString();
             txtsaldotitipan.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["saldotitipan"].ToString()));
-            txtkodecabang.Text = SessBranchID;
+            txtkodecabang.Text = kodecabang;
             btnSimpan.Visible = true;
 
            
@@ -794,7 +793,7 @@ public partial class CL_Process_MasukTrnAngsuranKresun : System.Web.UI.Page
         var1[0] = gb.CreateSPParameter("@Kodelgn", ParameterDirection.Input, SqlDbType.VarChar, 30, customer, typeof(string));
         var1[1] = gb.CreateSPParameter("@norekening", ParameterDirection.Input, SqlDbType.VarChar, 30, norekening, typeof(string));
         var1[2] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(String));
-        var1[3] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(String));
+        var1[3] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, txtkodecabang.Text, typeof(String));
 
         var1[4] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTTRANSAKSIPINJAMAN", typeof(string));
         var1[5] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
@@ -935,8 +934,8 @@ public partial class CL_Process_MasukTrnAngsuranKresun : System.Web.UI.Page
         //}
 
          
-        GRTP.UseAccessibleHeader = true;
-        GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;
+/*        GRTP.UseAccessibleHeader = true;
+        GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;*/
         subgridbayar_Click();
 
     }

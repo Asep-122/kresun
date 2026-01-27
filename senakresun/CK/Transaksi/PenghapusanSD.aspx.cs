@@ -796,7 +796,13 @@ public partial class CL_Process_PenghapusanSD : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect(Request.Url.AbsoluteUri);
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='PenghapusanSD.aspx';",
+            true
+        );
 
     }
     protected string btnreload()

@@ -51,7 +51,7 @@
     <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <!-- Responsive datatable examples -->
     <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
    
    
@@ -83,6 +83,17 @@
 
         }
 
+        function Alertfailed(h, t, p, i) {
+            setTimeout(function () {
+                Swal.fire({
+                    title: h,
+                    text: t,
+                    icon: "error"
+                });
+            }, 100);
+
+        }
+
         function SweetAlert(errMsg) {
 
             setTimeout(function () {
@@ -99,7 +110,23 @@
            function stringToArray(items) {
             return items.replace(/'/g, '"');
         }
+        function AlertSuccess(h, t, p, i, fr) {
+            console.log(fr)
+            setTimeout(function () {
 
+
+                Swal.fire({
+                    title: h,
+                    text: t,
+                    icon: "success"
+                }).then((result) => {
+                    if (fr === 'true') {
+                        window.location.href = "StatusMeninggalpdate.aspx"
+                    }
+                });;
+            }, 100);
+
+        }
           //numeric 1
         function Comma(Num) {
 
@@ -594,7 +621,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                                         <HeaderStyle CssClass="align-center" Width="10%"></HeaderStyle>
                                                                         <ItemStyle HorizontalAlign="Right"></ItemStyle>
                                                                         <ItemTemplate>
-                                                                             <asp:LinkButton ID="btndelete" runat="server" CausesValidation="True" OnClientClick="return sweetAlertConfirm(this,'Apakah anda yakin ingin menghapus data ini ?');" UseSubmitBehavior="False" data-toggle="tooltip" data-placement="left" title="Delete" CommandName="SETDEL" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="mdi mdi-close-circle"></i></asp:LinkButton>
+                                                                             <asp:LinkButton ID="btndelete" runat="server" CausesValidation="True"  UseSubmitBehavior="False" data-toggle="tooltip" data-placement="left" title="Delete" CommandName="SETDEL" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="mdi mdi-close-circle"></i></asp:LinkButton>
                                                                              <asp:LinkButton ID="btnedit" runat="server" data-toggle="tooltip" data-placement="left" OnClientClick="return sweetAlertConfirm(this,'Apakah anda yakin ingin merubah data ini ?');" title="Edit" CommandName="SET" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="fa fa-edit"></i></asp:LinkButton>
                                                                             <asp:LinkButton ID="BtnSlip" Visible="false" runat="server" CausesValidation="True" UseSubmitBehavior="False" data-toggle="tooltip" data-placement="left" title="Slip" CommandName="SLIP" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="mdi mdi-printer-3d"></i></asp:LinkButton>
                                                                             <asp:LinkButton ID="BtnPDF" Visible="false" runat="server" CausesValidation="True" UseSubmitBehavior="False" data-toggle="tooltip" data-placement="left" title="PDF" CommandName="PDF" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="mdi mdi-printer-3d"></i></asp:LinkButton>

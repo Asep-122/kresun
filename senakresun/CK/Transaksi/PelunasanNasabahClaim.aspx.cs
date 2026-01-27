@@ -556,7 +556,7 @@ public partial class CL_Transaksi_PelunasanNasabahClaim : System.Web.UI.Page
                     btnSimpan.Visible = false;
 
                     nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Delete Done!','zzzzzz','bottom-center','success','1');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Delete Done!','zzzzzz','bottom-center','success','true');", true);
 
                 }
 
@@ -583,14 +583,13 @@ public partial class CL_Transaksi_PelunasanNasabahClaim : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        //        Response.Redirect(Request.Url.AbsoluteUri);
-        pnlHeader.Visible = true;
-        PnlFront.Visible = true;
-        Pnlcustomer.Visible = false;
-        pnladd.Visible = false;
-        Pnlfooter4.Visible = false;
-        pnltrn.Visible = false;
-        Pnlsaldo.Visible = false;
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='PelunasanNasabahClaim.aspx';",
+            true
+        );
 
     }
     protected string btnreload()

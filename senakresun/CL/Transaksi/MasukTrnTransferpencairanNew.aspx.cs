@@ -577,20 +577,14 @@ public partial class CL_Process_MasukTrnTransferpencairanNew: System.Web.UI.Page
     protected void btnCancel_Click(object sender, EventArgs e)
     {
         //        Response.Redirect(Request.Url.AbsoluteUri);
-
-        try
-        {
-            Pnlfooter4.Visible = false;
-            pnltrn.Visible = false;
-            PnlFront.Visible = false;
-            pnladd.Visible = false;
-            PnlFront1.Visible = true;
-
-        }
-        catch (Exception ex)
-        {
-
-        }
+        
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='MasukTrnTransferpencairanNew.aspx';",
+            true
+        );
 
     }
     protected string btnreload()
@@ -769,7 +763,7 @@ public partial class CL_Process_MasukTrnTransferpencairanNew: System.Web.UI.Page
                         btnSimpan.Visible = false;
                        
                         nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','You successfully save this Asuransi','top-right','success','true');", true);
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','You successfully save this Transfer ','top-right','success','true');", true);
                     }
 
                     else

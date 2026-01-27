@@ -169,7 +169,7 @@ public partial class CL_Report_Filter_ReportPelunasanDiPercepat : System.Web.UI.
             if (ge.ListDataTable.Rows.Count > 0)
             {
 
-                rprt.Load(Server.MapPath("~/CL/Report/Report/CL/RptPelunasanDiPercepat.rpt"));
+                rprt.Load(Server.MapPath("~/Ck/Report/Report/CL/RptPelunasanDiPercepat.rpt"));
                 rprt.SetDataSource(ge.ListDataTable);
                 // rprt.SetParameterValue("NamaPerusahaan", SessNamaProfil);
                 rprt.SetParameterValue("tanggalawal", txtStart.Text);

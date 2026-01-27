@@ -738,13 +738,13 @@ public partial class CL_Transaksi_PelunasanLanjut : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        //        Response.Redirect(Request.Url.AbsoluteUri);
-        pnlHeader.Visible = true;
-        PnlFront.Visible = true;
-        Pnlcustomer.Visible = false;
-        pnladd.Visible = false;
-        Pnlfooter4.Visible = false;
-        pnltrn.Visible = false;
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='PelunasanLanjut.aspx';",
+            true
+        );
 
     }
     protected string btnreload()
@@ -974,7 +974,7 @@ public partial class CL_Transaksi_PelunasanLanjut : System.Web.UI.Page
                         btnSimpan.Visible = false;
 
                         nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','zzzzzz','bottom-center','success','true');", true);
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','Data Berhasil Tersimpan','bottom-center','success','true');", true);
 
                     }
 
