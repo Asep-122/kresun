@@ -1,13 +1,10 @@
 ﻿using DefaultClass;
 using EntitiesClass;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
+using System.Web.UI.DataVisualization.Charting;
 using System.Web.UI.WebControls;
 
 public partial class Report_datamarketing : System.Web.UI.Page
@@ -34,13 +31,15 @@ public partial class Report_datamarketing : System.Web.UI.Page
         set { ViewState["CultureName"] = value; }
 
     }
-  
+
 
     Global gb = new DefaultClass.Global();
     GlobalEntities ge = new GlobalEntities();
     public int bahanhariini = 0;
     protected void Page_Load(object sender, EventArgs e)
     {
+        Page.MaintainScrollPositionOnPostBack = false;
+
         try
         {
             if (!IsPostBack)
@@ -60,8 +59,6 @@ public partial class Report_datamarketing : System.Web.UI.Page
                 ddljenispensiun.DataBind();
                 ddljenispensiun.Items.Insert(0, new ListItem("Filter Jenis", "ALL"));
 
-
-
                 DefaultClass.Global.SqlHelper[] var2 = new DefaultClass.Global.SqlHelper[3];
                 var2[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "JENISJIWA", typeof(string));
                 var2[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
@@ -78,8 +75,7 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
                 string query;
 
-
-                btnproses.Visible = false;
+                btnproses.Visible = true; //btnproses.Visible = false;
                 Lbltaspen.Text = "DATA TASPEN / ASABRI";
 
                 DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
@@ -104,8 +100,21 @@ public partial class Report_datamarketing : System.Web.UI.Page
                 ddlcabang.DataBind();
                 ddlcabang.Items.Insert(0, new ListItem("Filter Area", "ALL"));
 
-      
-                if (bahanhariini < 5)
+                LblOutstanding.Text = String.Format("{0:#,###0}", Convert.ToInt32(bahanhariini));
+
+
+                DefaultClass.Global.SqlHelper[] varx2 = new DefaultClass.Global.SqlHelper[3];
+                varx2[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "MINIMALBAHAN", typeof(string));
+                varx2[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
+                varx2[2] = gb.CreateSPParameter("@kodeArea", ParameterDirection.Input, SqlDbType.VarChar, 30, SessBranchID, typeof(string));
+
+                ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", varx2, "constrmf");
+
+                //DataTable dtwrs = GetData(query);
+                Lblminimal.Text = ge.ListDataset.Tables[0].Rows[0][0].ToString();
+                Lblminimal.Text = String.Format("{0:#,###0}", Convert.ToInt32(Lblminimal.Text));
+
+                if (bahanhariini < 5) //minimal ketentuan harian data yang bisa diambil
                 {
 
                     DefaultClass.Global.SqlHelper[] varx = new DefaultClass.Global.SqlHelper[3];
@@ -117,10 +126,7 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
                     //bahanhariini = Convert.ToInt32(ge.ListDataset.Tables[0].Rows[0][0].ToString());
 
-                    LblOutstanding.Text = (bahanhariini + Convert.ToInt32(ge.ListDataset.Tables[0].Rows[0][0].ToString())).ToString();
-                    LblOutstanding.Text = String.Format("{0:#,###0}", Convert.ToInt32(LblOutstanding.Text));
-
-
+                    LblOutstanding.Text = String.Format("{0:#,###0}", Convert.ToInt32((bahanhariini + Convert.ToInt32(ge.ListDataset.Tables[0].Rows[0][0].ToString())).ToString()));
 
                     DefaultClass.Global.SqlHelper[] varx1 = new DefaultClass.Global.SqlHelper[3];
                     varx1[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "TOTALBAHANTMP", typeof(string));
@@ -129,28 +135,30 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
                     ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", varx1, "constrmf");
 
-
                     //DataTable dtwrx = GetData(query);
                     LblBahan.Text = ge.ListDataset.Tables[0].Rows[0][0].ToString();
                     LblBahan.Text = String.Format("{0:#,###0}", Convert.ToInt32(LblBahan.Text));
 
-                    DefaultClass.Global.SqlHelper[] varx2 = new DefaultClass.Global.SqlHelper[3];
-                    varx2[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "MINIMALBAHAN", typeof(string));
-                    varx2[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
-                    varx2[2] = gb.CreateSPParameter("@kodeArea", ParameterDirection.Input, SqlDbType.VarChar, 30, SessBranchID, typeof(string));
+                    //DefaultClass.Global.SqlHelper[] varx2 = new DefaultClass.Global.SqlHelper[3];
+                    //varx2[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "MINIMALBAHAN", typeof(string));
+                    //varx2[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
+                    //varx2[2] = gb.CreateSPParameter("@kodeArea", ParameterDirection.Input, SqlDbType.VarChar, 30, SessBranchID, typeof(string));
 
-                    ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", varx2, "constrmf");
+                    //ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", varx2, "constrmf");
 
-                    //DataTable dtwrs = GetData(query);
-                    Lblminimal.Text = ge.ListDataset.Tables[0].Rows[0][0].ToString();
-                    Lblminimal.Text = String.Format("{0:#,###0}", Convert.ToInt32(Lblminimal.Text));
+                    ////DataTable dtwrs = GetData(query);
+                    //Lblminimal.Text = ge.ListDataset.Tables[0].Rows[0][0].ToString();
+                    //Lblminimal.Text = String.Format("{0:#,###0}", Convert.ToInt32(Lblminimal.Text));
                 }
-
                 else
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Data Bahan sudah melebihi dari ketentuan per hari!');", true);
                 }
             }
+
+            SetGridHeader(Grdtagihan);
+            SetGridHeader(Grdasabri);
+            SetGridHeader(Grdtunggakan);
         }
         catch (System.Exception X)
         {
@@ -159,14 +167,81 @@ public partial class Report_datamarketing : System.Web.UI.Page
         }
     }
 
+    private void EnsureCabangProdukSafe()
+    {
+        if (ddlcabangprodukAsrn.Items.Count == 0)
+        {
+            ddlcabangprodukAsrn.Items.Insert( 0, new ListItem("Filter Cabang", "ALL") );
+            ddlcabangprodukAsrn.SelectedIndex = 0;
+        }
+    }
+
+    private string GetCabangProdukValue()
+    {
+        return ddlcabangprodukAsrn.Items.Count > 0 ? ddlcabangprodukAsrn.SelectedValue : "ALL";
+    }
+
+    private void SafeSelect(DropDownList ddl, string value)
+    {
+        var item = ddl.Items.FindByValue(value);
+        if (item != null)
+            ddl.SelectedValue = value;
+        else if (ddl.Items.Count > 0)
+            ddl.SelectedIndex = 0;
+    }
+
+    protected void ddlbahan_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        EnsureCabangProdukSafe();
+
+        DefaultClass.Global.SqlHelper[] vart = new DefaultClass.Global.SqlHelper[3];
+        vart[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlbahan.SelectedValue == "TASPEN" ? "USERTASPEN" : "USERASABRI", typeof(string));
+        vart[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
+        vart[2] = gb.CreateSPParameter("@kodeArea", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlbahan.SelectedValue == "TASPEN" ? ddlcabang.SelectedValue : SessBranchID, typeof(string));
+
+        ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", vart, "constrmf");
+        //ddlcabangprodukAsrn.DataSource = ge.ListDataset.Tables[0];
+        //ddlcabangprodukAsrn.DataTextField = "cabang";
+        //ddlcabangprodukAsrn.DataValueField = "kdcabang";
+
+        //ddlcabangprodukAsrn.DataBind();
+        //ddlcabangprodukAsrn.Items.Insert(0, new ListItem("Filter Cabang", "ALL"));
+        //ddlcabangprodukAsrn.SelectedIndex = 0;
+
+        ddlcabangprodukAsrn.ClearSelection();
+        ddlcabangprodukAsrn.SelectedIndex = -1;
+        ddlcabangprodukAsrn.Items.Clear();
+
+        ddlcabangprodukAsrn.DataSource = ge.ListDataset.Tables[0];
+        ddlcabangprodukAsrn.DataTextField = "cabang";
+        ddlcabangprodukAsrn.DataValueField = "kdcabang";
+        ddlcabangprodukAsrn.DataBind();
+
+        ddlcabangprodukAsrn.Items.Insert(0, new ListItem("Filter Cabang", "ALL"));
+        ddlcabangprodukAsrn.SelectedIndex = 0;
+
+        ddlcabang.SelectedIndex = 0;
+
+        Pnltagihan.Visible = false;
+        Pnlasabari.Visible = false;
+
+        Pnltunggakan.Visible = false;
+
+        SetGridHeader(Grdtagihan);
+        SetGridHeader(Grdasabri);
+        SetGridHeader(Grdtunggakan);
+    }
 
 
     public void BindGridEntityTagihan()
     {
+        EnsureCabangProdukSafe();
+
+        string produk = GetCabangProdukValue();
 
         DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[10];
         var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "VIEWTASPEN", typeof(string));
-        var[1] = gb.CreateSPParameter("@produk", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabangprodukAsrn.SelectedValue, typeof(string));
+        var[1] = gb.CreateSPParameter("@produk", ParameterDirection.Input, SqlDbType.VarChar, 50, produk, typeof(string));
         var[2] = gb.CreateSPParameter("@Kantorbayar", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlKantor.SelectedValue, typeof(string));
         var[3] = gb.CreateSPParameter("@jenispensiun", ParameterDirection.Input, SqlDbType.VarChar, 50, ddljenispensiun.SelectedValue, typeof(string));
         var[4] = gb.CreateSPParameter("@jenisjiwa", ParameterDirection.Input, SqlDbType.VarChar, 50, ddljenisjiwa.SelectedValue, typeof(string));
@@ -177,23 +252,13 @@ public partial class Report_datamarketing : System.Web.UI.Page
         var[9] = gb.CreateSPParameter("@kota", ParameterDirection.Input, SqlDbType.VarChar, 100, txtkotasearch.Text, typeof(string));
 
         ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", var, "constrmf");
-
-        ge.ListDataset.Tables[0].DefaultView.Sort = "notas asc";
-
-
-        Grdtagihan.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        Grdtagihan.DataSource = ge.ListDataset.Tables[0];
         Grdtagihan.DataBind();
 
         Grdtagihan.UseAccessibleHeader = true;
-
         Grdtagihan.HeaderRow.TableSection = TableRowSection.TableHeader;
-
-
-
-
     }
 
-    
     public void BindGridEntityTunggakan()
     {
         string query;
@@ -225,20 +290,17 @@ public partial class Report_datamarketing : System.Web.UI.Page
         Grdtunggakan.DataBind();
 
         Grdtunggakan.UseAccessibleHeader = true;
-
         Grdtunggakan.HeaderRow.TableSection = TableRowSection.TableHeader;
-
-
 
     }
 
     public void BindGridEntityAsabri()
     {
-       
+        string produk = ddlcabangprodukAsrn.Items.Count > 0 ? ddlcabangprodukAsrn.SelectedValue : "ALL";
 
         DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[10];
         var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "VIEWASABRI", typeof(string));
-        var[1] = gb.CreateSPParameter("@produk", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabangprodukAsrn.SelectedValue, typeof(string));
+        var[1] = gb.CreateSPParameter("@produk", ParameterDirection.Input, SqlDbType.VarChar, 50, produk, typeof(string));
         var[2] = gb.CreateSPParameter("@Kantorbayar", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlKantor.SelectedValue, typeof(string));
         var[3] = gb.CreateSPParameter("@jenispensiun", ParameterDirection.Input, SqlDbType.VarChar, 50, ddljenispensiun.SelectedValue, typeof(string));
         var[4] = gb.CreateSPParameter("@jenisjiwa", ParameterDirection.Input, SqlDbType.VarChar, 50, ddljenisjiwa.SelectedValue, typeof(string));
@@ -252,36 +314,60 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
         ge.ListDataset.Tables[0].DefaultView.Sort = "nourut asc";
 
-
         Grdasabri.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
         Grdasabri.DataBind();
 
         Grdasabri.UseAccessibleHeader = true;
-
         Grdasabri.HeaderRow.TableSection = TableRowSection.TableHeader;
-
-
 
     }
     protected void btnproses_Click(object sender, EventArgs e)
     {
-       
+
         try
         {
+            if (Convert.ToInt32(LblBahan.Text) == 0) {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Bahan kurang dari batas minimal');", true);
+                //Grdtunggakan.UseAccessibleHeader = true;
+                //Grdtunggakan.HeaderRow.TableSection = TableRowSection.TableHeader;
+                SetGridHeader(Grdtagihan);
+                SetGridHeader(Grdasabri);
+                SetGridHeader(Grdtunggakan);
+                return;
+            }
             if (Convert.ToInt32(LblBahan.Text) < Convert.ToInt32(Lblminimal.Text))
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Bahan kurang dari batas minimal');", true);
-                Grdtunggakan.UseAccessibleHeader = true;
-                Grdtunggakan.HeaderRow.TableSection = TableRowSection.TableHeader;
+                //Grdtunggakan.UseAccessibleHeader = true;
+                //Grdtunggakan.HeaderRow.TableSection = TableRowSection.TableHeader;
+                SetGridHeader(Grdtagihan);
+                SetGridHeader(Grdasabri);
+                SetGridHeader(Grdtunggakan);
                 return;
             }
-            if (Convert.ToInt32(LblBahan.Text) > Convert.ToInt32("10"))
+            if (Convert.ToInt32(LblBahan.Text) > Convert.ToInt32("20"))
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Bahan tidak boleh lebih dari 10 setiap hari ');", true);
-                Grdtunggakan.UseAccessibleHeader = true;
-                Grdtunggakan.HeaderRow.TableSection = TableRowSection.TableHeader;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Bahan tidak boleh lebih dari 20 setiap hari ');", true);
+                //Grdtunggakan.UseAccessibleHeader = true;
+                //Grdtunggakan.HeaderRow.TableSection = TableRowSection.TableHeader;
+                SetGridHeader(Grdtagihan);
+                SetGridHeader(Grdasabri);
+                SetGridHeader(Grdtunggakan);
                 return;
             }
+
+            if (Convert.ToInt32(LblOutstanding.Text) > 0)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Selesaikan Sisa Kunjungan Anda Terlebih Dahulu ');", true);
+                //Grdtunggakan.UseAccessibleHeader = true;
+                //Grdtunggakan.HeaderRow.TableSection = TableRowSection.TableHeader;
+                SetGridHeader(Grdtagihan);
+                SetGridHeader(Grdasabri);
+                SetGridHeader(Grdtunggakan);
+                return;
+            }
+            
+
             DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
             var[0] = gb.CreateSPParameter("@createuser", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
             var[1] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
@@ -298,7 +384,7 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Save Get Bahan Success');", true);
                 Pnltunggakan.Visible = false;
-                btnproses.Visible = false;
+                //btnproses.Visible = false;
                 LblOutstanding.Text = "0";
                 LblBahan.Text = "0";
 
@@ -324,79 +410,44 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
     }
 
-       
+
     protected void lnkCari_Click(object sender, EventArgs e)
     {
-     
-        //DataTable ds = new DataTable();
-        //ds = null;
+        EnsureCabangProdukSafe();
 
-      
-        //Grdtagihan.DataSource = ds;
-        //Grdtagihan.DataBind();
-      
-        //Grdtunggakan.DataSource = ds;
-        //Grdtunggakan.DataBind();
-
-
-        //Grdasabri.DataSource = ds;
-        //Grdasabri.DataBind();
+        if (ddlcabangprodukAsrn.SelectedValue == "ALL")
+        {
+            ScriptManager.RegisterStartupScript(
+                this, GetType(), "err",
+                "SweetAlert('Cabang Taspen tidak boleh kosong');", true
+            );
+            return;
+        }
 
         if (ddlbahan.SelectedValue == "TASPEN")
         {
-
-            if (ddlcabangprodukAsrn.Text.Length == 0)
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Cabang Taspen tidak boleh kosong');", true);
-                return;
-            }
-
-            if (ddlcabang.Text.Length == 0)
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Area tidak boleh kosong');", true);
-                return;
-            }
-            //if (ddlKantor.Text.Length == 0)
-            //{
-            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Kantor Bayar tidak boleh kosong');", true);
-            //    return;
-            //}
+            Pnlasabari.Visible = false;
             Pnltagihan.Visible = true;
-             BindGridEntityTagihan();
-
-
+            Pnltunggakan.Visible = false;
+            
+            BindGridEntityTagihan();
         }
-        else if (ddlbahan.SelectedValue == "ASABRI")
+        else
         {
-
-            if (ddlcabangprodukAsrn.Text.Length == 0)
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Cabang Taspen tidak boleh kosong');", true);
-                return;
-            }
-
-            if (ddlcabang.Text.Length == 0)
-            {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Area tidak boleh kosong');", true);
-                return;
-            }
-            //if (ddlKantor.Text.Length == 0)
-            //{
-            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Kantor Bayar tidak boleh kosong');", true);
-            //    return;
-            //}
+            Pnltagihan.Visible = false;
             Pnlasabari.Visible = true;
-            //Pnltunggakan.Visible = true;
+            Pnltunggakan.Visible = false;
 
             BindGridEntityAsabri();
-
-
         }
-       
-        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
+
+        ScriptManager.RegisterStartupScript(
+            this, GetType(), "modal", "jv_openModal_root();", true
+        );
     }
 
-    
+
+
     protected void Grdasabri_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         try
@@ -407,19 +458,25 @@ public partial class Report_datamarketing : System.Web.UI.Page
             switch (e.CommandName)
             {
                 case "APPROVE":
-                   
+
                     string nouruta;
                     nouruta = ((Label)Grdasabri.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnourutasabri")).Text;
-                    
 
+                    int bahan = string.IsNullOrEmpty(LblBahan.Text) ? 0 : int.Parse(LblBahan.Text);
 
+                    if (bahan >= 20)
+                    {
+                        //throw new Exception("Bahan Tidak Boleh Lebih Dari 20");
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Bahan Tidak Boleh Lebih Dari 20');", true);
+                        return;
+                    }
 
                     DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[5];
                     var[0] = gb.CreateSPParameter("@createuser", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
                     var[1] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
                     var[2] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "UPDATEASABRI", typeof(string));
                     var[3] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
-                    var[4] = gb.CreateSPParameter("@nourut", ParameterDirection.Input, SqlDbType.Int, 0,int.Parse(nouruta), typeof(int));
+                    var[4] = gb.CreateSPParameter("@nourut", ParameterDirection.Input, SqlDbType.Int, 0, int.Parse(nouruta), typeof(int));
 
                     ge.ListDataset = gb.GetDataJustOutPut("BG_get_bahan", var, "constrmf");
 
@@ -454,7 +511,7 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
                     }
 
-                   
+
                     break;
                 case "VIEW":
 
@@ -472,7 +529,7 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
             }
 
-
+            Pnltunggakan.Visible = false;
         }
 
         catch (Exception X)
@@ -481,7 +538,7 @@ public partial class Report_datamarketing : System.Web.UI.Page
             gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
 
         }
-     
+
 
 
     }
@@ -498,8 +555,14 @@ public partial class Report_datamarketing : System.Web.UI.Page
                     string nouruta;
                     nouruta = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnouruttaspen")).Text;
 
+                    int bahan = string.IsNullOrEmpty(LblBahan.Text) ? 0 : int.Parse(LblBahan.Text);
 
-
+                    if (bahan >= 20)
+                    {
+                        //throw new Exception("Bahan Tidak Boleh Lebih Dari 20");
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Bahan Tidak Boleh Lebih Dari 20');", true);
+                        return;
+                    }
 
                     DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[5];
                     var[0] = gb.CreateSPParameter("@createuser", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
@@ -509,8 +572,6 @@ public partial class Report_datamarketing : System.Web.UI.Page
                     var[4] = gb.CreateSPParameter("@nourut", ParameterDirection.Input, SqlDbType.Int, 0, int.Parse(nouruta), typeof(int));
 
                     ge.ListDataset = gb.GetDataJustOutPut("BG_get_bahan", var, "constrmf");
-
-
 
                     if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
                     {
@@ -561,6 +622,8 @@ public partial class Report_datamarketing : System.Web.UI.Page
                     break;
             }
 
+            Pnltunggakan.Visible = false;
+
         }
 
         catch (Exception X)
@@ -570,15 +633,15 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
         }
 
-        
+
 
 
     }
     public void TampilFormTaspen(string xnourut)
     {
-       
 
-            DefaultClass.Global.SqlHelper[] Paramsc = new DefaultClass.Global.SqlHelper[2];
+
+        DefaultClass.Global.SqlHelper[] Paramsc = new DefaultClass.Global.SqlHelper[2];
         Paramsc[0] = gb.CreateSPParameter("@nourut", ParameterDirection.Input, SqlDbType.VarChar, 50, xnourut, typeof(string));
         Paramsc[1] = gb.CreateSPParameter("@state", ParameterDirection.Input, SqlDbType.VarChar, 50, "TAMPILTASPEN", typeof(string));
 
@@ -586,8 +649,6 @@ public partial class Report_datamarketing : System.Web.UI.Page
         ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", Paramsc, "constrmf");
         if (ge.ListDataset.Tables[0].Rows.Count > 0)
         {
-           
-
 
             txtnotas.Text = ge.ListDataset.Tables[0].Rows[0]["notas"].ToString();
             Txtjenis.Text = ge.ListDataset.Tables[0].Rows[0]["jenispensiun"].ToString();
@@ -629,7 +690,7 @@ public partial class Report_datamarketing : System.Web.UI.Page
             Txtpenerbitskep.Text = ge.ListDataset.Tables[0].Rows[0]["penerbit_skep"].ToString();
             txtnpwp.Text = ge.ListDataset.Tables[0].Rows[0]["npwp"].ToString();
         }
-            
+
 
     }
     protected void Grdtunggakan_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -660,27 +721,15 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
                         ge.ListDataset = gb.GetDataJustOutPut("BG_get_bahan", var, "constrmf");
 
-
-
                         if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
                         {
-
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Delete Done!','You successfully save this Project','top-right','success','1');", true);
-                            
-
                         }
-
                         else
                         {
-
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "');", true);
                             gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
-
                         }
-
-
-
-
                     }
                     else if (nourutproduk == "2")
                     {
@@ -714,14 +763,14 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
 
 
-                        
+
 
                     }
 
                     //ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Ambil Done!','You successfully save this Project','top-right','success','1');", true);
 
                     Pnltunggakan.Visible = true;
-                    BindGridEntityTunggakan();
+                    //BindGridEntityTunggakan();
                     DefaultClass.Global.SqlHelper[] varx1 = new DefaultClass.Global.SqlHelper[3];
                     varx1[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "TOTALBAHANTMP", typeof(string));
                     varx1[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
@@ -770,6 +819,9 @@ public partial class Report_datamarketing : System.Web.UI.Page
                     break;
 
             }
+
+            //Pnltunggakan.Visible = false;
+            BindGridEntityTunggakan();
         }
         catch (Exception X)
         {
@@ -777,14 +829,15 @@ public partial class Report_datamarketing : System.Web.UI.Page
             gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
 
         }
-      
 
-
+        SetGridHeader(Grdtagihan);
+        SetGridHeader(Grdasabri);
+        SetGridHeader(Grdtunggakan);
 
     }
     public void TampilFormAsabri(string xnourut)
     {
-       
+
 
         DefaultClass.Global.SqlHelper[] Paramsc = new DefaultClass.Global.SqlHelper[2];
         Paramsc[0] = gb.CreateSPParameter("@nourut", ParameterDirection.Input, SqlDbType.VarChar, 50, xnourut, typeof(string));
@@ -798,7 +851,7 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
 
             txtnotas.Text = ge.ListDataset.Tables[0].Rows[0]["notas"].ToString();
-         
+
 
             txtnopensasbri.Text = ge.ListDataset.Tables[0].Rows[0]["nopens"].ToString();
             txtnrpasbri.Text = ge.ListDataset.Tables[0].Rows[0]["nrp"].ToString();
@@ -847,6 +900,8 @@ public partial class Report_datamarketing : System.Web.UI.Page
         Pnlasabari.Visible = true;
 
         pnlformatasabri.Visible = false;
+
+        Pnltunggakan.Visible = false;
         BindGridEntityAsabri();
 
 
@@ -855,10 +910,10 @@ public partial class Report_datamarketing : System.Web.UI.Page
     protected void btnKembaliasbriget_Click(object sender, EventArgs e)
     {
         Pnlsearch.Visible = true;
-        Pnltunggakan.Visible = true;
+        //Pnltunggakan.Visible = true;
 
         pnlformatasabri.Visible = false;
-        BindGridEntityTunggakan();
+        //BindGridEntityTunggakan();
 
 
     }
@@ -867,7 +922,7 @@ public partial class Report_datamarketing : System.Web.UI.Page
     {
         Pnlsearch.Visible = true;
         Pnltagihan.Visible = true;
-
+        Pnltunggakan.Visible = false;
         pnlformattaspen.Visible = false;
         BindGridEntityTagihan();
 
@@ -876,13 +931,12 @@ public partial class Report_datamarketing : System.Web.UI.Page
     protected void btnKembalitaspenget_Click(object sender, EventArgs e)
     {
         Pnlsearch.Visible = true;
-        Pnltunggakan.Visible = true;
+        //Pnltunggakan.Visible = true;
 
         pnlformattaspen.Visible = false;
-        BindGridEntityTunggakan();
+        //BindGridEntityTunggakan();
+    }
 
-
-    }    
     protected void btnCancel_Click(object sender, EventArgs e)
     {
         Response.Redirect(Request.Url.AbsoluteUri);
@@ -890,16 +944,22 @@ public partial class Report_datamarketing : System.Web.UI.Page
     protected void btntagihan_Click(object sender, EventArgs e)
     {
 
-      
+
+        //ddlcabangprodukAsrn.Items.Clear();
         ddlcabangprodukAsrn.Items.Clear();
+        ddlcabangprodukAsrn.Items.Insert(0, new ListItem("Filter Cabang", "ALL"));
+        ddlcabangprodukAsrn.SelectedIndex = 0;
+
+
         ddlKantor.Items.Clear();
+
         Lbltaspen.Text = "DATA TASPEN / ASABRI";
         ddlcabang.Enabled = true;
         ddlcabangprodukAsrn.Enabled = true;
         ddlbahan.Enabled = true;
         ddlKantor.Enabled = true;
         btnsearch.Visible = true;
-        btnproses.Visible = false;
+        //btnproses.Visible = false;
         Pnlsearch.Visible = true;
         Pnltagihan.Visible = false;
         Pnltunggakan.Visible = false;
@@ -910,12 +970,16 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
     }
 
-    
+
     protected void btnmanual_Click(object sender, EventArgs e)
     {
         Lbltaspen.Text = "MANUAL DATA";
         Lbljudul.Text = "MANUAL DATA";
+
+        //ddlcabangprodukAsrn.Items.Clear();
         ddlcabangprodukAsrn.Items.Clear();
+        ddlcabangprodukAsrn.Items.Insert(0, new ListItem("Filter Cabang", "ALL"));
+        ddlcabangprodukAsrn.SelectedIndex = 0;
 
         Pnlsearch.Visible = false;
         Pnltagihan.Visible = false;
@@ -925,38 +989,43 @@ public partial class Report_datamarketing : System.Web.UI.Page
         //BindGridEntityTunggakan();
         ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
     }
-    protected void btntunggakan_Click(object sender, EventArgs e)
-    {
-        
-        ddlcabangprodukAsrn.Items.Clear();
-        ddlKantor.Items.Clear();
-        Lbltaspen.Text = "GET DATA";
-        Lbljudul.Text = "GET DATA";
-        ddlcabang.Enabled = false;
-        ddlcabangprodukAsrn.Enabled = false;
-        ddlbahan.Enabled = false;
-        ddlKantor.Enabled = true;
-        Pnlsearch.Visible = true;
-        btnsearch.Visible = false;
-        btnproses.Visible = true;
-        Pnltagihan.Visible = false;
-        Pnlasabari.Visible = false;
-        Pnltunggakan.Visible = true;
-        PnlManual.Visible = false;
-        BindGridEntityTunggakan();
-        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
-    }
+    //protected void btntunggakan_Click(object sender, EventArgs e)
+    //{
+
+    //    //ddlcabangprodukAsrn.Items.Clear();
+    //    ddlcabangprodukAsrn.Items.Clear();
+    //    ddlcabangprodukAsrn.Items.Insert(0, new ListItem("Filter Cabang", "ALL"));
+    //    ddlcabangprodukAsrn.SelectedIndex = 0;
 
 
+    //    ddlKantor.Items.Clear();
 
-   
-   
+    //    Lbltaspen.Text = "GET DATA";
+    //    Lbljudul.Text = "GET DATA";
+    //    ddlcabang.Enabled = false;
+    //    ddlcabangprodukAsrn.Enabled = false;
+    //    ddlbahan.Enabled = false;
+    //    ddlKantor.Enabled = true;
+    //    Pnlsearch.Visible = true;
+    //    btnsearch.Visible = false;
+    //    btnproses.Visible = true;
+    //    Pnltagihan.Visible = false;
+    //    Pnlasabari.Visible = false;
+    //    //Pnltunggakan.Visible = true;
+    //    PnlManual.Visible = false;
+    //    BindGridEntityTunggakan();
+    //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
+    //}
 
     protected void ddlcabangprodukAsrn_SelectedIndexChanged(object sender, EventArgs e)
     {
         Pnltagihan.Visible = false;
+        Pnltunggakan.Visible = false;
         string query;
         query = "";
+
+        //if (ddlcabangprodukAsrn.Items.Count == 0) return;
+
         if (ddlbahan.SelectedValue == "TASPEN") //nama table menggunakan string
         {
             DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[4];
@@ -970,10 +1039,9 @@ public partial class Report_datamarketing : System.Web.UI.Page
             ddlKantor.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
             ddlKantor.DataTextField = "kantor";
             ddlKantor.DataValueField = "kodebyr";
+
             ddlKantor.DataBind();
             ddlKantor.Items.Insert(0, new ListItem("Filter", "ALL"));
-
-            
 
         }
         else if (ddlbahan.SelectedValue == "ASABRI")
@@ -990,17 +1058,21 @@ public partial class Report_datamarketing : System.Web.UI.Page
             ddlKantor.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
             ddlKantor.DataTextField = "zmitra_bayar";
             ddlKantor.DataValueField = "mitrabayar";
+
             ddlKantor.DataBind();
             ddlKantor.Items.Insert(0, new ListItem("Filter", "ALL"));
 
-
         }
-       
+
+        SetGridHeader(Grdtagihan);
+        SetGridHeader(Grdasabri);
+        SetGridHeader(Grdtunggakan);
+
     }
-    
-   protected void ddldatamanual_SelectedIndexChanged(object sender, EventArgs e)
+
+    protected void ddldatamanual_SelectedIndexChanged(object sender, EventArgs e)
     {
-       
+
         string query;
         query = "";
         if (ddldatamanual.SelectedValue == "TASPEN") //nama table menggunakan string
@@ -1038,13 +1110,20 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
         }
 
-       // DataTable dx = GetData(query);
-       // ddlcabangmanual.DataSource = dx;
-       // ddlcabangmanual.DataTextField = "cabang";
-       // ddlcabangmanual.DataValueField = "kdcabang";
-       // ddlcabangmanual.DataBind();
-       // //ddlcabangmanual.Items.Insert(0, new ListItem("Select", "--"));
-       //// ddlcabangmanual.Enabled = true;
+        // DataTable dx = GetData(query);
+        // ddlcabangmanual.DataSource = dx;
+        // ddlcabangmanual.DataTextField = "cabang";
+        // ddlcabangmanual.DataValueField = "kdcabang";
+        // ddlcabangmanual.DataBind();
+        // //ddlcabangmanual.Items.Insert(0, new ListItem("Select", "--"));
+        //// ddlcabangmanual.Enabled = true;
+        ///
+
+        Pnltunggakan.Visible = false;
+
+        SetGridHeader(Grdtagihan);
+        SetGridHeader(Grdasabri);
+        SetGridHeader(Grdtunggakan);
     }
     protected void btnSimpan_manual_Click(object sender, EventArgs e)
     {
@@ -1063,7 +1142,6 @@ public partial class Report_datamarketing : System.Web.UI.Page
                 else
                 {
 
-
                     DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[8];
                     var[0] = gb.CreateSPParameter("@createuser", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
                     var[1] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
@@ -1075,8 +1153,6 @@ public partial class Report_datamarketing : System.Web.UI.Page
                     var[7] = gb.CreateSPParameter("@cabangmanual", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabangmanual.SelectedValue, typeof(string));
 
                     ge.ListDataset = gb.GetDataJustOutPut("BG_get_bahan_Manual", var, "constrmf");
-
-
 
                     if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
                     {
@@ -1097,9 +1173,7 @@ public partial class Report_datamarketing : System.Web.UI.Page
                         LblBahan.Text = ge.ListDataset.Tables[0].Rows[0][0].ToString();
                         LblBahan.Text = String.Format("{0:#,###0}", Convert.ToInt32(LblBahan.Text));
 
-
                     }
-
                     else
                     {
 
@@ -1108,18 +1182,10 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
                     }
 
-
-
-                                   
-                    
-
-                    }
-               
-                
-
+                }
 
             }
-            else if(ddldatamanual.SelectedValue == "ASABRI")
+            else if (ddldatamanual.SelectedValue == "ASABRI")
             {
 
                 if (Txtnamamanual.Text == "")
@@ -1141,8 +1207,6 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
                     ge.ListDataset = gb.GetDataJustOutPut("BG_get_bahan_Manual", var, "constrmf");
 
-
-
                     if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
                     {
 
@@ -1157,14 +1221,11 @@ public partial class Report_datamarketing : System.Web.UI.Page
 
                         ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", varx1, "constrmf");
 
-
                         //DataTable dtwrx = GetData(query);
                         LblBahan.Text = ge.ListDataset.Tables[0].Rows[0][0].ToString();
                         LblBahan.Text = String.Format("{0:#,###0}", Convert.ToInt32(LblBahan.Text));
 
-
                     }
-
                     else
                     {
 
@@ -1191,111 +1252,71 @@ public partial class Report_datamarketing : System.Web.UI.Page
     }
     protected void ddlcabang_SelectedIndexChanged(object sender, EventArgs e)
     {
-        Pnltagihan.Visible = false;
-        string query;
-        query = "";
-        if (ddlbahan.SelectedValue == "TASPEN") //nama table menggunakan string
-        {
-            DefaultClass.Global.SqlHelper[] vart = new DefaultClass.Global.SqlHelper[3];
-            vart[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "USERTASPEN", typeof(string));
-            vart[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
-            vart[2] = gb.CreateSPParameter("@kodeArea", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlcabang.SelectedValue, typeof(string));
-            //var[3] = gb.CreateSPParameter("@kodekoperasi", ParameterDirection.Input, SqlDbType.VarChar, 15, Koperasi, typeof(string));
+        EnsureCabangProdukSafe();
 
-            ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", vart, "constrmf");
-            ge.ListDataset.Tables[0].DefaultView.Sort = "kdcabang asc";
-            ddlcabangprodukAsrn.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
-            ddlcabangprodukAsrn.DataTextField = "cabang";
-            ddlcabangprodukAsrn.DataValueField = "kdcabang";
-            ddlcabangprodukAsrn.DataBind();
-            ddlcabangprodukAsrn.Items.Insert(0, new ListItem("Filter Cabang", "ALL"));
+        ddlcabangprodukAsrn.Items.Clear();
 
+        DefaultClass.Global.SqlHelper[] vart = new DefaultClass.Global.SqlHelper[3];
+        vart[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlbahan.SelectedValue == "TASPEN" ? "USERTASPEN" : "USERASABRI", typeof(string));
+        vart[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
+        vart[2] = gb.CreateSPParameter("@kodeArea", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlcabang.SelectedValue, typeof(string));
 
+        ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", vart, "constrmf");
+        ddlcabangprodukAsrn.DataSource = ge.ListDataset.Tables[0];
+        ddlcabangprodukAsrn.DataTextField = "cabang";
+        ddlcabangprodukAsrn.DataValueField = "kdcabang";
+        ddlcabangprodukAsrn.DataBind(); 
 
-        }
-        else if (ddlbahan.SelectedValue == "ASABRI")
-        {
+        ddlcabangprodukAsrn.Items.Insert(0, new ListItem("Filter Cabang", "ALL"));
+        ddlcabangprodukAsrn.SelectedIndex = 0;
 
-            //query = "select kdcabang || ' - ' || nmcabang as cabang, kdcabang from tbl_asabri_cabang where kcu_giga = '" + ddlcabang.SelectedValue + "'";
-            DefaultClass.Global.SqlHelper[] vart = new DefaultClass.Global.SqlHelper[3];
-            vart[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "USERASABRI", typeof(string));
-            vart[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
-            vart[2] = gb.CreateSPParameter("@kodeArea", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlcabang.SelectedValue, typeof(string));
-            //var[3] = gb.CreateSPParameter("@kodekoperasi", ParameterDirection.Input, SqlDbType.VarChar, 15, Koperasi, typeof(string));
+        Pnltunggakan.Visible = false;
 
-            ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", vart, "constrmf");
-            ge.ListDataset.Tables[0].DefaultView.Sort = "kdcabang asc";
-            ddlcabangprodukAsrn.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
-            ddlcabangprodukAsrn.DataTextField = "cabang";
-            ddlcabangprodukAsrn.DataValueField = "kdcabang";
-            ddlcabangprodukAsrn.DataBind();
-            ddlcabangprodukAsrn.Items.Insert(0, new ListItem("Filter Cabang", "ALL"));
-
-
-        }
-
-        
-        ddlcabangprodukAsrn.Enabled = true;
+        SetGridHeader(Grdtagihan);
+        SetGridHeader(Grdasabri);
+        SetGridHeader(Grdtunggakan);
     }
 
-    protected void ddlbahan_SelectedIndexChanged(object sender, EventArgs e)
+    private void SetGridHeader(GridView grid)
     {
-
-        string query;
-        query = "";
-        if (ddlbahan.SelectedValue == "TASPEN") //nama table menggunakan string
+        if (grid != null && grid.Rows.Count > 0 && grid.HeaderRow != null)
         {
-            DefaultClass.Global.SqlHelper[] vart = new DefaultClass.Global.SqlHelper[3];
-            vart[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "USERTASPEN", typeof(string));
-            vart[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
-            vart[2] = gb.CreateSPParameter("@kodeArea", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlcabang.SelectedValue, typeof(string));
-            //var[3] = gb.CreateSPParameter("@kodekoperasi", ParameterDirection.Input, SqlDbType.VarChar, 15, Koperasi, typeof(string));
-
-            ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", vart, "constrmf");
-            ge.ListDataset.Tables[0].DefaultView.Sort = "kdcabang asc";
-            ddlcabangprodukAsrn.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
-            ddlcabangprodukAsrn.DataTextField = "cabang";
-            ddlcabangprodukAsrn.DataValueField = "kdcabang";
-            ddlcabangprodukAsrn.DataBind();
-            ddlcabangprodukAsrn.Items.Insert(0, new ListItem("Filter Cabang", "ALL"));
-
-            ddlcabangprodukAsrn.SelectedValue = "ALL";
-            ddlcabang.SelectedValue = "ALL";
-            Pnlasabari.Visible = false;
-            Pnltagihan.Visible = false;
-
-
-
+            grid.UseAccessibleHeader = true;
+            grid.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
-        else if (ddlbahan.SelectedValue == "ASABRI")
-        {
-
-            //query = "select kdcabang || ' - ' || nmcabang as cabang, kdcabang from tbl_asabri_cabang where kcu_giga = '" + ddlcabang.SelectedValue + "'";
-            DefaultClass.Global.SqlHelper[] vart = new DefaultClass.Global.SqlHelper[3];
-            vart[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "USERASABRI", typeof(string));
-            vart[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
-            vart[2] = gb.CreateSPParameter("@kodeArea", ParameterDirection.Input, SqlDbType.VarChar, 30, SessBranchID, typeof(string));
-            //var[3] = gb.CreateSPParameter("@kodekoperasi", ParameterDirection.Input, SqlDbType.VarChar, 15, Koperasi, typeof(string));
-
-            ge.ListDataset = gb.GetDataJustOutPut("BG_GetDATA_SALES", vart, "constrmf");
-            ge.ListDataset.Tables[0].DefaultView.Sort = "kdcabang asc";
-            ddlcabangprodukAsrn.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
-            ddlcabangprodukAsrn.DataTextField = "cabang";
-            ddlcabangprodukAsrn.DataValueField = "kdcabang";
-            ddlcabangprodukAsrn.DataBind();
-            ddlcabangprodukAsrn.Items.Insert(0, new ListItem("Filter Cabang", "ALL"));
-            Pnlasabari.Visible = false;
-            Pnltagihan.Visible = false;
-            ddlcabangprodukAsrn.SelectedValue = "ALL";
-            ddlcabang.SelectedValue = "ALL";
-        }
-        //Page.SetFocus(ddlcabangprodukAsrn);
-        ddlcabangprodukAsrn.Enabled = true;
-
-
-
-
     }
 
 
+
+    protected void btnlistgetdata_ServerClick(object sender, EventArgs e)
+    {
+        //ddlcabangprodukAsrn.Items.Clear();
+        //ddlcabangprodukAsrn.Items.Insert(0, new ListItem("Filter Cabang", "ALL"));
+        //ddlcabangprodukAsrn.SelectedIndex = 0;
+
+
+        //ddlKantor.Items.Clear();
+
+        //Lbltaspen.Text = "GET DATA";
+        //Lbljudul.Text = "GET DATA";
+        //ddlcabang.Enabled = false;
+        //ddlcabangprodukAsrn.Enabled = false;
+        //ddlbahan.Enabled = false;
+        //ddlKantor.Enabled = true;
+        //Pnlsearch.Visible = true;
+        //btnsearch.Visible = false;
+        //btnproses.Visible = true;
+
+        Pnltagihan.Visible = false;
+        Pnlasabari.Visible = false;
+        Pnltunggakan.Visible = true;
+        PnlManual.Visible = false;
+        BindGridEntityTunggakan();
+
+        SetGridHeader(Grdtagihan);
+        SetGridHeader(Grdasabri);
+        SetGridHeader(Grdtunggakan);
+
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
+    }
 }

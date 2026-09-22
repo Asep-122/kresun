@@ -746,7 +746,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                      
                                     <div class="form-group">
                                     <label for="inputCity" class="col-form-label">Kode Bank</label>
-                                    <asp:DropDownList ID="ddlKdBank" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" AutoPostBack="true" width ="400" OnSelectedIndexChanged ="ddlKdBank_SelectedIndexChanged"></asp:DropDownList> 
+                                    <asp:DropDownList Enabled="false" ID="ddlKdBank" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" AutoPostBack="true" width ="400" OnSelectedIndexChanged ="ddlKdBank_SelectedIndexChanged"></asp:DropDownList> 
                                  </div>
                                  <div class="form-group">
                                     <label for="inputpid" class="col-3 col-form-label">Nama Bank</label>
@@ -810,6 +810,17 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                     <div class="form-group col-md-4">
                                         <label for="inputCity" class="col-form-label">Jumlah Pelunasan</label>
                                         <asp:TextBox ID="txtJlhpelunasan" onkeyup="javascript:this.value=Comma(this.value);" Text="0" onblur="checkTextField1(this);" onkeypress="return isnumerickey(event);" type="text" required="required" placeholder="" class="form-control autonumber" runat="server" ></asp:TextBox>      
+                                    </div>
+                                    
+                                       </div>                                   
+                                    <div class="form-row">
+                                     <div class="form-group col-md-4">
+                                        <label for="inputCity" class="col-form-label">Uang muka</label>
+                                        <asp:TextBox ID="txtUangMuka" Visible="true" onkeyup="javascript:this.value=Comma(this.value);" Text="0" onblur="checkTextField1(this);" onkeypress="return isnumerickey(event);" type="text" required="required" placeholder="" class="form-control autonumber" runat="server" readonly="true"></asp:TextBox>      
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputCity" class="col-form-label">Jumlah Uang Muka</label>
+                                        <asp:TextBox ID="txtJlhUangMuka" onkeyup="javascript:this.value=Comma(this.value);" Text="0" onblur="checkTextField1(this);" onkeypress="return isnumerickey(event);" type="text" required="required" placeholder="" class="form-control autonumber" runat="server" readonly="true"></asp:TextBox>      
                                     </div>
                                     
                                        </div>

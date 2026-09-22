@@ -58,6 +58,11 @@
              function jv_openModal_root() {
             setTimeout(function () { $('#lnkopenGroup').click(); $("div").remove(".tooltip"); window.top.cekResize(); }, 200);
         }
+
+        
+
+
+
          function Alert(h, t, p, i, fr) {
             setTimeout(function () {
                 $.toast({
@@ -297,6 +302,15 @@ function sweetAlertsave(btnSimpan,errMsg) {
         } 
         $(document).ready(InIEvent);
         function InIEvent() {
+            window.savePageDT = function () {
+
+                var table = $('#GRTP').DataTable();
+
+                sessionStorage.setItem("grtp_page", table.page());
+
+                console.log(table.page());
+            };
+
             $("div").remove(".tooltip");
             $.getScript("../assets/js/jquery.core.js");
 
@@ -323,7 +337,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
 
 
             $(function () {
-                var table = $('#GRData').dataTable({
+                 table = $('#GRData').dataTable({
                     "order": [],
                     "columnDefs": [{
                         "targets": 'no-sort',
@@ -346,45 +360,59 @@ function sweetAlertsave(btnSimpan,errMsg) {
 
                 });
                 function initDT() {
-                    if (!$.fn.DataTable.isDataTable('#GRTP')) {
+                    console.log("initDT dipanggil");
+                    if ($.fn.DataTable.isDataTable('#GRTP')) {
+                        tableX = $('#GRTP').DataTable(); // ambil instance yang sudah ada
+                    }
+                    else {
                         tableX = $('#GRTP').DataTable({
                             scrollX: true,
-                            retrieve: true
+                            retrieve: true,
+                            dom: 'Bfrtip',
+                            buttons: [
+                                'copy',
+                                'csv',
+                                'excel',
+                                {
+                                    extend: 'pdfHtml5',
+                                    orientation: 'landscape',
+                                    pageSize: 'A4'
+                                },
+                                'print'
+                            ]
                         });
                     }
+
+            
                 }
 
                 Sys.Application.add_load(function () {
+                    console.log("add_load dipanggil");
+                    restorePageDT();
                     initDT();
+ 
                 });
 
-                function savePageDT() {
+
+/*                function savePageDT() {
+                    alert("savePageDT dipanggil");
+
+                    console.log(tableX.page());
                     if (tableX) {
-                        sessionStorage.setItem('grtp_page', tableX.page());
+                        sessionStorage.setItem("grtp_page", tableX.page());
                     }
-                }
 
+                    console.log(sessionStorage.getItem("grtp_page"));
+                }
+*/
                 function restorePageDT() {
-                    var p = sessionStorage.getItem('grtp_page');
-                    if (p !== null && tableX) {
-                        tableX.page(parseInt(p)).draw(false);
-                    }
+                    sessionStorage.removeItem("grtp_page");
                 }
-
+/*
                 Sys.Application.add_load(function () {
                     restorePageDT();
-                });
-                var tableX = $('#Grduangmuka').dataTable({
-                    "order": [],
-                    "columnDefs": [{
-                        "targets": 'no-sort',
-                        "orderable": false,
-                    }],
-                    ordering: [[0, 'asc']],
-                    "scrollX": true,
-                    retrieve: true
+                });*/
 
-                });
 
             });
 
@@ -740,7 +768,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                     <div class="form-row">
                                         <div class="form-group" style="width: 100%;">
                                             <%--<div class="card-box table-responsive">--%>
-                                            <asp:GridView ID="GRTP" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-striped table-hover js-basic-example dataTable" OnRowCommand="GRTP_RowCommand" OnRowDataBound="GRTP_RowDataBound" ShowHeaderWhenEmpty ="True">
+                                            <asp:GridView ID="GRTP" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-striped table-hover js-basic-example dataTable" OnRowCommand="GRTP_RowCommand" OnRowDataBound="GRTP_RowDataBound" ShowHeaderWhenEmpty ="True" >
                                                 
                                                 <Columns>
                                                     <asp:TemplateField HeaderText="No">
@@ -754,7 +782,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                         <HeaderStyle CssClass="align-center" ForeColor="Black" />
                                                         <ItemStyle HorizontalAlign="Center" />
                                                         <ItemTemplate>
-                                                             <asp:DropDownList ID="ddlbayar" CssClass="selectpicker show-tick" Text='<%#DataBinder.Eval(Container.DataItem, "Tipebayar")%>' runat="server" data-style="btn-custom" required="required" AutoPostBack="true" width ="400" OnSelectedIndexChanged ="ddlbayar_SelectedIndexChanged">
+                                                             <asp:DropDownList ID="ddlbayar" CssClass="selectpicker show-tick" Text='<%#DataBinder.Eval(Container.DataItem, "Tipebayar")%>' runat="server" data-style="btn-custom" required="required" AutoPostBack="true" width ="400" OnSelectedIndexChanged ="ddlbayar_SelectedIndexChanged" onchange="savePageDT()" >
                                                                 <asp:ListItem Value="0">NO</asp:ListItem>
                                                                 <asp:ListItem Value="1">YES</asp:ListItem>                                                                                                                                                                                      
                                                             </asp:DropDownList>
@@ -781,6 +809,13 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                         <ItemStyle HorizontalAlign="Center" />
                                                         <ItemTemplate>
                                                             <asp:Label ID="lblnorekening" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "no_rekening")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="No.Rekening Nasabah">
+                                                        <HeaderStyle CssClass="align-center" ForeColor="Black" />
+                                                        <ItemStyle HorizontalAlign="Center" />
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblnorekeningnasabah" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "no_rekening_nasabah")%>'></asp:Label>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
 
@@ -952,6 +987,8 @@ function sweetAlertsave(btnSimpan,errMsg) {
                            <asp:PostBackTrigger ControlID="btnAdd" />   
                 <asp:PostBackTrigger ControlID="GRData" />   
                 <asp:PostBackTrigger ControlID="ddlkdsup" />  
+                <asp:PostBackTrigger ControlID="txttgltrn" />  
+                <asp:PostBackTrigger ControlID="ddlKdBank" />  
                  <%--<asp:PostBackTrigger ControlID="GRRP" />--%>
                 <asp:PostBackTrigger ControlID="GRTP" />
              
@@ -977,6 +1014,14 @@ function sweetAlertsave(btnSimpan,errMsg) {
 <!-- Required datatable js -->
 <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+<!-- Buttons examples -->
+<script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+<script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables/jszip.min.js"></script>
+<script src="../../plugins/datatables/pdfmake.min.js"></script>
+<script src="../../plugins/datatables/vfs_fonts.js"></script>
+<script src="../../plugins/datatables/buttons.html5.min.js"></script>
+<script src="../../plugins/datatables/buttons.print.min.js"></script>
 
 <!-- Responsive examples -->
 <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>

@@ -577,11 +577,11 @@
       <div class="row">
               <div class="col-md-12">
                   <div class="card-box">
-                      <h4 class="m-t-0 header-title">  <asp:TextBox ID="txtfocus" CssClass="form-control"  readonly="true" text="Deviasi" runat="server" ></asp:TextBox> </h4>   
+                      <h4 class="m-t-0 header-title">  <asp:TextBox ID="txtfocus" CssClass="form-control"  readonly="true" text="Disposisi" runat="server" ></asp:TextBox> </h4>   
                       
                                <div class="form-row" >
                                  <div class="form-group" style="width: 100%;">
-                                        <label for="txtNoBukti" class="col-8 col-form-label">Pilih Status Deviasi</label>     
+                                        <label for="txtNoBukti" class="col-8 col-form-label">Pilih Status Disposisi</label>     
                                     <div class="col-6">
                                         <asp:DropDownList runat="server" ID="ddlStatus" CssClass="form-control selectpicker" data-style="btn-custom" OnSelectedIndexChanged="Status_SelectedIndexChanged" AutoPostBack="true">
                                             <asp:ListItem Text="Pilih Status" Value="-" Selected="True"></asp:ListItem>

@@ -56,6 +56,7 @@ public partial class Report_datafollowupmarket : System.Web.UI.Page
 
                 //ddlProduk.Items.Add("SELECT");
                 ddlProduk.Items.Add("TASPEN");
+                ddlProduk.Items.Add("ASABRI");
 
                 DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
                 var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "ALLAREA", typeof(string));

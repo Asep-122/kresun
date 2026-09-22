@@ -728,6 +728,14 @@
 
                                             <asp:GridView ID="GRData1" runat="server" CssClass="table table-bordered table-striped table-hover js-basic-example dataTable" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" OnRowCommand="GRData_RowCommand1" OnRowDataBound="GRData_RowDataBound1">
                                                 <Columns>
+                                                    <asp:TemplateField HeaderText="Tanggal Pengajuan">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lbltanggal" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "tanggal_pengajuan","{0:dd/MM/yyyy}")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                        <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                        <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                    </asp:TemplateField>
+
                                                     <asp:TemplateField HeaderText="Cabang">
                                                         <ItemTemplate>
                                                             <asp:Label ID="lblnamacabang" Visible="true" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "cabang_nama")%>'></asp:Label>
@@ -740,6 +748,13 @@
                                                     <asp:TemplateField HeaderText="No Rekening">
                                                         <ItemTemplate>
                                                             <asp:Label ID="lblnorekening" Visible="true" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "no_rekening")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                        <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                        <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="No PK">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblnopk" Visible="true" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "No_Pk")%>'></asp:Label>
                                                         </ItemTemplate>
                                                         <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
                                                         <ItemStyle HorizontalAlign="Left"></ItemStyle>
@@ -787,14 +802,6 @@
                                                     <asp:TemplateField HeaderText="Usia" Visible="false">
                                                         <ItemTemplate>
                                                             <asp:Label ID="lblusia" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "usiapeminjam")%>'></asp:Label>
-                                                        </ItemTemplate>
-                                                        <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
-                                                        <ItemStyle HorizontalAlign="Left"></ItemStyle>
-                                                    </asp:TemplateField>
-
-                                                    <asp:TemplateField HeaderText="Tanggal">
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="lbltanggal" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "tanggal_pengajuan","{0:dd/MM/yyyy}")%>'></asp:Label>
                                                         </ItemTemplate>
                                                         <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
                                                         <ItemStyle HorizontalAlign="Left"></ItemStyle>

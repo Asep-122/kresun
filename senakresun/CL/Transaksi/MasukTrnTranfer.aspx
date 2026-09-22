@@ -51,7 +51,7 @@
     <!-- Responsive datatable examples -->
     <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
-
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    
    
     <script type="text/javascript">
@@ -101,6 +101,35 @@
 
            function stringToArray(items) {
             return items.replace(/'/g, '"');
+        }
+
+        function Alertfailed(h, t, p, i) {
+            setTimeout(function () {
+                Swal.fire({
+                    title: h,
+                    text: t,
+                    icon: "error"
+                });
+            }, 100);
+
+        }
+
+        function AlertSuccess(h, t, p, i, fr) {
+            console.log(fr)
+            setTimeout(function () {
+
+
+                Swal.fire({
+                    title: h,
+                    text: t,
+                    icon: "success"
+                }).then((result) => {
+                    if (fr === 'true') {
+                        window.location.href = "MasukTrnTranfer.aspx"
+                    }
+                });;
+            }, 100);
+
         }
 
           //numeric 1
@@ -597,6 +626,13 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                        <asp:TemplateField HeaderText="nogiro" Visible="false">
                                             <ItemTemplate>
                                                 <asp:Label ID="lblnogiro" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "nogiro")%>'></asp:Label>
+                                            </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="align-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField> 
+                                       <asp:TemplateField HeaderText="To KodeCabang" Visible="false">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lbltokodecabang" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "tokodecabang")%>'></asp:Label>
                                             </ItemTemplate>
                                             <HeaderStyle Height="30px" CssClass="align-center"></HeaderStyle>
                                             <ItemStyle HorizontalAlign="Left"></ItemStyle>

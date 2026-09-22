@@ -36,6 +36,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
     Global gbx = new DefaultClass.Global();
     GlobalEntities gex = new GlobalEntities();
+    GlobalEntities gtx = new GlobalEntities();
 
     DateTime tgl_libur, tgl_realisasi, tgldrop;
     double angsuranperbulan = 0;
@@ -84,7 +85,8 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             txtnamapp.Text = txtnamanasabah.Text;
             ddljeniskelaminpp.SelectedValue = ddljenkelktp.SelectedValue;
             txttempatlahirpp.Text = txttempatlahirktp.Text;
-            txttgllahirpp.Text = txttgllahirktp.Text;
+            DateTime Temptxttgllahirktp = DateTime.Parse(txttgllahirktp.Text);
+            txttgllahirpp.Text = Temptxttgllahirktp.ToString("dd-MMMM-yyyy");
             ddlagamapp.SelectedValue = ddlAgamaktp.SelectedValue;
             txtnohppp.Text = txthpktp.Text;
             txtemailpp.Text = txtemailsktp.Text;
@@ -160,16 +162,16 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             //txttglrealisasi.Attributes["min"] = DateTime.Now.ToString("yyyy-MM-dd");
             //get tanggal server
 
-            DefaultClass.Global.SqlHelper[] varT = new DefaultClass.Global.SqlHelper[1];
-            varT[0] = gb.CreateSPParameter("@kodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(string));
-            ge.ListDataset = gb.GetDataJustOutPut("gettglsekarangXYZ", varT, "constrmf");
+            DefaultClass.Global.SqlHelper[] varT = new DefaultClass.Global.SqlHelper[0];
+            ge.ListDataset = gb.GetDataJustOutPut("gettglsekarang", varT, "constrmf");
 
             //DefaultClass.Global.SqlHelper[] varT = new DefaultClass.Global.SqlHelper[0];
             //ge.ListDataset = gb.GetDataJustOutPut("gettglsekarangXYZ", varT, "constrmf");
             DateTime xtanggal = DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal"].ToString());
-            txttglrealisasi.Text = xtanggal.ToString("dd-MM-yyyy");
-            txtmtpensiun.Text = xtanggal.ToString("dd-MM-yyyy");
-            txtglskpensiun.Text = xtanggal.ToString("dd-MM-yyyy");
+            txttglrealisasi.Enabled = false;
+            txttglrealisasi.Text = xtanggal.ToString("dd-MMMM-yyyy");
+            txtmtpensiun.Text = xtanggal.ToString("dd-MMMM-yyyy");
+            txtglskpensiun.Text = xtanggal.ToString("dd-MMMM-yyyy");
             ddlstatus.Focus();
 
 
@@ -738,7 +740,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
 
 
-                DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[164];
+                DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[166];
             var1[0] = gb.CreateSPParameter("@kode_cabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(string));
             var1[1] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
             var1[2] = gb.CreateSPParameter("@userlogin", ParameterDirection.Input, SqlDbType.VarChar, 30, SessLoginID, typeof(string));
@@ -921,7 +923,8 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                 var1[161] = gb.CreateSPParameter("@graceperiode", ParameterDirection.Input, SqlDbType.Money, 30, txtgraceperiode.Text, typeof(decimal));
                 var1[162] = gb.CreateSPParameter("@PK", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlPk.Text, typeof(string));
                 var1[163] = gb.CreateSPParameter("@statustunjanganistrianak", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlTunjanganIstriAnak.SelectedValue, typeof(string));
-
+                var1[164] = gb.CreateSPParameter("@namaibukandung", ParameterDirection.Input, SqlDbType.VarChar, 80, txtnamaibukandung.Text, typeof(string));
+                var1[165] = gb.CreateSPParameter("@THT", ParameterDirection.Input, SqlDbType.Money, 80, txtTHT.Text, typeof(decimal));
                 ge.ListDataset = gb.GetDataJustOutPut("KP_PERMOHONAN_KREDIT_NEW", var1, "constrmf");
 
             if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
@@ -1048,7 +1051,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             ClearData();
             Opendata();
 
-            txttglrealisasi.Enabled = true;
+            txttglrealisasi.Enabled = false;
             //ddlprodukpengajuan.Enabled = true;
             //ddljaminan.Enabled = true;
             //txtketeranganJaminan.Enabled = true;
@@ -1069,7 +1072,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             //ddllistsimulasi.SelectedValue = "-";
             ddldatasimulasi_SelectedIndexChanged(sender, e);
             ddlprogrampinjaman.SelectedValue = "A";
-            ddlprogrampinjaman_SelectedIndexChanged(sender, e);
+//            ddlprogrampinjaman_SelectedIndexChanged(sender, e);
             //ddlmajuhari_SelectedIndexChanged(sender, e);
 
             if (txtnonasabah.Text == "")
@@ -1104,6 +1107,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                     flagdata= int.Parse(ge.ListDataset.Tables[0].Rows[0]["flagdata"].ToString());
                     Setoranx = int.Parse(ge.ListDataset.Tables[0].Rows[0]["Setoranx"].ToString()); 
                     flag_bayar =ge.ListDataset.Tables[0].Rows[0]["flag_bayar"].ToString();
+                    txtsisagajipk.Text  = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["sisagaji"].ToString()));
                     if (flag_bayar == "0")
                     {
                         flagdata = 1;
@@ -1174,7 +1178,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
 
                              ge.ListDataset = gb.GetDataJustOutPut("KP_MASTER_PERMOHONAN_NEW", varkop1, "constrmf");
-                            if (ge.ListDataset.Tables[0].DefaultView.Count == 0)
+                            if (ge.ListDataset.Tables[0].DefaultView.Count != 2)
                             {
 
 
@@ -1231,12 +1235,13 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                                     ddlpropinsiktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["provinsi_ktp"].ToString();
                                     txtkecamatanktp.Text = ge.ListDataset.Tables[0].Rows[0]["kecamatan_ktp"].ToString();
                                     txtkotaktp.Text = ge.ListDataset.Tables[0].Rows[0]["kabupaten"].ToString();
+                                    txttglterbitidentitasktp.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_terbit_identitas"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
                                     txtkabupatenktp.Text = ge.ListDataset.Tables[0].Rows[0]["kabupaten"].ToString();
                                     txttempatlahirktp.Text = ge.ListDataset.Tables[0].Rows[0]["tempat_lahir"].ToString();
-                                    txttgllahirktp.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
-                                    txttgllahir.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
+                                    txttgllahirktp.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
+                                    txttgllahir.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
                                     txtnoidentitasktp.Text = ge.ListDataset.Tables[0].Rows[0]["no_identitas"].ToString();
-                                    txtmasaberakhirKTP.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();                           
+                                    txtmasaberakhirKTP.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();                           
                                     ddlAgamaktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["agama"].ToString();
                                     txthpktp.Text = ge.ListDataset.Tables[0].Rows[0]["no_hp"].ToString();
                                     txtemailsktp.Text = ge.ListDataset.Tables[0].Rows[0]["email"].ToString();
@@ -1256,7 +1261,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                                     //txtsimwa.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["saldo_awal_wajib"].ToString()));
 
                                     txtnorektabungan.Text = ge.ListDataset.Tables[0].Rows[0]["no_rek_tabungan"].ToString();
-                                    txttglbergabung.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["register_date"].ToString()));
+                                    txttglbergabung.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["register_date"].ToString()));
                                     ddlkewarganegaraanktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["kewarganegaraan"].ToString();
                                     
                                     ddlpendidikanktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["pendidikan"].ToString();
@@ -1273,7 +1278,16 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                                     ddlprovinsitpt.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["provinsi"].ToString();
                                     if (DATAKODEAOADA == "1")
                                     {
-                                    ddlAO.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["kode_AO"].ToString();
+                                        ddlAO.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["kode_AO"].ToString();
+                                        if(ddlAO.SelectedValue != "")
+                                        {
+                                            ddlnonao.Enabled = false;
+                                        }
+                                        else
+                                        {
+                                            ddlAO.Enabled = true;
+
+                                        }
                                     }
                                 
                                     HDKodePos.Value = txtkodeposktp.Text;
@@ -1339,7 +1353,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                                             DateTime tgl;
                                             if (DateTime.TryParse(row["tanggal_lahir_pasangan"].ToString(), out tgl))
                                             {
-                                                tgllahirpasangan = tgl.ToString("dd/MM/yyyy");
+                                                tgllahirpasangan = tgl.ToString("dd-MMMM-yyyy");
                                             }
                                         }
 
@@ -1426,7 +1440,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
 
                             }
-
+/*
                             else
                             {
                                 no_rekening = ge.ListDataset.Tables[0].Rows[0]["data"].ToString();
@@ -1434,7 +1448,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + no_rekening + " belum Lunas, Mohon Lunasi terlebih dahulu');", true);
                                 txtnonasabah.Focus();
                             }
-
+*/
 
 
                         //}
@@ -1447,9 +1461,35 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                     }
 
 
+/*                    DefaultClass.Global.SqlHelper[] varkops1 = new DefaultClass.Global.SqlHelper[4];
+                    varkops1[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CEKPK", typeof(string));
+                    varkops1[1] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                    varkops1[2] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(string));
+                    varkops1[3] = gb.CreateSPParameter("@no_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 30, nonasabah, typeof(string));
+
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_MASTER_PERMOHONAN_NEW", varkops1, "constrmf");
+                    if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Note"))
+                    {
+                        ScriptManager.RegisterStartupScript(
+                            this,
+                            this.GetType(),
+                            "Javascript",
+                            "SweetAlert('" + ge.ListDataset.Tables[0].Columns["Note"].ToString() + "');",
+                            true
+                        );
+
+                    }*/
 
 
-                }
+
+
+
+
+
+
+
+
+                    }
 
                 else
                 {
@@ -1628,10 +1668,10 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                 txtkecamatanktp.Text = ge.ListDataset.Tables[0].Rows[0]["kecamatan_ktp"].ToString();
                 txtkotaktp.Text = ge.ListDataset.Tables[0].Rows[0]["kabupaten"].ToString();
                 txttempatlahirktp.Text = ge.ListDataset.Tables[0].Rows[0]["tempat_lahir"].ToString();
-                txttgllahirktp.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
-                txttgllahir.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
+                txttgllahirktp.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
+                txttgllahir.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
                 txtnoidentitasktp.Text = ge.ListDataset.Tables[0].Rows[0]["no_identitas"].ToString();
-                txtmasaberakhirKTP.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();                           
+                txtmasaberakhirKTP.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();                           
                 ddlAgamaktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["agama"].ToString();
                 txthpktp.Text = ge.ListDataset.Tables[0].Rows[0]["no_hp"].ToString();
                 txtemailsktp.Text = ge.ListDataset.Tables[0].Rows[0]["email"].ToString();
@@ -1641,7 +1681,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                 txtrwktp.Text = ge.ListDataset.Tables[0].Rows[0]["RW_ktp"].ToString();
             
                 txtnorektabungan.Text = ge.ListDataset.Tables[0].Rows[0]["no_rek_tabungan"].ToString();
-                txttglbergabung.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["register_date"].ToString()));
+                txttglbergabung.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["register_date"].ToString()));
                 ddlkewarganegaraanktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["kewarganegaraan"].ToString();
                 ddljenkelktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["jenis_kelamin"].ToString();
                 ddlpendidikanktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["pendidikan"].ToString();
@@ -1686,7 +1726,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             DateTime tgl;
                             if (DateTime.TryParse(row["tanggal_lahir_pasangan"].ToString(), out tgl))
                             {
-                                tgllahirpasangan = tgl.ToString("dd/MM/yyyy");
+                                tgllahirpasangan = tgl.ToString("dd-MMMM-yyyy");
                             }
                         }
 
@@ -1838,6 +1878,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         txtalamatpp.Text = "";
         txtnamaaw.Text = "";
         txtnamaibukandungaw.Text = "";
+        txtnamaibukandung.Text = "";
         txthubunganaw.Text = "";
         txttempatlahiraw.Text = "";
         txtalamataw.Text = "";
@@ -1847,6 +1888,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         txtnosk.Text = "";
         txtnodapem.Text = "";
         txtgajidisplay.Text = "0";
+        txtgajibersih.Text = "0";
         txtgapok.Text = "0";
         ddljangkawaktu.Items.Insert(0, new ListItem("0", "0"));
         ddljangkawaktu.SelectedValue = "0";
@@ -1866,7 +1908,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         ddlKantorBayar.SelectedValue = "";
         ddlsumberdana.SelectedValue = "";
         ddlprogrampinjaman.SelectedValue = "";
-        ddlproduk.SelectedValue = "";
+        ddlproduk.SelectedValue = "1";
         ddlkategori.SelectedValue = "";
         txtplafon.Text = "0";
         ddlangsurandimukablokir.SelectedValue = "0";
@@ -2007,6 +2049,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         txtalamatpp.Enabled = true;
         txtnamaaw.Enabled = true;
         txtnamaibukandungaw.Enabled = true;
+        txtnamaibukandung.Enabled = true;
         txthubunganaw.Enabled = true;
         txttempatlahiraw.Enabled = true;
         txtalamataw.Enabled = true;
@@ -2016,6 +2059,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         txtnosk.Enabled = true;
         txtnodapem.Enabled = true;
         txtgajidisplay.Enabled = true;
+        txtgajibersih.Enabled = true;
         txtgapok.Enabled = true;
         ddljangkawaktu.Enabled = true;
         txtplafon.Enabled = true;
@@ -2028,15 +2072,14 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         ddlpensiun.Enabled = true;
         ddlkodejiwa.Enabled = true;
         txtmtpensiun.Enabled = true;
-        txttgllahir.Enabled = true;
         txtgajidisplay.Enabled = true;
         txttgllahiranak1.Enabled = true;
         txttgllahiranak2.Enabled = true;
-        txttglrealisasi.Enabled = true;
+        txttglrealisasi.Enabled = false;
         ddlKantorBayar.Enabled = true;
         ddlsumberdana.Enabled = true;
         ddlprogrampinjaman.Enabled = true;
-        ddlproduk.Enabled = true;
+        ddlproduk.Enabled = false;
         ddlkategori.Enabled = true;
         ddljangkawaktu.Enabled = true;
         txtplafon.Enabled = true;
@@ -2105,10 +2148,67 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         fileupload5.Enabled = true;
         btnfoto5.Enabled = true;
     }
-  
-    
-    
-    
+
+    private void ClearDataOutput()
+
+    {
+
+        try
+        {
+
+
+            txtnama.Text = "";
+            txtstatuspinjaman.Text = "";
+            txtusiapinjaman.Text = "0";
+            txtusiaasuransi.Text = "0";
+            txtusiaanak1.Text = "0";
+            txtusiaanak2.Text = "0";
+            txtplafonmax.Text = "0";
+            txtjangkawaktumax.Text = "0";
+            txtusiajthtempo.Text = "0";
+            txtrateasuransi.Text = "0";
+            txtratebungapinjaman.Text = "0";
+            txtangsuran.Text = "0";
+            txtratebungaefektif.Text = "0";
+            txtpsnangsuran.Text = "0";
+            txtasuransi.Text = "0";
+            txtpersenasuransi.Text = "0";
+            txttotal.Text = "0";
+            txttotalpersen.Text = "0";
+            txtsisagaji.Text = "0";
+            txtsisagajipersen.Text = "0";
+            txtprovisi.Text = "0";
+            txtpersenprovisi.Text = "0";
+            txtadminbank.Text = "0";
+            txtpersenadminbank.Text = "0";
+            txtkeanggotaan.Text = "0";
+            txtmaterai.Text = "0";
+            txtmateraipcs.Text = "0";
+            txtangsuranblokir.Text = "0";
+            txtangsuranblokirkali.Text = "0";
+            txtangsurandimuka.Text = "0";
+            txtangsurandimukakali.Text = "0";
+            txtangdimukaasuransi.Text = "0";
+            txtangdimukaasuransikali.Text = "0";
+            txtbiayaadmin.Text = "0";
+            txtpelunasanRp.Text = "0";
+            txtterimabersihrp.Text = "0";
+
+            ddlangsurandimuka.SelectedValue = "0";
+            ddlprovisi.SelectedValue = "0";
+            ddlmaterai.SelectedValue = "0";
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ex.Message.ToString() + "','success','true');", true);
+            gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+        }
+
+    }
+
+
     private void blockdata()
 
     {
@@ -2119,6 +2219,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         txtalamatpp.Enabled = false;
         txtnamaaw.Enabled = false;
         txtnamaibukandungaw.Enabled = false;
+        txtnamaibukandung.Enabled = false;
         txthubunganaw.Enabled = false;
         txttempatlahiraw.Enabled = false;
         txtalamataw.Enabled = false;
@@ -2322,10 +2423,10 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             txtkotaktp.Text = ge.ListDataset.Tables[0].Rows[0]["kabupaten"].ToString();
                             txtkabupatenktp.Text = ge.ListDataset.Tables[0].Rows[0]["kabupaten"].ToString();
                             txttempatlahirktp.Text = ge.ListDataset.Tables[0].Rows[0]["tempat_lahir"].ToString();
-                            txttgllahirktp.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
-                            txttgllahir.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
+                            txttgllahirktp.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
+                            txttgllahir.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
                             txtnoidentitasktp.Text = ge.ListDataset.Tables[0].Rows[0]["no_identitas"].ToString();
-                            txtmasaberakhirKTP.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();                           
+                            txtmasaberakhirKTP.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();                           
                             ddlAgamaktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["agama"].ToString();
                             txthpktp.Text = ge.ListDataset.Tables[0].Rows[0]["no_hp"].ToString();
                             txtemailsktp.Text = ge.ListDataset.Tables[0].Rows[0]["email"].ToString();
@@ -2335,7 +2436,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
                             txtusiajthtempo.Text = ge.ListDataset.Tables[0].Rows[0]["usiajatuhtempo"].ToString();
 
-                            txttglterbitidentitasktp.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse((ge.ListDataset.Tables[0].Rows[0]["tanggal_terbit_identitas"].ToString())));
+                            txttglterbitidentitasktp.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse((ge.ListDataset.Tables[0].Rows[0]["tanggal_terbit_identitas"].ToString())));
                             //ddlPekerjaan.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["pekerjaan_penjamin"].ToString();
                             //ddlsektorusahapenjamin.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["sektorusaha_penjamin"].ToString();
                             //txtjenisusahapenjamin.Text = ge.ListDataset.Tables[0].Rows[0]["jenisusaha_penjamin"].ToString();
@@ -2347,7 +2448,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             //txtsimwa.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["saldo_awal_wajib"].ToString()));
 
                             txtnorektabungan.Text = ge.ListDataset.Tables[0].Rows[0]["no_rek_tabungan"].ToString();
-                            txttglbergabung.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["register_date"].ToString()));
+                            txttglbergabung.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["register_date"].ToString()));
                             ddlkewarganegaraanktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["kewarganegaraan"].ToString();
 
                             ddlpendidikanktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["pendidikan"].ToString();
@@ -2430,7 +2531,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                                     DateTime tgl;
                                     if (DateTime.TryParse(row["tanggal_lahir_pasangan"].ToString(), out tgl))
                                     {
-                                        tgllahirpasangan = tgl.ToString("dd/MM/yyyy");
+                                        tgllahirpasangan = tgl.ToString("yyyy-MMMM-dd");
                                     }
                                 }
 
@@ -2447,7 +2548,8 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
 
                             txtnamaaw.Text = ge.ListDataset.Tables[0].Rows[0]["namaahliwaris"].ToString();
-                            txtnamaibukandungaw.Text = ge.ListDataset.Tables[0].Rows[0]["namaibukandung"].ToString();
+                            txtnamaibukandungaw.Text = ge.ListDataset.Tables[0].Rows[0]["namaibukandungaw"].ToString();
+                            txtnamaibukandung.Text = ge.ListDataset.Tables[0].Rows[0]["namaibukandung"].ToString();
                             txthubunganaw.Text = ge.ListDataset.Tables[0].Rows[0]["hubunganahliwaris"].ToString();
                             ddljeniskelaminaw.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["jenis_kelaminaw"].ToString();
                             txttempatlahiraw.Text = ge.ListDataset.Tables[0].Rows[0]["tempatlahir"].ToString();
@@ -2613,7 +2715,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             txtangsurandimukakali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimukaangsurankali"].ToString()));
                             txtangdimukaasuransikali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimukaasuransikali"].ToString()));
 
-                            txttgljatuhtempo.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgl_Jatuh_Tempo"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();    
+                            txttgljatuhtempo.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgl_Jatuh_Tempo"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();    
 
 
 
@@ -2675,8 +2777,12 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
                             DdlAngsurandimuka();
                             ddlmaterai.SelectedValue = kodematerai;
-                            ddlprovisi.SelectedValue = txtpersenprovisi.Text;
-                            ddlangsurandimuka.SelectedValue = txtangsurandimukakali.Text;
+                            string provisi = ge.ListDataset.Tables[0].Rows[0]["provisi"]
+                                              .ToString()
+                                              .Replace(".", ",");
+
+                            ddlprovisi.SelectedValue = provisi;
+                            ddlangsurandimuka.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["angsuranmukaangsuran"].ToString();
                             ddlangsurandimukablokir.SelectedValue = txtangsuranblokirkali.Text;
                             txtmateraipcs.Text = kodematerai;
                           
@@ -2825,10 +2931,10 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             txtkecamatanktp.Text = ge.ListDataset.Tables[0].Rows[0]["kecamatan_ktp"].ToString();
                             txtkotaktp.Text = ge.ListDataset.Tables[0].Rows[0]["kabupaten"].ToString();
                             txttempatlahirktp.Text = ge.ListDataset.Tables[0].Rows[0]["tempat_lahir"].ToString();
-                            txttgllahirktp.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
-                            txttgllahir.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
+                            txttgllahirktp.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
+                            txttgllahir.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
                             txtnoidentitasktp.Text = ge.ListDataset.Tables[0].Rows[0]["no_identitas"].ToString();
-                            txtmasaberakhirKTP.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();                           
+                            txtmasaberakhirKTP.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();                           
                             ddlAgamaktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["agama"].ToString();
                             txthpktp.Text = ge.ListDataset.Tables[0].Rows[0]["no_hp"].ToString();
                             txtemailsktp.Text = ge.ListDataset.Tables[0].Rows[0]["email"].ToString();
@@ -2850,7 +2956,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             //txtsimwa.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["saldo_awal_wajib"].ToString()));
 
                             txtnorektabungan.Text = ge.ListDataset.Tables[0].Rows[0]["no_rek_tabungan"].ToString();
-                            txttglbergabung.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["register_date"].ToString()));
+                            txttglbergabung.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["register_date"].ToString()));
                             ddlkewarganegaraanktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["kewarganegaraan"].ToString();
 
                             ddlpendidikanktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["pendidikan"].ToString();
@@ -2933,7 +3039,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                                     DateTime tgl;
                                     if (DateTime.TryParse(row["tanggal_lahir_pasangan"].ToString(), out tgl))
                                     {
-                                        tgllahirpasangan = tgl.ToString("dd/MM/yyyy");
+                                        tgllahirpasangan = tgl.ToString("dd-MMMM-yyyy");
                                     }
                                 }
 
@@ -2949,7 +3055,8 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
 
                             txtnamaaw.Text = ge.ListDataset.Tables[0].Rows[0]["namaahliwaris"].ToString();
-                            txtnamaibukandungaw.Text = ge.ListDataset.Tables[0].Rows[0]["namaibukandung"].ToString();
+                            txtnamaibukandungaw.Text = ge.ListDataset.Tables[0].Rows[0]["namaibukandungaw"].ToString();
+                            txtnamaibukandung.Text = ge.ListDataset.Tables[0].Rows[0]["namaibukandung"].ToString();
                             txthubunganaw.Text = ge.ListDataset.Tables[0].Rows[0]["hubunganahliwaris"].ToString();
                             ddljeniskelaminaw.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["jenis_kelaminaw"].ToString();
                             txttempatlahiraw.Text = ge.ListDataset.Tables[0].Rows[0]["tempatlahir"].ToString();
@@ -3109,7 +3216,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             txtangsurandimukakali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimukaangsurankali"].ToString()));
                             txtangdimukaasuransikali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimukaasuransikali"].ToString()));
 
-                            txttgljatuhtempo.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgl_Jatuh_Tempo"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();    
+                            txttgljatuhtempo.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgl_Jatuh_Tempo"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();    
 
                             txtfoto1.Text = ge.ListDataset.Tables[0].Rows[0]["file_path1"].ToString();
                             txtfoto2.Text = ge.ListDataset.Tables[0].Rows[0]["file_path2"].ToString();
@@ -3142,8 +3249,13 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
 
                             DdlAngsurandimuka();
+                            ddlangsurandimuka.SelectedValue = txtangsurandimukakali.Text;
+                            ddlangsurandimukablokir.SelectedValue = txtangsuranblokirkali.Text;
+                            string provisi = ge.ListDataset.Tables[0].Rows[0]["provisi"]
+                                                                          .ToString()
+                                                                          .Replace(".", ",");
                             ddlmaterai.SelectedValue = kodematerai;
-                            ddlprovisi.SelectedValue = txtpersenprovisi.Text;
+                            ddlprovisi.SelectedValue = provisi;
                             ddlangsurandimuka.SelectedValue = txtangsurandimukakali.Text;
                             ddlangsurandimukablokir.SelectedValue = txtangsuranblokirkali.Text;
                             txtmateraipcs.Text = kodematerai;
@@ -3308,10 +3420,10 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             txtkecamatanktp.Text = ge.ListDataset.Tables[0].Rows[0]["kecamatan_ktp"].ToString();
                             txtkotaktp.Text = ge.ListDataset.Tables[0].Rows[0]["kabupaten"].ToString();
                             txttempatlahirktp.Text = ge.ListDataset.Tables[0].Rows[0]["tempat_lahir"].ToString();
-                            txttgllahirktp.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
-                            txttgllahir.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
+                            txttgllahirktp.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
+                            txttgllahir.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString())); //ge.ListDataset.Tables[0].Rows[0]["tanggal_lahir"].ToString();
                             txtnoidentitasktp.Text = ge.ListDataset.Tables[0].Rows[0]["no_identitas"].ToString();
-                            txtmasaberakhirKTP.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();                           
+                            txtmasaberakhirKTP.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();                           
                             ddlAgamaktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["agama"].ToString();
                             txthpktp.Text = ge.ListDataset.Tables[0].Rows[0]["no_hp"].ToString();
                             txtemailsktp.Text = ge.ListDataset.Tables[0].Rows[0]["email"].ToString();
@@ -3333,7 +3445,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             //txtsimwa.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["saldo_awal_wajib"].ToString()));
 
                             txtnorektabungan.Text = ge.ListDataset.Tables[0].Rows[0]["no_rek_tabungan"].ToString();
-                            txttglbergabung.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["register_date"].ToString()));
+                            txttglbergabung.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["register_date"].ToString()));
                             ddlkewarganegaraanktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["kewarganegaraan"].ToString();
 
                             ddlpendidikanktp.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["pendidikan"].ToString();
@@ -3416,7 +3528,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                                     DateTime tgl;
                                     if (DateTime.TryParse(row["tanggal_lahir_pasangan"].ToString(), out tgl))
                                     {
-                                        tgllahirpasangan = tgl.ToString("dd/MM/yyyy");
+                                        tgllahirpasangan = tgl.ToString("dd-MMMM-yyyy");
                                     }
                                 }
 
@@ -3432,7 +3544,8 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
 
                             txtnamaaw.Text = ge.ListDataset.Tables[0].Rows[0]["namaahliwaris"].ToString();
-                            txtnamaibukandungaw.Text = ge.ListDataset.Tables[0].Rows[0]["namaibukandung"].ToString();
+                            txtnamaibukandungaw.Text = ge.ListDataset.Tables[0].Rows[0]["namaibukandungaw"].ToString();
+                            txtnamaibukandung.Text = ge.ListDataset.Tables[0].Rows[0]["namaibukandung"].ToString();
                             txthubunganaw.Text = ge.ListDataset.Tables[0].Rows[0]["hubunganahliwaris"].ToString();
                             ddljeniskelaminaw.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["jenis_kelaminaw"].ToString();
                             txttempatlahiraw.Text = ge.ListDataset.Tables[0].Rows[0]["tempatlahir"].ToString();
@@ -3583,7 +3696,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             txtangsurandimukakali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimukaangsurankali"].ToString()));
                             txtangdimukaasuransikali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimukaasuransikali"].ToString()));
 
-                            txttgljatuhtempo.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgl_Jatuh_Tempo"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();    
+                            txttgljatuhtempo.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgl_Jatuh_Tempo"].ToString()));// ge.ListDataset.Tables[0].Rows[0]["berlaku_sampai_dengan"].ToString();    
 
                             txtfoto1.Text = ge.ListDataset.Tables[0].Rows[0]["file_path1"].ToString();
                             txtfoto2.Text = ge.ListDataset.Tables[0].Rows[0]["file_path2"].ToString();
@@ -4129,12 +4242,14 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                     txttgllahiranak2.Text = (!string.IsNullOrEmpty(ge.ListDataset.Tables[0].Rows[0]["TglLahirAnak2"].ToString()) ? Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["TglLahirAnak2"].ToString()).ToString("dd-MMMM-yyyy") : string.Empty);
                     txtmtpensiun.Text = Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["TmtPensiun"].ToString()).ToString("dd-MMMM-yyyy");
                     txtgajidisplay.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Gajidisplay"].ToString())); //string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["Gaji"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                    txtgapok.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Gaji"].ToString())); //string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["Gaji"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
                     txtplafon.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Plafon"].ToString())); //string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["Plafon"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
                     txtpelunasan.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Pelunasan"].ToString())); //string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["Pelunasan"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
                     txtjangkatahun.Text = ge.ListDataset.Tables[0].Rows[0]["JangkaWaktuTahun"].ToString();                    
                     ddljangkawaktu.Items.Insert(0, new ListItem(ge.ListDataset.Tables[0].Rows[0]["JangkaWaktu"].ToString(), ge.ListDataset.Tables[0].Rows[0]["JangkaWaktu"].ToString()));
                     //ddlangsurandimuka.Items.Insert(0, new ListItem(ge.ListDataset.Tables[0].Rows[0]["AngsDimukaKali"].ToString(), ge.ListDataset.Tables[0].Rows[0]["AngsDimukaKali"].ToString()));
                     ddljangkawaktu.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["JangkaWaktu"].ToString();
+                    txttgljatuhtempo.Text = Convert.ToDateTime(ge.ListDataset.Tables[0].Rows[0]["tgljatuhtempo"].ToString()).ToString("dd-MMMM-yyyy");
 
 
                     //InsertCombo();
@@ -4153,6 +4268,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                     txtjangkawaktumax.Text = ge.ListDataset.Tables[0].Rows[0]["JangkaWaktuMax"].ToString();
                     txtrateasuransi.Text = ge.ListDataset.Tables[0].Rows[0]["RateAsuransi"].ToString();
                     txtratebungapinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["RateBungaPinjaman"].ToString();
+                    txtratebungaefektif.Text = ge.ListDataset.Tables[0].Rows[0]["ratebungapinjamanefektif"].ToString();
                     txtjangkatahun.Text = ge.ListDataset.Tables[0].Rows[0]["JangkaWaktuTahun"].ToString();
                     //txtjangkawaktumax = ge.ListDataset.Tables[0].Rows[0]["JthTempoBln"].ToString();
                     txtangsuran.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Angsuran"].ToString())); //string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["Angsuran"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
@@ -4176,7 +4292,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                     txtsisagajipersen.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["PersenSisaGaji"].ToString()));
                     txtangsurandimukakali.Text = string.Format("{0:N0}", int.Parse(ge.ListDataset.Tables[0].Rows[0]["angsdimukabanyak"].ToString()));
                     txtangsuranblokirkali.Text = string.Format("{0:N0}", int.Parse(ge.ListDataset.Tables[0].Rows[0]["AngsBlokirKali"].ToString()));
-                  
+                    txtTHT.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["THT"].ToString()));
                     txtangdimukaasuransikali.Text = string.Format("{0:N0}", int.Parse(ge.ListDataset.Tables[0].Rows[0]["angsdimukaasuransi"].ToString()));
 
                     if (ge.ListDataset.Tables[0].Rows[0]["MutasiKantorBayar"].ToString()=="" || ge.ListDataset.Tables[0].Rows[0]["MutasiKantorBayar"].ToString()== "Tidak")
@@ -4194,23 +4310,20 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
 
                     DdlAngsurandimuka();
-                    ddlmaterai.SelectedValue = "2";
                     ddlangsurandimuka.SelectedValue = txtangsurandimukakali.Text;
                     ddlangsurandimukablokir.SelectedValue = txtangsuranblokirkali.Text;
-                    ddlprovisi.SelectedValue = txtpersenprovisi.Text;
-                    //PersenAngsuran();
-                    //PersenSisaGaji();
-                    //PersenProvisi();
-                    //Angsuranblokirkali();
-                    //Angsurandimukakali();
+                    string provisi = ge.ListDataset.Tables[0].Rows[0]["provisi"]
+                                                                  .ToString()
+                                                                  .Replace(".", ",");
+
+                    ddlprovisi.SelectedValue = provisi;
                     DateTime tgl_libur, tgl_realisasi;
                     tgl_realisasi = DateTime.Parse(txttglrealisasi.Text);
                     tgl_libur = tgl_realisasi.AddMonths(int.Parse(ddljangkawaktu.SelectedValue));
                     txttgljatuhtempo.Text = tgl_libur.ToString();
                     DateTime tgljt = Convert.ToDateTime(txttgljatuhtempo.Text);
-                    txttgljatuhtempo.Text = tgljt.ToString("dd/MM/yyyy");
+                    txttgljatuhtempo.Text = tgljt.ToString("dd-MMMM-yyyy");
 
-                    //TerimaBersih();
 
 
                 }
@@ -4243,15 +4356,15 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                 ddlpensiun.Enabled = true;
                 ddlkodejiwa.Enabled = true;
                 txtmtpensiun.Enabled = true;
-                txttgllahir.Enabled = true;
+//                txttgllahir.Enabled = true;
                 txtgajidisplay.Enabled = true;
                 txttgllahiranak1.Enabled = true;
                 txttgllahiranak2.Enabled = true;
-                txttglrealisasi.Enabled = true;
+                txttglrealisasi.Enabled = false;
                 ddlKantorBayar.Enabled = true;
                 ddlsumberdana.Enabled = true;
                 ddlprogrampinjaman.Enabled = true;
-                ddlproduk.Enabled = true;
+                ddlproduk.Enabled = false;
                 ddlkategori.Enabled = true;
                 ddljangkawaktu.Enabled = true;
                 txtplafon.Enabled = true;
@@ -4274,12 +4387,12 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                 txttgllahiranak1.Text = "";
                 txttgllahiranak2.Text = "";
                 
-                txttglrealisasi.Enabled = true;
+                txttglrealisasi.Enabled = false;
                 ddlKantorBayar.SelectedValue = "";
                 ddlsumberdana.SelectedValue = "";
                 ddlprogrampinjaman.SelectedValue = "";
-                ddlproduk.SelectedValue = "";
-                ddlkategori.SelectedValue = "";
+                ddlproduk.SelectedValue = "1";
+                ddlkategori.SelectedValue = ""; 
                 ddljangkawaktu.SelectedValue = "0";
                 txtplafon.Text = "0";
                 ddlangsurandimukablokir.SelectedValue = "0";
@@ -4321,6 +4434,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                 txtmtpensiun.Enabled = false;
                 txttgllahir.Enabled = false;
                 txtgajidisplay.Enabled = false;
+                txtgajibersih.Enabled = false;
                 txttgllahiranak1.Enabled = false;
                 txttgllahiranak2.Enabled = false;
                 txttglrealisasi.Enabled = false;
@@ -4337,6 +4451,8 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                 ddlangsurandimukaasuransi.Enabled = false;
                 ddlmaterai.Enabled = false;
                 ddlprovisi.Enabled = false;
+                ddlTunjanganIstriAnak.Enabled = false;
+
 
 
                 ddlinstansi.SelectedValue = "";
@@ -4348,6 +4464,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                
                 txttgllahir.Text = "";
                 txtgajidisplay.Text = "0";
+                txtgajibersih.Text = "0";
                 txttgllahiranak1.Text = "";
                 txttgllahiranak2.Text = "";
                 txttglrealisasi.Enabled = false;
@@ -4401,7 +4518,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             ddlsumberdana.DataTextField = "NamaSumberDana";
             ddlsumberdana.DataValueField = "KodesumberDana";
             ddlsumberdana.DataBind();
-            ddlsumberdana.Items.Insert(0, new ListItem("Pilih Sumber Dana", "-"));
+            ddlsumberdana.Items.Insert(0, new ListItem("Pilih Sumber Dana", "-"));  
 
 
 
@@ -4431,17 +4548,44 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                 ddlsumberdana.SelectedValue = ddlKantorBayar.SelectedValue;
                 ddlsumberdana.Enabled = false;
                 txtkodesimulasi.Text = "B";
-          
+                ddlkategori.Enabled = true;
             }
+            else if (ddlKantorBayar.SelectedValue == "A015")
+            {
+                ddlsumberdana.SelectedValue = "A002";
+                ddlsumberdana.Enabled = false;
+                txtkodesimulasi.Text = "B";
+                ddlkategori.Enabled = true;
+
+            }
+            else if (ddlsumberdana.SelectedValue == "A018" || ddlKantorBayar.SelectedValue == "A019" || ddlKantorBayar.SelectedValue == "A020")
+            {
+                ddlsumberdana.SelectedValue = "-";
+                ddlsumberdana.Enabled = true;
+                txtkodesimulasi.Text = "C";
+                ddlkategori.SelectedValue = "A";
+                ddlkategori.Enabled = false;
+            }
+            else if (ddlKantorBayar.SelectedValue == "A063")
+            {
+                ddlsumberdana.SelectedValue = "-";
+                ddlsumberdana.Enabled = true;
+                txtkodesimulasi.Text = "D";
+                ddlkategori.Enabled = false;
+                ddlkategori.SelectedValue = "B";
+                ddlproduk.SelectedValue = "5";
+                ddlangsurandimukablokir.Enabled = false;
+
+            }
+
             else
             {
                 ddlsumberdana.SelectedValue = "-";
                 ddlsumberdana.Enabled = true;
-                //DdlAngsurandimuka();
                 txtkodesimulasi.Text = "A";
-                //txtpersenadminbank.Text = "0";
-
-
+                ddlkategori.Enabled = false;
+                ddlkategori.SelectedValue = "A";
+                ddlangsurandimukablokir.Enabled = false;
 
             }
 
@@ -4471,21 +4615,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             ddlmaterai.SelectedValue = "2";
             ddlmaterai_SelectedIndexChanged(sender, e);
 
-            if(txtkodesimulasi.Text == "A")
-            {
-                ddlangsurandimukablokir.Enabled = false;
-                ddlPk.Enabled = false;
-                ddlkategori.SelectedValue = "A";
-                ddlkategori.Enabled = false;
-            }
-            else
-            {
-                ddlangsurandimukablokir.Enabled = true;
-                ddlPk.Enabled = true;
-                ddlkategori.Enabled = true;
 
-
-            }
 
         }
         catch (Exception ex)
@@ -4616,6 +4746,8 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
     {
         try
         {
+            decimal plafond = decimal.Parse(txtplafon.Text);
+            decimal result = 0;
             if (ddlprovisi.SelectedValue == "-")
             {
                 txtpersenprovisi.Text = "0";
@@ -4623,12 +4755,30 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             }
             else
             {
-                txtpersenprovisi.Text = ddlprovisi.SelectedValue;
-                txtprovisi.Text = string.Format("{0:N0}", (decimal.Parse(ddlprovisi.SelectedValue)/100) * decimal.Parse(txtplafon.Text));
+                decimal provisi = decimal.Parse(ddlprovisi.SelectedValue);
+
+                if (txtkodesimulasi.Text == "B")
+                {
+                    result = (provisi / 100) * plafond;
+
+                    txtprovisi.Text = string.Format("{0:N0}", result);
+                    txtpersenprovisi.Text = string.Format("{0:N0}", decimal.Parse(txtprovisi.Text) / decimal.Parse(txtplafon.Text));
+                    Data_Formula(sender, e);
+                }
+                else
+                {
+                    txtpersenprovisi.Text = ddlprovisi.SelectedValue;
+                    txtprovisi.Text = string.Format("{0:N0}", (decimal.Parse(ddlprovisi.SelectedValue) / 100) * decimal.Parse(txtplafon.Text));
+                    Data_Formula(sender, e);
+                }
+
 
             }
 
-            Data_Formula(sender, e);
+            
+
+
+            
         }
         catch (Exception ex)
         {
@@ -4664,10 +4814,10 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             var[2] = gb.CreateSPParameter("@kodebank", ParameterDirection.Input, SqlDbType.VarChar, 50, txtkodesimulasi.Text, typeof(string));
             var[3] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
 
-            ge.ListDataset = gb.GetDataJustOutPut("SI_Request", var, "constrmf");
+            gtx.ListDataset = gb.GetDataJustOutPut("SI_Request", var, "constrmf");
 
 
-            ddlprovisi.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+            ddlprovisi.DataSource = gtx.ListDataset.Tables[0].DefaultView.ToTable();
             ddlprovisi.DataTextField = "provisi";
             ddlprovisi.DataValueField = "provisi";
             ddlprovisi.DataBind();
@@ -4713,18 +4863,82 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         //DdlKodeProduk();
         //ddlkantorbayar_SelectedIndexChanged(ddlKantorBayar.SelectedValue, EventArgs.Empty);
         //fungsiAllB();
-        if (ddlprogrampinjaman.SelectedValue =="B")
+        if (txtkodesimulasi.Text =="A")
         {
-            txtpelunasan.Text = "0";
-            txtpelunasan.Enabled = true;
+
+
+            DateTime tglRealisasi = DateTime.Parse(txttglrealisasi.Text);
+            DateTime tglLahir = DateTime.Parse(txttgllahir.Text);
+
+            int usiaAsuransi = tglRealisasi.Year - tglLahir.Year;
+            if (tglLahir.AddYears(usiaAsuransi) > tglRealisasi)
+            {
+                usiaAsuransi--;
+            }
+
+            int usiaJatuhTempo = usiaAsuransi + Convert.ToInt32(txtjangkatahun.Text);
+
+
+            int result = 1;
+
+            if (usiaAsuransi + Math.Ceiling(Convert.ToInt32(ddljangkawaktu.Text) / 12.0) <= 75)
+            {
+                result = 1;
+            }
+            else
+            {
+                // asumsi: hasil VLOOKUP sudah kamu ambil dari DB
+                // misalnya disimpan di variable: col4
+                // string col4 = ...;
+
+                if (ddlprogrampinjaman.SelectedValue == "CIU" && usiaAsuransi >= 70)
+                {
+                    result = 5;
+                }
+                else if ((ddlprogrampinjaman.SelectedValue == "A" || ddlprogrampinjaman.SelectedValue == "C") && usiaJatuhTempo < 75)
+                {
+                    result = 1;
+                }
+                else if (ddlprogrampinjaman.SelectedValue == "B" && usiaAsuransi < 70)
+                {
+                    result = 3;
+                }
+                else if ((ddlprogrampinjaman.SelectedValue == "A" || ddlprogrampinjaman.SelectedValue == "C") && usiaAsuransi >= 70)
+                {
+                    result = 2;
+                }
+                else if (ddlprogrampinjaman.SelectedValue == "Take Over" && usiaAsuransi >= 70)
+                {
+                    result = 4;
+                }
+
+                else if ((ddlprogrampinjaman.SelectedValue == "A" || ddlprogrampinjaman.SelectedValue == "C") && usiaAsuransi < 70)
+                {
+                    result = 1;
+                }
+                else if (ddlprogrampinjaman.SelectedValue == "B" && usiaAsuransi < 70)
+                {
+                    result = 3;
+                }
+                else if ((ddlprogrampinjaman.SelectedValue == "A" || ddlprogrampinjaman.SelectedValue == "C") && usiaAsuransi >= 70)
+                {
+                    result = 2;
+                }
+                else if (ddlprogrampinjaman.SelectedValue == "B" && usiaJatuhTempo >= 70)
+                {
+                    result = 4;
+                }
+                else
+                {
+                    result = 5;
+                }
+
+
+            }
+            ddlproduk.SelectedValue = result.ToString();
 
         }
-        else
-        {
-            txtpelunasan.Text = "0";
-            txtpelunasan.Enabled = false;
 
-        }
         Data_Formula(sender, e);
 
     }
@@ -4802,7 +5016,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         ddlsumberdana.Items.Insert(0, new ListItem("Pilih Sumber Dana", ""));
 
 
-        ge.ListDataset = gb.GetDataFunction("dbo.getkantorbayar()", "constrmf");
+        ge.ListDataset = gb.GetDataFunction("dbo.getkantorbayar2()", "constrmf");
 
         ge.ListDataset.Tables[0].DefaultView.Sort = "NamaBank asc";
 
@@ -4835,17 +5049,16 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         ddlproduk.DataValueField = "kode";
         ddlproduk.DataBind();
         ddlproduk.Items.Insert(0, new ListItem("Pilih Produk Pinjaman", ""));
-
-        //ge.ListDataset = gb.GetDataFunction("dbo.getprogrampinjam()", "constrmf");
-
-        //ge.ListDataset.Tables[0].DefaultView.Sort = "kode asc";
-
-        //ddlproduk.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
-        //ddlproduk.DataTextField = "keterangan";
-        //ddlproduk.DataValueField = "kode";
-        //ddlproduk.DataBind();
-        //ddlproduk.Items.Insert(0, new ListItem("Pilih Produk Pinjaman", ""));
         ddlproduk.SelectedValue = "1";
+            //ge.ListDataset = gb.GetDataFunction("dbo.getprogrampinjam()", "constrmf");
+
+            //ge.ListDataset.Tables[0].DefaultView.Sort = "kode asc";
+
+            //ddlproduk.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+            //ddlproduk.DataTextField = "keterangan";
+            //ddlproduk.DataValueField = "kode";
+            //ddlproduk.DataBind();
+            //ddlproduk.Items.Insert(0, new ListItem("Pilih Produk Pinjaman", ""));
         //ddlproduk.Enabled = false;
 
 
@@ -5236,17 +5449,75 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
     }
 
+
+    void produkTHT()
+    {
+        if (txtkodesimulasi.Text == "D")
+        {
+            DateTime tglrealisasi = DateTime.Parse(txttglrealisasi.Text);
+            DateTime tgltmtpensiun = DateTime.Parse(txtmtpensiun.Text);
+
+            int totalMonths =
+                (tgltmtpensiun.Year - tglrealisasi.Year) * 12
+                + tgltmtpensiun.Month - tglrealisasi.Month;
+
+            if (tgltmtpensiun.Day < tglrealisasi.Day)
+            {
+                totalMonths--;
+            }
+
+            if(ddlsumberdana.Text == "A023")
+            {
+                if (totalMonths >= 36 && totalMonths <= 60)
+                {
+                    ddljangkawaktu.SelectedValue = totalMonths.ToString();
+                    decimal totalYears = totalMonths / 12;
+                    txtjangkatahun.Text = totalYears.ToString("0.##");
+
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Produk THT jangka waktu 36 sampai 60 bulan');", true);
+                    return;
+
+                }
+
+            }
+            if(ddlsumberdana.Text == "A005")
+            {
+                if (totalMonths <= 35 || totalMonths >= 49)
+                {
+                    ddljangkawaktu.SelectedValue = totalMonths.ToString();
+                    decimal totalYears = totalMonths / 12;
+                    txtjangkatahun.Text = totalYears.ToString("0.##");
+
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Produk THT jangka waktu 1 sampai 35 bulan dan 49 Bulan keatas');", true);
+                    return;
+
+                }
+
+            }
+
+            ddljangkawaktu.Enabled = false;
+            ddlprogrampinjaman.SelectedValue = "D";
+
+        }
+    }
   
     protected void Data_Formula(object sender, EventArgs e)
     {
         try
         {
+            produkTHT();
 
 
-            if (ddlinstansi.SelectedValue != "" && ddlkategori.SelectedValue != "" && ddlKantorBayar.SelectedValue != "" && ddlsumberdana.SelectedValue != "" && ddlpensiun.SelectedValue != "" && ddlprogrampinjaman.SelectedValue != "" && txttgllahir.Text != "" && ddljangkawaktu.SelectedValue!="0")
+            if (ddlinstansi.SelectedValue != "" && ddlkategori.SelectedValue != "" && ddlKantorBayar.SelectedValue != "" && ddlsumberdana.SelectedValue != "" && ddlpensiun.SelectedValue != "" && ddlprogrampinjaman.SelectedValue != "" && txttgllahir.Text != "" && ddljangkawaktu.SelectedValue != "0")
             {
 
-                if(Convert.ToDecimal(txtgajidisplay.Text) == 0)
+                if (Convert.ToDecimal(txtgajidisplay.Text) == 0)
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Mohon isi gaji display terlebih dahulu');", true);
                     txtplafon.Text = "0";
@@ -5258,7 +5529,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                 object tgllahir = CheckTglNull(txttgllahir.Text);
 
 
-                DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[21];
+                DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[22];
                 var[0] = gb.CreateSPParameter("@instansix", ParameterDirection.Input, SqlDbType.VarChar, 2, ddlinstansi.SelectedValue, typeof(string));
                 var[1] = gb.CreateSPParameter("@Tglrealisasi", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, tglrealisasi, typeof(DateTime));
                 var[2] = gb.CreateSPParameter("@C13Kategori", ParameterDirection.Input, SqlDbType.VarChar, 1, ddlkategori.SelectedValue, typeof(string));
@@ -5281,54 +5552,59 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                 var[18] = gb.CreateSPParameter("@no_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 30, txtnoanggota.Text, typeof(string));
                 var[19] = gb.CreateSPParameter("@PK", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlPk.SelectedValue, typeof(string));
                 var[20] = gb.CreateSPParameter("@TunjanganIstriAnak", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlTunjanganIstriAnak.SelectedValue, typeof(string));
-                if (ddlKantorBayar.SelectedValue == "A014" && ddlpensiun.SelectedValue=="1")
-                {
-                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_POS", var, "constrmf");
-                }
-                else if (ddlKantorBayar.SelectedValue == "A009" && ddlsumberdana.SelectedValue== "A009" && ddlpensiun.SelectedValue == "1")
+                var[21] = gb.CreateSPParameter("@THT", ParameterDirection.Input, SqlDbType.Money, 0, txtTHT.Text, typeof(string));
+                if (ddlKantorBayar.SelectedValue == "A009" && ddlsumberdana.SelectedValue == "A009" /*&& ddlpensiun.SelectedValue == "1"*/)
                 {
                     ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_CAPITAL", var, "constrmf");
                 }
-                else if (ddlKantorBayar.SelectedValue == "A015" && ddlsumberdana.SelectedValue != "A009" && ddlpensiun.SelectedValue == "1")
+                else if (ddlKantorBayar.SelectedValue == "A015" && ddlsumberdana.SelectedValue != "A009")
                 {
                     ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_Capital_A", var, "constrmf");
                 }
-                else if (ddlKantorBayar.SelectedValue == "A013" && ddlsumberdana.SelectedValue != "A009" && ddlpensiun.SelectedValue == "1")
+                else if ((ddlKantorBayar.SelectedValue == "A027" || ddlKantorBayar.SelectedValue == "A010" ||  ddlKantorBayar.SelectedValue == "A011" || ddlKantorBayar.SelectedValue == "A012" || ddlKantorBayar.SelectedValue == "A013" || ddlKantorBayar.SelectedValue == "A014") && ddlsumberdana.SelectedValue != "A009" && ddlsumberdana.SelectedValue != "A018" && ddlpensiun.SelectedValue == "1")
                 {
-                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_MANTAP", var, "constrmf");
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_TEMPLATE_A", var, "constrmf");
                 }
-                else if (ddlKantorBayar.SelectedValue == "A014" && (ddlpensiun.SelectedValue == "2" || ddlpensiun.SelectedValue == "3"))
-                {
-                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_JANDA_DUDA", var, "constrmf");
-                }
-                else if (ddlKantorBayar.SelectedValue == "A015" && ddlsumberdana.SelectedValue != "A009" && (ddlpensiun.SelectedValue == "2" || ddlpensiun.SelectedValue == "3"))
+                else if ((ddlKantorBayar.SelectedValue == "A027" || ddlKantorBayar.SelectedValue == "A010" || ddlKantorBayar.SelectedValue == "A011" || ddlKantorBayar.SelectedValue == "A012" || ddlKantorBayar.SelectedValue == "A013" || ddlKantorBayar.SelectedValue == "A014" || ddlKantorBayar.SelectedValue == "A015" ) && ddlsumberdana.SelectedValue != "A009" && (ddlpensiun.SelectedValue == "2" || ddlpensiun.SelectedValue == "3"))
                 {
                     ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_JANDA_DUDA", var, "constrmf");
                 }
-                else    if (ddlKantorBayar.SelectedValue == "A013"  && (ddlpensiun.SelectedValue == "2" || ddlpensiun.SelectedValue == "3"))
+                else if (ddlsumberdana.SelectedValue == "A018")
                 {
-                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_JANDA_DUDA", var, "constrmf");
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_SUMBER_DANA_LESTARI", var, "constrmf");
                 }
+                else if ((ddlKantorBayar.SelectedValue == "A019" || ddlKantorBayar.SelectedValue == "A020") && ddlsumberdana.SelectedValue == "A002")
+                {
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_DANA_LESTARI_A", var, "constrmf");
+                }
+                else if (ddlKantorBayar.SelectedValue == "A063")
+                {
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_HITUNG_KANTOR_BAYAR_THT", var, "constrmf");
+                }
+
+
 
                 if (ge.ListDataset.Tables[0].Rows.Count > 0)
                 {
                     if (ge.ListDataset.Tables[0].Rows[0]["statusmsg"].ToString() == "1")
                     {
-                        txtplafon.Text = "0";
+                        ClearDataOutput();
                         var datamsg = ge.ListDataset.Tables[0].Rows[0]["msg"].ToString();
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + datamsg + "');", true);
                         return;
                     }
-/*                    if(ge.ListDataset.Tables[0].Rows[0]["bungasenaefektif"].ToString() == "0")
-                    {
-                        txtplafon.Text = "0";
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Rate Bunga Efektif tidak boleh 0 mohon di isi Master terlebih dahulu ');", true);
-                        return;
-                    }*/
                     if(ge.ListDataset.Tables[0].Rows[0]["bungasenaflat"].ToString() == "0")
                     {
-                        txtplafon.Text = "0";
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Rate Bunga Flat tidak boleh 0 mohon di isi Master terlebih dahulu ');", true);
+                        ClearDataOutput();
+                        ScriptManager.RegisterStartupScript(
+                             this,
+                             this.GetType(),
+                             "Javascript",
+                             "SweetAlert('Error rate bunga atau kalkulasi sumber dana "
+                                 + ddlsumberdana.SelectedItem.Text
+                                 + " tidak tersedia');",
+                             true
+                         );
                         return;
                     }
 
@@ -5347,19 +5623,14 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             txtusiapinjaman.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["UsiaPeminjam"].ToString());
                             txtusiaasuransi.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["Usiaasuransi"].ToString());
                             txtjangkatahun.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["jangkawaktutahun"].ToString());
-                            txttgljatuhtempo.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgljatuhtempo"].ToString()));
+                            txttgljatuhtempo.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgljatuhtempo"].ToString()));
                             ddlangsurandimukablokir.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsurandiblokir"].ToString());
                             ddlangsurandimuka.Enabled = true;
                             ddlmaterai.Enabled = true;
-                            
-                            //                        ddlangsurandimuka.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsurandimuka"].ToString());
-                            //                        ddlangsurandimukaasuransi.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsuranAsuransidiblokir"].ToString());
-                            //                        ddlmaterai.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kalimaterai"].ToString());
-                            //                        ddlprovisi.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["persenProvisi"].ToString());
-                            //ddlmutasikantorbayar.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["@@I23persenProvisi"].ToString());
                             txtnama.Text = ge.ListDataset.Tables[0].Rows[0]["ketanggota"].ToString();
                             txtstatuspinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["ketrekening"].ToString();
                             txtusiajthtempo.Text = ge.ListDataset.Tables[0].Rows[0]["usiajatuhtempo"].ToString();
+                            ddlproduk.SelectedValue = ge.ListDataset.Tables[0].Rows[0]["Programpinjaman"].ToString();
                             txtplafonmax.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Plafonmax"].ToString()));
                             txtjangkawaktumax.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["jangkawaktumax"].ToString());
                             txtratebungapinjaman.Text = string.Format("{0:N2}", ge.ListDataset.Tables[0].Rows[0]["bungasenaflat"].ToString());
@@ -5373,54 +5644,38 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             txttotalpersen.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["totalpersen"].ToString()));
                             txtsisagaji.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["sisagaji"].ToString()));
                             txtsisagajipersen.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Persensisagaji"].ToString()));
-                            //                        txtprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["provisi"].ToString()));
                             txtpersenprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenprovisi"].ToString()));
                             txtadminbank.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["adminbank"].ToString()));
                             txtpersenadminbank.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenadminbank"].ToString()));
                             txtkeanggotaan.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["keanggotaan"].ToString()));
-                            //                        txtmaterai.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["materai"].ToString()));
-                            //txtmateraipcs.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kalimaterai"].ToString()));
                             txtangsuranblokir.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuranblokir"].ToString()));
                             txtangsuranblokirkali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsurandiblokir"].ToString()));
-                            //                        txtangsurandimuka.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimuka"].ToString()));
-                            //txtangsurandimukakali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsurandimuka"].ToString()));
                             txtangdimukaasuransi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuranAsuransidiblokir"].ToString()));
-                            //txtangdimukaasuransikali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsuranAsuransidiblokir"].ToString()));
                             txtbiayaadmin.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["tatalaksana"].ToString()));
                             txtpelunasanRp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["pelunasanRp"].ToString()));
-                            //                        txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["terimabersih"].ToString()));
                             decimal terimabersih = decimal.Parse(txtplafon.Text) - decimal.Parse(txtprovisi.Text) - decimal.Parse(txtadminbank.Text) - decimal.Parse(txtasuransi.Text) - decimal.Parse(txtkeanggotaan.Text) - decimal.Parse(txtangsuranblokir.Text) - decimal.Parse(txtangsurandimuka.Text) - decimal.Parse(txtangdimukaasuransi.Text) - decimal.Parse(txtmaterai.Text) - decimal.Parse(txtbiayaadmin.Text) - decimal.Parse(txtpelunasanRp.Text);
                             txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(terimabersih.ToString()));
 
                         }
-                        else
+                        else if (txtkodesimulasi.Text == "B")
                         {
                             ddlangsurandimuka.Items.Clear();
-                            for (int i = 1; i <= 30; i++)
-                            {
-                                ddlangsurandimuka.Items.Add(new ListItem(i.ToString(), i.ToString()));
 
-                            }
-                            ddlangsurandimuka.Items.Insert(0, new ListItem("Pilih Angsuran Dimuka Angsuran", "0"));
 
 
                             txtusiapinjaman.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["UsiaPeminjam"].ToString());
                             txtusiaasuransi.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["Usiaasuransi"].ToString());
                             txtjangkatahun.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["jangkawaktutahun"].ToString());
-                            txttgljatuhtempo.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgljatuhtempo"].ToString()));
+                            txttgljatuhtempo.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgljatuhtempo"].ToString()));
                             ddlangsurandimukablokir.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsurandiblokir"].ToString());
                             ddlangsurandimukablokir.Enabled = false;
-                            ddlangsurandimuka.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["ddlangsurandimuka"].ToString());
+
+                            ddlangsurandimuka.Items.Insert(0, new ListItem(string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["ddlangsurandimuka"].ToString()), string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["ddlangsurandimuka"].ToString())));
                             ddlangsurandimuka.Enabled = false;
+
                             ddlangsurandimukaasuransi.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsuranAsuransidiblokir"].ToString());
                             ddlmaterai.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kalimaterai"].ToString());
                             ddlmaterai.Enabled = false;
-                            string persenprovisi = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["persenProvisi"].ToString());
-                            ddlprovisi.Items.Clear();
-                            ddlprovisi.Items.Insert(0, new ListItem(persenprovisi, persenprovisi));
-                                
-                            ddlprovisi.SelectedValue = persenprovisi;
-                            //ddlmutasikantorbayar.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["@@I23persenProvisi"].ToString());
                             txtnama.Text = ge.ListDataset.Tables[0].Rows[0]["ketanggota"].ToString();
                             txtstatuspinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["ketrekening"].ToString();
                             txtusiajthtempo.Text = ge.ListDataset.Tables[0].Rows[0]["usiajatuhtempo"].ToString();
@@ -5437,8 +5692,6 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             txttotalpersen.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["totalpersen"].ToString()));
                             txtsisagaji.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["sisagaji"].ToString()));
                             txtsisagajipersen.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Persensisagaji"].ToString()));
-                            txtprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["provisi"].ToString()));
-                            txtpersenprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenprovisi"].ToString()));
                             txtadminbank.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["adminbank"].ToString()));
                             txtpersenadminbank.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenadminbank"].ToString()));
                             txtkeanggotaan.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["keanggotaan"].ToString()));
@@ -5453,9 +5706,108 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                             txtbiayaadmin.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["tatalaksana"].ToString()));
                             txtpelunasanRp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["pelunasanRp"].ToString()));
                             txtgraceperiode.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["gracePeriode"].ToString()));
-//                            txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["terimabersih"].ToString()));
                             decimal terimabersih = decimal.Parse(txtplafon.Text) - decimal.Parse(txtasuransi.Text) - decimal.Parse(txtprovisi.Text) - decimal.Parse(txtadminbank.Text)  - decimal.Parse(txtkeanggotaan.Text) - 
-                                decimal.Parse(txtangsuranblokir.Text) - decimal.Parse(txtangsurandimuka.Text)  - decimal.Parse(txtmaterai.Text) - decimal.Parse(txtbiayaadmin.Text) - decimal.Parse(txtgraceperiode.Text) - -decimal.Parse(txtpelunasanRp.Text);
+                                decimal.Parse(txtangsuranblokir.Text) - decimal.Parse(txtangsurandimuka.Text)  - decimal.Parse(txtmaterai.Text) - decimal.Parse(txtbiayaadmin.Text) - decimal.Parse(txtgraceperiode.Text) - decimal.Parse(txtpelunasanRp.Text);
+                            txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(terimabersih.ToString()));
+
+                        }
+                        else if (txtkodesimulasi.Text == "C")
+                        {
+
+
+                            txtusiapinjaman.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["UsiaPeminjam"].ToString());
+                            txtusiaasuransi.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["Usiaasuransi"].ToString());
+                            txtjangkatahun.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["jangkawaktutahun"].ToString());
+                            txttgljatuhtempo.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgljatuhtempo"].ToString()));
+                            ddlangsurandimukablokir.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsurandiblokir"].ToString());
+                            ddlangsurandimukablokir.Enabled = false;
+                            ddlangsurandimukaasuransi.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsuranAsuransidiblokir"].ToString());
+                            ddlmaterai.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kalimaterai"].ToString());
+                            ddlmaterai.Enabled = false;
+                            txtnama.Text = ge.ListDataset.Tables[0].Rows[0]["ketanggota"].ToString();
+                            txtstatuspinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["ketrekening"].ToString();
+                            txtusiajthtempo.Text = ge.ListDataset.Tables[0].Rows[0]["usiajatuhtempo"].ToString();
+                            txtplafonmax.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Plafonmax"].ToString()));
+                            txtjangkawaktumax.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["jangkawaktumax"].ToString());
+                            txtratebungapinjaman.Text = string.Format("{0:N2}", ge.ListDataset.Tables[0].Rows[0]["bungasenaflat"].ToString());
+                            txtratebungaefektif.Text = string.Format("{0:N2}", ge.ListDataset.Tables[0].Rows[0]["bungasenaefektif"].ToString());
+                            txtrateasuransi.Text = string.Format("{0:N2}", ge.ListDataset.Tables[0].Rows[0]["rateasuransi"].ToString());
+                            txtangsuran.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuran"].ToString()));
+                            txtpsnangsuran.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenangsuran"].ToString()));
+                            txtasuransi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["asuransi"].ToString()));
+                            txtpersenasuransi.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["rateasuransi"].ToString()));
+                            txttotal.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["total"].ToString()));
+                            txttotalpersen.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["totalpersen"].ToString()));
+                            txtsisagaji.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["sisagaji"].ToString()));
+                            txtsisagajipersen.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Persensisagaji"].ToString()));
+                            txtadminbank.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["adminbank"].ToString()));
+                            txtpersenadminbank.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenadminbank"].ToString()));
+                            txtkeanggotaan.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["keanggotaan"].ToString()));
+                            txtmaterai.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["materai"].ToString()));
+                            txtmateraipcs.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kalimaterai"].ToString()));
+                            txtangsuranblokir.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuranblokir"].ToString()));
+                            txtangsuranblokirkali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsurandiblokir"].ToString()));
+/*                            txtangsurandimuka.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimuka"].ToString()));
+                            txtangsurandimukakali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsurandimuka"].ToString()));
+*/                            txtangdimukaasuransi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuranAsuransidiblokir"].ToString()));
+                            txtangdimukaasuransikali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsuranAsuransidiblokir"].ToString()));
+                            txtbiayaadmin.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["tatalaksana"].ToString()));
+                            txtpelunasanRp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["pelunasanRp"].ToString()));
+                            txtgraceperiode.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["gracePeriode"].ToString()));
+                            decimal terimabersih = decimal.Parse(txtplafon.Text) -  decimal.Parse(txtprovisi.Text) - decimal.Parse(txtadminbank.Text)  - decimal.Parse(txtkeanggotaan.Text) - 
+                                decimal.Parse(txtangsuranblokir.Text) - decimal.Parse(txtangsurandimuka.Text)  - decimal.Parse(txtmaterai.Text) - decimal.Parse(txtbiayaadmin.Text) - decimal.Parse(txtgraceperiode.Text) - decimal.Parse(txtpelunasanRp.Text)-decimal.Parse(txtasuransi.Text);
+                            txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(terimabersih.ToString()));
+
+                        }
+                        else if (txtkodesimulasi.Text == "D")
+                        {
+
+
+                            txtusiapinjaman.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["UsiaPeminjam"].ToString());
+                            txtusiaasuransi.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["Usiaasuransi"].ToString());
+                            txtjangkatahun.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["jangkawaktutahun"].ToString());
+                            txttgljatuhtempo.Text = string.Format("{0:dd-MMMM-yyy}", DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tgljatuhtempo"].ToString()));
+//                            ddlangsurandimukablokir.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsurandiblokir"].ToString());
+                            ddlangsurandimukablokir.Enabled = true;
+                            ddlangsurandimuka.Enabled = false;
+                            ddlangsurandimukaasuransi.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kaliangsuranAsuransidiblokir"].ToString());
+                            ddlmaterai.SelectedValue = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["kalimaterai"].ToString());
+                            ddlmaterai.Enabled = false;
+                            txtnama.Text = ge.ListDataset.Tables[0].Rows[0]["ketanggota"].ToString();
+                            txtstatuspinjaman.Text = ge.ListDataset.Tables[0].Rows[0]["ketrekening"].ToString();
+                            txtusiajthtempo.Text = ge.ListDataset.Tables[0].Rows[0]["usiajatuhtempo"].ToString();
+                            txtplafonmax.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Plafonmax"].ToString()));
+                            txtjangkawaktumax.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["jangkawaktumax"].ToString());
+                            txtratebungapinjaman.Text = string.Format("{0:N2}", ge.ListDataset.Tables[0].Rows[0]["bungasenaflat"].ToString());
+                            txtratebungaefektif.Text = string.Format("{0:N2}", ge.ListDataset.Tables[0].Rows[0]["bungasenaefektif"].ToString());
+                            txtrateasuransi.Text = string.Format("{0:N2}", ge.ListDataset.Tables[0].Rows[0]["rateasuransi"].ToString());
+                            txtangsuran.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuran"].ToString()));
+                            txtpsnangsuran.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenangsuran"].ToString()));
+                            txtasuransi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["asuransi"].ToString()));
+                            txtpersenasuransi.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["rateasuransi"].ToString()));
+                            txttotal.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["total"].ToString()));
+                            txttotalpersen.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["totalpersen"].ToString()));
+                            txtsisagaji.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["sisagaji"].ToString()));
+                            txtsisagajipersen.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Persensisagaji"].ToString()));
+                            txtadminbank.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["adminbank"].ToString()));
+                            txtpersenadminbank.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["persenadminbank"].ToString()));
+                            txtkeanggotaan.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["keanggotaan"].ToString()));
+                            txtmaterai.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["materai"].ToString()));
+                            txtmateraipcs.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kalimaterai"].ToString()));
+/*                            txtangsuranblokir.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuranblokir"].ToString()));
+                            txtangsuranblokirkali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsurandiblokir"].ToString()));
+*/
+                            /*                            txtangsurandimuka.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimuka"].ToString()));
+                                                        txtangsurandimukakali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsurandimuka"].ToString()));
+                            */
+                            txtprovisi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["provisi"].ToString()));
+                            txtangdimukaasuransi.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuranAsuransidiblokir"].ToString()));
+                            txtangdimukaasuransikali.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["kaliangsuranAsuransidiblokir"].ToString()));
+                            txtbiayaadmin.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["tatalaksana"].ToString()));
+                            txtpelunasanRp.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["pelunasanRp"].ToString()));
+                            txtgraceperiode.Text = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["gracePeriode"].ToString()));
+                            decimal terimabersih = decimal.Parse(txtplafon.Text) - decimal.Parse(txtprovisi.Text) - decimal.Parse(txtadminbank.Text) - decimal.Parse(txtkeanggotaan.Text) -
+                                decimal.Parse(txtangsuranblokir.Text) - decimal.Parse(txtangsurandimuka.Text) - decimal.Parse(txtmaterai.Text) - decimal.Parse(txtbiayaadmin.Text) - decimal.Parse(txtgraceperiode.Text) - decimal.Parse(txtpelunasanRp.Text) - decimal.Parse(txtasuransi.Text);
                             txtterimabersihrp.Text = string.Format("{0:N0}", decimal.Parse(terimabersih.ToString()));
 
                         }
@@ -5518,7 +5870,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
             }
 
-            selectedprioritassumberdana();
+//            selectedprioritassumberdana();
 
         }
         catch (Exception X)
@@ -5532,14 +5884,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
     {
         try
         {
-
             Data_Formula(sender, e);
-
-
-
-
-
-
 
         }
         catch (Exception X)
@@ -5607,6 +5952,10 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             decimal d = Math.Round(AmountSpent1, 0);
             txtjangkatahun.Text = d.ToString();
             
+            if(txtkodesimulasi.Text == "A")
+            {
+                ddlprogrampinjaman_SelectedIndexChanged(sender, e);
+            }
 
             Data_Formula(sender, e);
            
@@ -5630,8 +5979,6 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         {
             //lblnopenlama.
 
-            if (txtnopen.Text != "")
-            {
                 DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
                 var[0] = gb.CreateSPParameter("@tgllahir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttgllahiranak1.Text, typeof(DateTime));
                 var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CEKUSIAPENSIUN", typeof(string));
@@ -5639,17 +5986,16 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
                 ge.ListDataset = gb.GetDataJustOutPut("SI_Request", var, "constrmf");
 
-                if (ge.ListDataset.Tables[0].Rows.Count > 0)
-                {
-                    txtusiaanak1.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["usia"].ToString());
-                    txtusia1.Text = txtusiaanak1.Text;
-                }
-                else
-                {
-                    txtusiaanak1.Text = string.Format("{0:N0}", "0");
-                    txtusia1.Text = txtusiaanak1.Text;
-                    //lblnopenbaru.Visible = true;
-                }
+            if (ge.ListDataset.Tables[0].Rows.Count > 0)
+            {
+                txtusiaanak1.Text = string.Format("{0:N0}", ge.ListDataset.Tables[0].Rows[0]["usia"].ToString());
+                txtusia1.Text = txtusiaanak1.Text;
+            }
+            else
+            {
+                txtusiaanak1.Text = string.Format("{0:N0}", "0");
+                txtusia1.Text = txtusiaanak1.Text;
+                //lblnopenbaru.Visible = true;
             }
             //fungsiAll();
         }
@@ -5669,9 +6015,10 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             //lblnopenlama.
 
 
-
+/*
             if (txtnopen.Text != "")
             {
+*/
                 DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
                 var[0] = gb.CreateSPParameter("@tgllahir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttgllahiranak2.Text, typeof(DateTime));
                 var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CEKUSIAPENSIUN", typeof(string));
@@ -5691,7 +6038,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
 
                 }
-            }
+//            }
             //fungsiAll();
         }
         catch (Exception X)
@@ -5710,10 +6057,11 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             //lblnopenlama.
 
 
-
+/*
             if (txtnopen.Text != "")
             {
-                DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
+*/
+            DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
                 var[0] = gb.CreateSPParameter("@tgllahir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttgllahiranak3.Text, typeof(DateTime));
                 var[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CEKUSIAPENSIUN", typeof(string));
                 var[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
@@ -5731,7 +6079,7 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
 
                 }
-            }
+//            }
             //fungsiAll();
         }
         catch (Exception X)
@@ -5897,7 +6245,9 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
         BackNextSimulasi.Visible = false;
         btnBackSimulasi.Visible = false;
 
+
         txtalasantolak.Focus();
+        btnSimpanTolakan_Click(sender, e);
 
     }
     protected void btnSimpanTolakan_Click(object sender, EventArgs e)
@@ -6059,7 +6409,11 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
                 btnCancel.Visible = false;
                 PnlRekeningBank.Visible = false;
                 //btndokumen.Visible = false;
-
+                nav.Visible = false;
+                BackNextAnggota.Visible = false;
+                BackNextAhliWaris.Visible = false;
+                BackNextSimulasi.Visible = false;
+                btnBackSimulasi.Visible = false;
                 ddlstatus_SelectedIndexChanged(sender, e);
                 txtnonasabah.Focus();
             }
@@ -6315,11 +6669,11 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             }
 
 
-            int maxSize = 2 * 1024 * 1024; // 2 MB
+            int maxSize = 4 * 1024 * 1024; // 2 MB
             if (fileupload6.PostedFile.ContentLength > maxSize)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript",
-                    "javascript:SweetAlert('Ukuran file maksimal 2 MB!');", true);
+                    "javascript:SweetAlert('Ukuran file maksimal 4 MB!');", true);
                 return;
             }
 			
@@ -6460,5 +6814,41 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
             txttunjangananak.Text = "0";
 
         }
+    }
+
+    protected void ddlnonao_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (ddlnonao.SelectedValue != "-")
+        {
+            ddlAO.Enabled = false;
+        }
+        else
+        {
+            ddlAO.Enabled = true;
+
+        }
+
+    }
+    protected void ddlao_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (ddlAO.SelectedValue != "")
+        {
+            ddlnonao.Enabled = false;
+        }
+        else
+        {
+            ddlnonao.Enabled = true;
+
+        }
+
+    }
+
+    protected void BtnAktifTglRealisasi_Click(object sender, EventArgs e)
+    {
+        if(txttglrealisasi.Enabled == false)
+        {
+            txttglrealisasi.Enabled = true;
+        }
+
     }
 }

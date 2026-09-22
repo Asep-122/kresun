@@ -373,7 +373,7 @@
                                                    <div class="button-list">
                                                    
                                                      
-                                                    <asp:Button ID="btnSimpan" class="btn btn-success waves-light text-white" runat="server" Text="CETAK SURAT KUASA" OnClick="btnSimpan_Click"  OnClientClick="return sweetAlertsave(this,'Apakah anda yakin ingin Menyimpan data ini ?');" />
+                                                    <asp:Button ID="btnSimpan" class="btn btn-success waves-light text-white" runat="server" Text="CETAK PENYERTAAN PERBEDAAN IDENTITAS" OnClick="btnSimpan_Click"  OnClientClick="return sweetAlertsave(this,'Apakah anda yakin ingin Menyimpan data ini ?');" />
                                                        
                                                        <asp:LinkButton ID="btnCancel" CssClass="btn btn-success waves-light text-white" runat="server" Text="Back" OnClick="btnCancel_Click" Width="65px" />
                                                   

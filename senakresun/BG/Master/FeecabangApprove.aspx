@@ -16,47 +16,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <!-- App icon -->
-        <link rel="shortcut icon" href="../../assets/images/icon.ico"/>
+        <link rel="shortcut icon" href="/assets/images/icon.ico"/>
  <!-- Plugins css-->
-    <link rel="stylesheet" href="../../plugins/tooltipster/tooltipster.bundle.min.css" />
-    <link href="../../plugins/sweet-alert/sweetalert2.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../plugins/jquery-toastr/jquery.toast.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/plugins/tooltipster/tooltipster.bundle.min.css" />
+    <link href="/plugins/sweet-alert/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/jquery-toastr/jquery.toast.min.css" rel="stylesheet" />
 
             <!-- Plugins css-->
-    <link href="../../plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />
 
 
-    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../plugins/datatables/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/datatables/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
 
 
-      <link href="../../plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet" />
-        <link href="../../plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="../../plugins/switchery/switchery.min.css" />
+      <link href="/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet" />
+        <link href="/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="/plugins/switchery/switchery.min.css" />
     
 
     <!-- App css -->
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/css/icons.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
-    <script src="../../assets/js/modernizr.min.js"></script>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="/assets/js/modernizr.min.js"></script>
         <!-- jQuery  -->
-    <script src="../../Javascript/jquery-1.12.0.min.js"></script>
-    <script src="../../assets/js/popper.min.js"></script>
-    <script src="../../assets/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/waves.js"></script>
-    <script src="../../assets/js/jquery.slimscroll.js"></script>
-
+    <script src="/Javascript/jquery-1.12.0.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    
   <!-- jQuery  -->
-    <script src="../../Javascript/jquery-1.12.0.min.js"></script>
+    <script src="/Javascript/jquery-1.12.0.min.js"></script>
    
     <%--<script src="../assets/js/bootstrap.min.js"></script>--%>
   
 
-    <script src="../../Javascript/jquery-ui.js"></script>
+    <script src="/Javascript/jquery-ui.js"></script>
     <script type="text/javascript">
 
         function jv_openModal_root() {
@@ -203,7 +202,7 @@
         $(document).ready(InIEvent);
         function InIEvent() {
             $("div").remove(".tooltip");
-            $.getScript("../../assets/js/jquery.core.js");
+            $.getScript("/assets/js/jquery.core.js");
 
             $('#LnkAdd, #lnkCari, #lnkSaveGR').tooltipster({
                 animation: 'grow'
@@ -363,7 +362,7 @@
                                                                         </ItemTemplate>
                                                                     </asp:TemplateField> 
                           
-                                                                    <asp:TemplateField HeaderText="Approve">
+                                                                    <asp:TemplateField HeaderText="Action">
                                                                         <HeaderStyle CssClass="align-center"></HeaderStyle>
                                                                         <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                                                         <ItemTemplate>
@@ -412,40 +411,41 @@
 
         
 <!-- App js -->
-<script src="../../assets/js/jquery.app.js"></script>
+<script src="/assets/js/jquery.slimscroll.js"></script>
+<script src="/assets/js/jquery.app.js"></script>
 <!-- Toastr js -->
-<script src="../../plugins/jquery-toastr/jquery.toast.min.js" type="text/javascript"></script>
+<script src="/plugins/jquery-toastr/jquery.toast.min.js" type="text/javascript"></script>
 <!-- Sweet Alert Js  -->
-<script src="../../plugins/sweet-alert/sweetalert2.min.js"></script>
+<script src="/plugins/sweet-alert/sweetalert2.min.js"></script>
 
 <!-- Parsley js -->
-<script type="text/javascript" src="../../plugins/parsleyjs/parsley.min.js"></script>
-  <script src="../../plugins/bootstrap-select/js/bootstrap-select.js" type="text/javascript"></script>
+<script type="text/javascript" src="/plugins/parsleyjs/parsley.min.js"></script>
+  <script src="/plugins/bootstrap-select/js/bootstrap-select.js" type="text/javascript"></script>
 
 <!-- Tooltipster js -->
-<script src="../../plugins/tooltipster/tooltipster.bundle.min.js"></script>
+<script src="/plugins/tooltipster/tooltipster.bundle.min.js"></script>
 
 <!-- Required datatable js -->
-<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/plugins/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Responsive examples -->
-<script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
-<script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>  
+<script src="/plugins/datatables/dataTables.responsive.min.js"></script>
+<script src="/plugins/datatables/responsive.bootstrap4.min.js"></script>  
 
-<script src="../../plugins/tablesaw/js/tablesaw.js"></script>
-<script src="../../plugins/tablesaw/js/tablesaw-init.js"></script>
-<script src="../../plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="/plugins/tablesaw/js/tablesaw.js"></script>
+<script src="/plugins/tablesaw/js/tablesaw-init.js"></script>
+<script src="/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 <!-- Buttons examples -->
-<script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
-<script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
-<script src="../../plugins/datatables/jszip.min.js"></script>
-<script src="../../plugins/datatables/pdfmake.min.js"></script>
-<script src="../../plugins/datatables/vfs_fonts.js"></script>
-<script src="../../plugins/datatables/buttons.html5.min.js"></script>
-<script src="../../plugins/datatables/buttons.print.min.js"></script>
+<script src="/plugins/datatables/dataTables.buttons.min.js"></script>
+<script src="/plugins/datatables/buttons.bootstrap4.min.js"></script>
+<script src="/plugins/datatables/jszip.min.js"></script>
+<script src="/plugins/datatables/pdfmake.min.js"></script>
+<script src="/plugins/datatables/vfs_fonts.js"></script>
+<script src="/plugins/datatables/buttons.html5.min.js"></script>
+<script src="/plugins/datatables/buttons.print.min.js"></script>
 <!-- Key Tables -->
-<script src="../../plugins/datatables/dataTables.keyTable.min.js"></script>
+<script src="/plugins/datatables/dataTables.keyTable.min.js"></script>
 
 </html>
 

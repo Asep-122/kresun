@@ -230,6 +230,7 @@
             setTimeout(function () {
                 swal(
                     {
+                        type: 'error',
                         title: errMsg,
                         confirmButtonClass: 'btn btn-confirm mt-2'
                     }
@@ -394,16 +395,13 @@
                 }
         }
 
-        $(function () {
-            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                var activeTab = $(e.target).attr("href");
-                $('#<%= hfActiveTab.ClientID %>').val(activeTab);
-            });
-         });
+
 
         $(document).ready(InIEvent);
         function InIEvent() {
             $.getScript("/assets/js/jquery.core.js");
+
+
             $("#<%= btnNextAhliWaris.ClientID %>").click(function () {
                 $('#AhliWaris-tab').tab('show');
             });
@@ -422,6 +420,14 @@
             $("#<%= btnBackSimulasi.ClientID %>").click(function () {
                 $('#Simulasi-tab').tab('show');
             });
+
+            $(function () {
+                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                    var activeTab = $(e.target).attr("href");
+                    $('#<%= hfActiveTab.ClientID %>').val(activeTab);
+                console.log(activeTab);
+            });
+                    });
 
             $("div").remove(".tooltip");
 //            $.getScript("../assets/js/jquery.core.js");
@@ -1331,11 +1337,13 @@
                                                                 <asp:label ID="Label171" runat="server" class="col-form-label">Nama Lengkap</asp:label>
 																<asp:TextBox CssClass="form-control" ID="txtnamapp" MaxLength="70"   runat="server" Text="" ></asp:TextBox>
                                                             </div>
+                                                        </div>                                                         
+                                                         <div class="form-row">
+                                                            <div class="form-group col-md-12">
+                                                                <asp:label ID="lblnamaibukandung" runat="server" class="col-form-label">Nama Ibu Kandung</asp:label>
+																<asp:TextBox CssClass="form-control" ID="txtnamaibukandung" MaxLength="70"   runat="server" Text="" ></asp:TextBox>
+                                                            </div>
                                                         </div>
-
-                                                           
-
-
                                                      <div class="form-row">
                                                              <div class="form-group col-md-4">
                                                                 <asp:label ID="Label172" runat="server" class="col-form-label">Jenis Kelamin</asp:label>
@@ -1777,6 +1785,8 @@
                                                                         <asp:ListItem Value="0">Tanpa Data Simulasi</asp:ListItem>
                                                                         <asp:ListItem Value="A">Data Simulasi Universal</asp:ListItem>              
                                                                         <asp:ListItem Value="B">Data Simulasi Capital</asp:ListItem>        
+                                                                        <asp:ListItem Value="C">Data Simulasi Dana Lestari</asp:ListItem>        
+                                                                        <asp:ListItem Value="D">Data Simulasi THT</asp:ListItem>        
                                                                         </asp:DropDownList> 
                                                              <asp:TextBox CssClass="form-control"  Visible="false" ID="txtidpermohonan" text="0" MaxLength="50"  runat="server" ></asp:TextBox> 
                                                                </div>
@@ -1943,7 +1953,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
 
-                                                                    <asp:DropDownList ID="ddlpensiun" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" AutoPostBack ="true">
+                                                                    <asp:DropDownList ID="ddlpensiun" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" AutoPostBack ="true" OnSelectedIndexChanged="Data_Formula">
                                                                             <asp:ListItem Value="">Pilih Pensiun</asp:ListItem>
                                                                             <asp:ListItem Value="1">Sendiri</asp:ListItem>
                                                                             <asp:ListItem Value="2">Janda</asp:ListItem>
@@ -2000,7 +2010,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
 
-                                                                        <asp:TextBox ID="txttgllahir" CssClass="form-control" TextMode="DateTime" runat="server" AutoPostBack="true" OnTextChanged="txtusia_OnChange" ></asp:TextBox>
+                                                                        <asp:TextBox ID="txttgllahir" Enabled="false" CssClass="form-control" TextMode="DateTime" runat="server" AutoPostBack="true" OnTextChanged="txtusia_OnChange" ></asp:TextBox>
                                                                 </div>
                                                             </div>
                                                   
@@ -2024,6 +2034,15 @@
                                                      
 
                                                              <div class ="form-row">
+                                                                <div class="col-md-4">
+                                                                    <p class="mb-1 mt-4 font-weight-bold ">Sisa Gaji PK</p>
+                                                                        <%--<asp:TextBox ID="TextBox1" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Gaji Pokok/Bln" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
+                                                                </div>
+                                                                <div class="col-md-8">
+                                                                     <asp:TextBox ID="txtsisagajipk" CssClass="form-control"  runat="server" Enabled="false" text="0"  onkeyup="javascript:this.value=Comma(this.value);" onblur="checkTextField1(this);" onkeypress="return isnumerickey(event);"></asp:TextBox> 
+                                                                </div>
+                                                            </div>                                                            
+                                                            <div class ="form-row">
                                                                 <div class="col-md-4">
                                                                     <p class="mb-1 mt-4 font-weight-bold ">Gaji Sesuai Display</p>
                                                                         <%--<asp:TextBox ID="TextBox1" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Gaji Pokok/Bln" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
@@ -2205,8 +2224,12 @@
                                                                     <p class="form-control">Tgl Realisasi</p>
                                                                         <%--<asp:TextBox ID="TextBox1" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Gaji Pokok/Bln" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
                                                                 </div>
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-4">
                                                                     <asp:TextBox ID="txttglrealisasi" TextMode="DateTime" Enabled="false" CssClass="form-control" MaxLength="100" runat="server" AutoPostBack ="true" OnTextChanged="Data_Formula"></asp:TextBox>
+
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <asp:Button ID="BtnAktifTglRealisasi" runat="server" autopostback="true" CssClass="btn btn-success waves-light text-white" Text="Enable Tanggal" OnClick="BtnAktifTglRealisasi_Click"/>
 
                                                                 </div>
                                                             </div>
@@ -2254,7 +2277,7 @@
                                                                         <%--<asp:TextBox ID="TextBox1" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Gaji Pokok/Bln" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <asp:DropDownList ID="ddlproduk" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" AutoPostBack ="true" OnSelectedIndexChanged="Data_Formula"></asp:DropDownList>
+                                                                    <asp:DropDownList ID="ddlproduk" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" AutoPostBack ="true" OnSelectedIndexChanged="Data_Formula" Enabled="false"></asp:DropDownList>
 
                                                                 </div>
                                                             </div>
@@ -2306,9 +2329,7 @@
                                                             </div>
                                                        <div class ="form-row">
                                                                 <div class="col-md-6">
-                                                                    <p class="form-control">Tgl Jatuh Tempo</p>
-                                                                    
-                                                                        <%--<asp:TextBox ID="TextBox1" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Gaji Pokok/Bln" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
+                                                                    <p class="form-control">Tgl Jatuh Tempo</p>                                                                    
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                 <asp:TextBox ID="txttgljatuhtempo" Enabled="false" CssClass="form-control" TextMode="DateTime" MaxLength="100" runat="server"></asp:TextBox>
@@ -2318,10 +2339,17 @@
                                                    
                                                               <div class ="form-row">
                                                                 <div class="col-md-6">
-                                                                    <p class="form-control">Plafon</p>
-                                                                    
-                                                                        <%--<asp:TextBox ID="TextBox1" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Gaji Pokok/Bln" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
+                                                                    <p class="form-control">THT</p>                                                                    
                                                                 </div>
+                                                                <div class="col-md-6">
+                                                              <asp:TextBox ID="txtTHT" CssClass="form-control"  runat="server" text="0,00"  onkeyup="javascript:this.value=Comma(this.value);" onblur="checkTextField1(this);" onkeypress="return isnumerickey(event);" AutoPostBack ="true" OnTextChanged="Data_Formula" ></asp:TextBox> 
+
+                                                                </div>
+                                                            </div>
+                                                              <div class ="form-row">
+                                                                <div class="col-md-6">
+                                                                    <p class="form-control">Plafon</p>                                                                    
+                                                                    </div>
                                                                 <div class="col-md-6">
                                                               <asp:TextBox ID="txtplafon" CssClass="form-control"  runat="server" text="0,00"  onkeyup="javascript:this.value=Comma(this.value);" onblur="checkTextField1(this);" onkeypress="return isnumerickey(event);" AutoPostBack ="true" OnTextChanged="Data_Formula" ></asp:TextBox> 
 
@@ -2425,7 +2453,7 @@
                                                                         <%--<asp:TextBox ID="TextBox1" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Gaji Pokok/Bln" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                      <asp:DropDownList ID="ddlAO" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" ></asp:DropDownList>
+                                                                      <asp:DropDownList ID="ddlAO" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" OnSelectedIndexChanged="ddlao_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                                                                 </div>
                                                             </div>
                                                      <div class ="form-row">
@@ -2434,7 +2462,7 @@
                                                                         <%--<asp:TextBox ID="TextBox1" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Gaji Pokok/Bln" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                      <asp:DropDownList ID="ddlnonao" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" ></asp:DropDownList>
+                                                                      <asp:DropDownList ID="ddlnonao" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" OnSelectedIndexChanged ="ddlnonao_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                                                                 </div>
                                                             </div>
 
@@ -3149,11 +3177,14 @@
         </ContentTemplate>
              <Triggers>  
                 <asp:PostBackTrigger ControlID="btnSearch" />
+                <asp:PostBackTrigger ControlID="Button2" />
                     <asp:PostBackTrigger ControlID="GRData" />               
                 <asp:PostBackTrigger ControlID="btnCancel" />
                 <asp:PostBackTrigger ControlID="btnSimpan" />
                 <asp:PostBackTrigger ControlID="ddlstatusrumah" />
                 <asp:PostBackTrigger ControlID="ddlstatuskawinupload" />
+                <asp:PostBackTrigger ControlID="ddlao" />
+                <asp:PostBackTrigger ControlID="ddlnonao" />
                  <asp:PostBackTrigger ControlID="btnfoto1" /> 
                 <asp:PostBackTrigger ControlID="btnfoto2" />
                 <asp:PostBackTrigger ControlID="btnfoto3" />

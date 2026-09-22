@@ -579,9 +579,9 @@ public partial class Report_viewliststorting : System.Web.UI.Page
 
 
                     string report = "";
-                    if (ddlproduk.SelectedValue == "3C")
+                    if (ddlproduk.SelectedValue == "35")
                     {
-                        report = "Report List Storting Mingguan " + ddlmarketing.SelectedItem.Text.ToString() + ".xlsx";
+                        report = "Report List Storting Pinjaman Pensiun " + ddlmarketing.SelectedItem.Text.ToString() + ".xlsx";
                     }
                     else if (ddlproduk.SelectedValue == "3B")
                     {

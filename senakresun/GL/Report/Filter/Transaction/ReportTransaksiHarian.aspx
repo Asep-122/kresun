@@ -175,7 +175,7 @@
                                     
                                      <div class="form-group">
                                         <label for="inputState" class="col-form-label">Tanggal Hari ini</label>
-                                         <asp:TextBox ID="txttglhariini" Enabled="false" CssClass="form-control" runat="server"  Type="date"></asp:TextBox>     
+                                         <asp:TextBox ID="txttglhariini" CssClass="form-control" runat="server"  Type="date"></asp:TextBox>     
                                     </div>
                                    
                                
@@ -203,7 +203,12 @@
                                     
                                 
                                 </div>
-
+                                <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label for="inputCity" class="col-form-label">Code Cabang</label>
+                                              <asp:DropDownList ID="ddlcabang" CssClass="form-control"  runat="server"></asp:DropDownList>
+                                        </div> 
+                                    </div>    
 
                  
                                 </div>                                                    
@@ -269,6 +274,20 @@
                                                      </ItemTemplate>
                                                      <HeaderStyle Height="30px" CssClass="align-center"></HeaderStyle>
                                                      <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                                 </asp:TemplateField>                                                
+                                                 <asp:TemplateField HeaderText="Kode Cabang">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblkdcabang" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "kodecabang")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="align-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                                 </asp:TemplateField>
+                                                 <asp:TemplateField HeaderText="Nama Cabang">
+                                                     <ItemTemplate>
+                                                         <asp:Label ID="lblnamacabang" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "namacabang")%>'></asp:Label>
+                                                     </ItemTemplate>
+                                                     <HeaderStyle Height="30px" CssClass="align-center"></HeaderStyle>
+                                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                                  </asp:TemplateField>
                                                       <asp:TemplateField HeaderText="Tgl Trn">
                                                      <ItemTemplate>
@@ -316,8 +335,7 @@
                                                          <asp:Label ID="lblkredit" CssClass="" runat="server" Text='<%#Eval("JlhKredit","{0:N0}")%>'></asp:Label>
                                                      </ItemTemplate>
                                                      <FooterTemplate>
-                                                          <span style="display:block; padding:0; text-align: right"><asp:Label ID="lblkredit" Font-Bold="true" runat="server" /> </span>
-                                                         
+                                                          <span style="display:block; padding:0; text-align: right"><asp:Label ID="lblkredit" Font-Bold="true" runat="server" /> </span>                                                         
                                                      </FooterTemplate>
                                                      <HeaderStyle Height="30px" CssClass="text-right"></HeaderStyle>
                                                      <ItemStyle HorizontalAlign="Right"></ItemStyle>

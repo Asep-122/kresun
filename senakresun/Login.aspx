@@ -54,7 +54,8 @@
 
             setTimeout(function () {
                 swal(
-                    {
+					{
+                        type: 'error',
                         title: errMsg,
                         confirmButtonClass: 'btn btn-confirm mt-2'
                     }

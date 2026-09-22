@@ -3079,7 +3079,7 @@ public partial class AR_Process_PermohonanPinjamanKreditApprovalTransferBank: Sy
 
                         ge.ListDataset = gb.GetDataJustOutPut("KP_MASTER_PERMOHONAN_NEW", var, "constrmf");
 
-                        DefaultClass.Global.SqlHelper[] varSD = new DefaultClass.Global.SqlHelper[9];
+                        DefaultClass.Global.SqlHelper[] varSD = new DefaultClass.Global.SqlHelper[10];
                         varSD[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
                         varSD[1] = gb.CreateSPParameter("@jangka", ParameterDirection.Input, SqlDbType.Int, 0, int.Parse(ddljangkawaktu.SelectedValue), typeof(int));
                         varSD[2] = gb.CreateSPParameter("@statuspensiun", ParameterDirection.Input, SqlDbType.Int, 0, int.Parse(ddlpensiun.SelectedValue), typeof(int));
@@ -3089,6 +3089,7 @@ public partial class AR_Process_PermohonanPinjamanKreditApprovalTransferBank: Sy
                         varSD[6] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTBUNGASD", typeof(string));
                         varSD[7] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
                         varSD[8] = gb.CreateSPParameter("@plafon", ParameterDirection.Input, SqlDbType.Money, 0, txtplafon.Text, typeof(decimal));
+                        varSD[9] = gb.CreateSPParameter("@umur", ParameterDirection.Input, SqlDbType.VarChar, 0, txtusiapinjaman.Text, typeof(string));
                         ge.ListDataset = gb.GetDataJustOutPut("KP_MASTER_PERMOHONAN_NEW", varSD, "constrmf");
                         float bungabank = 0;
                         decimal angsuranperbulanbank = 0;

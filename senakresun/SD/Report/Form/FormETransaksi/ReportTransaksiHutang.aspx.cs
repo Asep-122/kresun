@@ -243,7 +243,7 @@ public partial class SD_Report_Transaksi_Hutang : System.Web.UI.Page
                     DateTime ambilawal = Convert.ToDateTime(txtStartTransaksi.Text);
 
 
-
+                 
                 DefaultClass.Global.SqlHelper[] Paramsc = new DefaultClass.Global.SqlHelper[11];
                 //Paramsc[0] = gb.CreateSPParameter("@KodeWilawal", ParameterDirection.Input, SqlDbType.VarChar, 20, ddlwilayahawal.SelectedValue, typeof(string));
                 //Paramsc[1] = gb.CreateSPParameter("@KodeWilakhir", ParameterDirection.Input, SqlDbType.VarChar, 20, ddlwilayahakhir.SelectedValue, typeof(string));

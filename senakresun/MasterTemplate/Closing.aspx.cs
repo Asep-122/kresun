@@ -394,125 +394,209 @@ public partial class CF_CLosing : System.Web.UI.Page
             }
             else
             {
+                decimal nilaikasteller = 0;
+                //check kas teller harus 0
+                DefaultClass.Global.SqlHelper[] varc1 = new DefaultClass.Global.SqlHelper[7];
 
-                DefaultClass.Global.SqlHelper[] var2 = new DefaultClass.Global.SqlHelper[5];
-                var2[0] = gb.CreateSPParameter("@bulan", ParameterDirection.Input, SqlDbType.VarChar, 15, ddlbulan.SelectedValue, typeof(string));
-                var2[1] = gb.CreateSPParameter("@tahun", ParameterDirection.Input, SqlDbType.VarChar, 15, ddltahun.SelectedValue, typeof(string));
-                var2[2] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 3, ddlcabang.SelectedValue, typeof(string));
-                var2[3] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "PETUGAS", typeof(string));
-                var2[4] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                varc1[0] = gb.CreateSPParameter("@tglbiawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwalini.Text, typeof(string));
+                varc1[1] = gb.CreateSPParameter("@tglbiakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAkhirini.Text, typeof(string));
+                varc1[2] = gb.CreateSPParameter("@tglblakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwallalu.Text, typeof(string));
+                varc1[3] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+                varc1[4] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabang.SelectedValue, typeof(string));
+                varc1[5] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CHECKTELLER", typeof(string));
+                varc1[6] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
 
-                ge.ListDataset = gb.GetDataJustOutPut("CF_Closing", var2, "constrmf");
-
+                ge.ListDataset = gb.GetDataJustOutPut("CF_Closing", varc1, "constrmf");
                 if (ge.ListDataset.Tables[0].DefaultView.Count == 0)
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert(' Petugas Bahan belum di input di bulan tersebut');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert(' Data Kas Teller tidak ditemukan');", true);
                     btnSimpan.Enabled = true;
                 }
                 else
                 {
-                    decimal nilaikasteller = 0;
-                    //check kas teller harus 0
-                    DefaultClass.Global.SqlHelper[] varc1 = new DefaultClass.Global.SqlHelper[7];
+                    DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[13];
 
-                    varc1[0] = gb.CreateSPParameter("@tglbiawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwalini.Text, typeof(string));
-                    varc1[1] = gb.CreateSPParameter("@tglbiakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAkhirini.Text, typeof(string));
-                    varc1[2] = gb.CreateSPParameter("@tglblakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwallalu.Text, typeof(string));
-                    varc1[3] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
-                    varc1[4] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabang.SelectedValue, typeof(string));
-                    varc1[5] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CHECKTELLER", typeof(string));
-                    varc1[6] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                    var1[0] = gb.CreateSPParameter("@FiskalBi", ParameterDirection.Input, SqlDbType.Int, 0, ddlbulan.SelectedValue, typeof(string));
+                    var1[1] = gb.CreateSPParameter("@FiskalTi", ParameterDirection.Input, SqlDbType.Int, 0, ddltahun.SelectedValue, typeof(string));
+                    var1[2] = gb.CreateSPParameter("@tglbiawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwalini.Text, typeof(string));
+                    var1[3] = gb.CreateSPParameter("@tglbiakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAkhirini.Text, typeof(string));
+                    var1[4] = gb.CreateSPParameter("@tglblawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwallalu.Text, typeof(string));
+                    var1[5] = gb.CreateSPParameter("@tglblakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwallalu.Text, typeof(string));
+                    var1[6] = gb.CreateSPParameter("@LastUserFK", ParameterDirection.Input, SqlDbType.VarChar, 40, SessLoginID, typeof(string));
+                    var1[7] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+                    var1[8] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabang.SelectedValue, typeof(string));
+                    var1[9] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CLOSING", typeof(string));
+                    var1[10] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                    var1[11] = gb.CreateSPParameter("@tglbdawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwaldepan.Text, typeof(string));
+                    var1[12] = gb.CreateSPParameter("@tglbdakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAkhirdepan.Text, typeof(string));
 
-                    ge.ListDataset = gb.GetDataJustOutPut("CF_Closing", varc1, "constrmf");
-                    if (ge.ListDataset.Tables[0].DefaultView.Count == 0)
+                    ge.ListDataset = gb.GetDataJustOutPut("CF_Closing", var1, "constrmf");
+                    if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
                     {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert(' Data Kas Teller tidak ditemukan');", true);
+
+
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Selamat Closing Bulanan Done');", true);
+
+                        btnSimpan.Enabled = true;
+                        ddlbulan.SelectedValue = "1";
+                        ddltahun.SelectedValue = DateTime.Now.ToString("yyyy");
+                        txttglAwalini.Text = "";
+                        txttglAkhirini.Text = "";
+                        txttglAwaldepan.Text = "";
+                        txttglAkhirdepan.Text = "";
+                        txttglAwallalu.Text = "";
+                        txttglAkhirlalu.Text = "";
+
+
+
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "');", true);
+                        gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
                         btnSimpan.Enabled = true;
                     }
 
-                    else
-                    {
-
-                        nilaikasteller = decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["saldoakhir"].ToString());
-
-
-                        if (nilaikasteller != 0)
-                        {
-
-                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Saldo Kas teller Masih Ada Belum Bisa Closing');", true);
-                            btnSimpan.Enabled = true;
-
-
-                        }
-
-                        else
-                        {
-
-                            DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[13];
-
-                            var1[0] = gb.CreateSPParameter("@FiskalBi", ParameterDirection.Input, SqlDbType.Int, 0, ddlbulan.SelectedValue, typeof(string));
-                            var1[1] = gb.CreateSPParameter("@FiskalTi", ParameterDirection.Input, SqlDbType.Int, 0, ddltahun.SelectedValue, typeof(string));
-                            var1[2] = gb.CreateSPParameter("@tglbiawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwalini.Text, typeof(string));
-                            var1[3] = gb.CreateSPParameter("@tglbiakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAkhirini.Text, typeof(string));
-                            var1[4] = gb.CreateSPParameter("@tglblawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwallalu.Text, typeof(string));
-                            var1[5] = gb.CreateSPParameter("@tglblakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwallalu.Text, typeof(string));
-                            var1[6] = gb.CreateSPParameter("@LastUserFK", ParameterDirection.Input, SqlDbType.VarChar, 40, SessLoginID, typeof(string));
-                            var1[7] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
-                            var1[8] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabang.SelectedValue, typeof(string));
-                            var1[9] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CLOSING", typeof(string));
-                            var1[10] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
-                            var1[11] = gb.CreateSPParameter("@tglbdawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwaldepan.Text, typeof(string));
-                            var1[12] = gb.CreateSPParameter("@tglbdakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAkhirdepan.Text, typeof(string));
-
-                            ge.ListDataset = gb.GetDataJustOutPut("CF_Closing", var1, "constrmf");
-                            if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
-                            {
-
-
-                                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Selamat Closing Bulanan Done');", true);
-
-                                btnSimpan.Enabled = true;
-                                ddlbulan.SelectedValue = "1";
-                                ddltahun.SelectedValue = DateTime.Now.ToString("yyyy");
-                                txttglAwalini.Text = "";
-                                txttglAkhirini.Text = "";
-                                txttglAwaldepan.Text = "";
-                                txttglAkhirdepan.Text = "";
-                                txttglAwallalu.Text = "";
-                                txttglAkhirlalu.Text = "";
-
-
-
-                            }
-                            else
-                            {
-                                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "');", true);
-                                gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
-                                btnSimpan.Enabled = true;
-                            }
-
-
-
-
-
-                        }
-
-                    }
-
-
-
-
-
-
-
-
-
                 }
-
-
-
-
             }
+
+
+
+            //if (ddlcabang.SelectedValue == "-")
+            //{
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:WarningAlert('Pilih Cabang Terlebih Dahulu');", true);
+            //    ddlcabang.Focus();
+            //    ddlbulan.SelectedValue = "1";
+            //    ddltahun.SelectedValue = DateTime.Now.ToString("yyyy");
+            //    txttglAwalini.Text = "";
+            //    txttglAkhirini.Text = "";
+            //    txttglAwaldepan.Text = "";
+            //    txttglAkhirdepan.Text = "";
+            //    txttglAwallalu.Text = "";
+            //    txttglAkhirlalu.Text = "";
+            //    btnSimpan.Enabled = true;
+            //}
+            //else
+            //{
+
+            //    DefaultClass.Global.SqlHelper[] var2 = new DefaultClass.Global.SqlHelper[5];
+            //    var2[0] = gb.CreateSPParameter("@bulan", ParameterDirection.Input, SqlDbType.VarChar, 15, ddlbulan.SelectedValue, typeof(string));
+            //    var2[1] = gb.CreateSPParameter("@tahun", ParameterDirection.Input, SqlDbType.VarChar, 15, ddltahun.SelectedValue, typeof(string));
+            //    var2[2] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 3, ddlcabang.SelectedValue, typeof(string));
+            //    var2[3] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "PETUGAS", typeof(string));
+            //    var2[4] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+            //    ge.ListDataset = gb.GetDataJustOutPut("CF_Closing", var2, "constrmf");
+
+            //    if (ge.ListDataset.Tables[0].DefaultView.Count == 0)
+            //    {
+            //        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert(' Petugas Bahan belum di input di bulan tersebut');", true);
+            //        btnSimpan.Enabled = true;
+            //    }
+            //    else
+            //    {
+            //        decimal nilaikasteller = 0;
+            //        //check kas teller harus 0
+            //        DefaultClass.Global.SqlHelper[] varc1 = new DefaultClass.Global.SqlHelper[7];
+
+            //        varc1[0] = gb.CreateSPParameter("@tglbiawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwalini.Text, typeof(string));
+            //        varc1[1] = gb.CreateSPParameter("@tglbiakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAkhirini.Text, typeof(string));
+            //        varc1[2] = gb.CreateSPParameter("@tglblakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwallalu.Text, typeof(string));
+            //        varc1[3] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+            //        varc1[4] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabang.SelectedValue, typeof(string));
+            //        varc1[5] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CHECKTELLER", typeof(string));
+            //        varc1[6] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+            //        ge.ListDataset = gb.GetDataJustOutPut("CF_Closing", varc1, "constrmf");
+            //        if (ge.ListDataset.Tables[0].DefaultView.Count == 0)
+            //        {
+            //            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert(' Data Kas Teller tidak ditemukan');", true);
+            //            btnSimpan.Enabled = true;
+            //        }
+
+            //        else
+            //        {
+
+            //            nilaikasteller = decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["saldoakhir"].ToString());
+
+
+            //            if (nilaikasteller != 0)
+            //            {
+
+            //                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Saldo Kas teller Masih Ada Belum Bisa Closing');", true);
+            //                btnSimpan.Enabled = true;
+
+
+            //            }
+
+            //            else
+            //            {
+
+            //                DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[13];
+
+            //                var1[0] = gb.CreateSPParameter("@FiskalBi", ParameterDirection.Input, SqlDbType.Int, 0, ddlbulan.SelectedValue, typeof(string));
+            //                var1[1] = gb.CreateSPParameter("@FiskalTi", ParameterDirection.Input, SqlDbType.Int, 0, ddltahun.SelectedValue, typeof(string));
+            //                var1[2] = gb.CreateSPParameter("@tglbiawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwalini.Text, typeof(string));
+            //                var1[3] = gb.CreateSPParameter("@tglbiakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAkhirini.Text, typeof(string));
+            //                var1[4] = gb.CreateSPParameter("@tglblawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwallalu.Text, typeof(string));
+            //                var1[5] = gb.CreateSPParameter("@tglblakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwallalu.Text, typeof(string));
+            //                var1[6] = gb.CreateSPParameter("@LastUserFK", ParameterDirection.Input, SqlDbType.VarChar, 40, SessLoginID, typeof(string));
+            //                var1[7] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+            //                var1[8] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabang.SelectedValue, typeof(string));
+            //                var1[9] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CLOSING", typeof(string));
+            //                var1[10] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+            //                var1[11] = gb.CreateSPParameter("@tglbdawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAwaldepan.Text, typeof(string));
+            //                var1[12] = gb.CreateSPParameter("@tglbdakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttglAkhirdepan.Text, typeof(string));
+
+            //                ge.ListDataset = gb.GetDataJustOutPut("CF_Closing", var1, "constrmf");
+            //                if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
+            //                {
+
+
+            //                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Selamat Closing Bulanan Done');", true);
+
+            //                    btnSimpan.Enabled = true;
+            //                    ddlbulan.SelectedValue = "1";
+            //                    ddltahun.SelectedValue = DateTime.Now.ToString("yyyy");
+            //                    txttglAwalini.Text = "";
+            //                    txttglAkhirini.Text = "";
+            //                    txttglAwaldepan.Text = "";
+            //                    txttglAkhirdepan.Text = "";
+            //                    txttglAwallalu.Text = "";
+            //                    txttglAkhirlalu.Text = "";
+
+
+
+            //                }
+            //                else
+            //                {
+            //                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "');", true);
+            //                    gb.SaveErroLog(ge.ListDataset.Tables[0].Rows[0][0].ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+            //                    btnSimpan.Enabled = true;
+            //                }
+
+
+
+
+
+            //            }
+
+            //        }
+
+
+
+
+
+
+
+
+
+            //    }
+
+
+
+
+            //}
 
 
 

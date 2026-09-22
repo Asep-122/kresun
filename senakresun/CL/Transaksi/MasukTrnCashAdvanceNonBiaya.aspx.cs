@@ -141,7 +141,7 @@ public partial class CL_Process_MasukTrnCashAdvanceNonBiaya : System.Web.UI.Page
                 ddlKdBank.DataBind();
                 //ddlKdBank.Items.Insert(0, new ListItem("Pilih Data", "-"));
                 txtNmBank.Text = "Kas Head Teller";
-                ddlKdBank.Enabled = false;
+               // ddlKdBank.Enabled = false;
 
 
                 txttgltrnx.Text = xtanggal.ToString("dd-MM-yyyy");
@@ -152,8 +152,10 @@ public partial class CL_Process_MasukTrnCashAdvanceNonBiaya : System.Web.UI.Page
                 gb.FillDDL(ge.ListDataset.Tables[0].DefaultView.ToTable(), ddlteller, "None", "");
                 ddlteller.Items.Insert(0, new ListItem("ALL", "ALL"));
 
-                ddlteller.SelectedValue = SessLoginID;
-                if (SessLoginID.Substring(3, 3) == "TL1")
+                string tempuser = (SessBranchID == "000" ? "000TL1" : SessLoginID);
+
+                ddlteller.SelectedValue = tempuser;
+                if (tempuser.Substring(3, 3) == "TL1")
                 {
                     ddlteller.Enabled = true;
                 }
@@ -162,7 +164,7 @@ public partial class CL_Process_MasukTrnCashAdvanceNonBiaya : System.Web.UI.Page
                     ddlteller.Enabled = false;
                 }
 
-                if (SessLoginID == "PUSAT01" || SessLoginID == "APPROVAL1" || SessLoginID == "Approval1")
+                if (tempuser == "PUSAT01" || tempuser == "APPROVAL1" || tempuser == "Approval1")
                 {
                     pnlHeader.Visible = false;
                 } else

@@ -125,7 +125,7 @@ public partial class CL_Process_MasukTrnSewaGedung : System.Web.UI.Page
                 ddlKdBank.Items.Insert(0, new ListItem("Pilih Data", "-"));
 
 
-                ddlKdBank.SelectedValue = "110191";
+                //ddlKdBank.SelectedValue = "110191";
 
 
                 txtNmBank.Text = "Kas Head Teller";
@@ -138,8 +138,9 @@ public partial class CL_Process_MasukTrnSewaGedung : System.Web.UI.Page
                 gb.FillDDL(ge.ListDataset.Tables[0].DefaultView.ToTable(), ddlteller, "None", "");
                 ddlteller.Items.Insert(0, new ListItem("ALL", "ALL"));
 
-                ddlteller.SelectedValue = SessLoginID;
-                if (SessLoginID.Substring(3, 3) == "TL1")
+                string tempuser = (SessBranchID == "000" ? "000TL1" : SessLoginID);
+                ddlteller.SelectedValue = tempuser;
+                if (tempuser.Substring(3, 3) == "TL1")
                 {
                     ddlteller.Enabled = true;
                 }
@@ -722,7 +723,13 @@ public partial class CL_Process_MasukTrnSewaGedung : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect(Request.Url.AbsoluteUri);
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='MasukTrnsSewaGedung.aspx';",
+            true
+        );
 
     }
     protected string btnreload()
@@ -938,7 +945,7 @@ public partial class CL_Process_MasukTrnSewaGedung : System.Web.UI.Page
                         btnSimpan.Visible = false;
 
 
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Save Done!','zzzzzz','bottom-center','success','1');", true);
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','You successfully save this Simulasi','top-right','success','true');", true);
 
                     }
 

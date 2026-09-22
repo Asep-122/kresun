@@ -166,7 +166,9 @@ public partial class Kresun_View_CetakAnalisaDanPenawaranKredit : System.Web.UI.
                 gb.CreateSPParameter("@action", ParameterDirection.Input, SqlDbType.VarChar, 50, "CETAK_PERSETUJUAN_PEMBERIAN_KREDIT", typeof(string)),
                 gb.CreateSPParameter("@no_rekening", ParameterDirection.Input, SqlDbType.VarChar, 50, _noRekening, typeof(string)),
                 gb.CreateSPParameter("@session_id", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string)),
-                gb.CreateSPParameter("@session_branch_id", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string))
+                gb.CreateSPParameter("@session_branch_id", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string)),
+                gb.CreateSPParameter("@pejabat_1", ParameterDirection.Input, SqlDbType.VarChar, 100, txtpejabat1.Text, typeof(string)),
+                gb.CreateSPParameter("@pejabat_2", ParameterDirection.Input, SqlDbType.VarChar, 100, txtpejabat2.Text, typeof(string))
             };
             ge.ListDataTable = gb.GetDataJustOutPut("KP_CETAK_ANALISA_PERSETUJUAN_PEMBERIAN_KREDIT", paramList2.ToArray(), "constrmf").Tables[0];
 
@@ -186,7 +188,8 @@ public partial class Kresun_View_CetakAnalisaDanPenawaranKredit : System.Web.UI.
     {
         string _noRekening = HDRekening.Value;
 
-        string reportPath = Server.MapPath("~/Kresun/Report/AnalisaKredit/KP_ANALISA_DAN_PERSETUJUAN_PEMBIAYAAN.rpt");
+
+        string reportPath = string.Empty;
         using (ReportDocument rprt = new ReportDocument())
         {
             var paramList = new List<DefaultClass.Global.SqlHelper>
@@ -194,16 +197,32 @@ public partial class Kresun_View_CetakAnalisaDanPenawaranKredit : System.Web.UI.
                 gb.CreateSPParameter("@action", ParameterDirection.Input, SqlDbType.VarChar, 50, "CETAK_ANALISA", typeof(string)),
                 gb.CreateSPParameter("@no_rekening", ParameterDirection.Input, SqlDbType.VarChar, 50, _noRekening, typeof(string)),
                 gb.CreateSPParameter("@session_id", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string)),
-                gb.CreateSPParameter("@session_branch_id", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string))
+                gb.CreateSPParameter("@session_branch_id", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string)),
+                gb.CreateSPParameter("@pejabat_1", ParameterDirection.Input, SqlDbType.VarChar, 100, txtpejabat1.Text, typeof(string)),
+                gb.CreateSPParameter("@pejabat_2", ParameterDirection.Input, SqlDbType.VarChar, 100, txtpejabat2.Text, typeof(string))
             };
             ge.ListDataTable = gb.GetDataJustOutPut("KP_CETAK_ANALISA_PERSETUJUAN_PEMBERIAN_KREDIT", paramList.ToArray(), "constrmf").Tables[0];
 
+            if (ge.ListDataTable.Rows[0]["sumberdana"].ToString() == "A001")
+            {
+                reportPath = Server.MapPath("~/Kresun/Report/AnalisaKredit/KP_ANALISA_DAN_PERSETUJUAN_PEMBIAYAAN.rpt");
+            }            
+            else if (ge.ListDataTable.Rows[0]["Jenis_produk"].ToString() == "5")
+            {
+                reportPath = Server.MapPath("~/Kresun/Report/AnalisaKredit/KP_ANALISA_DAN_PERSETUJUAN_PEMBIAYAAN_KONVEN_THT.rpt");
+            }
+            else
+            {
+                reportPath = Server.MapPath("~/Kresun/Report/AnalisaKredit/KP_ANALISA_DAN_PERSETUJUAN_PEMBIAYAAN_KONVEN.rpt");
+            }
+
             if (!System.IO.File.Exists(reportPath))
                 throw new FileNotFoundException("Report file not found", reportPath);
-
             rprt.Load(reportPath);
 
             rprt.SetDataSource(ge.ListDataTable);
+
+
 
             Response.ClearContent();
             Response.ClearHeaders();

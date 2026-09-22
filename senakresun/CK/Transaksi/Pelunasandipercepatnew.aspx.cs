@@ -840,11 +840,11 @@ public partial class CL_Pelunasandipercepatnew : System.Web.UI.Page
             total = pokok + bunga + fee;
             HDBUnga.Value = lbltotalBunga.Text;
             HDPokok.Value = lbltotalPokok.Text;
-            HDFee.Value = string.Format("{0:N2}", fee); 
-            txttotalpiutang.Text = lbltotalAngsuran.Text;
+            HDFee.Value = string.Format("{0:N2}", fee);
+            txttotalpiutang.Text = string.Format("{0:N2}", total);
             
           
-            HDtotal.Value = lbltotalAngsuran.Text;
+            HDtotal.Value = string.Format("{0:N2}", total);
         }
     }
 

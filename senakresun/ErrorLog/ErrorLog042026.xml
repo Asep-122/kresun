@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Divide by zero error encountered.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalBank.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-04-06 15.03.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Failed to convert parameter value from a TextBox to a String.</ErrorText>
+    <FileError>CreateDeviasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-04-08 11.04.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>@txtNoPen is not a parameter for procedure KP_Deviasi.</ErrorText>
+    <FileError>CreateDeviasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-04-08 11.06.38</TglError>
+  </ErrorLog>
+</DocumentElement>

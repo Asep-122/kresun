@@ -355,6 +355,49 @@ function sweetAlertsave(btnSimpan,errMsg) {
 
 
             $(function () {
+                window.savePageDT = function () {
+
+                    var table = $('#GRTP').DataTable();
+
+                    sessionStorage.setItem("grtp_page", table.page());
+
+                    console.log(table.page());
+                };
+                function initDT() {
+                    console.log("initDT dipanggil");
+                    if ($.fn.DataTable.isDataTable('#GRTP')) {
+                        tableX = $('#GRTP').DataTable(); // ambil instance yang sudah ada
+                    }
+                    else {
+                        tableX = $('#GRTP').DataTable({
+                            scrollX: true,
+                            retrieve: true,
+                            dom: 'Bfrtip',
+                            buttons: [
+                                'copy',
+                                'csv',
+                                'excel',
+                                {
+                                    extend: 'pdfHtml5',
+                                    orientation: 'landscape',
+                                    pageSize: 'A4'
+                                },
+                                'print'
+                            ]
+                        });
+                    }
+
+
+                }
+
+                Sys.Application.add_load(function () {
+                    console.log("add_load dipanggil");
+                    restorePageDT();
+                    initDT();
+
+                });
+
+
                 var table = $('#GRData').dataTable({
                     "order": [],
                     "columnDefs": [{
@@ -737,8 +780,8 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                         <HeaderStyle CssClass="align-center" ForeColor="Black" />
                                                         <ItemStyle HorizontalAlign="Center" />
                                                         <ItemTemplate>
-                                                             <asp:DropDownList ID="ddlbayar" CssClass="selectpicker show-tick" Text='<%#DataBinder.Eval(Container.DataItem, "Tipebayar")%>' runat="server" data-style="btn-custom" required="required" AutoPostBack="true" width ="400" OnSelectedIndexChanged ="ddlbayar_SelectedIndexChanged">
-                                                                
+                                                             <asp:DropDownList ID="ddlbayar" CssClass="selectpicker show-tick" Text='<%#DataBinder.Eval(Container.DataItem, "Tipebayar")%>' runat="server" data-style="btn-custom" required="required" AutoPostBack="true" width ="400" onchange="savePageDT();" OnSelectedIndexChanged ="ddlbayar_SelectedIndexChanged">                                                                
+                                                                <asp:ListItem Value="0">NO</asp:ListItem>                                                                                                                                                                                      
                                                                 <asp:ListItem Value="1">YES</asp:ListItem>                                                                                                                                                                                      
                                                             </asp:DropDownList>
                                                      
@@ -751,7 +794,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                         <ItemTemplate>
                                                             <div class="form-group">
                                                                 <div class="form-line">                                                                                         
-                                                                    <asp:TextBox enabled="true" CssClass="form-control" ID="jlhdibayar" Text='<%#DataBinder.Eval(Container.DataItem, "JlhDibayar","{0:N2}")%>' Width="120" runat="server"  onkeypress="return isnumerickey(event);" required="required" onblur="checkTextField1(this);"  AutoPostBack="true" onkeyup="javascript:this.value=Comma(this.value);" OnTextChanged ="txtjlhbayar_TextChanged" ></asp:TextBox>
+                                                                    <asp:TextBox enabled="true" CssClass="form-control" ID="jlhdibayar" Text='<%#DataBinder.Eval(Container.DataItem, "JlhDibayar","{0:N2}")%>' Width="120" runat="server"  onkeypress="return isnumerickey(event);" required="required" onblur="checkTextField1(this);savePageDT();"  AutoPostBack="true" onkeyup="javascript:this.value=Comma(this.value);savePageDT();" OnTextChanged ="txtjlhbayar_TextChanged" ></asp:TextBox>
                                                                     <%--<asp:TextBox CssClass="form-control" ID="jlhdibayar"  MaxLength="30" runat="server"  onkeypress="return isnumerickey(event);" required="required" onblur="checkTextField1(this);"  AutoPostBack="true" onkeyup="javascript:this.value=Comma(this.value);"></asp:TextBox>--%>
                                                                 </div>
                                                             </div>

@@ -578,9 +578,9 @@ public partial class Report_viewlisttagihan : System.Web.UI.Page
 
 
                     string report = "";
-                    if (ddlproduk.SelectedValue == "3C")
+                    if (ddlproduk.SelectedValue == "35")
                     {
-                        report = "Report List Tagihan Mingguan " + ddlmarketing.SelectedItem.Text.ToString() + ".xlsx";
+                        report = "Report List Tagihan Pinjaman Pensiun " + ddlmarketing.SelectedItem.Text.ToString() + ".xlsx";
                     }
                     else if (ddlproduk.SelectedValue == "3B")
                     {
@@ -597,7 +597,8 @@ public partial class Report_viewlisttagihan : System.Web.UI.Page
                     using (MemoryStream MyMemoryStream = new MemoryStream())
                     {
                         wb.SaveAs(MyMemoryStream);
-                        MyMemoryStream.WriteTo(Response.OutputStream);
+                        //                        MyMemoryStream.WriteTo(Response.OutputStream);
+                        Response.BinaryWrite(MyMemoryStream.ToArray());
                         Response.Flush();
                         Response.End();
                     }
@@ -1052,7 +1053,8 @@ public partial class Report_viewlisttagihan : System.Web.UI.Page
                 using (MemoryStream MyMemoryStream = new MemoryStream())
                 {
                     wb.SaveAs(MyMemoryStream);
-                    MyMemoryStream.WriteTo(Response.OutputStream);
+//                    MyMemoryStream.WriteTo(Response.OutputStream);
+                    Response.BinaryWrite(MyMemoryStream.ToArray());
                     Response.Flush();
                     Response.End();
                 }

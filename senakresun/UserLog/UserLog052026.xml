@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <UserLog>
+    <ID>1</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 09.19.27</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>2</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 09.54.39</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>3</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 10.11.11</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>4</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 13.09.19</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>5</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 13.58.38</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>6</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 14.36.23</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>7</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 14.40.46</TglError>
+  </UserLog>
+</DocumentElement>

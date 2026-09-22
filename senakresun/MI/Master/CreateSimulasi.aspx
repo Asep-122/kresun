@@ -743,8 +743,12 @@
                                                             <p class="form-control">Tgl Realisasi</p>
                                                             <%--<asp:TextBox ID="TextBox1" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Gaji Pokok/Bln" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-4">
                                                             <asp:TextBox ID="txttglrealisasi" TextMode="DateTime" CssClass="form-control" MaxLength="100" runat="server" AutoPostBack="true" OnTextChanged="Data_Formula"></asp:TextBox>
+
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <asp:Button ID="BtnAktifTglRealisasi" runat="server" autopostback="true" CssClass="btn btn-success waves-light text-white" Text="Enable Tanggal" OnClick="BtnAktifTglRealisasi_Click"/>
 
                                                         </div>
                                                     </div>
@@ -780,7 +784,7 @@
                                                         </div>
                                                         <div class="form-group col-md-3">
                                                             <asp:Label ID="Label8" runat="server" class="col-form-label">Pensiunan</asp:Label>
-                                                            <asp:DropDownList ID="ddlpensiun" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom">
+                                                            <asp:DropDownList ID="ddlpensiun" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" OnSelectedIndexChanged="Data_Formula">
                                                                 <asp:ListItem Value="">Pilih Pensiun</asp:ListItem>
                                                                 <asp:ListItem Value="1">Sendiri</asp:ListItem>
                                                                 <asp:ListItem Value="2">Janda</asp:ListItem>
@@ -861,7 +865,7 @@
                                                             <%--<asp:TextBox ID="TextBox1" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Gaji Pokok/Bln" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <asp:DropDownList ID="ddlproduk" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" AutoPostBack="true" OnSelectedIndexChanged="Data_Formula"></asp:DropDownList>
+                                                            <asp:DropDownList ID="ddlproduk" Enabled ="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" AutoPostBack="true" OnSelectedIndexChanged="Data_Formula"></asp:DropDownList>
 
                                                         </div>
                                                     </div>
@@ -921,7 +925,15 @@
 
                                                     </div>
 
+                                                      <div class ="form-row">
+                                                        <div class="col-md-6">
+                                                            <p class="form-control">THT</p>                                                                    
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                        <asp:TextBox ID="txtTHT" CssClass="form-control"  runat="server" text="0,00"  onkeyup="javascript:this.value=Comma(this.value);" onblur="checkTextField1(this);" onkeypress="return isnumerickey(event);" AutoPostBack ="true" OnTextChanged="Data_Formula" ></asp:TextBox> 
 
+                                                        </div>
+                                                    </div>
 
                                                     <div class="form-row">
                                                         <div class="col-md-6">
@@ -1091,9 +1103,14 @@
                                                             <asp:Label ID="Label50" BackColor="#cccccc" runat="server" class="form-control">Rate Asuransi %</asp:Label>
                                                             <asp:TextBox ID="txtrateasuransi" Enabled="false" CssClass="form-control" runat="server" Text="0,00" onkeyup="javascript:this.value=Comma(this.value);" onblur="checkTextField1(this);" onkeypress="return isnumerickey(event);"></asp:TextBox>
                                                         </div>
-                                                        <div class="form-group col-md-8">
+                                                        <div class="form-group col-md-4">
                                                             <asp:Label ID="Label51" BackColor="#cccccc" runat="server" class="form-control">Rate Bunga Pinjaman %</asp:Label>
                                                             <asp:TextBox ID="txtratebungapinjaman" Enabled="false" CssClass="form-control" runat="server" Text="0,00" onkeyup="javascript:this.value=Comma(this.value);" onblur="checkTextField1(this);" onkeypress="return isnumerickey(event);"></asp:TextBox>
+                                                        </div>
+                                                        <div class="form-group col-md-4">
+                                                                <asp:label ID="Label25" BackColor="#cccccc" runat="server" class="form-control">Rate Bunga Efektif %</asp:label>
+                                                            <asp:TextBox ID="txtratebungaefektif" Enabled="false" CssClass="form-control"  runat="server" text="0,00"  onkeyup="javascript:this.value=Comma(this.value);" onblur="checkTextField1(this);" onkeypress="return isnumerickey(event);" ></asp:TextBox> 
+                                                        </div>
                                                         </div>
                                                     </div>
 

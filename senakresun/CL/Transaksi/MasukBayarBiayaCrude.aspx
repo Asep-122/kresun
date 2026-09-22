@@ -408,7 +408,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
 
         function CheckExt(obj) {
             var validFiles = ["png", "jpg", "jpeg", "pdf"];
-            var maxFileSize = 2097152; // 4MB -> 4 * 1024 * 1024
+            var maxFileSize =  4 * 1024 * 1024
             var fileUpload = $('#fileuploadbuktitrn');
             var source = obj.value;
             var ext = source.substring(source.lastIndexOf(".") + 1, source.length).toLowerCase();

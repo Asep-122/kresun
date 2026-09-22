@@ -68,7 +68,8 @@ public partial class Kresun_Master_MasterProvisi : System.Web.UI.Page
             {
                 string ambilbranch = SessBranchID;
                 BindGridEntity();
-
+                PnlFront.Visible = true;
+                divtotalrequest.Visible = true;
 
             }
 
@@ -84,23 +85,97 @@ public partial class Kresun_Master_MasterProvisi : System.Web.UI.Page
     public void BindGridEntity()
     {
 
-/*        DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
-        var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTPROVISI", typeof(string));
+        PnlFront.Visible = true;
+        pnlGenerate.Visible = false;
+        DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
+        var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LISTPROVISI", typeof(string));
         var[1] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
         var[2] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+        var[3] = gb.CreateSPParameter("@Grup", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlGroup.SelectedValue, typeof(string));
 
-        ge.ListDataset = gb.GetDataJustOutPut("Kp_MasterProvisi", var, "constrmf");
-
-
+        ge.ListDataset = gb.GetDataJustOutPut("KP_MasterProvisi", var, "constrmf");
         GRData.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
         GRData.DataBind();
 
         GRData.UseAccessibleHeader = true;
 
-        GRData.HeaderRow.TableSection = TableRowSection.TableHeader;*/
+        GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
 
 
     }
+
+    protected void GRData_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        ReportDocument rprt = new ReportDocument();
+        switch (e.CommandName)
+        {
+            case "SET":
+
+                try
+                {
+                    DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[6];
+                    var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "UPDATEPROVISI", typeof(string));
+                    var[1] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                    var[2] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+                    var[3] = gb.CreateSPParameter("@Grup", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlGroup.SelectedValue, typeof(string));
+                    var[4] = gb.CreateSPParameter("@Start", ParameterDirection.Input, SqlDbType.VarChar, 50, Convert.ToInt32(txtStart.Text), typeof(string));
+                    var[5] = gb.CreateSPParameter("@End", ParameterDirection.Input, SqlDbType.VarChar, 50, Convert.ToInt32(txtEnd.Text), typeof(string));
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_MasterProvisi", var, "constrmf");
+                    if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','You successfully delete data','top-right','success','true');", true);
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "','success','true');", true);
+
+                    }
+                }
+                catch (Exception X)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+                    gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+                }
+                break;
+            case "SETDEL":
+                try
+                {
+
+                    string Group = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblGroup")).Text;
+                    decimal Provisi = decimal.Parse(((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblProvisi")).Text.ToString());
+
+                    DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[6];
+                    var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "DELETEPROVISI", typeof(string));
+                    var[1] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                    var[2] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+                    var[3] = gb.CreateSPParameter("@Grup", ParameterDirection.Input, SqlDbType.VarChar, 50, Group, typeof(string));
+                    var[4] = gb.CreateSPParameter("@Start", ParameterDirection.Input, SqlDbType.Decimal, 50, Provisi, typeof(decimal));
+                    var[5] = gb.CreateSPParameter("@End", ParameterDirection.Input, SqlDbType.VarChar, 50, Convert.ToInt32(txtEnd.Text), typeof(string));
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_MasterProvisi", var, "constrmf");
+                    if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Delete Done!','You successfully delete data','top-right','success','true');", true);
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "','success','true');", true);
+
+                    }
+                }
+                catch(Exception X)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+                    gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+
+                }
+                break;
+        }
+    }
+
+
+
+
 
     protected void LinkButton1_Click(object sender, EventArgs e)
     {
@@ -135,6 +210,37 @@ public partial class Kresun_Master_MasterProvisi : System.Web.UI.Page
             if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','You successfully delete data','top-right','success','true');", true);
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "','success','true');", true);
+
+            }
+
+        }
+        catch(Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        }
+
+    }
+    protected void btnSimpan_Click(object sender, EventArgs e)
+    {
+        try
+        {
+  
+
+            DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[5];
+            var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "INSERTPROVISI2", typeof(string));
+            var[1] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+            var[2] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+            var[3] = gb.CreateSPParameter("@Grup", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlGroup.SelectedValue, typeof(string));
+            var[4] = gb.CreateSPParameter("@Start", ParameterDirection.Input, SqlDbType.VarChar, 50, txtprovisi.Text, typeof(string));
+            ge.ListDataset = gb.GetDataJustOutPut("KP_MasterProvisi", var, "constrmf");
+            if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','You successfully save data','top-right','success','true');", true);
             }
             else
             {

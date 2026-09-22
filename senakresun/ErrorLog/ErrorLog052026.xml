@@ -1,0 +1,1335 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Arithmetic overflow error converting expression to data type nvarchar.</ErrorText>
+    <FileError>AnggotaPinjamanPengembalian.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 12.04.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 16.17.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>The string was not recognized as a valid DateTime. There is an unknown word starting at index 0.Couldn't store &lt;Cileunyi&gt; in namacabang Column.  Expected type is DateTime.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 22.45.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Input string was not in a correct format.Couldn't store &lt;tes keanggotaan&gt; in namanasabah Column.  Expected type is Decimal.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 22.47.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>The procedure "Report_SumberDana" has no parameter named "@SD_LIST_REKAPDROPPING".</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 22.47.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>The procedure "Report_SumberDana" has no parameter named "@SD_LIST_REKAPDROPPING".</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 22.48.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>The procedure "Report_SumberDana" has no parameter named "@SD_LIST_REKAPDROPPING".</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 22.48.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>The procedure "Report_SumberDana" has no parameter named "@SD_LIST_REKAPDROPPING".</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 22.54.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>The procedure "Report_SumberDana" has no parameter named "@SD_LIST_REKAPDROPPING".</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 22.57.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>The procedure "Report_SumberDana" has no parameter named "@SD_LIST_REKAPDROPPING".</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 22.57.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>The procedure "Report_SumberDana" has no parameter named "@SD_LIST_REKAPDROPPING".</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 22.59.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>Column 'kantor_pelayanan' does not belong to table Table.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 22.59.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Column 'kantor_pelayanan' does not belong to table Table.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 22.59.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>Column 'norekening' does not belong to table Transaction.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.45.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Column 'norekening' does not belong to table Transaction.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.46.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.47.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.47.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.50.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.50.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.52.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.52.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.56.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.56.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.57.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.57.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.58.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.58.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.59.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-18 23.59.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.00.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.00.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.05.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.05.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.06.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.06.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.16.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.16.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.16.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.16.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.23.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 00.23.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 08.46.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 08.46.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 08.49.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 08.49.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 08.51.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 08.51.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.18.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.18.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Column 'NoBukti' does not belong to table Table1.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.19.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Column 'NoBukti' does not belong to table Table1.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.19.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Column 'NoBukti' does not belong to table Table1.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.19.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>53</ID>
+    <ErrorText>Column 'NoBukti' does not belong to table Table1.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.19.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>54</ID>
+    <ErrorText>Column 'NoBukti' does not belong to table Table1.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.20.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>55</ID>
+    <ErrorText>Column 'NoBukti' does not belong to table Table1.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.20.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>56</ID>
+    <ErrorText>Column 'NoBukti' does not belong to table Table1.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.23.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>57</ID>
+    <ErrorText>Column 'NoBukti' does not belong to table Table1.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.30.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>58</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.31.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.31.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.33.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 09.33.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 10.27.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 10.28.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>64</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 10.40.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>65</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 10.51.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>66</ID>
+    <ErrorText>Error in File SD_SuratPermohonanTransferPembiayaan 19164_2540_{FB660926-72DB-4AAE-9C15-3ED7AADDD4B7}.rpt:
+Error in formula  total_debitur: 
+'Sum({ReportSuratRekapDropping;1.jumlah_nasabah})'
+This field name is not known.
+Details: errorKind</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 13.16.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>67</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 13.16.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>68</ID>
+    <ErrorText>Error in File SD_SuratPermohonanTransferPembiayaan 19164_30708_{9C91F734-59C5-45ED-9DEF-D21C89FACFEF}.rpt:
+Error in formula  total_debitur: 
+'Sum({ReportSuratRekapDropping;1.jumlah_nasabah})'
+This field name is not known.
+Details: errorKind</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 13.21.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>69</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 13.21.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>70</ID>
+    <ErrorText>Error in File SD_SuratPermohonanTransferPembiayaan 19164_22012_{A9AE0510-BCE1-4A29-A28D-1DE3AF975071}.rpt:
+Error in formula  total_debitur: 
+'Sum({ReportSuratRekapDropping;1.jumlah_nasabah})'
+This field name is not known.
+Details: errorKind</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 13.24.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>71</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 13.24.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>72</ID>
+    <ErrorText>Error in File SD_SuratPermohonanTransferPembiayaan 19164_30708_{7AF59CFC-B828-464D-AD9B-13CBEE58188A}.rpt:
+Error in formula  total_debitur: 
+'Sum({ReportSuratRekapDropping;1.jumlah_nasabah})'
+This field name is not known.
+Details: errorKind</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 13.24.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>73</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 13.24.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>74</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 13.26.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>75</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 14.48.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 14.51.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 14.52.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 15.12.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 15.21.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 15.28.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 15.32.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 15.41.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 15.53.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 16.12.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 16.18.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 16.24.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 16.28.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 16.28.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 16.29.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 16.35.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 16.52.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, &lt;, &lt;= , &gt;, &gt;= or when the subquery is used as an expression.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 16.52.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-19 16.52.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 09.16.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportPencairanPerjanjianKredit.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 09.17.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 09.59.36</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 10.01.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 10.01.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSumberDana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 10.01.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 13.07.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.04.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>102</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.06.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>103</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.19.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>104</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.19.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>105</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.20.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>106</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.23.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>107</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.28.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>108</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.28.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>109</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.29.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>110</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.31.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>111</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.32.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>112</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.36.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>113</ID>
+    <ErrorText>Column 'kodesumberdana' does not belong to table Table1.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.52.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>114</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.52.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>115</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.55.19</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>116</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.55.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>117</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 15.57.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>118</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 16.08.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>119</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 16.09.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>120</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 16.09.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>121</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 16.13.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>122</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 16.14.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>123</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 16.15.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>124</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 16.17.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>125</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 16.17.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>126</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 16.18.23</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>127</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 16.58.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>128</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-20 16.59.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>129</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 11.25.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>130</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 11.28.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>131</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 11.34.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>132</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 11.49.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>133</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 11.54.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>134</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 11.56.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>135</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 12.11.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>136</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 12.11.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>137</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 12.16.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>138</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 13.21.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>139</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 13.23.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>140</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 13.33.31</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>141</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 13.35.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>142</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 13.39.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>143</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 13.47.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>144</ID>
+    <ErrorText>Load report failed.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 14.19.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>145</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 14.19.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>146</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 14.21.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>147</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 14.35.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>148</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 14.36.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>149</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 14.38.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>150</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 14.40.10</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>151</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 14.47.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>152</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 14.51.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>153</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 15.12.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>154</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 15.22.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>155</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 15.43.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>156</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 15.47.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>157</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.21.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>158</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.24.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>159</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.26.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>160</ID>
+    <ErrorText>Load report failed.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.28.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>161</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.28.20</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>162</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.29.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>163</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.33.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>164</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.35.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>165</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.37.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>166</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.37.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>167</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.38.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>168</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.40.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>169</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.42.41</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>170</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.44.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>171</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-21 16.49.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>172</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>UpdateProvisi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-22 15.39.38</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>173</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-25 16.52.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>174</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-25 16.52.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>175</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-25 16.55.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>176</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-25 16.56.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>177</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-25 17.03.13</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>178</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-25 17.11.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>179</ID>
+    <ErrorText>000080</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-25 17.16.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>180</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 09.27.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>181</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 09.54.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>182</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 10.07.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>183</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 10.07.52</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>184</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 10.08.37</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>185</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 10.15.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>186</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 10.26.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>187</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-05-26 13.59.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>188</ID>
+    <ErrorText>An invalid floating point operation occurred.</ErrorText>
+    <FileError>rubahsumberdana.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-05-28 10.37.39</TglError>
+  </ErrorLog>
+</DocumentElement>

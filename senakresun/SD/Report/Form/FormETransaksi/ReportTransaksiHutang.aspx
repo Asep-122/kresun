@@ -57,24 +57,24 @@
                                          <label for="inputCity" class="col-form-label font-weight-bold" >Choice Category Report</label>
                                           <asp:DropDownList ID="ddljenisreport" runat="server" AutoPostBack="true" CssClass="form-control" data-style="btn-custom" OnSelectedIndexChanged="ddljenis_SelectedIndexChanged">
                                                   <asp:ListItem Value="-">Pilih Salah Satu Category Report....</asp:ListItem>
-                                                  <asp:ListItem Value="A">Transaksi Hutang Berdasarkan Transaksi Saldo Awal</asp:ListItem>
-                                                  <asp:ListItem Value="C">Transaksi Hutang Berdasarkan Transaksi Beli Kredit</asp:ListItem>
+                                                  <%--<asp:ListItem Value="A">Transaksi Hutang Berdasarkan Transaksi Saldo Awal</asp:ListItem>--%>
+                                                  <%--<asp:ListItem Value="C">Transaksi Hutang Berdasarkan Transaksi Beli Kredit</asp:ListItem>--%>
                                                   <asp:ListItem Value="D">Transaksi Hutang Berdasarkan Transaksi Nota Kredit</asp:ListItem>
-                                                  <asp:ListItem Value="E">Transaksi Hutang Berdasarkan Transaksi Pinalty Keterlambatan</asp:ListItem>
-                                                  <asp:ListItem Value="F">Transaksi Hutang Berdasarkan Transaksi PPN Masukan</asp:ListItem>
-                                                  <asp:ListItem Value="H">Transaksi Hutang Berdasarkan Transaksi Ongkos Angkut</asp:ListItem>
-                                                  <asp:ListItem Value="J">Transaksi Hutang Berdasarkan Transaksi Adjustment</asp:ListItem>
-                                                  <asp:ListItem Value="O">Transaksi Hutang Berdasarkan Transaksi Nota Debit</asp:ListItem>
-                                                  <asp:ListItem Value="P">Transaksi Hutang Berdasarkan Transaksi Discount</asp:ListItem>
-                                                  <asp:ListItem Value="Q">Transaksi Hutang Berdasarkan Transaksi Retur Pembelian</asp:ListItem>
-                                                  <asp:ListItem Value="S">Transaksi Hutang Berdasarkan Transaksi Retur PPN Masukan</asp:ListItem>
+                                                  <%--<asp:ListItem Value="E">Transaksi Hutang Berdasarkan Transaksi Pinalty Keterlambatan</asp:ListItem>--%>
+                                                  <%--<asp:ListItem Value="F">Transaksi Hutang Berdasarkan Transaksi PPN Masukan</asp:ListItem>--%>
+                                                  <%--<asp:ListItem Value="H">Transaksi Hutang Berdasarkan Transaksi Ongkos Angkut</asp:ListItem>--%>
+                                                  <%--<asp:ListItem Value="J">Transaksi Hutang Berdasarkan Transaksi Adjustment</asp:ListItem>--%>
+                                                  <%--<asp:ListItem Value="O">Transaksi Hutang Berdasarkan Transaksi Nota Debit</asp:ListItem>--%>
+                                                  <%--<asp:ListItem Value="P">Transaksi Hutang Berdasarkan Transaksi Discount</asp:ListItem>--%>
+                                                  <%--<asp:ListItem Value="Q">Transaksi Hutang Berdasarkan Transaksi Retur Pembelian</asp:ListItem>--%>
+                                                  <%--<asp:ListItem Value="S">Transaksi Hutang Berdasarkan Transaksi Retur PPN Masukan</asp:ListItem>--%>
                                                   <asp:ListItem Value="All">Transaksi Hutang Berdasarkan Semua Type Transaksi</asp:ListItem>
                                                  <%-- -<asp:ListItem Value="13">Transaksi Hutang Berdasarkan Semua Transaksi Pembelian Dari Purchasing</asp:ListItem>
                                                   <asp:ListItem Value="14">Transaksi Hutang Berdasarkan Semua Transaksi Retur Dari Purchasing</asp:ListItem>
                                                   <asp:ListItem Value="M">Transaksi Hutang Berdasarkan Semua Transaksi Pembayaran Dari Cheque (Cek) Control</asp:ListItem>
                                                   <asp:ListItem Value="K">Transaksi Hutang Berdasarkan Semua Transaksi Yang Sudah Lunas</asp:ListItem>--%>
                                                   <%--<asp:ListItem Value="17">Transaksi Hutang Berdasarkan Semua Transaksi Yang Belum Lunas</asp:ListItem> SAMA DENGAN BELI KREDIT--%>
-                                                  <asp:ListItem Value="U">Transaksi Hutang Berdasarkan Transaksi Mutasi Uang Muka</asp:ListItem>
+                                                  <%--<asp:ListItem Value="U">Transaksi Hutang Berdasarkan Transaksi Mutasi Uang Muka</asp:ListItem>--%>
                                                   <asp:ListItem Value="B">Transaksi Hutang Berdasarkan Transaksi Beli Cash</asp:ListItem>
                                           </asp:DropDownList>
                                      </div>

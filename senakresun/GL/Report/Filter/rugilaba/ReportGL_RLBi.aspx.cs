@@ -177,6 +177,18 @@ public partial class GL_Report_ReportGL_RLBi : System.Web.UI.Page
         txtEnd.Enabled = true;
         Txtrptperiode.Enabled = true;
         ddlSP.Enabled = true;
+
+        DefaultClass.Global.SqlHelper[] Paramsd = new DefaultClass.Global.SqlHelper[2];
+        Paramsd[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+        Paramsd[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "GETKODECABANG", typeof(string));
+        ge.ListDataset = gb.GetDataJustOutPut("dbo.KP_REPORTING_CL", Paramsd, "constrmf");
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kodecabang asc";
+
+        ddlcabang.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlcabang.DataTextField = "namacabang";
+        ddlcabang.DataValueField = "kodecabang";
+        ddlcabang.DataBind();
+        ddlcabang.Items.Insert(0, new ListItem("ALL", "ALL"));
         //string nowx;
         //nowx = gb.ReadOrderData();
         //DateTime now = DateTime.Parse(nowx);
@@ -212,7 +224,7 @@ public partial class GL_Report_ReportGL_RLBi : System.Web.UI.Page
             Paramsc[1] = gb.CreateSPParameter("@DteTglAwal", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txtStart.Text, typeof(DateTime));
             Paramsc[2] = gb.CreateSPParameter("@DteTglAkhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txtEnd.Text, typeof(DateTime));
             Paramsc[3] = gb.CreateSPParameter("@BentukLpr", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlrpttype.SelectedValue, typeof(string));
-            Paramsc[4] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+            Paramsc[4] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabang.SelectedValue, typeof(string));
             Paramsc[5] = gb.CreateSPParameter("@Kurs", ParameterDirection.Input, SqlDbType.Decimal, 10, Txtkurs.Text, typeof(decimal));
             Paramsc[6] = gb.CreateSPParameter("@fiskalbi", ParameterDirection.Input, SqlDbType.VarChar, 10, ddlSP.SelectedValue, typeof(string));
             ge.ListDataTable = gb.GetDataJustOutPut("dbo.GL_RLBulan", Paramsc, "constrmf").Tables[0];

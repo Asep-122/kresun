@@ -571,7 +571,7 @@
 
 
 
-                                      <asp:GridView ID="GRData" runat="server" CssClass="table table-bordered table-striped table-hover js-basic-example dataTable" ShowHeaderWhenEmpty="True"     AutoGenerateColumns="False" OnRowCommand="GRData_RowCommand" >
+                                      <asp:GridView ID="GRData" runat="server" CssClass="table table-bordered table-striped table-hover js-basic-example dataTable" ShowHeaderWhenEmpty="True"     AutoGenerateColumns="False" OnRowCommand="GRData_RowCommand" OnRowDataBound="GRData_RowDataBound">
                                     <Columns>
                                           <asp:TemplateField HeaderText="Cabang">
                                             <ItemTemplate>
@@ -614,9 +614,17 @@
                                         </asp:TemplateField>
                                         
 
-                                         <asp:TemplateField HeaderText="Tanggal">
+                                         <asp:TemplateField HeaderText="Tanggal Pk">
                                             <ItemTemplate>
-                                                <asp:Label ID="lbltanggal" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "tgl_drop","{0:dd/MM/yyyy}")%>'></asp:Label>
+                                                <asp:Label ID="lbltanggalpk" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "tgl_pk","{0:dd/MM/yyyy}")%>'></asp:Label>
+                                             </ItemTemplate>
+                                            <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                        </asp:TemplateField>
+
+                                        <asp:TemplateField HeaderText="No Pk">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblnopk" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "nopk")%>'></asp:Label>
                                              </ItemTemplate>
                                             <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
                                             <ItemStyle HorizontalAlign="Left"></ItemStyle>
@@ -1431,6 +1439,7 @@
                                                                         <asp:ListItem Value="0">Tanpa Data Simulasi</asp:ListItem>
                                                                         <asp:ListItem Value="A">Data Simulasi Universal</asp:ListItem>              
                                                                         <asp:ListItem Value="B">Data Simulasi Capital</asp:ListItem>        
+                                                                        <asp:ListItem Value="C">Data Simulasi Dana Lestari</asp:ListItem>        
                                                                         </asp:DropDownList> 
                                                              <asp:TextBox CssClass="form-control"  Visible="false" ID="txtidpermohonan" text="0" MaxLength="50"  runat="server" ></asp:TextBox> 
                                                                </div>
@@ -2649,7 +2658,7 @@
                                                                    
                                                                 <hr /> 
 
-                                                          
+                                                            
                                                             </div>
                                                              <div>
                                                                   <asp:Image ID="imgfoto4" runat="server" Height="300px" Width="550px" />
@@ -3154,7 +3163,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
-                                            <div class="card-box ribbon-box">
+                                            <div class="card-box ribbon-box" style="display:none;">
                                                 <div class="ribbon ribbon-custom">Alasan ditolak</div>
                                                 <p class="text-muted font-14 m-b-30"></p>
 

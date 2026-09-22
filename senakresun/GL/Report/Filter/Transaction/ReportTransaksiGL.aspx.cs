@@ -171,6 +171,19 @@ public partial class GL_Report_ReportTransaksiGL : System.Web.UI.Page
         ddltypejournalakhir.Items.Insert(0, new ListItem("-", "-"));
 
 
+        DefaultClass.Global.SqlHelper[] Paramsd = new DefaultClass.Global.SqlHelper[2];
+        Paramsd[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+        Paramsd[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "GETKODECABANG", typeof(string));
+        ge.ListDataset = gb.GetDataJustOutPut("dbo.KP_REPORTING_CL", Paramsd, "constrmf");
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kodecabang asc";
+        //ge.ListDataset.Tables[0].DefaultView.Sort = "value asc";
+        //gb.FillDDL(ge.ListDataset.Tables[0].DefaultView.ToTable(), ddlcabang, "None", "");
+        ddlcabang.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlcabang.DataTextField = "namacabang";
+        ddlcabang.DataValueField = "kodecabang";
+        ddlcabang.DataBind();
+        ddlcabang.Items.Insert(0, new ListItem("ALL", "ALL"));
+
     }
     //public void btnSerach_Click(object sender, EventArgs e)
     //{
@@ -1287,9 +1300,9 @@ public partial class GL_Report_ReportTransaksiGL : System.Web.UI.Page
             }
 
 
-            if (stopreport == "1")
+/*            if (stopreport == "1")
             {
-
+*/
                 DefaultClass.Global.SqlHelper[] Paramsl = new DefaultClass.Global.SqlHelper[2];
                 Paramsl[0] = gb.CreateSPParameter("@kodereport", ParameterDirection.Input, SqlDbType.VarChar, 10, "GL01", typeof(string));
                 Paramsl[1] = gb.CreateSPParameter("@state", ParameterDirection.Input, SqlDbType.VarChar, 50, "UPDATEANTRIANREPORTTAMBAH", typeof(string));
@@ -1311,7 +1324,7 @@ public partial class GL_Report_ReportTransaksiGL : System.Web.UI.Page
                 Paramsx[2] = gb.CreateSPParameter("@TglTrnawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txtStart.Text, typeof(DateTime));
                 Paramsx[3] = gb.CreateSPParameter("@TglTrnakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txtEnd.Text, typeof(DateTime));
                 Paramsx[4] = gb.CreateSPParameter("@typeposting", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlrpttype.SelectedValue, typeof(string));
-                Paramsx[5] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(String));
+                Paramsx[5] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, ddlcabang.SelectedValue, typeof(String));
                 Paramsx[6] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
                 Paramsx[7] = gb.CreateSPParameter("@UserEntry", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlteller.SelectedValue, typeof(String));
 
@@ -1415,7 +1428,7 @@ public partial class GL_Report_ReportTransaksiGL : System.Web.UI.Page
 
                     worksheet.Cell("C2").Style.Font.FontName = "Calibri";
                     worksheet.Cell("C2").Style.Font.FontSize = 9;
-                    worksheet.Cell("C3").Value = ddlaccountawal.SelectedItem.Text;
+                    worksheet.Cell("C3").Value = ddlcabang.SelectedItem.Text;
                     worksheet.Cell("C3").Style.Font.FontName = "Calibri";
                     worksheet.Cell("C3").Style.Font.FontSize = 9;
 
@@ -1687,46 +1700,43 @@ public partial class GL_Report_ReportTransaksiGL : System.Web.UI.Page
 
 
 
+                    string report = "";
 
+                    report = "Report Transaksi Journal " + Txtrptperiode.Text + ".xlsx";
+
+                    DefaultClass.Global.SqlHelper[] Paramstt = new DefaultClass.Global.SqlHelper[2];
+                    Paramstt[0] = gb.CreateSPParameter("@kodereport", ParameterDirection.Input, SqlDbType.VarChar, 10, "GL01", typeof(string));
+                    Paramstt[1] = gb.CreateSPParameter("@state", ParameterDirection.Input, SqlDbType.VarChar, 50, "UPDATEANTRIANREPORTKURANG", typeof(string));
+                    ge.ListDataset = gb.GetDataJustOutPut("dbo.AntrianReportX", Paramstt, "constrmf");
+
+
+                    Response.Clear();
+                    Response.Buffer = true;
+                    Response.Charset = "";
+                    Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                    Response.AddHeader("content-disposition", "attachment;filename=" + report + "");
+                    using (MemoryStream MyMemoryStream = new MemoryStream())
+                    {
+                        wb.SaveAs(MyMemoryStream);
+                        MyMemoryStream.WriteTo(Response.OutputStream);
+                        Response.Flush();
+                        Response.End();
+                    }
 
                 }
 
-
-
-
-
-
-
-                string report = "";
-
-                report = "Report Transaksi Journal " + Txtrptperiode.Text + ".xlsx";
-
-                DefaultClass.Global.SqlHelper[] Paramstt = new DefaultClass.Global.SqlHelper[2];
-                Paramstt[0] = gb.CreateSPParameter("@kodereport", ParameterDirection.Input, SqlDbType.VarChar, 10, "GL01", typeof(string));
-                Paramstt[1] = gb.CreateSPParameter("@state", ParameterDirection.Input, SqlDbType.VarChar, 50, "UPDATEANTRIANREPORTKURANG", typeof(string));
-                ge.ListDataset = gb.GetDataJustOutPut("dbo.AntrianReportX", Paramstt, "constrmf");
-
-
-                Response.Clear();
-                Response.Buffer = true;
-                Response.Charset = "";
-                Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-                Response.AddHeader("content-disposition", "attachment;filename=" + report + "");
-                using (MemoryStream MyMemoryStream = new MemoryStream())
+                else
                 {
-                    wb.SaveAs(MyMemoryStream);
-                    MyMemoryStream.WriteTo(Response.OutputStream);
-                    Response.Flush();
-                    Response.End();
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('mohon maaf data tidak ada');", true);
+
                 }
 
-
-            }
+/*            }
 
             else
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('mohon maaf tunggu sebentar, lakukan proses cetak kembali , dikarenakan sudah melebihi maksimal antrian');", true);
-            }
+            }*/
 
 
 
@@ -1784,7 +1794,7 @@ public partial class GL_Report_ReportTransaksiGL : System.Web.UI.Page
         Paramsx[2] = gb.CreateSPParameter("@TglTrnawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txtStart.Text, typeof(DateTime));
         Paramsx[3] = gb.CreateSPParameter("@TglTrnakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txtEnd.Text, typeof(DateTime));
         Paramsx[4] = gb.CreateSPParameter("@typeposting", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlrpttype.SelectedValue, typeof(string));
-        Paramsx[5] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(String));
+        Paramsx[5] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, ddlcabang.SelectedValue, typeof(String));
         Paramsx[6] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
         Paramsx[7] = gb.CreateSPParameter("@UserEntry", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlteller.SelectedValue, typeof(String));
 

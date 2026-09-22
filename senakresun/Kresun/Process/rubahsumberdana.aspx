@@ -952,6 +952,7 @@
                 <asp:PostBackTrigger ControlID="btnSearch" />
                 <asp:PostBackTrigger ControlID="ddlkantorbayarbaru" />
                 <asp:PostBackTrigger ControlID="ddlsdbaru" />
+                <asp:PostBackTrigger ControlID="txttgltrn" />
 
                 <asp:PostBackTrigger ControlID="btnAdd" />
                 <asp:PostBackTrigger ControlID="GRData" />

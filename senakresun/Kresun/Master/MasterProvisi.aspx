@@ -189,6 +189,33 @@
             return items.replace(/'/g, '"');
         } // "
 
+        function sweetAlertConfirm(btndelete, errMsg) {
+            if (btndelete.dataset.confirmed) {
+                // The action was already confirmed by the user, proceed with server event
+                btndelete.dataset.confirmed = false;
+                return true;
+            } else {
+                // Ask the user to confirm/cancel the action
+                event.preventDefault();
+                swal({
+                    title: errMsg,
+                    confirmButtonClass: 'btn btn-confirm mt-2',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: "Yes",
+                    cancelButtonText: "No",
+                })
+                    .then(function () {
+                        // Set data-confirmed attribute to indicate that the action was confirmed
+                        btndelete.dataset.confirmed = true;
+                        btndelete.click();
+                    }).catch(function (reason) {
+                        // The action was canceled by the user
+                        return false
+                    });
+            }
+        } 
+
         function isnumerickey(e) {
 
             var region = '<%=CultureName%>';
@@ -330,6 +357,33 @@
                         // Set data-confirmed attribute to indicate that the action was confirmed
                         btnGenerate.dataset.confirmed = true;
                         btnGenerate.click();
+
+                    }).catch(function (reason) {
+                        // The action was canceled by the user
+                        return false
+                    });
+            }
+        }
+        function sweetAlertsave2(btnrequest, errMsg) {
+            if (btnSimpan.dataset.confirmed) {
+                // The action was already confirmed by the user, proceed with server event
+                btnSimpan.dataset.confirmed = false;
+                return true;
+            } else {
+                // Ask the user to confirm/cancel the action
+                event.preventDefault();
+                swal({
+                    title: errMsg,
+                    confirmButtonClass: 'btn btn-confirm mt-2',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: "Yes",
+                    cancelButtonText: "No",
+                })
+                    .then(function () {
+                        // Set data-confirmed attribute to indicate that the action was confirmed
+                        btnSimpan.dataset.confirmed = true;
+                        btnSimpan.click();
 
                     }).catch(function (reason) {
                         // The action was canceled by the user
@@ -559,24 +613,28 @@
                             <div class="card-box ribbon-box">
                                 <div class="ribbon ribbon-custom">Group</div>
                                 <p class="text-muted font-14 m-b-30"></p>         
+                                <div>
+                                                                               <asp:Button ID="btnAdd" class="btn btn-success waves-light text-white" runat="server" Text="Add Provisi" OnClick="btnAdd_Click"/>
+
+                                </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="labelKantorBayar" class="col-form-label">Group</label>
                                             <asp:DropDownList ID="ddlGroup" runat="server"  CssClass="form-control" data-style="btn-custom">
                                                 <asp:ListItem Text="ALL" Value="ALL"></asp:ListItem>
-                                                <asp:ListItem Text="A" Value="A"></asp:ListItem>
-                                                <asp:ListItem Text="B" Value="B"></asp:ListItem>
+                                                <asp:ListItem Text="A Universal" Value="A"></asp:ListItem>
+                                                <asp:ListItem Text="B Capital" Value="B"></asp:ListItem>
+                                                <asp:ListItem Text="C Dana Lestari" Value="C"></asp:ListItem>
                                             </asp:DropDownList>                                                                
                                         </div>
                                         </div>
 
-                                                <div class="form-row">
-                                                        <div class="form-group">
-                                                        <asp:Button ID="btnSearch" class="btn btn-success waves-light text-white" runat="server" Text="Search" OnClick="btnSearch_Click" />
-                                                        <asp:Button ID="btnAdd" class="btn btn-success waves-light text-white" runat="server" Text="Add Provisi" OnClick="btnAdd_Click"/>
-                                                        </div>
-                                                </div>                                                    
+                                    <div class="form-row">
+                                            <div class="form-group">
+                                            <asp:Button ID="btnSearch" class="btn btn-success waves-light text-white" runat="server" Text="Search" OnClick="btnSearch_Click" />
                                             </div>
+                                    </div>                                                    
+                                </div>
                         </div>
                             </div>
                     </asp:Panel>      
@@ -604,7 +662,7 @@
 
                                          
                                         <div class="form-group" style="width: 100%;">
-                                            <asp:GridView ID="GRData" runat="server" CssClass="table table-bordered table-striped table-hover js-basic-example dataTable" ShowHeaderWhenEmpty="True"  AutoGenerateColumns="False">
+                                            <asp:GridView ID="GRData" runat="server" CssClass="table table-bordered table-striped table-hover js-basic-example dataTable" ShowHeaderWhenEmpty="True"  AutoGenerateColumns="False" OnRowCommand="GRData_RowCommand">
                                                 <Columns>
                                                     <asp:TemplateField HeaderText="No">
                                                         <ItemTemplate>
@@ -620,6 +678,13 @@
                                                         <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
                                                         <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                                      </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Nama Grup Template" >
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblNamaGrup" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "NamaGrup")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                        <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                                        <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                                                     </asp:TemplateField>
                                                     <asp:TemplateField HeaderText="Provisi">
                                                         <ItemTemplate>
                                                             <asp:Label ID="lblProvisi" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "provisi")%>'></asp:Label>
@@ -627,6 +692,16 @@
                                                         <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
                                                         <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                                     </asp:TemplateField>
+                                                                                      <asp:TemplateField HeaderText="Action">
+                                                  <HeaderStyle CssClass="text-center"></HeaderStyle>
+                                                  <ItemStyle HorizontalAlign="Right"></ItemStyle>
+                                                  <ItemTemplate>
+                                                      <asp:LinkButton ID="btnedit" runat="server" data-toggle="tooltip" data-placement="left" title="Edit" CommandName="SET" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="fa fa-edit"></i></asp:LinkButton>
+                                                      <asp:LinkButton ID="btnDelete" runat="server" data-toggle="tooltip" data-placement="left" title="Delete" CommandName="SETDEL" OnClientClick="return sweetAlertConfirm(this,'Apakah anda yakin ingin menghapus data ini ?');" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="fa fa-trash"></i></asp:LinkButton>
+                                                  </ItemTemplate>
+                                              </asp:TemplateField>
+
+
                                                 </Columns>
                                             </asp:GridView>
                                         </div>
@@ -645,12 +720,15 @@
                         <p class="text-muted font-14 m-b-30"></p>  
                         <table>
                             <tr>
-                                <td>Range</td>
-                                <td><asp:TextBox ID="txtStart" runat="server" CssClass="form-control" data-style="btn-custom" text="0" TextMode="Number"></asp:TextBox> <asp:HiddenField ID="txtLast" runat="server"/></td>
-                                <td>S/d</td>
-                                <td><asp:TextBox ID="txtEnd" runat="server" CssClass="form-control" data-style="btn-custom" text="0" TextMode="Number"></asp:TextBox></td>
-                                <td><asp:Button ID="btnGenerate" class="btn btn-success waves-light text-white" runat="server" Text="Generate" OnClick="btnGenerate_Click" OnClientClick="return sweetAlertsave(this,'Apakah anda yakin ingin Replace Provisi Grup yang sudah ada?');"/></td>
-                            </tr>
+                                <td>Provisi</td>
+                                <td><asp:TextBox ID="txtprovisi" runat="server" CssClass="form-control" data-style="btn-custom" text="0" TextMode="Number"></asp:TextBox> 
+                                <td style="display:none"><asp:TextBox ID="txtStart" runat="server" CssClass="form-control" data-style="btn-custom" text="0" TextMode="Number"></asp:TextBox> <asp:HiddenField ID="txtLast" runat="server"/></td>
+                                <td style="display:none">S/d</td>
+                                <td style="display:none"><asp:TextBox ID="txtEnd" runat="server" CssClass="form-control" data-style="btn-custom" text="0" TextMode="Number"></asp:TextBox></td>
+                                <td style="display:none"><asp:Button ID="btnGenerate" class="btn btn-success waves-light text-white" runat="server" Text="Generate" OnClick="btnGenerate_Click" OnClientClick="return sweetAlertsave(this,'Apakah anda yakin ingin Replace Provisi Grup yang sudah ada?');"/></td>
+
+                           <td><asp:Button ID="btnSimpan" class="btn btn-success waves-light text-white" runat="server" Text="Simpan" OnClick="btnSimpan_Click" OnClientClick="return sweetAlertsave2(this,'Apakah anda yakin ingin Simpan Provisi?');"/></td>
+                          </tr>
                         </table>
                           </div>
                         </div>

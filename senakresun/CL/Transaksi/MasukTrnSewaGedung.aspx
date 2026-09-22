@@ -51,7 +51,7 @@
     <link href="/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <!-- Responsive datatable examples -->
     <link href="/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
    
    
@@ -104,6 +104,25 @@
            function stringToArray(items) {
             return items.replace(/'/g, '"');
         }
+
+        function AlertSuccess(h, t, p, i, fr) {
+            console.log(fr)
+            setTimeout(function () {
+
+
+                Swal.fire({
+                    title: h,
+                    text: t,
+                    icon: "success"
+                }).then((result) => {
+                    if (fr === 'true') {
+                        window.location.href = "MasukTrnSewaGedung.aspx"
+                    }
+                });;
+            }, 100);
+
+        }
+
 
           //numeric 1
         function Comma(Num) {

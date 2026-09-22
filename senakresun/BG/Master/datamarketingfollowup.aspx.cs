@@ -1,15 +1,15 @@
-﻿using DefaultClass;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using DefaultClass;
 using EntitiesClass;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Web;
+using System.Text.RegularExpressions;
+using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Text.RegularExpressions;
 public partial class Report_datamarketingfollowup : System.Web.UI.Page
 {
 
@@ -29,25 +29,191 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         get { return Session["SessKdpersh"].ToString(); }
         set { ViewState["SessKdpersh"] = value; }
     }
+    private string SessKoperasiID
+    {
+        get { return Session["SessKoperasiID"].ToString(); }
+        set { ViewState["SessKoperasiID"] = value; }
+    }
+    private string SessKoperasiNama
+    {
+        get { return Session["SessKoperasiNama"].ToString(); }
+        set { ViewState["SessKoperasiNama"] = value; }
+    }
     public string CultureName
     {
         get { return (string)ViewState["CultureName"]; }
         set { ViewState["CultureName"] = value; }
 
     }
- 
 
     Global gb = new DefaultClass.Global();
     GlobalEntities ge = new GlobalEntities();
 
     public int bahanhariini = 0;
-  
+
+
+    [Serializable]
+    private class PetugasDto
+    {
+        public string Nama { get; set; }
+        public string NoTelp { get; set; }
+    }
+    private List<PetugasDto> PetugasList
+    {
+        get
+        {
+            if (ViewState["PetugasList"] == null)
+                ViewState["PetugasList"] = new List<PetugasDto>();
+
+            return (List<PetugasDto>)ViewState["PetugasList"];
+        }
+        set
+        {
+            ViewState["PetugasList"] = value;
+        }
+    }
+
+    bool IsValidPhone(string phone)
+    {
+        //@"^(?:\+62|62|0)8[1-9][0-9]{6,9}$"
+        return Regex.IsMatch(phone, @"^(?:\+62|62|0)\s?8[1-9](?:[\s\-]?[0-9]){6,9}$");
+    }
+
+    private void BindPetugas()
+    {
+        rptPetugas.DataSource = PetugasList;
+        rptPetugas.DataBind();
+    }
+
+    protected void btnTambahPetugas_Click(object sender, EventArgs e)
+    {
+        SyncRepeaterToModel();
+        PetugasList.Add(new PetugasDto());
+        BindPetugas();
+    }
+
+    protected void rptPetugas_ItemCommand(object source, RepeaterCommandEventArgs e)
+    {
+        if (e.CommandName == "delete")
+        {
+            SyncRepeaterToModel();
+
+            if (PetugasList.Count <= 1)
+            {
+                // Hard rule: minimal 1 petugas
+                return;
+            }
+
+            int index = Convert.ToInt32(e.CommandArgument);
+            PetugasList.RemoveAt(index);
+
+            BindPetugas();
+        }
+    }
+
+    private void SyncRepeaterToModel()
+    {
+        var result = new List<PetugasDto>();
+
+        foreach (RepeaterItem item in rptPetugas.Items)
+        {
+            var nama = ((TextBox)item.FindControl("txtNamaPetugas")).Text;
+            var telp = ((TextBox)item.FindControl("txtNoTelp")).Text;
+
+            result.Add(new PetugasDto
+            {
+                Nama = nama,
+                NoTelp = telp
+            });
+        }
+
+        PetugasList = result;
+    }
+
+    protected void btnCetakSuratPenawaran_Click(object sender, EventArgs e)
+    {
+
+        try
+        {
+
+            SyncRepeaterToModel();
+
+            if (PetugasList.Count < 1)
+                throw new Exception("Minimal satu petugas wajib diisi.");
+
+            using (ReportDocument rprt = new ReportDocument())
+            {
+                var jsonPetugas = new JavaScriptSerializer().Serialize(PetugasList);
+                string notas = txtNotasPenewaran.Text;
+                string namaNasabah = txtNamaNasabah.Text;
+                string alamatNasabah = txtAlamatNasabah.Text;
+
+                var paramList = new List<DefaultClass.Global.SqlHelper> {
+                    gb.CreateSPParameter("@Notas", ParameterDirection.Input, SqlDbType.VarChar, 50, notas, typeof(string)),
+                    gb.CreateSPParameter("@PetugasJson", ParameterDirection.Input, SqlDbType.VarChar, 0, jsonPetugas, typeof(string)),
+                    gb.CreateSPParameter("@session_id", ParameterDirection.Input, SqlDbType.VarChar, 15, SessLoginID, typeof(string)),
+                    gb.CreateSPParameter("@session_branch_id", ParameterDirection.Input, SqlDbType.VarChar, 9, SessBranchID, typeof(string)),
+                    gb.CreateSPParameter("@session_koperasi_id", ParameterDirection.Input, SqlDbType.VarChar, 9, SessKoperasiID, typeof(string)),
+                    gb.CreateSPParameter("@nama_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 100, namaNasabah, typeof(string)),
+                    gb.CreateSPParameter("@alamat_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 500, alamatNasabah, typeof(string)),
+                };
+
+                ge.ListDataTable = gb.GetDataJustOutPut("BG_CETAK_SURAT_PENAWARAN", paramList.ToArray(), "constrmf").Tables[0];
+
+                if (ge.ListDataTable.Rows.Count == 0)
+                    throw new Exception("Data Not Found.");
+
+                rprt.Load(Server.MapPath("~/BG/Report/SURAT_PENAWARAN.rpt"));
+                rprt.SetDataSource(ge.ListDataTable);
+
+                Response.ClearContent();
+                Response.ClearHeaders();
+
+                ReportHelper.ExportPdfInline(rprt, "Surat_Penawaran_" + notas, Response);
+            }
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString() + "');", true);
+        }
+
+    }
+
+    protected void btnKembaliPenawaran_Click(object sender, EventArgs e)
+    {
+        Pnlsearch.Visible = true;
+
+        Pnlakanfollow.Visible = false;
+        Pnlcancel.Visible = false;
+        if (ddlbahan.SelectedValue == "TASPEN")
+        {
+            Pnltagihan.Visible = true;
+            BindGridEntityTagihan();
+        }
+        else
+        {
+            Pnlasabari.Visible = true;
+            BindGridEntityAsabri();
+        }
+
+        CloseFormCetakPenawaran();
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
         try
         {
             if (!IsPostBack)
             {
+                PetugasList = new List<PetugasDto>
+                {
+                    new PetugasDto()
+                };
+
+                BindPetugas();
+
+
+
                 datacancel.Value = "0";
                 string query;
 
@@ -141,7 +307,25 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         }
     }
 
+    protected void BindDdlKantorBayar()
+    {
+        //KODEBANK
+        DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
+        var[0] = gb.CreateSPParameter("@kdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+        var[1] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+        var[2] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTCLMST", typeof(string));
+        var[3] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+        ge.ListDataset = gb.GetDataJustOutPut("KP_Trn_KANTOR_BAYAR", var, "constrmf");
 
+        ge.ListDataset.Tables[0].DefaultView.Sort = "KantorBayar asc";
+
+
+        ddlKantorBayarKunjungan.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlKantorBayarKunjungan.DataTextField = "NamaKantorBayar";
+        ddlKantorBayarKunjungan.DataValueField = "KantorBayar";
+        ddlKantorBayarKunjungan.DataBind();
+        ddlKantorBayarKunjungan.Items.Insert(0, new ListItem("Pilih Data", "-"));
+    }
 
     public void BindGridEntityTagihan()
     {
@@ -164,7 +348,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
     }
 
 
-                                                      
+
 
     public void BindGridEntityAsabri()
     {
@@ -186,7 +370,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         Grdasabri.HeaderRow.TableSection = TableRowSection.TableHeader;
 
 
-      
+
 
 
     }
@@ -194,7 +378,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
 
     public void BindGridEntitytaspencancel()
     {
-        
+
         DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[3];
         var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "VIEWTASPENCANCEL", typeof(string));
         var[1] = gb.CreateSPParameter("@kodeuser", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
@@ -212,7 +396,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
 
         Grdtaspencancel.HeaderRow.TableSection = TableRowSection.TableHeader;
 
-        
+
     }
     public void BindGridEntityasabricancel()
     {
@@ -233,7 +417,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
 
         Grdasabricancel.HeaderRow.TableSection = TableRowSection.TableHeader;
 
-        
+
 
 
     }
@@ -258,21 +442,21 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         GrdHistory.HeaderRow.TableSection = TableRowSection.TableHeader;
 
 
-       
 
-        
+
+
 
 
     }
 
 
 
-  
- 
+
+
     protected void lnkCari_Click(object sender, EventArgs e)
     {
-     
-      
+
+
         Pnltagihan.Visible = false;
 
         Pnlasabari.Visible = false;
@@ -286,12 +470,12 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
 
         if (datacancel.Value == "0")
         {
-      
+
 
 
             if (ddlbahan.SelectedValue == "TASPEN")
             {
-               
+
 
 
                 Pnltagihan.Visible = true;
@@ -301,7 +485,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
             }
             else if (ddlbahan.SelectedValue == "ASABRI")
             {
-            
+
                 Pnlasabari.Visible = true;
                 //Pnltunggakan.Visible = true;
 
@@ -316,7 +500,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
             if (ddlbahan.SelectedValue == "TASPEN")
             {
 
-            
+
                 Pnltaspencancel.Visible = true;
                 BindGridEntitytaspencancel();
 
@@ -336,38 +520,83 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
     }
 
+    //protected void Grdasabri_RowDataBound(object sender, GridViewRowEventArgs e)
+    //{
+    //    if (e.Row.RowType == DataControlRowType.DataRow)
+    //    {
+    //        for (int i = 0; i < e.Row.Cells.Count; i++)
+    //        {
+    //            if (ddlstatusfollow.SelectedValue == "0")
+    //            {
+    //                LinkButton status = (LinkButton)e.Row.FindControl("Lnkakanfollwox");
+    //                status.Visible = true;
+    //                LinkButton statusx = (LinkButton)e.Row.FindControl("Lnkcancelfollwox");
+    //                statusx.Visible = true;
+    //                LinkButton statusd = (LinkButton)e.Row.FindControl("LnkView1");
+    //                statusd.Visible = false;
+
+    //                LinkButton btnPenawaran = (LinkButton)e.Row.FindControl("lbCetakPenawaranAsabri");
+    //                btnPenawaran.Visible = true;
+    //            }
+    //            else
+    //            {
+    //                LinkButton status = (LinkButton)e.Row.FindControl("Lnkakanfollwox");
+    //                status.Visible = false;
+    //                LinkButton statusx = (LinkButton)e.Row.FindControl("Lnkcancelfollwox");
+    //                statusx.Visible = false;
+    //                LinkButton statusd = (LinkButton)e.Row.FindControl("LnkView1");
+    //                statusd.Visible = true;
+
+    //                LinkButton btnPenawaran = (LinkButton)e.Row.FindControl("lbCetakPenawaranAsabri");
+    //                btnPenawaran.Visible = false;
+    //            }
+    //        }
+    //    }
+    //}
+
     protected void Grdasabri_RowDataBound(object sender, GridViewRowEventArgs e)
     {
-        if (e.Row.RowType == DataControlRowType.DataRow)
+        if (e.Row.RowType != DataControlRowType.DataRow)
+            return;
+
+        // Ambil kontrol sekali
+        LinkButton lnkFollow = e.Row.FindControl("Lnkakanfollwox") as LinkButton;
+        LinkButton lnkCancel = e.Row.FindControl("Lnkcancelfollwox") as LinkButton;
+        LinkButton lnkHistory = e.Row.FindControl("LnkView1") as LinkButton;
+        LinkButton btnOffer = e.Row.FindControl("lbCetakPenawaranAsabri") as LinkButton;
+
+        // ambil nilai statuscancel dari datasource
+        int statusCancel = Convert.ToInt32(
+            DataBinder.Eval(e.Row.DataItem, "statuscancel")
+        );
+
+        // Default rule berdasarkan ddlstatusfollow
+        if (ddlstatusfollow.SelectedValue == "0")
         {
-            for (int i = 0; i < e.Row.Cells.Count; i++)
-            {
-                if (ddlstatusfollow.SelectedValue == "0")
-                {
-                    LinkButton status = (LinkButton)e.Row.FindControl("Lnkakanfollwox");
-                    status.Visible = true;
-                    LinkButton statusx = (LinkButton)e.Row.FindControl("Lnkcancelfollwox");
-                    statusx.Visible = true;
-                    LinkButton statusd = (LinkButton)e.Row.FindControl("LnkView1");
-                    statusd.Visible = false;
-
-
-                }
-                else
-                {
-                    LinkButton status = (LinkButton)e.Row.FindControl("Lnkakanfollwox");
-                    status.Visible = false;
-                    LinkButton statusx = (LinkButton)e.Row.FindControl("Lnkcancelfollwox");
-                    statusx.Visible = false;
-                    LinkButton statusd = (LinkButton)e.Row.FindControl("LnkView1");
-                    statusd.Visible = true;
-
-                }
-            }
+            if (lnkFollow != null) lnkFollow.Visible = true;
+            if (lnkCancel != null) lnkCancel.Visible = true;
+            if (lnkHistory != null) lnkHistory.Visible = false;
+            if (btnOffer != null) btnOffer.Visible = true;
+        }
+        else
+        {
+            if (lnkFollow != null) lnkFollow.Visible = false;
+            if (lnkCancel != null) lnkCancel.Visible = false;
+            if (lnkHistory != null) lnkHistory.Visible = true;
+            if (btnOffer != null) btnOffer.Visible = false;
         }
 
-
+        // OVERRIDE : jika statuscancel = 1 → Cancel HARUS hilang
+        if (lnkCancel != null)
+        {
+            lnkCancel.Visible = statusCancel != 1;
+            // untuk kunjungan dan penawaran apakah perlu di hide juga ?
+        }
     }
+
+    //SELECT KodeBank AS[Value], NamaBank AS[Text] FROM getkantorbayar();
+
+
     protected void Grdasabri_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         string urut;
@@ -378,7 +607,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         txttgllahirkunjungan.Text = "";
         txtusia.Text = "0";
         txttelpon.Text = "";
-        txtkantorbayarkunjungan.Text = "";
+        //txtkantorbayarkunjungan.Text = "";
         txtskonhand.Text = "";
         txtskonto.Text = "";
 
@@ -396,18 +625,18 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         switch (e.CommandName)
         {
             case "APPROVE":
-                
-                
+
+                BindDdlKantorBayar();
 
                 txtnourutfollow.Text = ((Label)Grdasabri.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnourut")).Text;
                 //  pnlData.Visible = false;
-                 Pnlasabari.Visible = false;
+                Pnlasabari.Visible = false;
                 Pnlakanfollow.Visible = true;
                 Pnlsearch.Visible = false;
                 txtnotasmaster.Text = ((Label)Grdasabri.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnotas")).Text;
                 Txtnama.Text = ((Label)Grdasabri.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnama")).Text;
                 txtalamat.Text = ((Label)Grdasabri.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblalamat")).Text;
-                Txtnamakunjungan.Text= ((Label)Grdasabri.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnama")).Text;
+                Txtnamakunjungan.Text = ((Label)Grdasabri.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnama")).Text;
                 TxtAlamatKunjungan.Text = ((Label)Grdasabri.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblalamat")).Text;
                 break;
             case "CANCEL1":
@@ -443,6 +672,35 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
                 pnlformatasabri.Visible = true;
                 TampilFormAsabri(urut);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
+                break;
+            case "PENAWARAN":
+                {
+                    GridViewRow row = ((Control)e.CommandSource).NamingContainer as GridViewRow;
+                    if (row == null)
+                        return;
+
+                    Label lblNotas = row.FindControl("lblnotas") as Label;
+                    Label lblNama = row.FindControl("lblnama") as Label;
+                    Label lblAlamat = row.FindControl("lblalamat") as Label;
+
+                    if (lblNotas != null)
+                        txtNotasPenewaran.Text = lblNotas.Text;
+
+                    if (lblNama != null)
+                        txtNamaNasabah.Text = lblNama.Text;
+
+                    if (lblAlamat != null)
+                        txtAlamatNasabah.Text = lblAlamat.Text;
+
+                    OpenFormCetakPenawaran();
+
+                    break;
+                }
+
+            default:
+
+                BindGridEntityAsabri();
+
                 break;
         }
 
@@ -504,38 +762,86 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         }
     }
 
+    //protected void Grdtagihan_RowDataBound(object sender, GridViewRowEventArgs e)
+    //{
+    //    if (e.Row.RowType == DataControlRowType.DataRow)
+    //    {
+    //        for (int i = 0; i < e.Row.Cells.Count; i++)
+    //        {
+    //            if (ddlstatusfollow.SelectedValue == "0")
+    //            {
+    //                LinkButton status = (LinkButton)e.Row.FindControl("Lnkakanfollwo");
+    //                status.Visible = true;
+    //                LinkButton statusx = (LinkButton)e.Row.FindControl("Lnkcancel4");
+    //                statusx.Visible = true;
+    //                LinkButton statusd = (LinkButton)e.Row.FindControl("LnkView2");
+    //                statusd.Visible = false;
+
+    //                LinkButton btnPenawaran = (LinkButton)e.Row.FindControl("lbCetakPenawaran");
+    //                btnPenawaran.Visible = true;
+    //            }
+    //            else
+    //            {
+    //                LinkButton status = (LinkButton)e.Row.FindControl("Lnkakanfollwo");
+    //                status.Visible = false;
+    //                LinkButton statusx = (LinkButton)e.Row.FindControl("Lnkcancel4");
+    //                statusx.Visible = false;
+    //                LinkButton statusd = (LinkButton)e.Row.FindControl("LnkView2");
+    //                statusd.Visible = true;
+
+    //                LinkButton btnPenawaran = (LinkButton)e.Row.FindControl("lbCetakPenawaran");
+    //                btnPenawaran.Visible = false;
+    //            }
+    //        }
+    //    }
+    //}
+
     protected void Grdtagihan_RowDataBound(object sender, GridViewRowEventArgs e)
     {
-        if (e.Row.RowType == DataControlRowType.DataRow)
+        if (e.Row.RowType != DataControlRowType.DataRow)
+            return;
+
+        //Lnkakanfollwo = kunjungan
+        //lbCetakPenawaran = penawaran
+        //Lnkcancel4 = cancel
+        //LnkView2 = history
+        //LinkButton3 = view
+
+        // ambil kontrol sekali saja
+        LinkButton lnkFollow = e.Row.FindControl("Lnkakanfollwo") as LinkButton;
+        LinkButton lnkCancel = e.Row.FindControl("Lnkcancel4") as LinkButton;
+        LinkButton lnkHistory = e.Row.FindControl("LnkView2") as LinkButton;
+        LinkButton btnOffer = e.Row.FindControl("lbCetakPenawaran") as LinkButton;
+        LinkButton btnHistory = e.Row.FindControl("LinkButton3") as LinkButton;
+
+
+        // ambil nilai statuscancel dari datasource
+        int statusCancel = Convert.ToInt32(
+            DataBinder.Eval(e.Row.DataItem, "statuscancel")
+        );
+
+        // logic berdasarkan ddlstatusfollow
+        if (ddlstatusfollow.SelectedValue == "0")
         {
-            for (int i = 0; i < e.Row.Cells.Count; i++)
-            {
-                if (ddlstatusfollow.SelectedValue == "0")
-                {
-                    LinkButton status = (LinkButton)e.Row.FindControl("Lnkakanfollwo");
-                    status.Visible = true;
-                    LinkButton statusx = (LinkButton)e.Row.FindControl("Lnkcancel4");
-                    statusx.Visible = true;
-                    LinkButton statusd = (LinkButton)e.Row.FindControl("LnkView2");
-                    statusd.Visible = false;
-
-
-                }
-                else
-                {
-                    LinkButton status = (LinkButton)e.Row.FindControl("Lnkakanfollwo");
-                    status.Visible = false;
-                    LinkButton statusx = (LinkButton)e.Row.FindControl("Lnkcancel4");
-                    statusx.Visible = false;
-                    LinkButton statusd = (LinkButton)e.Row.FindControl("LnkView2");
-                    statusd.Visible = true;
-
-                }
-            }
+            if (lnkFollow != null) lnkFollow.Visible = true;
+            if (lnkHistory != null) lnkHistory.Visible = false;
+            if (btnOffer != null) btnOffer.Visible = true;
+        }
+        else
+        {
+            if (lnkFollow != null) lnkFollow.Visible = false;
+            if (lnkHistory != null) lnkHistory.Visible = true;
+            if (btnOffer != null) btnOffer.Visible = false;
         }
 
-
+        // OVERRIDE : jika statuscancel = 1 → Cancel HARUS hilang
+        if (lnkCancel != null) lnkCancel.Visible = statusCancel != 1;
+        if (lnkFollow != null) lnkFollow.Visible = statusCancel != 1;
+        if (btnOffer != null) btnOffer.Visible = statusCancel != 1;
+        
     }
+
+
     protected void Grdtagihan_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         string urut;
@@ -546,7 +852,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         txttgllahirkunjungan.Text = "";
         txtusia.Text = "0";
         txttelpon.Text = "";
-        txtkantorbayarkunjungan.Text = "";
+        //txtkantorbayarkunjungan.Text = "";
         txtskonhand.Text = "";
         txtskonto.Text = "";
 
@@ -565,13 +871,15 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         switch (e.CommandName)
         {
             case "APPROVE":
-                
+
+                BindDdlKantorBayar();
+
                 txtnourutfollow.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnourut")).Text;
                 //  pnlData.Visible = false;
                 Pnlsearch.Visible = false;
                 Pnltagihan.Visible = false;
                 Pnlakanfollow.Visible = true;
-                txtnotasmaster.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnotas")).Text; 
+                txtnotasmaster.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnotas")).Text;
                 Txtnama.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnama")).Text;
                 txtalamat.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblalamat")).Text;
                 Txtnamakunjungan.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnama")).Text;
@@ -595,7 +903,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
 
                 txtnourutfollow.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnourut")).Text;
                 //  pnlData.Visible = false;
-                TextBox1.Text= ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbllat")).Text;
+                TextBox1.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbllat")).Text;
                 TextBox2.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbllon")).Text;
                 Pnlsearch.Visible = false;
                 Pnltagihan.Visible = false;
@@ -612,12 +920,48 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
                 TampilFormTaspen(urut);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
                 break;
+            case "PENAWARAN":
+
+                txtNotasPenewaran.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnotas")).Text;
+                txtNamaNasabah.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnama")).Text;
+                txtAlamatNasabah.Text = ((Label)Grdtagihan.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblalamat")).Text;
+
+                OpenFormCetakPenawaran();
+
+                break;
+            default:
+
+                BindGridEntityTagihan();
+
+                break;
 
         }
 
-
-
     }
+
+    private void OpenFormCetakPenawaran()
+    {
+        pnlData.Visible = false;
+        Pnlsearch.Visible = false;
+        Pnltagihan.Visible = false;
+        Pnlasabari.Visible = false;
+        Pnltaspencancel.Visible = false;
+        Pnlasabricancel.Visible = false;
+        Pnlakanfollow.Visible = false;
+        Pnlcancel.Visible = false;
+        Pnlhistory.Visible = false;
+        pnlformattaspen.Visible = false;
+        pnlformatasabri.Visible = false;
+        PanelSuratPenawaran.Visible = false;
+
+        PanelSuratPenawaran.Visible = true;
+    }
+
+    private void CloseFormCetakPenawaran()
+    {
+        PanelSuratPenawaran.Visible = false;
+    }
+
     public void TampilFormTaspen(string xnourut)
     {
         //numberFormat is the formatter I use for numbers.
@@ -629,7 +973,6 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         ge.ListDataset = gb.GetDataJustOutPut("BG_FOLLOWUP_SALES", Paramsc, "constrmf");
         if (ge.ListDataset.Tables[0].Rows.Count > 0)
         {
-            
 
             txtnotas.Text = ge.ListDataset.Tables[0].Rows[0]["notas"].ToString();
             Txtjenis.Text = ge.ListDataset.Tables[0].Rows[0]["jenispensiun"].ToString();
@@ -717,7 +1060,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
     protected void btnKembali_Click(object sender, EventArgs e)
     {
         Pnlsearch.Visible = true;
-       
+
         Pnlakanfollow.Visible = false;
         Pnlcancel.Visible = false;
         if (ddlbahan.SelectedValue == "TASPEN") //nama table menggunakan string
@@ -739,17 +1082,17 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
     {
         Lbljudul.Text = "DATA FOLLOW UP";
         Lbltaspen.Text = "Data FOLLOW UP";
-         datacancel.Value = "0";
+        datacancel.Value = "0";
         //btnproses.Visible = false;
         Pnltagihan.Visible = false;
         Pnltaspencancel.Visible = false;
         Pnlasabricancel.Visible = false;
         Pnlasabari.Visible = false;
- 
+
     }
     protected void btntunggakan_Click(object sender, EventArgs e)
     {
-        
+
         Pnltagihan.Visible = false;
 
         Pnlasabari.Visible = false;
@@ -767,12 +1110,6 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         //BindGridEntityTunggakan();
         //  ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
     }
-
-
-
-   
-   
-
 
 
     //protected void ddlbahan_SelectedIndexChanged(object sender, EventArgs e)
@@ -851,11 +1188,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
     //        }
     //    }
 
-
-
     //}
-
-
 
     protected void btnSimpan_followup_Click(object sender, EventArgs e)
     {
@@ -863,7 +1196,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
         {
             string prospek;
             prospek = "";
-            if (Hdnlon.Value=="")
+            if (Hdnlon.Value == "")
             {
                 Hdnlon.Value = "0";
             }
@@ -872,7 +1205,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
                 Hdnlat.Value = "0";
             }
 
-            if (Hdnlon.Value=="0" || Hdnlat.Value=="0")
+            if (Hdnlon.Value == "0" || Hdnlat.Value == "0")
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Anda Belum Mendapatkan Titik Location!','You successfully save this Project','top-right','success','1');", true);
             }
@@ -884,7 +1217,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
                     {
                         prospek = "3";
                     }
-                    else if(ddlkeinginan.SelectedValue == "1")
+                    else if (ddlkeinginan.SelectedValue == "1")
                     {
                         prospek = "3";
                     }
@@ -901,8 +1234,6 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
                     }
                 }
 
-
-               
                 DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[30];
                 var[0] = gb.CreateSPParameter("@createuser", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
                 var[1] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
@@ -917,7 +1248,8 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
                 var[9] = gb.CreateSPParameter("@Gajikunjungan", ParameterDirection.Input, SqlDbType.Money, 0, TxtGajikunjungan.Text, typeof(decimal));
                 var[10] = gb.CreateSPParameter("@usiakunjungan", ParameterDirection.Input, SqlDbType.Int, 0, int.Parse(txtusia.Text), typeof(int));
                 var[11] = gb.CreateSPParameter("@telponkunjungan", ParameterDirection.Input, SqlDbType.VarChar, 20, txttelpon.Text, typeof(string));
-                var[12] = gb.CreateSPParameter("@kantorbayarkunjungan", ParameterDirection.Input, SqlDbType.VarChar, 30, txtkantorbayarkunjungan.Text, typeof(string));
+                //var[12] = gb.CreateSPParameter("@kantorbayarkunjungan", ParameterDirection.Input, SqlDbType.VarChar, 30, txtkantorbayarkunjungan.Text, typeof(string));
+                var[12] = gb.CreateSPParameter("@kantorbayarkunjungan", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlKantorBayarKunjungan.SelectedValue, typeof(string));
                 var[13] = gb.CreateSPParameter("@skonhand", ParameterDirection.Input, SqlDbType.VarChar, 50, txtskonhand.Text, typeof(string));
                 var[14] = gb.CreateSPParameter("@skonto", ParameterDirection.Input, SqlDbType.VarChar, 50, txtskonto.Text, typeof(string));
                 var[15] = gb.CreateSPParameter("@pinjamanlama", ParameterDirection.Input, SqlDbType.Int, 0, ddlpinjaman.SelectedValue, typeof(int));
@@ -960,12 +1292,6 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
 
                 }
 
-
-
-
-
-                
-              
             }
             else
             {
@@ -1007,7 +1333,8 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
                 var[9] = gb.CreateSPParameter("@Gajikunjungan", ParameterDirection.Input, SqlDbType.Money, 0, TxtGajikunjungan.Text, typeof(decimal));
                 var[10] = gb.CreateSPParameter("@usiakunjungan", ParameterDirection.Input, SqlDbType.Int, 0, int.Parse(txtusia.Text), typeof(int));
                 var[11] = gb.CreateSPParameter("@telponkunjungan", ParameterDirection.Input, SqlDbType.VarChar, 20, txttelpon.Text, typeof(string));
-                var[12] = gb.CreateSPParameter("@kantorbayarkunjungan", ParameterDirection.Input, SqlDbType.VarChar, 30, txtkantorbayarkunjungan.Text, typeof(string));
+                //var[12] = gb.CreateSPParameter("@kantorbayarkunjungan", ParameterDirection.Input, SqlDbType.VarChar, 30, txtkantorbayarkunjungan.Text, typeof(string));
+                var[12] = gb.CreateSPParameter("@kantorbayarkunjungan", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlKantorBayarKunjungan.SelectedValue, typeof(string));
                 var[13] = gb.CreateSPParameter("@skonhand", ParameterDirection.Input, SqlDbType.VarChar, 50, txtskonhand.Text, typeof(string));
                 var[14] = gb.CreateSPParameter("@skonto", ParameterDirection.Input, SqlDbType.VarChar, 50, txtskonto.Text, typeof(string));
                 var[15] = gb.CreateSPParameter("@pinjamanlama", ParameterDirection.Input, SqlDbType.Int, 0, ddlpinjaman.SelectedValue, typeof(int));
@@ -1031,7 +1358,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
                 if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
                 {
 
-                    
+
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Save Done!','You successfully save this Project','top-right','success','1');", true);
                     Pnlsearch.Visible = true;
                     Pnlasabari.Visible = true;
@@ -1050,12 +1377,12 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
                 }
 
 
-              
 
-             
+
+
 
             }
-            
+
 
         }
 
@@ -1074,9 +1401,6 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
             if (ddlbahan.SelectedValue == "TASPEN") //nama table menggunakan string
             {
 
-
-
-
                 DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[6];
                 var[0] = gb.CreateSPParameter("@createuser", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
                 var[1] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
@@ -1084,7 +1408,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
                 var[3] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
                 var[4] = gb.CreateSPParameter("@nourut", ParameterDirection.Input, SqlDbType.Int, 0, int.Parse(txtnourutfollow.Text), typeof(int));
                 var[5] = gb.CreateSPParameter("@cancel", ParameterDirection.Input, SqlDbType.VarChar, 150, txtcancel.Text, typeof(string));
-                
+
                 ge.ListDataset = gb.GetDataJustOutPut("BG_FOLLOWUP_SALES_Pro", var, "constrmf");
 
 
@@ -1109,7 +1433,7 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
                 }
 
 
-               
+
             }
             else
             {
@@ -1145,9 +1469,9 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
 
                 }
 
-               
 
-             
+
+
 
             }
 
@@ -1160,5 +1484,4 @@ public partial class Report_datamarketingfollowup : System.Web.UI.Page
             //gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
         }
     }
-
 }

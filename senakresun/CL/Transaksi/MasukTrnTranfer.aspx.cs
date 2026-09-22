@@ -148,14 +148,19 @@ public partial class CL_Process_MasukTrnTranfer : System.Web.UI.Page
 
                 ge.ListDataset.Tables[0].DefaultView.Sort = "kode_cabang asc";
 
-
                 ddlTokdcabang.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
                 ddlTokdcabang.DataTextField = "nama_cabang";
-                ddlTokdcabang.DataValueField = "kode_cabang"; 
+                ddlTokdcabang.DataValueField = "kode_cabang";
                 ddlTokdcabang.DataBind();
 
+                if (SessBranchID != "000")
+                {
+                    ddlTokdcabang.SelectedValue = SessBranchID;
+                    ddlTokdcabang.Enabled = false;
+                }
 
-                DefaultClass.Global.SqlHelper[] Paramx = new DefaultClass.Global.SqlHelper[1];
+
+                    DefaultClass.Global.SqlHelper[] Paramx = new DefaultClass.Global.SqlHelper[1];
                 Paramx[0] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(String));
                 ge.ListDataset = gb.GetDataJustOutPut("dbo.GL_GetTeller", Paramx, "constrmf");
                 ge.ListDataset.Tables[0].DefaultView.Sort = "value asc";
@@ -187,8 +192,9 @@ public partial class CL_Process_MasukTrnTranfer : System.Web.UI.Page
                 gb.FillDDL(ge.ListDataset.Tables[0].DefaultView.ToTable(), ddltellerhdr, "None", "");
                 ddltellerhdr.Items.Insert(0, new ListItem("ALL", "ALL"));
 
-                ddltellerhdr.SelectedValue = SessLoginID;
-                if (SessLoginID.Substring(3, 3) == "TL1")
+                string tempuser = (SessBranchID == "000" ? "000TL1" : SessLoginID);
+                ddltellerhdr.SelectedValue = tempuser;
+                if (tempuser.Substring(3, 3) == "TL1")
                 {
                     ddltellerhdr.Enabled = true;
                 }
@@ -435,7 +441,7 @@ public partial class CL_Process_MasukTrnTranfer : System.Web.UI.Page
                     statusclosing = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblTutupBukuFlag")).Text;
                     statusposting = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblHapusFlag")).Text;
                     ddlteller.SelectedValue = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbluserteller")).Text;
-                    
+                    ddlTokdcabang.SelectedValue = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbltokodecabang")).Text;
 
                      //pnltrn.Visible = true;
                     Pnlfooter4.Visible = true;
@@ -704,7 +710,7 @@ public partial class CL_Process_MasukTrnTranfer : System.Web.UI.Page
                     btnSimpan.Visible = false;
                     btnCancel.Visible = false;
                     nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Delete Done!','zzzzzz','bottom-center','success','1');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Delete Done!','Data Berhasil Terhapus','bottom-center','success','true');", true);
 
                 }
 
@@ -734,10 +740,13 @@ public partial class CL_Process_MasukTrnTranfer : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        pnlHeader.Visible = true;
-        PnlFront.Visible = true;
-        pnladd.Visible = false;
-        Pnlfooter4.Visible = false;
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='MasukTrnTranfer.aspx';",
+            true
+        );
 
     }
     protected string btnreload()
@@ -778,7 +787,7 @@ public partial class CL_Process_MasukTrnTranfer : System.Web.UI.Page
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Jumlah Transaksi Masih Kosong');", true);
                     btnSimpan.Enabled = true;
                 }
-                else if (ddlKdBank.SelectedValue == "")
+                else if (ddlKdBank.SelectedValue == "") 
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Kode Bank Sumber Masih Kosong');", true);
                     btnSimpan.Enabled = true;
@@ -848,7 +857,8 @@ public partial class CL_Process_MasukTrnTranfer : System.Web.UI.Page
                     {
                         btnSimpan.Visible = false;
                         nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Save Done!','zzzzzz','bottom-center','success','1');", true);
+//                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Save Done!','zzzzzz','bottom-center','success','1');", true);
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','Data Berhasil Tersimpan','bottom-center','success','true');", true);
 
                     }
 

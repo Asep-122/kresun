@@ -770,9 +770,9 @@ public partial class Report_viewlisttunggakan : System.Web.UI.Page
                     //worksheet.Cell(ro, co).Style.Border.BottomBorder = XLBorderStyleValues.Thin;
 
                     string report = "";
-                    if (ddlproduk.SelectedValue == "3C")
+                    if (ddlproduk.SelectedValue == "35")
                     {
-                        report = "Report Tunggakan Mingguan " + ddlmarketing.SelectedItem.Text.ToString() + ".xlsx";
+                        report = "Report Tunggakan Pinjaman Pensiun " + ddlmarketing.SelectedItem.Text.ToString() + ".xlsx";
                     }
                     else if (ddlproduk.SelectedValue == "3B")
                     {

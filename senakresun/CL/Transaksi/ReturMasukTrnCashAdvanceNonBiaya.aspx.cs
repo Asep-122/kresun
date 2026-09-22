@@ -146,8 +146,10 @@ public partial class CL_Process_MasukBayarBiayaCrude : System.Web.UI.Page
                 gb.FillDDL(ge.ListDataset.Tables[0].DefaultView.ToTable(), ddlteller, "None", "");
                 ddlteller.Items.Insert(0, new ListItem("ALL", "ALL"));
 
-                ddlteller.SelectedValue = SessLoginID;
-                if (SessLoginID.Substring(3, 3) == "TL1")
+                string tempuser = (SessBranchID == "000" ? "000TL1" : SessLoginID);
+                ddlteller.SelectedValue = tempuser;
+
+                if (tempuser.Substring(3, 3) == "TL1")
                 {
                     ddlteller.Enabled = true;
                 }
@@ -683,7 +685,7 @@ public partial class CL_Process_MasukBayarBiayaCrude : System.Web.UI.Page
                 {
                     btnSimpan.Visible = false;
                     //nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Delete Done!','','bottom-center','success','1');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Delete Done!','Data Berhasil Terhapus','bottom-center','success','true');", true);
                 }
                 else
                 {
@@ -704,7 +706,13 @@ public partial class CL_Process_MasukBayarBiayaCrude : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect(Request.Url.AbsoluteUri);
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='ReturMasukTrnCashAdvanceNonBiaya.aspx';",
+            true
+        );
     }
     protected string btnreload()
     {
@@ -883,7 +891,8 @@ public partial class CL_Process_MasukBayarBiayaCrude : System.Web.UI.Page
                     {
                         btnSimpan.Visible = false;
                         //nobuktidb = ge.ListDataset.Tables[0].Rows[0][1].ToString();
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alert('Save Done!','','bottom-center','success','1');", true);
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','Data Berhasil Tersimpan','bottom-center','success','true');", true);
+
                     }
                     else
                     {

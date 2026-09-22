@@ -12,45 +12,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- Plugins css-->
-    <link href="../../plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />
 
     <!-- App css -->
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/css/icons.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
 
-    <script src="../../assets/js/modernizr.min.js"></script>
+    <script src="/assets/js/modernizr.min.js"></script>
 
-    <link href="../../assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="/assets/css/jquery-ui.css" rel="stylesheet" />
 
-    <link href="../../plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
 
     <!-- Sweet Alert css -->
-    <link href="../../plugins/sweet-alert/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/sweet-alert/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 
 
     <!-- jQuery  -->
-    <script src="../../Javascript/jquery-1.12.0.min.js"></script>
-    <script src="../../assets/js/popper.min.js"></script>
-    <script src="../../assets/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/waves.js"></script>
-    <script src="../../assets/js/jquery.slimscroll.js"></script>
+    <script src="/Javascript/jquery-1.12.0.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/jquery.slimscroll.js"></script>
 
-    <script src="../../Javascript/jquery-ui.js"></script>
+    <script src="/Javascript/jquery-ui.js"></script>
 
     <!-- Toastr css -->
-    <link href="../../plugins/jquery-toastr/jquery.toast.min.css" rel="stylesheet" />
+    <link href="/plugins/jquery-toastr/jquery.toast.min.css" rel="stylesheet" />
 
     <!-- Modal -->
-    <link href="../../plugins/custombox/css/custombox.min.css" rel="stylesheet" />
+    <link href="/plugins/custombox/css/custombox.min.css" rel="stylesheet" />
 
     <!-- Tooltipster css -->
-    <link rel="stylesheet" href="../../plugins/tooltipster/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" href="/plugins/tooltipster/tooltipster.bundle.min.css" />
     <!-- DataTables -->
-    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <!-- Responsive datatable examples -->
-    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript">
         function Alert(h, t, p, i, fr) {
@@ -295,7 +295,20 @@
                                                         <itemtemplate>
                                                             <asp:Label ID="lbltgljatuhtempo" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "TglJatuhTempo")%>'></asp:Label>
                                                         </itemtemplate>
-
+                                                        <headerstyle height="30px" cssclass="text-center"></headerstyle>
+                                                        <itemstyle horizontalalign="Left"></itemstyle>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="JenisProduk">
+                                                        <itemtemplate>
+                                                            <asp:Label ID="lblProduk" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Jenis_Produk")%>'></asp:Label>
+                                                        </itemtemplate>
+                                                        <headerstyle height="30px" cssclass="text-center"></headerstyle>
+                                                        <itemstyle horizontalalign="Left"></itemstyle>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="SumberDana">
+                                                        <itemtemplate>
+                                                            <asp:Label ID="lblSumberDana" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "sumberdana")%>'></asp:Label>
+                                                        </itemtemplate>
                                                         <headerstyle height="30px" cssclass="text-center"></headerstyle>
                                                         <itemstyle horizontalalign="Left"></itemstyle>
                                                     </asp:TemplateField>
@@ -303,7 +316,8 @@
                                                         <headerstyle cssclass="align-center" width="10%"></headerstyle>
                                                         <itemstyle horizontalalign="Center"></itemstyle>
                                                         <itemtemplate>
-                                                            <asp:LinkButton ID="printPreview" runat="server" data-toggle="tooltip" data-placement="left" title="Print Preview" CommandName='<%#DataBinder.Eval(Container.DataItem, "KantorBayar")%>' CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"><i class="mdi mdi-printer icon-md"></i></asp:LinkButton>
+                                                            <%--<asp:LinkButton ID="printPreview" runat="server" data-toggle="tooltip" data-placement="left" title="Print Preview" CommandName='<%#DataBinder.Eval(Container.DataItem, "KantorBayar")%>' CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"><i class="mdi mdi-printer icon-md"></i></asp:LinkButton>--%>
+                                                            <asp:LinkButton ID="printPreview" runat="server" data-toggle="tooltip" data-placement="left" title="Print Preview" CommandName="printPreview" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"><i class="mdi mdi-printer icon-md"></i></asp:LinkButton>
                                                         </itemtemplate>
                                                     </asp:TemplateField>
                                                 </columns>
@@ -328,29 +342,29 @@
 </body>
 
 <!-- Parsley js -->
-<script type="text/javascript" src="../../plugins/parsleyjs/parsley.min.js"></script>
+<script type="text/javascript" src="/plugins/parsleyjs/parsley.min.js"></script>
 
-<script src="../../plugins/bootstrap-select/js/bootstrap-select.js" type="text/javascript"></script>
+<script src="/plugins/bootstrap-select/js/bootstrap-select.js" type="text/javascript"></script>
 
-<script src="../../plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
 <!-- Sweet Alert Js  -->
-<script src="../../plugins/sweet-alert/sweetalert2.min.js"></script>
+<script src="/plugins/sweet-alert/sweetalert2.min.js"></script>
 <!-- Tooltipster js -->
-<script src="../../plugins/tooltipster/tooltipster.bundle.min.js"></script>
+<script src="/plugins/tooltipster/tooltipster.bundle.min.js"></script>
 
 <!-- Required datatable js -->
-<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/plugins/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Responsive examples -->
-<script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
-<script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+<script src="/plugins/datatables/dataTables.responsive.min.js"></script>
+<script src="/plugins/datatables/responsive.bootstrap4.min.js"></script>
 
 <!-- App js -->
-<script src="../../assets/js/jquery.app.js"></script>
+<script src="/assets/js/jquery.app.js"></script>
 
 <!-- Toastr js -->
-<script src="../../plugins/jquery-toastr/jquery.toast.min.js" type="text/javascript"></script>
+<script src="/plugins/jquery-toastr/jquery.toast.min.js" type="text/javascript"></script>
 
 </html>

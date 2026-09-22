@@ -363,9 +363,14 @@ updateProgress.style.display = "block";
                                                                    <%--<form action="#">--%>
                                                                     
                                                                     <div class="form-group row">
+                                                                         <label for="inputpid" class="col-3 col-form-label">Produk</label>
+                                                                        <div class="col-9">
+                                                                            <asp:DropDownList ID="ddlProduk" Visible="true" CssClass="selectpicker show-tick" runat="server" data-style=btn-custom></asp:DropDownList>
+                                                                        </div>
+                                                                    </div>                                                                   
+                                                                    <div class="form-group row">
                                                                          <label for="inputpid" class="col-3 col-form-label">Area SENA</label>
                                                                         <div class="col-9">
-                                                                            <asp:DropDownList ID="ddlProduk" Visible="false" CssClass="selectpicker show-tick" runat="server" data-style=btn-custom></asp:DropDownList>
                                                                             <asp:DropDownList ID="ddlAreaSena" CssClass="selectpicker show-tick" runat="server" data-style=btn-custom AutoPostBack="true" OnSelectedIndexChanged="ddlAreaSena_SelectedIndexChanged"></asp:DropDownList>
                                                                             <asp:DropDownList ID="ddlCabangSena" Visible="false" CssClass="selectpicker show-tick" runat="server" data-style=btn-custom  AutoPostBack="true" ></asp:DropDownList>
                                                                         </div>

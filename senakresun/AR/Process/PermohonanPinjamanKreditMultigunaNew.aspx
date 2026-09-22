@@ -2080,7 +2080,7 @@
                                                              </div>
                                                              <div class="form-group">
                                                                 <asp:label ID="Label65" runat="server" Visible="false" class="col-form-label">Ref Non AO</asp:label>
-																<asp:DropDownList ID="ddlnonao" Visible="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" ></asp:DropDownList>
+																<asp:DropDownList ID="ddlnonao" Visible="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom"></asp:DropDownList>
                                                              </div>
                                                              <div class="form-group">
                                                                 <asp:label ID="Label66" runat="server" Visible="false" class="col-form-label">Sektor Ekonomi</asp:label>

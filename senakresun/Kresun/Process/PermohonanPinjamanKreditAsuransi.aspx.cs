@@ -35,7 +35,7 @@ public partial class AR_Process_PermohonanPinjamanKreditAsuransi: System.Web.UI.
 
     Global gbx = new DefaultClass.Global();
     GlobalEntities gex = new GlobalEntities();
-
+    GlobalEntities gtx = new GlobalEntities();
     DateTime tgl_libur, tgl_realisasi, tgldrop;
     double angsuranperbulan = 0;
     string nonasabah = "", agama = "", usia = "", namafileJaminan = "", fotopathJaminan = "";
@@ -1844,21 +1844,20 @@ public partial class AR_Process_PermohonanPinjamanKreditAsuransi: System.Web.UI.
                     txtidpermohonan.Text = HDRegister.Value;
 
                         pnladd.Visible = true;
-                        pnlIdentitas.Visible = true;
+                        pnlIdentitas.Visible = false;
                         PnlFront.Visible = false;
                     
                         //pnlJaminan.Visible = true;
                         //pnlPengajuan.Visible = true;
                       
-                        pnlpinjaman.Visible = true;
-                        Pnlpenerima.Visible = true;
-                        Pnlsimulasi.Visible = true;
-                        PnlSKPensiun.Visible = true;
-                        pnlpinjaman.Visible = true;
+                        pnlpinjaman.Visible = false;
+                        Pnlpenerima.Visible = false;
+                        Pnlsimulasi.Visible = false;
+                        PnlSKPensiun.Visible = false;
                     pnlUpdAsuransi.Visible = true;
                     pnlAlasanTolak.Visible = true;
-                    PNLKELUARGA.Visible = true;
-                    PnlRekeningBank.Visible = true;
+                    PNLKELUARGA.Visible = false;
+                    PnlRekeningBank.Visible = false;
                     //PnlFooter.Visible = true;
                     btnCancel.Visible = true;
                       
@@ -2227,7 +2226,10 @@ public partial class AR_Process_PermohonanPinjamanKreditAsuransi: System.Web.UI.
 
                         DdlAngsurandimuka();
                         ddlmaterai.SelectedValue = kodematerai;
-                        ddlprovisi.SelectedValue = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["provisi"].ToString()));
+                        string provisi = ge.ListDataset.Tables[0].Rows[0]["provisi"]
+                                              .ToString()
+                                              .Replace(".", ",");
+                        ddlprovisi.SelectedValue = provisi;
                         ddlangsurandimuka.SelectedValue = txtangsurandimukakali.Text;
                         ddlangsurandimukablokir.SelectedValue = txtangsuranblokirkali.Text;
                         txtmateraipcs.Text = kodematerai;
@@ -2709,8 +2711,6 @@ public partial class AR_Process_PermohonanPinjamanKreditAsuransi: System.Web.UI.
         }
 
     }
-
-
     public string DdlAngsurandimuka()
     {
         try
@@ -2727,15 +2727,23 @@ public partial class AR_Process_PermohonanPinjamanKreditAsuransi: System.Web.UI.
             }
             ddlmaterai.Items.Insert(0, new ListItem("Pilih Materai", "0"));
 
-
-
             ddlprovisi.Items.Clear();
-            for (int i = 3; i <= 8; i++)
-            {
-                ddlprovisi.Items.Add(new ListItem(i.ToString(), i.ToString()));
 
-            }
+            DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
+            var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LISTPROVISI", typeof(string));
+            var[1] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+            var[2] = gb.CreateSPParameter("@kodebank", ParameterDirection.Input, SqlDbType.VarChar, 50, txtkodesimulasi.Text, typeof(string));
+            var[3] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+            gtx.ListDataset = gb.GetDataJustOutPut("SI_Request", var, "constrmf");
+
+
+            ddlprovisi.DataSource = gtx.ListDataset.Tables[0].DefaultView.ToTable();
+            ddlprovisi.DataTextField = "provisi";
+            ddlprovisi.DataValueField = "provisi";
+            ddlprovisi.DataBind();
             ddlprovisi.Items.Insert(0, new ListItem("Pilih Provisi", "0"));
+
 
             ddlangsurandimuka.Items.Clear();
             for (int i = 1; i <= 30; i++)

@@ -696,6 +696,8 @@
                                                 <asp:ListItem Text="Piliha Simulasi" Value="-"></asp:ListItem>
                                                 <asp:ListItem Text="Universal" Value="A"></asp:ListItem>
                                                 <asp:ListItem Text="Capital" Value="B"></asp:ListItem>
+                                                <asp:ListItem Text="Dana Lestari" Value="C"></asp:ListItem>
+                                                <asp:ListItem Text="THT" Value="D"></asp:ListItem>
                                             </asp:DropDownList>                                                                
                                         </div> 
                                         <div class="form-group col-md-6">

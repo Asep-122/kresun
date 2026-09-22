@@ -144,8 +144,23 @@ public partial class GL_Report_ReportTransaksiHarian : System.Web.UI.Page
         ddltypejournalakhir.Items.Insert(0, new ListItem("-", "-"));
 
 
+        DefaultClass.Global.SqlHelper[] Paramsd = new DefaultClass.Global.SqlHelper[2];
+        Paramsd[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+        Paramsd[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "GETKODECABANG", typeof(string));
+        ge.ListDataset = gb.GetDataJustOutPut("dbo.KP_REPORTING_CL", Paramsd, "constrmf");
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kodecabang asc";
+        //ge.ListDataset.Tables[0].DefaultView.Sort = "value asc";
+        //gb.FillDDL(ge.ListDataset.Tables[0].DefaultView.ToTable(), ddlcabang, "None", "");
+        ddlcabang.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlcabang.DataTextField = "namacabang";
+        ddlcabang.DataValueField = "kodecabang";
+        ddlcabang.DataBind();
+        ddlcabang.Items.Insert(0, new ListItem("ALL", "ALL"));
+
+
+
     }
- 
+
     protected void btnSerach_Click(object sender, EventArgs e)
     {
         //ReportDocument rprt = new ReportDocument();
@@ -164,7 +179,7 @@ public partial class GL_Report_ReportTransaksiHarian : System.Web.UI.Page
                 Paramsx[2] = gb.CreateSPParameter("@TglTrnawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txttglhariini.Text, typeof(DateTime));
                 Paramsx[3] = gb.CreateSPParameter("@TglTrnakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txttglhariini.Text, typeof(DateTime));
                 Paramsx[4] = gb.CreateSPParameter("@typeposting", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlrpttype.SelectedValue, typeof(string));
-                Paramsx[5] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(String));
+                Paramsx[5] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, ddlcabang.SelectedValue, typeof(String));
                 Paramsx[6] = gb.CreateSPParameter("@userteller", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlteller.SelectedValue, typeof(String));
                
                 dt2.ListDataset = gb.GetDataJustOutPut("GL_STD_RPT_003_TglHarian_X", Paramsx, "constrmf");
@@ -618,11 +633,11 @@ public partial class GL_Report_ReportTransaksiHarian : System.Web.UI.Page
         Paramsx[2] = gb.CreateSPParameter("@TglTrnawal", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txttglhariini.Text, typeof(DateTime));
         Paramsx[3] = gb.CreateSPParameter("@TglTrnakhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txttglhariini.Text, typeof(DateTime));
         Paramsx[4] = gb.CreateSPParameter("@typeposting", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlrpttype.SelectedValue, typeof(string));
-        Paramsx[5] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(String));
+        Paramsx[5] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, ddlcabang.SelectedValue, typeof(String));
         Paramsx[6] = gb.CreateSPParameter("@userteller", ParameterDirection.Input, SqlDbType.VarChar, 30, ddlteller.SelectedValue, typeof(String));
 
         ge.ListDataset = gb.GetDataJustOutPut("GL_STD_RPT_003_TglHarian_X", Paramsx, "constrmf");
-       ge.ListDataset.Tables[0].DefaultView.Sort = "TglEntry desc";
+        ge.ListDataset.Tables[0].DefaultView.Sort = "TglEntry desc";
 
 
         GRData.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();

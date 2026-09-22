@@ -463,9 +463,10 @@ function sweetAlertsave(btnSimpan,errMsg) {
                             console.log(obj);
                             var found = $.map(obj, function (item) {
                                 return {
-                                    label: item[2],
+                                    label: item[3],
                                     hdncustomer: item[0],
-                                    HDNoRekening: item[1]
+                                    HDNoRekening: item[1],
+                                    HDNKodeCabang: item[2]
                                 }
                             });
 

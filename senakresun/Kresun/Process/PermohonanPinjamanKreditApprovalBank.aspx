@@ -1407,7 +1407,9 @@
                                                                         <asp:DropDownList ID="ddldatasimulasi" runat="server" CssClass="selectpicker show-tick" data-style="btn-custom" AutoPostBack="true" >
                                                                         <asp:ListItem Value="0">Tanpa Data Simulasi</asp:ListItem>
                                                                         <asp:ListItem Value="A">Data Simulasi Universal</asp:ListItem>              
-                                                                        <asp:ListItem Value="B">Data Simulasi Capital</asp:ListItem>        
+                                                                        <asp:ListItem Value="B">Data Simulasi Capital</asp:ListItem>
+                                                                        <asp:ListItem Value="C">Data Simulasi Dana Lestari</asp:ListItem>
+                                                                        <asp:ListItem Value="D">Data Simulasi THT</asp:ListItem>                                                                             
                                                                         </asp:DropDownList> 
                                                              <asp:TextBox CssClass="form-control"  Visible="false" ID="txtidpermohonan" text="0" MaxLength="50"  runat="server" ></asp:TextBox> 
                                                                </div>

@@ -1378,7 +1378,8 @@
                     
                     <!-- end wrapper -->
             </ContentTemplate>
-            <Triggers>                <asp:PostBackTrigger ControlID="txtnopen"/>
+            <Triggers>
+                <asp:PostBackTrigger ControlID="txtnopen"/>
                 <asp:PostBackTrigger ControlID="GRData" />
                      <asp:PostBackTrigger ControlID="btnAdd" />
                  <asp:PostBackTrigger ControlID="ddlkodeproduk"/>
@@ -1392,7 +1393,8 @@
              
                 
                 
-               
+              
+ 
             </Triggers>
         </asp:UpdatePanel>
     </form>

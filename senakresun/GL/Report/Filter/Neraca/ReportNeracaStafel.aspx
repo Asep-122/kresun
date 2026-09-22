@@ -109,6 +109,12 @@
                                                  --%>                   <asp:ListItem Value="9">Laporan Semua Perkiraan Termasuk Bersaldo Nol</asp:ListItem>
                                                                 </asp:DropDownList>                                                     
                                 </div>
+                                   <div class="form-row" style="display:none">
+                                        <div class="form-group col-md-12">
+                                            <label for="inputCity" class="col-form-label">Code Cabang</label>
+                                              <asp:DropDownList ID="ddlcabang" CssClass="form-control"  runat="server"></asp:DropDownList>
+                                        </div> 
+                                    </div>   
                                         <%--<div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputCity" class="col-form-label">Department Code from </label>

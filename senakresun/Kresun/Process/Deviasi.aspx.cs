@@ -65,7 +65,7 @@ public partial class KP_Process_Deviasi : System.Web.UI.Page
     {
         if (!Page.IsPostBack)
         {
-            BindGridEntity();
+            Status_SelectedIndexChanged(sender, e);
         }
 
 
@@ -75,7 +75,7 @@ public partial class KP_Process_Deviasi : System.Web.UI.Page
     {
 
 
-        DefaultClass.Global.SqlHelper[] x = new DefaultClass.Global.SqlHelper[4];
+/*        DefaultClass.Global.SqlHelper[] x = new DefaultClass.Global.SqlHelper[4];
         x[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
         x[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LISTDEVIASI", typeof(string));
         x[2] = gb.CreateSPParameter("@UserLogin", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));        
@@ -91,7 +91,7 @@ public partial class KP_Process_Deviasi : System.Web.UI.Page
 
         GRData.UseAccessibleHeader = true;
 
-        GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
+        GRData.HeaderRow.TableSection = TableRowSection.TableHeader;*/
     }
 
     protected void btnAdd_Click(object sender, EventArgs e)
@@ -150,30 +150,100 @@ public partial class KP_Process_Deviasi : System.Web.UI.Page
                     //hdnnourut.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnobukti")).Text;
 
                     DefaultClass.Global.SqlHelper[] Paramsc = new DefaultClass.Global.SqlHelper[6];
+
                     Paramsc[0] = gb.CreateSPParameter("@NoBukti", ParameterDirection.Input, SqlDbType.VarChar, 50, nobukti, typeof(string));
                     Paramsc[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "REPORTDEVIASI", typeof(string));
                     Paramsc[2] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
                     Paramsc[3] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(string));
                     Paramsc[4] = gb.CreateSPParameter("@Level", ParameterDirection.Input, SqlDbType.Int, 10, Convert.ToInt32(Level), typeof(int));
                     Paramsc[5] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
                     ge.ListDataTable = gb.GetDataJustOutPut("KP_Deviasi", Paramsc, "constrmf").Tables[0];
+
+                    DataTable dtAsli = ge.ListDataTable;
+                    DataTable dtReport = dtAsli.Clone();
+
+                    if (!dtReport.Columns.Contains("images"))
+                    {
+                        dtReport.Columns.Add("images", typeof(byte[]));
+                    }                    
+                    
+                    if (!dtReport.Columns.Contains("Checkimages"))
+                    {
+                        dtReport.Columns.Add("Checkimages", typeof(byte[]));
+                    }
+
+                    if (dtAsli.Rows.Count > 0)
+                    {
+                        DataRow rowUtama = dtAsli.Rows[0];
+
+                        string htmlEditor = rowUtama["Editor"] == DBNull.Value
+                            ? ""
+                            : rowUtama["Editor"].ToString();
+
+                        MatchCollection semuaGambar = Regex.Matches(
+                            htmlEditor,
+                            @"<img[^>]*src=[""']data:image\/[^;]+;base64,([^""']+)[""']",
+                            RegexOptions.IgnoreCase
+                        );
+
+                        foreach (Match gambar in semuaGambar)
+                        {
+                            DataRow rowBaru = dtReport.NewRow();
+
+                            foreach (DataColumn col in dtAsli.Columns)
+                            {
+                                rowBaru[col.ColumnName] = rowUtama[col.ColumnName];
+                            }
+
+                            try
+                            {
+                                rowBaru["images"] = Convert.FromBase64String(gambar.Groups[1].Value);
+                                rowBaru["Checkimages"] = 1;
+                            }
+                            catch
+                            {
+                                rowBaru["images"] = DBNull.Value;
+                                rowBaru["Checkimages"] = 0;
+                            }
+
+                            dtReport.Rows.Add(rowBaru);
+                        }
+
+                        if (dtReport.Rows.Count == 0)
+                        {
+                            DataRow rowTanpaGambar = dtReport.NewRow();
+
+                            foreach (DataColumn col in dtAsli.Columns)
+                            {
+                                rowTanpaGambar[col.ColumnName] = rowUtama[col.ColumnName];
+                            }
+
+                            rowTanpaGambar["images"] = DBNull.Value;
+
+                            dtReport.Rows.Add(rowTanpaGambar);
+                        }
+                    }
+
+                    ge.ListDataTable = dtReport;
 
                     if (ge.ListDataTable.Rows.Count > 0)
                     {
-
-
                         rprt.Load(Server.MapPath("~/Kresun/Report/Deviasi.rpt"));
                         rprt.SetDataSource(ge.ListDataTable);
+
                         Response.Buffer = false;
-                        // Clear the response content and headers
                         Response.ClearContent();
                         Response.ClearHeaders();
                         Response.ContentType = "application/pdf";
-                        rprt.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "ExportedFile");
 
-
+                        rprt.ExportToHttpResponse(
+                            ExportFormatType.PortableDocFormat,
+                            Response,
+                            false,
+                            "ExportedFile"
+                        );
                     }
-
 
                 }
 
@@ -200,14 +270,48 @@ public partial class KP_Process_Deviasi : System.Web.UI.Page
                 {
                     string NoBukti = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnobukti")).Text;
                     string Level = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblLevel")).Text;
-                    DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[7];
+                    string keteranganapprove = hdnKeteranganApprove.Value.ToString();
+                    DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[8];
                     var1[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
                     var1[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "APPROVEDEVIASI", typeof(string));
                     var1[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
                     var1[3] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
                     var1[4] = gb.CreateSPParameter("@NoBukti", ParameterDirection.Input, SqlDbType.VarChar, 50, NoBukti, typeof(string));
                     var1[5] = gb.CreateSPParameter("@UserLogin", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
-                    var1[6] = gb.CreateSPParameter("@Level", ParameterDirection.Input, SqlDbType.Int, 50, Convert.ToInt32(Level) + 1, typeof(int));
+                    var1[6] = gb.CreateSPParameter("@Note", ParameterDirection.Input, SqlDbType.VarChar, 50, keteranganapprove, typeof(string));
+                    var1[7] = gb.CreateSPParameter("@Level", ParameterDirection.Input, SqlDbType.Int, 50, Convert.ToInt32(Level) + 1, typeof(int));
+                    ge.ListDataset = gb.GetDataJustOutPut("KP_Deviasi", var1, "constrmf");
+                    if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','You successfully Approve data','top-right','success','true');", true);
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "','success','true');", true);
+
+                    }
+                }
+                catch(Exception ex)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString().Replace("'", "") + "');", true);
+                    gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+                }
+                break;            
+            case "Tolak":
+                try
+                {
+                    string NoBukti = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnobukti")).Text;
+                    string Level = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblLevel")).Text;
+                    string keteranganapprove = hdnKeteranganApprove.Value.ToString();
+                    DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[8];
+                    var1[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+                    var1[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "TOLAKDEVIASI", typeof(string));
+                    var1[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                    var1[3] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+                    var1[4] = gb.CreateSPParameter("@NoBukti", ParameterDirection.Input, SqlDbType.VarChar, 50, NoBukti, typeof(string));
+                    var1[5] = gb.CreateSPParameter("@UserLogin", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
+                    var1[6] = gb.CreateSPParameter("@Note", ParameterDirection.Input, SqlDbType.VarChar, 50, keteranganapprove, typeof(string));
+                    var1[7] = gb.CreateSPParameter("@Level", ParameterDirection.Input, SqlDbType.Int, 50, Convert.ToInt32(Level) + 1, typeof(int));
                     ge.ListDataset = gb.GetDataJustOutPut("KP_Deviasi", var1, "constrmf");
                     if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
                     {
@@ -229,6 +333,60 @@ public partial class KP_Process_Deviasi : System.Web.UI.Page
         }
 
 
+    }
+
+
+    private DataTable BuatTabelFoto(string htmlQuill, string kdDokumen)
+    {
+        DataTable dtFoto = new DataTable("dtFoto");
+
+        dtFoto.Columns.Add("KdDokumen", typeof(string));
+        dtFoto.Columns.Add("NoUrut", typeof(int));
+        dtFoto.Columns.Add("Foto", typeof(byte[]));
+
+        if (string.IsNullOrWhiteSpace(htmlQuill))
+            return dtFoto;
+
+        MatchCollection matches = Regex.Matches(
+            htmlQuill,
+            @"<img[^>]+src\s*=\s*[""'](?<src>[^""']+)[""']",
+            RegexOptions.IgnoreCase
+        );
+
+        int noUrut = 1;
+
+        foreach (Match match in matches)
+        {
+            try
+            {
+                string src = HttpUtility.HtmlDecode(match.Groups["src"].Value);
+                byte[] imageBytes = null;
+
+                // Gambar Quill dalam bentuk Base64
+                if (src.StartsWith("data:image", StringComparison.OrdinalIgnoreCase))
+                {
+                    string base64 = src.Substring(src.IndexOf(",") + 1);
+                    imageBytes = Convert.FromBase64String(base64);
+                }
+
+                if (imageBytes != null)
+                {
+                    DataRow row = dtFoto.NewRow();
+                    row["KdDokumen"] = kdDokumen;
+                    row["NoUrut"] = noUrut;
+                    row["Foto"] = imageBytes;
+                    dtFoto.Rows.Add(row);
+
+                    noUrut++;
+                }
+            }
+            catch
+            {
+                // Jika ada gambar Base64 rusak, lewati gambar tersebut
+            }
+        }
+
+        return dtFoto;
     }
 
     protected void btnCancel_Click(object sender, EventArgs e)
@@ -330,56 +488,89 @@ public partial class KP_Process_Deviasi : System.Web.UI.Page
     {
         try
         {
-
-            if(ddlStatus.SelectedValue == "-" || ddlStatus.SelectedValue == "Tolak")
+            if (ddlStatus.SelectedValue == "-" )
             {
                 return;
             }
 
-            DefaultClass.Global.SqlHelper[] x = new DefaultClass.Global.SqlHelper[5];
+            DefaultClass.Global.SqlHelper[] x = new DefaultClass.Global.SqlHelper[6];
             x[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
             x[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LISTSTATUSDEVIASI", typeof(string));
             x[2] = gb.CreateSPParameter("@UserLogin", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
             x[3] = gb.CreateSPParameter("@Status", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlStatus.SelectedValue, typeof(string));
-            x[4] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+            x[4] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+            x[5] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
             ge.ListDataset = gb.GetDataJustOutPut("KP_Deviasi", x, "constrmf");
 
-            DataTable dt = ge.ListDataset.Tables[0];
-            GRData.DataSource = dt.DefaultView.ToTable();
-            GRData.DataBind();
-            GRData.UseAccessibleHeader = true;
-            GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
+            DataView dv = ge.ListDataset.Tables[0].DefaultView;
+            dv.Sort = "CreateDate desc";
 
-            // 🔹 Loop berdasarkan index baris
+            DataTable dt = dv.ToTable();
+                
+            GRData.DataSource = dt;
+            GRData.DataBind();
+
             for (int i = 0; i < GRData.Rows.Count; i++)
             {
                 GridViewRow row = GRData.Rows[i];
-                LinkButton btnApprove = (LinkButton)row.FindControl("btnApproveAntrian");
 
-                if (ddlStatus.SelectedValue == "Selesai")
-                {
-                    if (btnApprove != null)
-                        btnApprove.Visible = false;
-                }
-                else if (ddlStatus.SelectedValue == "Progress")
-                {
-                    // Ambil nilai UserLogin dari DataTable
-                    string userLogin = dt.Rows[i]["UserLogin"].ToString();
+                LinkButton btnApprove =
+                    (LinkButton)row.FindControl("btnApproveAntrian");
+                LinkButton btnTolak = (LinkButton)row.FindControl("BtnTolak");
 
-                    if (userLogin != SessLoginID)
+                if (btnApprove == null)
+                    continue;
+
+                string userLogin =
+                    dt.Rows[i]["UserLogin"].ToString().Trim();
+
+                if (ddlStatus.SelectedValue == "Progress")
+                {
+                    if (userLogin.Equals(
+                            SessLoginID.ToString().Trim(),
+                            StringComparison.OrdinalIgnoreCase))
                     {
-                        if (btnApprove != null)
-                            btnApprove.Visible = false;
+                        btnApprove.Visible = true;
+                        btnTolak.Visible = true;
+                    }
+                    else
+                    {
+                        btnApprove.Visible = false;
+                        btnTolak.Visible = false;
                     }
                 }
+                else
+                {
+                    btnApprove.Visible = false;
+                    btnTolak.Visible = false;
+                }
+
+            }
+
+            if (GRData.Rows.Count > 0)
+            {
+                GRData.UseAccessibleHeader = true;
+                GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
             }
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + ex.Message.ToString().Replace("'", "") + "');", true);
-            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+            ScriptManager.RegisterStartupScript(
+                this,
+                this.GetType(),
+                "Javascript",
+                "javascript:SweetAlert('" + ex.Message.Replace("'", "") + "');",
+                true);
+
+            gb.SaveErroLog(
+                ex.Message,
+                Path.GetFileName(Request.Path),
+                SessLoginID,
+                Server.MapPath("~/ErrorLog/" +
+                "ErrorLog" +
+                DateTime.Now.ToString("MMyyyy") +
+                ".xml"));
         }
-
-
     }
 }

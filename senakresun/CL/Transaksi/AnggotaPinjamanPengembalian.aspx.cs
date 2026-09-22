@@ -162,8 +162,8 @@ public partial class AR_Process_AnggotaPinjamanPengembalian : System.Web.UI.Page
                     Pnlfooter4.Visible = true;
                     pnlFilter.Visible = false;
 
-                    btndelete.Visible = false;
-                    btnSimpan.Visible = true;
+                    btndelete.Visible = false;  
+                    btnSimpan.Visible = false;
                     txtnobukti.Text = "";
                     PnlListdata.Visible = false;
 
@@ -676,7 +676,14 @@ public partial class AR_Process_AnggotaPinjamanPengembalian : System.Web.UI.Page
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect(Request.Url.AbsoluteUri);
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='AnggotaPinjamanPengembalian.aspx';",
+            true
+        );
+
 
     }
     protected string btnreload()
@@ -923,9 +930,19 @@ public partial class AR_Process_AnggotaPinjamanPengembalian : System.Web.UI.Page
                     }
 
 
+                    /*                    DefaultClass.Global.SqlHelper[] Params = new DefaultClass.Global.SqlHelper[7];
+                                        Params[0] = gb.CreateSPParameter("@no_rekening", ParameterDirection.Input, SqlDbType.VarChar, 30, HDNoRekening.Value, typeof(string));
+                                        Params[1] = gb.CreateSPParameter("@userlogin", ParameterDirection.Input, SqlDbType.VarChar, 20, SessLoginID, typeof(string));
+                                        Params[2] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(string));
+                                        Params[3] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+                                        Params[4] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                                        Params[5] = gb.CreateSPParameter("@alasan_tolak", ParameterDirection.Input, SqlDbType.VarChar, 150, txtnote.Text, typeof(string));
+                                        Params[6] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "PembatalanPencairan", typeof(string));
+
+                                        ge.ListDataset = gb.GetDataJustOutPut("KP_MASTER_PERMOHONAN_NEW", Params, "constrmf");
+                    */
+
                     DefaultClass.Global.SqlHelper[] Params = new DefaultClass.Global.SqlHelper[16];
-
-
                     Params[0] = gb.CreateSPParameter("@KodeKonter", ParameterDirection.Input, SqlDbType.VarChar, 50, KodeKonter, typeof(string));
                     Params[1] = gb.CreateSPParameter("@tgltrn", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttgltrn.Text, typeof(DateTime));
                     Params[2] = gb.CreateSPParameter("@jumlahtrn", ParameterDirection.Input, SqlDbType.Decimal, 0, txtbayar.Text, typeof(decimal));
@@ -943,6 +960,8 @@ public partial class AR_Process_AnggotaPinjamanPengembalian : System.Web.UI.Page
                     Params[14] = gb.CreateSPParameter("@jumlahdiscount", ParameterDirection.Input, SqlDbType.Decimal, 0, Txtdiscount.Text, typeof(decimal));
                     Params[15] = gb.CreateSPParameter("@jumlahstldiscount", ParameterDirection.Input, SqlDbType.Decimal, 0, txtjumlahbayar.Text, typeof(decimal));
                     ge.ListDataset = gb.GetDataJustOutPut("CL_Trn_AR_Insert_Pengembalian_Pinjaman_New_2024_001", Params, "constrmf");
+
+
                     if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Closing"))
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Transaksi Tersebut Sudah Diclosing!');", true);
@@ -977,7 +996,7 @@ public partial class AR_Process_AnggotaPinjamanPengembalian : System.Web.UI.Page
         
         }
 
-        catch (Exception X)
+        catch (Exception X) 
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString().Replace("'", "") + "');", true);
             gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));

@@ -186,11 +186,11 @@ public partial class AR_Process_UploadDokumentPencairanKreditNasabah : System.We
                 return;
             }
 
-            int maxSize = 2 * 1024 * 1024; // 5 MB
+            int maxSize = 4 * 1024 * 1024; // 5 MB
             if (fileuploadpdf1.PostedFile.ContentLength > maxSize)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript",
-                    "javascript:SweetAlert('Ukuran file maksimal 2 MB!');", true);
+                    "javascript:SweetAlert('Ukuran file maksimal 4 MB!');", true);
                 return;
             }
 
@@ -247,11 +247,11 @@ public partial class AR_Process_UploadDokumentPencairanKreditNasabah : System.We
                 return;
             }
 
-            int maxSize = 2 * 1024 * 1024; // 5 MB
+            int maxSize = 4 * 1024 * 1024; // 5 MB
             if (fileuploadpdf2.PostedFile.ContentLength > maxSize)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript",
-                    "javascript:SweetAlert('Ukuran file maksimal 2 MB!');", true);
+                    "javascript:SweetAlert('Ukuran file maksimal 4 MB!');", true);
                 return;
             }
 
@@ -308,11 +308,11 @@ public partial class AR_Process_UploadDokumentPencairanKreditNasabah : System.We
                 return;
             }
 
-            int maxSize = 2 * 1024 * 1024; // 5 MB
+            int maxSize = 4 * 1024 * 1024; // 5 MB
             if (fileuploadpdf3.PostedFile.ContentLength > maxSize)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript",
-                    "javascript:SweetAlert('Ukuran file maksimal 2 MB!');", true);
+                    "javascript:SweetAlert('Ukuran file maksimal 4 MB!');", true);
                 return;
             }
 
@@ -392,7 +392,7 @@ public partial class AR_Process_UploadDokumentPencairanKreditNasabah : System.We
         {
             DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[10];
             var1[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
-            var1[1] = gb.CreateSPParameter("@no_rekening", ParameterDirection.Input, SqlDbType.VarChar, 10, txtNoRekening.Text, typeof(string));
+            var1[1] = gb.CreateSPParameter("@no_rekening", ParameterDirection.Input, SqlDbType.VarChar, 100, txtNoRekening.Text, typeof(string));
             var1[2] = gb.CreateSPParameter("@File1", ParameterDirection.Input, SqlDbType.VarChar, 100, txtfilename1.Text, typeof(string));
             var1[3] = gb.CreateSPParameter("@file_path1", ParameterDirection.Input, SqlDbType.VarChar, 100, txtPdf1.Text, typeof(string));
             var1[4] = gb.CreateSPParameter("@File2", ParameterDirection.Input, SqlDbType.VarChar, 100, txtfilename2.Text, typeof(string));

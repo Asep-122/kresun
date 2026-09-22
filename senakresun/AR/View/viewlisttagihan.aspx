@@ -526,10 +526,17 @@
                                                                 <HeaderStyle Height="30px" CssClass="align-center"></HeaderStyle>
                                                                 <ItemStyle HorizontalAlign="Right"></ItemStyle>
                                                             </asp:TemplateField>
-                                                            <asp:TemplateField HeaderText="Tgl JTH">
+                                                           <asp:TemplateField HeaderText="Tgl JTH">
                                                                 <ItemTemplate>
-                                                                    <asp:Label ID="lbltgljth" CssClass="" runat="server" Text='<%#Eval("tgl_due","{0:dd-MM-yyyy}")%>'></asp:Label>
+                                                                    <asp:Label 
+                                                                        ID="lbltgljth" 
+                                                                        runat="server"
+                                                                        Text='<%# Eval("tgl_due") == DBNull.Value 
+                                                                                ? "" 
+                                                                                : Convert.ToDateTime(Eval("tgl_due")).ToString("dd-MM-yyyy") %>'>
+                                                                    </asp:Label>
                                                                 </ItemTemplate>
+
                                                                 <HeaderStyle Height="30px" CssClass="align-center"></HeaderStyle>
                                                                 <ItemStyle HorizontalAlign="Right"></ItemStyle>
                                                             </asp:TemplateField>

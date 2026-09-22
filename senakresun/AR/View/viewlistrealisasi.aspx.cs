@@ -527,9 +527,9 @@ public partial class Report_viewlistrealisasi : System.Web.UI.Page
                     worksheet.PageSetup.Margins.Footer = 0;
 
                     string report = "";
-                    if (ddlproduk.SelectedValue == "3C")
+                    if (ddlproduk.SelectedValue == "35")
                     {
-                        report = "Report List Realisasi Mingguan " + ddlmarketing.SelectedItem.Text.ToString() + ".xlsx";
+                        report = "Report List Realisasi Pinjaman Pensiun" + ddlmarketing.SelectedItem.Text.ToString() + ".xlsx";
                     }
                     else if (ddlproduk.SelectedValue == "3B")
                     {

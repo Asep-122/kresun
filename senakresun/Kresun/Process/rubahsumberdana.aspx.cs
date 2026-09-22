@@ -618,8 +618,8 @@ public partial class Kresun_Process_rubahsumberdana : System.Web.UI.Page
                 var[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
                  
                 ge.ListDataset = gb.GetDataJustOutPut("KP_CHANGE_SD", var, "constrmf");
- 
-                decimal jangkabulan = Convert.ToDecimal(txtjangka.Text) / Convert.ToDecimal(12);
+
+                decimal jangkabulan = 10;//Convert.ToDecimal(txtjangka.Text) / Convert.ToDecimal(12);
 
                 //bungaFlat = float.Parse(String.Format("{0:0.000}", bungaFlat));      // "123.46"
                 float jgka = float.Parse(txtjangka.Text.ToString());

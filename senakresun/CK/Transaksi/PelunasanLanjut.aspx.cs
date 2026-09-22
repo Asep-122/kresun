@@ -851,10 +851,10 @@ public partial class CL_Transaksi_PelunasanLanjut : System.Web.UI.Page
             HDBUnga.Value = lbltotalBunga.Text;
             HDPokok.Value = lbltotalPokok.Text;
             HDFee.Value = string.Format("{0:N2}", fee);
-            txttotalpiutang.Text = lbltotalAngsuran.Text;
+            txttotalpiutang.Text = string.Format("{0:N2}", total);
 
 
-            HDtotal.Value = lbltotalAngsuran.Text;
+            HDtotal.Value = string.Format("{0:N2}", total);
         }
     }
 
@@ -920,13 +920,13 @@ public partial class CL_Transaksi_PelunasanLanjut : System.Web.UI.Page
                 //if(selisih.)
                 //invoce yg dibayarkan 
 
-                if (ddlKdBank.SelectedValue == "-")
+/*                if (ddlKdBank.SelectedValue == "-")
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Kode Bank Masih Kosong!');", true);
                 }
                 else
                 {
-
+*/
 
                     DefaultClass.Global.SqlHelper[] Params = new DefaultClass.Global.SqlHelper[26];
                     Params[0] = gb.CreateSPParameter("@KodeKonter", ParameterDirection.Input, SqlDbType.VarChar, 50, KodeKonter, typeof(string));
@@ -986,7 +986,7 @@ public partial class CL_Transaksi_PelunasanLanjut : System.Web.UI.Page
 
                     }
                 }
-            }
+         //   }
         }
         catch (Exception X)
         {
@@ -1095,8 +1095,10 @@ public partial class CL_Transaksi_PelunasanLanjut : System.Web.UI.Page
             txtNmSup.Text = ge.ListDataset.Tables[0].Rows[0]["nama_nasabah"].ToString();
             HDAO.Value = ge.ListDataset.Tables[0].Rows[0]["kd_staff"].ToString();
             HDTglDue.Value = ge.ListDataset.Tables[0].Rows[0]["tgl_due"].ToString();
+            txtUangMuka.Text = ge.ListDataset.Tables[0].Rows[0]["angsurandimukaangsurankali"].ToString() + " Kali";
 
             //txtTotTO.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["bakidb"].ToString()));
+            txtJlhUangMuka.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsurandimukaangsuranrp"].ToString()));
             Txtangsuran.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["angsuran_perbulan"].ToString()));
             //txtmutasikredit.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["Tarikansaldo"].ToString()));
 

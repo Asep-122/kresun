@@ -109,13 +109,13 @@ public partial class Kresun_View_CetakTandaTerimaPenyerahanJaminan : System.Web.
 
                 string sumberDana = HDSumberdana.Value;
 
-                if (sumberDana == "Pembiayaan Sendiri")
+/*                if (sumberDana == "Pembiayaan Sendiri")
                 {
-                    rprt.Load(Server.MapPath("~/Kresun/Report/TandaTerimaPenyerahanJaminan.rpt"));
-                }
+*/                    rprt.Load(Server.MapPath("~/Kresun/Report/TandaTerimaPenyerahanJaminan.rpt"));
+  /*              }
                 else if (sumberDana == "BPRS HIK")
                 {
-                    rprt.Load(Server.MapPath("~/Kresun/Report/TandaTerimaPenyerahanJaminanHIK.rpt"));
+                       rprt.Load(Server.MapPath("~/Kresun/Report/TandaTerimaPenyerahanJaminanHIK.rpt"));
                 }
                 else if (sumberDana == "BPR Ramaganda")
                 {
@@ -129,7 +129,7 @@ public partial class Kresun_View_CetakTandaTerimaPenyerahanJaminan : System.Web.
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Tidak Tersedia Untuk Sumber Dana Ini');", true);
                 }
-
+*/
 
                 rprt.SetDataSource(ge.ListDataTable);
 

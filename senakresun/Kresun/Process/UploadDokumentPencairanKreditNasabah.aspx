@@ -674,7 +674,7 @@
                     <div class="ribbon ribbon-custom">Upload Dokument</div>
                     <p class="text-muted font-14 m-b-30"></p>    
                         <div class="form-group col-md-6">                    
-                        <asp:label ID="LabelPdf" runat="server" class="col-form-label">File PDF Nasabah</asp:label>
+                        <asp:label ID="LabelPdf" runat="server" class="col-form-label">File PDF Pencairan Nasabah</asp:label>
                             <div>
                                 <asp:FileUpload ID="fileuploadpdf1" runat="server"/> 
                                 <asp:Button ID="btnPdf1" Text="Upload" runat="server"   OnClientClick="return CheckFilePdfNasabah()" OnClick="btnPdf1_Click"/>
@@ -684,7 +684,7 @@
                             </div>
                         </div>                          
                     <div class="form-group col-md-6">                    
-                        <asp:label ID="LabelPdf2" runat="server" class="col-form-label">File PDF Sumber Dana</asp:label>
+                        <asp:label ID="LabelPdf2" runat="server" class="col-form-label">File PDF Pemberkasan Sumber Dana</asp:label>
                             <div>
                                 <asp:FileUpload ID="fileuploadpdf2" runat="server"/> 
                                 <asp:Button ID="btnPdf2" Text="Upload" runat="server"   OnClientClick="return CheckFilePdfSumberDana()" OnClick="btnPdf2_Click"/>
@@ -694,7 +694,7 @@
                             </div>
                     </div>   
                     <div class="form-group col-md-6">                    
-                        <asp:label ID="LabelPdf3" runat="server" class="col-form-label">File PDF Take Over</asp:label>
+                        <asp:label ID="LabelPdf3" runat="server" class="col-form-label">File PDF Take Over / Mutasi Kantor Bayar</asp:label>
                             <div>
                                 <asp:FileUpload ID="fileuploadpdf3" runat="server"/> 
                                 <asp:Button ID="btnPdf3" Text="Upload" runat="server"   OnClientClick="return CheckFilePdfTakeOver()" OnClick="btnPdf3_Click"/>

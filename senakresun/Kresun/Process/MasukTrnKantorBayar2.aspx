@@ -341,6 +341,51 @@ function sweetAlertsave(btnSimpan,errMsg) {
 
 
             $(function () {
+                window.savePageDT = function () {
+
+                    var table = $('#GRTP').DataTable();
+
+                    sessionStorage.setItem("grtp_page", table.page());
+
+                    console.log(table.page());
+                };
+                function initDT() {
+                    console.log("initDT dipanggil");
+                    if ($.fn.DataTable.isDataTable('#GRTP')) {
+                        tableX = $('#GRTP').DataTable(); // ambil instance yang sudah ada
+                    }
+                    else {
+                        tableX = $('#GRTP').DataTable({
+                            scrollX: true,
+                            retrieve: true,
+                            dom: 'Bfrtip',
+                            buttons: [
+                                'copy',
+                                'csv',
+                                'excel',
+                                {
+                                    extend: 'pdfHtml5',
+                                    orientation: 'landscape',
+                                    pageSize: 'A4'
+                                },
+                                'print'
+                            ]
+                        });
+                    }
+
+
+                }
+
+                Sys.Application.add_load(function () {
+                    console.log("add_load dipanggil");
+                    restorePageDT();
+                    initDT();
+
+                });
+
+                function restorePageDT() {
+                    sessionStorage.removeItem("grtp_page");
+                }
                 var table = $('#GRData').dataTable({
                     "order": [],
                     "columnDefs": [{
@@ -792,7 +837,7 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                         <HeaderStyle CssClass="align-center" ForeColor="Black" />
                                                         <ItemStyle HorizontalAlign="Center" />
                                                         <ItemTemplate>
-                                                           <asp:TextBox enabled="true" CssClass="form-control" ID="ajukanbayar" Text='<%#DataBinder.Eval(Container.DataItem, "Angsuran","{0:N2}")%>' Width="120" runat="server"  onkeypress="return isnumerickey(event);" required="required" onblur="checkTextField1(this);"  AutoPostBack="true" onkeyup="javascript:this.value=Comma(this.value);" OnTextChanged="ajukanbayar_TextChanged"></asp:TextBox>
+                                                           <asp:TextBox enabled="true" CssClass="form-control" ID="ajukanbayar" Text='<%#DataBinder.Eval(Container.DataItem, "Angsuran","{0:N2}")%>' Width="120" runat="server"  onkeypress="return isnumerickey(event);savePageDT();" required="required" onblur="checkTextField1(this);savePageDT();"  AutoPostBack="true" onkeyup="javascript:this.value=Comma(this.value);" OnTextChanged="ajukanbayar_TextChanged" onfocus="savePageDT();"   ></asp:TextBox>
                                                             <%--<asp:CheckBox ID="CheckBox1"  AutoPostBack="true" runat="server" OnCheckedChanged="Check_Clicked"  />--%>   
                                                         </ItemTemplate>                                                    
                                                     </asp:TemplateField> 

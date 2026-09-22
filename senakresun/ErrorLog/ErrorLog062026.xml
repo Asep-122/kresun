@@ -1,0 +1,375 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ErrorLog>
+    <ID>1</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportAutoDebet.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-05 10.08.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>2</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportAutoDebet.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-05 10.15.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>3</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportAutoDebet.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-05 11.17.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>4</ID>
+    <ErrorText>Cannot find column CreateDate.</ErrorText>
+    <FileError>Deviasi.aspx</FileError>
+    <FromUser>AREAJKT</FromUser>
+    <TglError>2026-06-05 16.43.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>5</ID>
+    <ErrorText>Cannot find column CreateDate.</ErrorText>
+    <FileError>Deviasi.aspx</FileError>
+    <FromUser>AREAJKT</FromUser>
+    <TglError>2026-06-05 16.43.57</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>6</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-09 16.33.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>7</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-09 16.39.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>8</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-09 16.40.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>9</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-09 16.44.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>10</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-09 16.47.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>11</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-09 16.48.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>12</ID>
+    <ErrorText>'ddlprovisi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-09 16.54.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>13</ID>
+    <ErrorText>Column 'gracePeriode' does not belong to table Table.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-11 09.25.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>14</ID>
+    <ErrorText>'ddlangsurandimuka' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-11 09.51.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>15</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-11 10.24.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>16</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-11 10.24.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>17</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-11 10.28.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>18</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-11 10.29.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>19</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-11 10.32.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>20</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-11 10.53.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>21</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-11 11.00.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>22</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-11 11.02.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>23</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-11 11.21.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>24</ID>
+    <ErrorText>1</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-22 15.57.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>25</ID>
+    <ErrorText>1</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-22 15.58.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>26</ID>
+    <ErrorText>String or binary data would be truncated in table 'SENAKRESUN.dbo.Gltrnsm', column 'Keterangan'. Truncated value: 'Pencairan Sumber Dana Cahaya Arthasejati 101000109'.</ErrorText>
+    <FileError>PencairanKreditSumberDana.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 11.02.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>27</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 13.12.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>28</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 13.15.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>29</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 15.08.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>30</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 15.24.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>31</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 15.38.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>32</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 15.57.06</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>33</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 15.59.16</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>34</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 15.59.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>35</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 16.01.09</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>36</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 16.02.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>37</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 16.02.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>38</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 16.05.15</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>39</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 16.18.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>40</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 16.29.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>41</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 16.30.46</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>42</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-24 16.33.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>43</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SD001</FromUser>
+    <TglError>2026-06-26 09.45.28</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>44</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalBank.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-26 13.16.05</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>45</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalBank.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-26 13.16.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>46</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalBank.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-26 13.17.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>47</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalBank.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-26 13.27.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>48</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalBank.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-26 13.28.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>49</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalBank.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-26 13.28.49</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>50</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-26 15.11.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>51</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-26 15.17.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>52</ID>
+    <ErrorText>Thread was being aborted.</ErrorText>
+    <FileError>ReportSuratRekapDropping.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-06-26 15.43.16</TglError>
+  </ErrorLog>
+</DocumentElement>

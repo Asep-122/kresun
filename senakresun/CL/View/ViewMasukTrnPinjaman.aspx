@@ -494,12 +494,12 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                                
                                                                     <div class="form-group col-md-6">
                                                                         <asp:DropDownList ID="ddlSearch" runat="server" CssClass="selectpicker show-tick" data-style="btn-success">
-                                                                            <asp:ListItem Value=" and x.no_nasabah ">No. Anggota</asp:ListItem>   
-                                                                            <asp:ListItem Value=" and x.no_rekening ">No. Rekening</asp:ListItem> 
-                                                                             <asp:ListItem Value=" and x.no_nasabah_cbs ">No. Anggota CBS</asp:ListItem>   
-                                                                            <asp:ListItem Value=" and x.no_rekening_cbs ">No. Rekening CBS</asp:ListItem> 
-                                                                            <asp:ListItem Value=" and x.nama_nasabah ">Nama Anggota</asp:ListItem> 
-                                                                            <asp:ListItem Value=" and y.no_identitas ">ID KTP</asp:ListItem> 
+                                                                            <asp:ListItem Value=" x.no_nasabah ">No. Anggota</asp:ListItem>   
+                                                                            <asp:ListItem Value=" x.no_rekening ">No. Rekening</asp:ListItem> 
+                                                                             <asp:ListItem Value=" x.no_nasabah_cbs ">No. Anggota CBS</asp:ListItem>   
+                                                                            <asp:ListItem Value=" x.no_rekening_cbs ">No. Rekening CBS</asp:ListItem> 
+                                                                            <asp:ListItem Value=" x.nama_nasabah ">Nama Anggota</asp:ListItem> 
+                                                                            <asp:ListItem Value=" y.no_identitas ">ID KTP</asp:ListItem> 
                                                                         </asp:DropDownList>
                                                                         <asp:TextBox CssClass="form-control" ID="txtSearch" runat="server"></asp:TextBox>
                                                                         <asp:Button ID="lnkCari" class="btn btn-success waves-light text-white" runat="server" Text="Cari" OnClick="lnkCari_Click" />

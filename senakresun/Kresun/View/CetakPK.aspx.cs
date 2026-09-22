@@ -44,48 +44,65 @@ public partial class Kresun_View_CetakPK : System.Web.UI.Page
 
     private Dictionary<string, CetakAction> _cetakActions;
 
-    protected override void OnInit(EventArgs e)
+    protected void GRData_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        base.OnInit(e);
 
-        _cetakActions = new Dictionary<string, CetakAction>();
 
         try
         {
-            DefaultClass.Global.SqlHelper[] prm = new DefaultClass.Global.SqlHelper[0];
-            ge.ListDataset = gb.GetDataJustOutPut("KP_GET_MAPPING_CETAKAN_PK", prm, "constrmf");
+            _cetakActions = new Dictionary<string, CetakAction>();
 
-            if (ge.ListDataset != null && ge.ListDataset.Tables.Count > 0)
+            if (e.CommandName == "printPreview")
             {
-                DataTable dt = ge.ListDataset.Tables[0];
-                foreach (DataRow row in dt.Rows)
+                string produk = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblProduk")).Text;
+                int form = (produk.ToString() != "5" ? 1 : 2);
+                string sumberdana = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblSumberDana")).Text;
+                string norekening = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnorekening")).Text;
+                string noNasabah = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnonasabah")).Text;
+
+
+                DefaultClass.Global.SqlHelper[] prm = new DefaultClass.Global.SqlHelper[2];
+                prm[0] = gb.CreateSPParameter("@form", ParameterDirection.Input, SqlDbType.Int, 2, form, typeof(int));
+                prm[1] = gb.CreateSPParameter("@KodeBank", ParameterDirection.Input, SqlDbType.VarChar, 4, sumberdana, typeof(string));
+                ge.ListDataset = gb.GetDataJustOutPut("KP_GET_MAPPING_CETAKAN_PK", prm, "constrmf");
+
+                if (ge.ListDataset != null && ge.ListDataset.Tables.Count > 0)
                 {
-                    string kodeBank = row["KodeBank"].ToString();
-                    string categoryPk = row["CategoryPK"].ToString();
-                    string reportPath = row["ReportPath"].ToString();
-
-                    Action<object, GridViewCommandEventArgs, string, string> handler = CetakPerjanjianKredit_Generic;
-
-                    // kalau ada pengecualian (custom handler)
-                    //switch (kodeBank)
-                    //{
-                    //    case "A002":
-                    //        handler = CetakPerjanjianKredit_Umum;
-                    //        break;
-                    //}
-                    switch (categoryPk)
+                    string reportPath = ge.ListDataset.Tables[0].Rows[0]["ReportPath"].ToString();
+                    string kategoriPk = ge.ListDataset.Tables[0].Rows[0]["CategoryPK"].ToString();
+                    using (ReportDocument rprt = new ReportDocument())
                     {
-                        case "PK_UMUM":
-                            handler = CetakPerjanjianKredit_Umum;
-                            break;
+                        if (noNasabah.Substring(0, 3) == SessBranchID)
+                        {
+                            var paramList = new List<DefaultClass.Global.SqlHelper>
+                            {
+                                gb.CreateSPParameter("@action", ParameterDirection.Input, SqlDbType.VarChar, 50, "action", typeof(string)),
+                                gb.CreateSPParameter("@no_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 50, noNasabah, typeof(string)),
+                                gb.CreateSPParameter("@kode_cabang", ParameterDirection.Input, SqlDbType.VarChar, 20, SessBranchID, typeof(string)),
+                                gb.CreateSPParameter("@kode_bank", ParameterDirection.Input, SqlDbType.VarChar, 5, sumberdana, typeof(string)),
+                                gb.CreateSPParameter("@kategori_pk", ParameterDirection.Input, SqlDbType.VarChar, 50, kategoriPk, typeof(string)),
+                                gb.CreateSPParameter("@no_rekening", ParameterDirection.Input, SqlDbType.VarChar, 50, norekening, typeof(string))
+                            };
+
+
+                            ge.ListDataTable = gb.GetDataJustOutPut("KP_CETAK_PERJANJIAN_KREDIT", paramList.ToArray(), "constrmf").Tables[0];
+
+                            rprt.Load(Server.MapPath(reportPath));
+                            rprt.SetDataSource(ge.ListDataTable);
+
+                            // Export ke stream
+                            ReportHelper.ExportPdfInline(rprt, "pdf", Response);
+                        }
+                        else
+                        {
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('Kantor bayar tidak sesuai!');", true);
+                        }
+
+                        rprt.Close();
+                        //rprt.Dispose();
                     }
 
-                    _cetakActions[kodeBank] = new CetakAction
-                    {
-                        Handler = handler,
-                        ReportPath = reportPath,
-                        CategoryPk = categoryPk
-                    };
+
                 }
             }
         }
@@ -140,7 +157,7 @@ public partial class Kresun_View_CetakPK : System.Web.UI.Page
         GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
     }
 
-    protected void GRData_RowCommand(object sender, GridViewCommandEventArgs e)
+ /*   protected void GRData_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         try
         {
@@ -166,7 +183,7 @@ public partial class Kresun_View_CetakPK : System.Web.UI.Page
             GRData_Draw_DataTable();
         }
     }
-
+*/
     private void CetakPerjanjianKredit_Generic(object sender, GridViewCommandEventArgs e, string reportPath, string kategoriPk)
     {
         CetakPerjanjianKredit(

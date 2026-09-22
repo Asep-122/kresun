@@ -436,4 +436,43 @@ Parameter name: value</ErrorText>
     <FromUser>SD001</FromUser>
     <TglError>2026-01-23 11.18.21</TglError>
   </ErrorLog>
+  <ErrorLog>
+    <ID>59</ID>
+    <ErrorText>Invalid object name 'armasterkredit'.
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.</ErrorText>
+    <FileError>Home.aspx</FileError>
+    <FromUser>PUSAT01</FromUser>
+    <TglError>2026-01-30 09.36.32</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>60</ID>
+    <ErrorText>Index and length must refer to a location within the string.
+Parameter name: length</ErrorText>
+    <FileError>MasukTrnTranfer.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-30 14.13.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>61</ID>
+    <ErrorText>Index and length must refer to a location within the string.
+Parameter name: length</ErrorText>
+    <FileError>MasukTrnTranfer.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-30 14.46.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>62</ID>
+    <ErrorText>Index and length must refer to a location within the string.
+Parameter name: length</ErrorText>
+    <FileError>MasukTrnTranfer.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-30 14.49.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>63</ID>
+    <ErrorText>String or binary data would be truncated in table 'SENAKRESUN.dbo.ClhdrTransferBank', column 'NamaBankTarget'. Truncated value: 'Bank Bukopin Syariah          '.</ErrorText>
+    <FileError>MasukTrnTranfer.aspx</FileError>
+    <FromUser>GL001</FromUser>
+    <TglError>2026-01-30 15.15.08</TglError>
+  </ErrorLog>
 </DocumentElement>

@@ -116,7 +116,7 @@ public partial class AR_Process_ReportValidasi : System.Web.UI.Page
     protected void GRData_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         ReportDocument rprt = new ReportDocument();
-        switch (e.CommandName)
+        switch (e.CommandName)  
         {
             case "SET":
 

@@ -1171,11 +1171,11 @@ public partial class AS_Process_MasukTrnInvoicePengajuanPolis : System.Web.UI.Pa
                 return;
             }
 
-            int maxSize = 2 * 1024 * 1024; // 5 MB
+            int maxSize = 4 * 1024 * 1024; // 5 MB
             if (fileupload1.PostedFile.ContentLength > maxSize)
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript",
-                    "javascript:SweetAlert('Ukuran file maksimal 2 MB!');", true);
+                    "javascript:SweetAlert('Ukuran file maksimal 4 MB!');", true);
                 return;
             }
 

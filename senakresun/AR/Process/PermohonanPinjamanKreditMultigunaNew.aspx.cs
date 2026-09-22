@@ -7684,4 +7684,6 @@ public partial class AR_Process_PermohonanPinjamanKreditMultigunaNew : System.We
 
     }
 
+
+
 }

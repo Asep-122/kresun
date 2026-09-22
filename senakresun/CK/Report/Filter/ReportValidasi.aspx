@@ -275,7 +275,8 @@
                 });
             }, 0);
 
-              }
+        }
+
         function Comma(Num) { //function to add commas to textboxes
 
             console.log('<%=CultureName%>');
@@ -390,6 +391,22 @@
             
             $('.selectpicker').selectpicker();
 
+            $(function () {
+                var table = $('#GRData').dataTable({
+                    "order": [],
+                    paging: false,
+                    "columnDefs": [{
+                        "targets": 'no-sort',
+                        "orderable": false,
+                    }],
+                    ordering: [[0, 'asc']],
+                    "scrollX": false,
+                    scrollY: "500px",
+                    retrieve: true
+
+                });
+
+            });
 
 
 

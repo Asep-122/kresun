@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <UserLog>
+    <ID>1</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-04-06 09.33.28</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>2</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-04-06 10.17.52</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>3</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-04-06 10.27.16</TglError>
+  </UserLog>
+  <UserLog>
+    <ID>4</ID>
+    <ErrorText>Login Masuk </ErrorText>
+    <FileError>Login.aspx</FileError>
+    <FromUser>101ADMIN1</FromUser>
+    <TglError>2026-04-06 11.46.43</TglError>
+  </UserLog>
+</DocumentElement>

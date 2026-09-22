@@ -158,6 +158,19 @@ public partial class GL_Report_Reportsummary : System.Web.UI.Page
         ddlSP.Enabled = true;
 
 
+        DefaultClass.Global.SqlHelper[] Paramsd = new DefaultClass.Global.SqlHelper[2];
+        Paramsd[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+        Paramsd[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "GETKODECABANG", typeof(string));
+        ge.ListDataset = gb.GetDataJustOutPut("dbo.KP_REPORTING_CL", Paramsd, "constrmf");
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kodecabang asc";
+        //ge.ListDataset.Tables[0].DefaultView.Sort = "value asc";
+        //gb.FillDDL(ge.ListDataset.Tables[0].DefaultView.ToTable(), ddlcabang, "None", "");
+        ddlcabang.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlcabang.DataTextField = "namacabang";
+        ddlcabang.DataValueField = "kodecabang";
+        ddlcabang.DataBind();
+        ddlcabang.Items.Insert(0, new ListItem("ALL", "ALL"));
+
     }
     //public void btnSerach_Click(object sender, EventArgs e)
     //{
@@ -259,7 +272,7 @@ public partial class GL_Report_Reportsummary : System.Web.UI.Page
         DefaultClass.Global.SqlHelper[] Paramsc = new DefaultClass.Global.SqlHelper[8];
         Paramsc[0] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
         Paramsc[1] = gb.CreateSPParameter("@KodeGlAwal", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlaccountawal.SelectedValue, typeof(string));
-        Paramsc[2] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+        Paramsc[2] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabang.SelectedValue, typeof(string));
         Paramsc[3] = gb.CreateSPParameter("@DteTglAwal", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txtStart.Text, typeof(DateTime));
         Paramsc[4] = gb.CreateSPParameter("@DteTglAkhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txtEnd.Text, typeof(DateTime));
         Paramsc[5] = gb.CreateSPParameter("@typeposting", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlrpttype.SelectedValue, typeof(string));
@@ -350,7 +363,7 @@ public partial class GL_Report_Reportsummary : System.Web.UI.Page
             DefaultClass.Global.SqlHelper[] Paramsc = new DefaultClass.Global.SqlHelper[8];
             Paramsc[0] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
             Paramsc[1] = gb.CreateSPParameter("@KodeGlAwal", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlaccountawal.SelectedValue, typeof(string));
-            Paramsc[2] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+            Paramsc[2] = gb.CreateSPParameter("@Kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlcabang.SelectedValue, typeof(string));
             Paramsc[3] = gb.CreateSPParameter("@DteTglAwal", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txtStart.Text, typeof(DateTime));
             Paramsc[4] = gb.CreateSPParameter("@DteTglAkhir", ParameterDirection.Input, SqlDbType.SmallDateTime, 50, txtEnd.Text, typeof(DateTime));
             Paramsc[5] = gb.CreateSPParameter("@typeposting", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlrpttype.SelectedValue, typeof(string));
@@ -453,7 +466,7 @@ public partial class GL_Report_Reportsummary : System.Web.UI.Page
                 worksheet.Cell("A2").Style.Font.FontName = "Calibri";
                 worksheet.Cell("A2").Style.Font.FontSize = 9;
                 worksheet.Cell("A2").Style.Font.Bold = true;
-                worksheet.Cell("A3").Value = "Cabang : " + ddlbranch.SelectedItem.Text;
+                worksheet.Cell("A3").Value = "Cabang : " + ddlcabang.SelectedItem.Text;
                 worksheet.Cell("A3").Style.Font.FontName = "Calibri";
                 worksheet.Cell("A3").Style.Font.FontSize = 9;
                 worksheet.Cell("A3").Style.Font.Bold = true;

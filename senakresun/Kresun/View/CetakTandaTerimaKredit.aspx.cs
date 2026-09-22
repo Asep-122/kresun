@@ -176,7 +176,7 @@ public partial class Kresun_View_CetakTandaTerimaKredit : System.Web.UI.Page
                     gb.CreateSPParameter("@manager_cabang", ParameterDirection.Input, SqlDbType.VarChar, 150, txtpejabat1.Text, typeof(string)),
                     gb.CreateSPParameter("@admin_area", ParameterDirection.Input, SqlDbType.VarChar, 150, txtpejabat2.Text, typeof(string)),
                     gb.CreateSPParameter("@head_area", ParameterDirection.Input, SqlDbType.VarChar, 150, txtpejabat3.Text, typeof(string))
-                };
+                };  
 
                 ge.ListDataTable = gb.GetDataJustOutPut("KP_CETAK_KWITANSI_TANDA_TERIMA_PENCAIRAN_PEMBIAYAAN", paramList.ToArray(), "constrmf").Tables[0];
 

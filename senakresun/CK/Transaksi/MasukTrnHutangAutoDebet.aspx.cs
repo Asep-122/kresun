@@ -180,7 +180,8 @@ public partial class CL_Process_MasukTrnHutangAutoDebet : System.Web.UI.Page
                 txtkursbank.Enabled = true;
             }
             GRData.UseAccessibleHeader = true;
-            GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
+            GRData.HeaderRow.TableSection = TableRowSection.TableHeader;            
+
 
         }
         catch (System.Exception X)
@@ -896,7 +897,9 @@ public partial class CL_Process_MasukTrnHutangAutoDebet : System.Web.UI.Page
         }
         else
         {
-            //SetDetailBayar();
+            txttransAP.Text = "0";
+            txttalangan.Text = "0";
+//            SetDetailBayar();
         }
 
         ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:jv_openModal_root();", true);
@@ -1073,6 +1076,8 @@ public partial class CL_Process_MasukTrnHutangAutoDebet : System.Web.UI.Page
 
         }
         }
+
+
     }
 
    
@@ -1219,24 +1224,27 @@ public partial class CL_Process_MasukTrnHutangAutoDebet : System.Web.UI.Page
             ((TextBox)grow.FindControl("jlhdibayar")).Enabled = true;
         }
 
-        //else if (((DropDownList)grow.FindControl("ddlbayar")).SelectedValue == "2")
-        //{
-        //    decimal angsuran = 0;
-        //    decimal denda = 0;
-        //    decimal total = 0;
-
-        //    angsuran = decimal.Parse(((Label)grow.FindControl("lblAngsuran")).Text);
-        //    denda = decimal.Parse(((Label)grow.FindControl("lbldenda")).Text);
-        //    total = angsuran + denda;
-        //    ((Label)grow.FindControl("lblbayar")).Text = string.Format("{0:N2}", total);
-
-        //}
-
-
 
         subgridbayar_Click();
         GRTP.UseAccessibleHeader = true;
         GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;
+
+        ScriptManager.RegisterStartupScript(
+            this,
+            GetType(),
+            "SetPage",
+                        @"
+                Sys.Application.add_load(function () {
+                    var table = $('#GRTP').DataTable();
+
+                    var page = sessionStorage.getItem('grtp_page');
+
+                    if (page !== null) {
+                        table.page(parseInt(page)).draw(false);
+                    }
+                });
+                ",
+            true);
 
     }
     private void subgridbayar_Click()

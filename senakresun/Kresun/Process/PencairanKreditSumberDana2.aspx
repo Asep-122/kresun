@@ -696,7 +696,7 @@
                                             <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
                                             <ItemStyle HorizontalAlign="Left"></ItemStyle>
                                         </asp:TemplateField>
-                                         <asp:TemplateField HeaderText="Plafon" Visible ="false">
+                                         <asp:TemplateField HeaderText="Plafon">
                                             <ItemTemplate>
                                                 <asp:Label ID="lblplafon" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "plafon", "{0:N0}")%>'></asp:Label>
                                             </ItemTemplate>

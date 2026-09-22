@@ -1022,6 +1022,23 @@ public partial class CL_Process_MasukTrnKantorBayar2 : System.Web.UI.Page
         subgridbayar_Click();
         GRTP.UseAccessibleHeader = true;
         GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;
+
+        ScriptManager.RegisterStartupScript(
+            this,
+            GetType(),
+            "SetPage",
+                        @"
+                                Sys.Application.add_load(function () {
+                                    var table = $('#GRTP').DataTable();
+
+                                    var page = sessionStorage.getItem('grtp_page');
+
+                                    if (page !== null) {
+                                        table.page(parseInt(page)).draw(false);
+                                    }
+                                });
+                                ",
+            true);
     }
 
     protected void ddlbayar_SelectedIndexChanged(object sender, EventArgs e)

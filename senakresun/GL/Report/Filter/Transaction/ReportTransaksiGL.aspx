@@ -256,6 +256,12 @@
                                     </div>
                                                                       
                                 </div>
+                                <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label for="inputCity" class="col-form-label">Code Cabang</label>
+                                              <asp:DropDownList ID="ddlcabang" CssClass="form-control"  runat="server"></asp:DropDownList>
+                                        </div> 
+                                    </div>    
 
 
                  

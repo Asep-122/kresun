@@ -98,11 +98,12 @@ public partial class BG_Master_Taspen : System.Web.UI.Page
                 //ddlcabang.DataBind();
                 //ddlcabang.Items.Insert(0, new ListItem("Select", ""));
 
-                DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
-                var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "USERAREA", typeof(string));
+                DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[5];
+                var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "ALLAREA", typeof(string));
                 var[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 30, SessKdpersh, typeof(string));
                 var[2] = gb.CreateSPParameter("@KodeUser", ParameterDirection.Input, SqlDbType.VarChar, 30, SessLoginID, typeof(string));
-                var[3] = gb.CreateSPParameter("@kodekoperasi", ParameterDirection.Input, SqlDbType.VarChar, 15, "I", typeof(string));
+                var[3] = gb.CreateSPParameter("@SessBranchId", ParameterDirection.Input, SqlDbType.VarChar, 30, SessBranchID, typeof(string));
+                var[4] = gb.CreateSPParameter("@kodekoperasi", ParameterDirection.Input, SqlDbType.VarChar, 15, "I", typeof(string));
 
                 ge.ListDataset = gb.GetDataJustOutPut("BG_GetCabang_Login", var, "constrmf");
                 ge.ListDataset.Tables[0].DefaultView.Sort = "kode_area asc";

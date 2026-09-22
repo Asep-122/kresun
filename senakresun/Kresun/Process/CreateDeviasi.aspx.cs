@@ -1,23 +1,12 @@
 ﻿using DefaultClass;
 using EntitiesClass;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Drawing;
-using System.Web.Script.Serialization;
-using System.Web.Services;
-using System.Text.RegularExpressions;
-using System.Globalization;
 using CrystalDecisions.Shared;
 using CrystalDecisions.CrystalReports.Engine;
-using System.Activities.Statements;
-using iTextSharp.text.pdf;
 
 
 
@@ -68,17 +57,36 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
             BindGridEntity();
         }
 
+        DivReasonVisibility();
 
+    }
+
+    private void DivReasonVisibility() {
+        switch (ddlPurpose.SelectedValue.ToLower())
+        {
+            case "deviasi":
+                divReason.Visible = true;
+                break;
+
+            case "lain - lain":
+                divReason.Visible = true;
+                break;
+
+            default:
+                divReason.Visible = false;
+            break;
+        }
     }
 
     public void BindGridEntity()
     {
 
 
-        DefaultClass.Global.SqlHelper[] x = new DefaultClass.Global.SqlHelper[3];
+        DefaultClass.Global.SqlHelper[] x = new DefaultClass.Global.SqlHelper[4];
         x[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
         x[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "CREATELISTDEVIASI", typeof(string));
-        x[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+        x[2] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+        x[3] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
 
         ge.ListDataset = gb.GetDataJustOutPut("KP_Deviasi", x, "constrmf");
 
@@ -111,10 +119,23 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
                 try
                 {
                     //string register
+                    txtNamaDebitur.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnamadebitur")).Text;
+                    txtNoPen.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnopensiun")).Text;
                     txtTo.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblto")).Text;
                     txtTitle.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbltitle")).Text;
                     ddlDept.SelectedValue = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbldept")).Text;
-                    txtPurpose.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblpurpose")).Text;
+
+                    //txtPurpose.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblpurpose")).Text;
+                    var lbl = GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblpurpose") as Label;
+
+                    ddlPurpose.SelectedIndex = 0;
+
+                    if (lbl != null && !string.IsNullOrWhiteSpace(lbl.Text) && ddlPurpose.Items.FindByValue(lbl.Text) != null)
+                    {
+                        ddlPurpose.SelectedValue = lbl.Text;
+                    }
+                    txtReason.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblreason")).Text;
+
                     txtNoBukti.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnobukti")).Text;
                     txtPrihal.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblperihal")).Text;
                     hdnEditorContent.Value = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbleditor")).Text;
@@ -128,6 +149,7 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
                     pnlUploadDokument.Visible = true;
                     pnlHeader.Visible = false;
 
+                    DivReasonVisibility();
 
                 }
                 catch (Exception X)
@@ -211,7 +233,7 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
                     ge.ListDataset = gb.GetDataJustOutPut("KP_Deviasi", var1, "constrmf");
                     if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
                     {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','zzzzzz','top-right','success','1');", true);
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:AlertSuccess('Save Done!','zzzzzz','top-right','success','true');", true);
                     }
 
                     GRData.UseAccessibleHeader = true;
@@ -230,7 +252,19 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
                     txtTo.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblto")).Text;
                     txtTitle.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbltitle")).Text;
                     ddlDept.SelectedValue = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbldept")).Text;
-                    txtPurpose.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblpurpose")).Text;
+
+                    //txtPurpose.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblpurpose")).Text;
+                    var lbl = GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblpurpose") as Label;
+
+                    ddlPurpose.SelectedIndex = 0;
+
+                    if (lbl != null && !string.IsNullOrWhiteSpace(lbl.Text) && ddlPurpose.Items.FindByValue(lbl.Text) != null)
+                    {
+                        ddlPurpose.SelectedValue = lbl.Text;
+                    }
+
+                    txtReason.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblreason")).Text;
+
                     txtNoBukti.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnobukti")).Text;
                     txtPrihal.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblperihal")).Text;
                     hdnEditorContent.Value = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbleditor")).Text;
@@ -246,8 +280,8 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
                     pnlHeader.Visible = false;
                     btnSimpan.Visible = false;
 
+                    DivReasonVisibility();
 
-                    
                 }
                 catch (Exception ex)
                 {
@@ -295,7 +329,7 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
 
             string nobukti = (string.IsNullOrEmpty(txtNoBukti.Text) ? bukti : txtNoBukti.Text);
 
-            DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[12];
+            DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[15];
             var1[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
             var1[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, STATE, typeof(string));
             var1[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
@@ -303,11 +337,15 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
             var1[4] = gb.CreateSPParameter("@To", ParameterDirection.Input, SqlDbType.VarChar, 50, txtTo.Text, typeof(string));
             var1[5] = gb.CreateSPParameter("@Title", ParameterDirection.Input, SqlDbType.VarChar, 50, txtTitle.Text, typeof(string));
             var1[6] = gb.CreateSPParameter("@Dept", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlDept.SelectedValue, typeof(string));
-            var1[7] = gb.CreateSPParameter("@Purpose", ParameterDirection.Input, SqlDbType.VarChar, 50, txtPurpose.Text, typeof(string));
+            //var1[7] = gb.CreateSPParameter("@Purpose", ParameterDirection.Input, SqlDbType.VarChar, 50, txtPurpose.Text, typeof(string));
+            var1[7] = gb.CreateSPParameter("@Purpose", ParameterDirection.Input, SqlDbType.VarChar, 50, ddlPurpose.SelectedValue.ToString(), typeof(string));
             var1[8] = gb.CreateSPParameter("@Perihal", ParameterDirection.Input, SqlDbType.VarChar, 50, txtPrihal.Text, typeof(string));
             var1[9] = gb.CreateSPParameter("@Editor", ParameterDirection.Input, SqlDbType.Text, 0, editorContent, typeof(string));
             var1[10] = gb.CreateSPParameter("@UserLogin", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
             var1[11] = gb.CreateSPParameter("@NoBukti", ParameterDirection.Input, SqlDbType.VarChar, 50, nobukti, typeof(string));
+            var1[12] = gb.CreateSPParameter("@Reason", ParameterDirection.Input, SqlDbType.VarChar, 100, txtReason.Text, typeof(string));
+            var1[13] = gb.CreateSPParameter("@NamaDebitur", ParameterDirection.Input, SqlDbType.VarChar, 100, txtNamaDebitur.Text, typeof(string));
+            var1[14] = gb.CreateSPParameter("@NoPensiun", ParameterDirection.Input, SqlDbType.VarChar, 100, txtNoPen.Text, typeof(string));
             ge.ListDataset = gb.GetDataJustOutPut("KP_Deviasi", var1, "constrmf");
             if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
             {

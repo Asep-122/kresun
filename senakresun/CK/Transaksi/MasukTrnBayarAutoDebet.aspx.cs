@@ -215,6 +215,8 @@ public partial class CL_Process_MasukTrnBayarAutoDebet : System.Web.UI.Page
                 ddlkursbank.SelectedValue = "IDR";
                 txtkursbank.Text = "1";
             }
+            GRTP.UseAccessibleHeader = true;
+            GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;
 
         }
         catch(Exception X)
@@ -1253,8 +1255,24 @@ public partial class CL_Process_MasukTrnBayarAutoDebet : System.Web.UI.Page
             //((TextBox)grow.FindControl("jlhdebit")).Enabled = true;
             //((TextBox)grow.FindControl("jlhkredit")).Enabled = false;
         }
-/*        GRTP.UseAccessibleHeader = true;
-        GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;*/
+        GRTP.UseAccessibleHeader = true;
+        GRTP.HeaderRow.TableSection = TableRowSection.TableHeader;
+        ScriptManager.RegisterStartupScript(
+            this,
+            GetType(),
+            "SetPage",
+                        @"
+                        Sys.Application.add_load(function () {
+                            var table = $('#GRTP').DataTable();
+
+                            var page = sessionStorage.getItem('grtp_page');
+
+                            if (page !== null) {
+                                table.page(parseInt(page)).draw(false);
+                            }
+                        });
+                        ",
+            true);
     }
     protected void ddlbayar_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -1289,7 +1307,22 @@ public partial class CL_Process_MasukTrnBayarAutoDebet : System.Web.UI.Page
 
         //}
 
+        ScriptManager.RegisterStartupScript(
+            this,
+            GetType(),
+            "SetPage",
+                        @"
+                                Sys.Application.add_load(function () {
+                                    var table = $('#GRTP').DataTable();
 
+                                    var page = sessionStorage.getItem('grtp_page');
+
+                                    if (page !== null) {
+                                        table.page(parseInt(page)).draw(false);
+                                    }
+                                });
+                                ",
+            true);
 
         subgridbayar_Click();
         GRTP.UseAccessibleHeader = true;

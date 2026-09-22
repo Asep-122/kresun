@@ -95,7 +95,7 @@ public partial class GL_Report_ReportNeracaStafel : System.Web.UI.Page
                 Txtkurs.Text = "0";
                 BindGridEntity();
 
-                ddlSP.Enabled = false;
+                ddlSP.Enabled = true;
                 txtStart.Enabled = false;
                 txtEnd.Enabled = false;
 
@@ -177,6 +177,19 @@ public partial class GL_Report_ReportNeracaStafel : System.Web.UI.Page
         txtEnd.Enabled = true;
         Txtrptperiode.Enabled = true;
         ddlSP.Enabled = true;
+
+        DefaultClass.Global.SqlHelper[] Paramsd = new DefaultClass.Global.SqlHelper[2];
+        Paramsd[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+        Paramsd[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "GETKODECABANG", typeof(string));
+        ge.ListDataset = gb.GetDataJustOutPut("dbo.KP_REPORTING_CL", Paramsd, "constrmf");
+        ge.ListDataset.Tables[0].DefaultView.Sort = "kodecabang asc";
+        //ge.ListDataset.Tables[0].DefaultView.Sort = "value asc";
+        //gb.FillDDL(ge.ListDataset.Tables[0].DefaultView.ToTable(), ddlcabang, "None", "");
+        ddlcabang.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlcabang.DataTextField = "namacabang";
+        ddlcabang.DataValueField = "kodecabang";
+        ddlcabang.DataBind();
+        ddlcabang.Items.Insert(0, new ListItem("ALL", "ALL"));
     }
     public void btnSerach_Click(object sender, EventArgs e)
     {

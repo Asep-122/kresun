@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8" />
-    <title>Pencairan Kredit</title>
+    <title>Disposisi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -62,10 +62,10 @@
             setTimeout(function () { $('#lnkopenGroup').click(); $("div").remove(".tooltip"); window.top.cekResize(); }, 200);
         }
     
-        history.pushState(null, null, location.href);
+/*        history.pushState(null, null, location.href);
         window.onpopstate = function () {
             history.go(1);
-        };
+        };*/
 
         function IsValid( args ) {
         if( args.value.length == 0 ) {
@@ -155,7 +155,53 @@
         }
 
 
+        function sweetAlertsaveApprove(btnSimpan, errMsg,kategori) {
 
+                var keterangan = "";
+                 if (kategori == "Approve") {
+                    keterangan = "Masukkan keterangan approval";
+                }
+                else {
+                    keterangan = "Masukkan keterangan Tolak";
+                }
+
+                if (btnSimpan.dataset.confirmed) {
+
+                    var myEditor = document.querySelector('#editor');
+                    var html = myEditor.children[0].innerHTML;
+
+                    document.getElementById('<%= hdnEditorContent.ClientID %>').value = html;
+
+                    btnSimpan.dataset.confirmed = false;
+
+                    return true;
+                }
+
+                event.preventDefault();
+
+                Swal.fire({
+                    title: keterangan,
+                    input: 'textarea',
+                    inputPlaceholder: 'Tulis keterangan di sini...',
+                    showCancelButton: true,
+                    confirmButtonText: 'OK',
+                    cancelButtonText: 'Batal'
+                }).then((result) => {
+
+                    if (result.isConfirmed) {
+
+                        var keterangan = result.value;
+
+                        console.log(keterangan);
+
+                        document.getElementById('<%= hdnKeteranganApprove.ClientID %>').value = keterangan;
+
+                        btnSimpan.dataset.confirmed = true;
+                        btnSimpan.click();
+                    }
+                });
+                return false;
+            }
           function sweetAlertsave(btnSimpan,errMsg) {
             if (btnSimpan.dataset.confirmed) {
                 // The action was already confirmed by the user, proceed with server event
@@ -446,16 +492,53 @@
             });
             
             $('.selectpicker').selectpicker();
-
-
+            $(".table ").css({ "width": "100%" });
+          
             $(function () {
+                var tables = $('#<%= GRData.ClientID %>').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy',
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'A4',
+                        exportOptions: {
+                            columns: ':visible'
+                        },
+                        customize: function (doc) {
+                            doc.pageMargins = [10, 10, 10, 10];
+                            doc.defaultStyle.fontSize = 8;
+                            doc.styles.tableHeader.fontSize = 9;
 
+                            var tableNode = doc.content.find(function (item) {
+                                return item.table;
+                            });
 
+                            if (tableNode && tableNode.table && tableNode.table.body) {
+                                tableNode.table.widths =
+                                    Array(tableNode.table.body[0].length).fill('*');
+                            }
+                        }
+                    },
+                    'excel'
+                ],
+                scrollX: true,
+                order: [],
+                columnDefs: [{
+                    targets: 'no-sort',
+                    orderable: false,
+                }],
+                retrieve: true
             });
 
+            tables.buttons().container().appendTo('#<%= GRData.ClientID %>_wrapper .col-md-6:eq(0)');
+        });
 
 
-            $(".table ").css({ "width": "100%" });
+
+
+
 
             $('form').parsley();
 
@@ -531,6 +614,12 @@
 .ql-font-comic-sans {
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
+
+.swal2-title {
+    margin-top: 15px !important;
+    margin-bottom: 20px !important;
+    font-size: 24px !important;
+}
     </style>
 </head>
 <body>
@@ -583,6 +672,7 @@
                                  <div class="form-group" style="width: 100%;">
                                         <label for="txtNoBukti" class="col-8 col-form-label">Pilih Status Deviasi</label>     
                                     <div class="col-6">
+                                        <asp:HiddenField ID="hdnKeteranganApprove" runat="server" />
                                         <asp:DropDownList runat="server" ID="ddlStatus" CssClass="form-control selectpicker" data-style="btn-custom" OnSelectedIndexChanged="Status_SelectedIndexChanged" AutoPostBack="true">
                                             <asp:ListItem Text="Pilih Status" Value="-" Selected="True"></asp:ListItem>
                                             <asp:ListItem Text="Progress" Value="Progress"></asp:ListItem>
@@ -603,10 +693,38 @@
                                        </ItemTemplate>
                                       <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
                                       <ItemStyle HorizontalAlign="Left"></ItemStyle>
-                                  </asp:TemplateField>
-                                 <asp:TemplateField HeaderText="To">
+                                  </asp:TemplateField>                                                      
+                                <asp:TemplateField HeaderText="No Pensiun">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblnopensiun" Visible="true" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "NoPensiun")%>'></asp:Label>
+                                    </ItemTemplate>
+                                    <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                    <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                </asp:TemplateField>
+                                 <asp:TemplateField HeaderText="Nama Debitur">
+                                     <ItemTemplate>
+                                         <asp:Label ID="lblnamadebitur" Visible="true" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "NamaDebitur")%>'></asp:Label>
+                                     </ItemTemplate>
+                                     <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                 </asp:TemplateField>      
+                                 <asp:TemplateField HeaderText="To" Visible="false">
                                       <ItemTemplate>
-                                          <asp:Label ID="lblto" Visible="true" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "[To]")%>'></asp:Label>
+                                          <asp:Label ID="lblto" Visible="false" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "[To]")%>'></asp:Label>
+                                       </ItemTemplate>
+                                      <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                      <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                  </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Area">
+                                      <ItemTemplate>
+                                          <asp:Label ID="lblarea" Visible="true" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "nama_area")%>'></asp:Label>
+                                       </ItemTemplate>
+                                      <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
+                                      <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                  </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Cabang">
+                                      <ItemTemplate>
+                                          <asp:Label ID="lblcabang" Visible="true" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "nama_cabang")%>'></asp:Label>
                                        </ItemTemplate>
                                       <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
                                       <ItemStyle HorizontalAlign="Left"></ItemStyle>
@@ -689,8 +807,8 @@
                                                   <ItemTemplate>
                                                       <asp:LinkButton ID="btnedit" runat="server" data-toggle="tooltip" Visible="false" data-placement="left" title="Process Verifikasi" CommandName="SET" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="fa fa-edit"></i></asp:LinkButton>
                                                       <asp:LinkButton ID="BtnPDF" runat="server" CausesValidation="True" UseSubmitBehavior="False" data-toggle="tooltip" data-placement="left" title="PDF" CommandName="PDF" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="mdi mdi-printer-3d"></i></asp:LinkButton>
-                                                      <asp:LinkButton ID="btnApproveAntrian" Visible="true" runat="server" data-toggle="tooltip" data-placement="left" title="Approve Antrian" CommandName="Approve" OnClientClick="return sweetAlertsave(this,'Apakah anda yakin ingin Approve dan menentukan data ini ?');" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="dripicons-export"></i></asp:LinkButton>
-                                                      <asp:LinkButton ID="BtnBatalkanAntrian" Visible="false" runat="server" data-toggle="tooltip" data-placement="left" title="Batalkan Antrian" CommandName="Batalkan" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="dripicons-thumbs-down"></i></asp:LinkButton>
+                                                      <asp:LinkButton ID="btnApproveAntrian" Visible="true" runat="server" data-toggle="tooltip" data-placement="left" title="Approve Antrian" CommandName="Approve" OnClientClick="return sweetAlertsaveApprove(this,'Apakah anda yakin ingin Approve dan menentukan data ini ?','Approve');" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="dripicons-export"></i></asp:LinkButton>
+                                                      <asp:LinkButton ID="BtnTolak" Visible="true" runat="server" data-toggle="tooltip" data-placement="left" title="Tolak" CommandName="Tolak" OnClientClick="return sweetAlertsaveApprove(this,'Apakah anda yakin ingin Approve dan menentukan data ini ?','Tolak');" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"> <i class="dripicons-thumbs-down"></i></asp:LinkButton>
                                                   </ItemTemplate>
                                               </asp:TemplateField>
                                 
@@ -801,13 +919,13 @@
         </ContentTemplate>
              <Triggers>  
                    <asp:PostBackTrigger ControlID="GRData" />  
+                   <asp:PostBackTrigger ControlID="ddlStatus" />  
                  
             </Triggers>
         </asp:UpdatePanel>
     </form>
-</body>
-  
-    
+
+        
         <!-- Parsley js -->
         <script type="text/javascript" src="../../plugins/parsleyjs/parsley.min.js"></script>
 
@@ -831,10 +949,20 @@
         <!-- App js -->
         <script src="../../assets/js/jquery.app.js"></script>
 
-
+            <!-- Buttons examples -->
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    <script src="../../plugins/datatables/pdfmake.min.js"></script>
+    <script src="../../plugins/datatables/vfs_fonts.js"></script>
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
 
         <!-- Toastr js -->
         <script src="../../plugins/jquery-toastr/jquery.toast.min.js" type="text/javascript"></script>
+</body>
+  
+
 
 
 </html>

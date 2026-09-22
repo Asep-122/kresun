@@ -174,8 +174,8 @@ public partial class FA_Master_RegistrasiDataPelengkap : System.Web.UI.Page
             if (!Page.IsPostBack)
             {
                 txtalamatPihakLain.Attributes.Add("maxlength", txtalamatPihakLain.MaxLength.ToString());
-                //BindGridEntity();
-               
+                BindGridEntityx();
+
                 InsertCombo();
                 //txttgllahirasuransi.Text = DateTime.Now.ToString("dd-MM-yyyy");
                  

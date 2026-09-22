@@ -12,7 +12,7 @@ public partial class MI_Master_UploadDokumenKunjunganAO : System.Web.UI.Page
     private readonly Global gb = new DefaultClass.Global();
     GlobalEntities ge = new GlobalEntities();
 
-    private const int MaxSize = 2 * 1024 * 1024; // 2 MB
+    private const int MaxSize = 4 * 1024 * 1024; // 2 MB
     private string finalPathDokumenNasabah = string.Empty;
     private string finalPathAplikasiNasabah = string.Empty;
 
@@ -163,61 +163,152 @@ public partial class MI_Master_UploadDokumenKunjunganAO : System.Web.UI.Page
         }
     }
 
+    // protected void btnUpload_Click(object sender, EventArgs e)
+    // {
+        // try
+        // {
+            // if (fileuploadpdf_dokumen_nasabah.HasFile)
+                // finalPathDokumenNasabah = UploadPdf(fileuploadpdf_dokumen_nasabah,
+                    // "~/Files/Kresun/FileKunjunganMarketing/DokumenNasabah/", "Dokumen");
+
+            // if (fileuploadpdf_dokumen_aplikasi.HasFile)
+                // finalPathAplikasiNasabah = UploadPdf(fileuploadpdf_dokumen_aplikasi,
+                    // "~/Files/Kresun/FileKunjunganMarketing/AplikasiNasabah/", "Aplikasi");
+
+            // SaveData();
+
+            // SweetAlert("File berhasil disimpan.");
+        // }
+        // catch (Exception ex)
+        // {
+            // SweetAlert(ex.Message.ToString());
+            // gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+        // }
+        // finally
+        // {
+            // //Response.Redirect("CreateSimulasi.aspx");
+            // BindData(no_simulasi);
+        // }
+    // }
+	
+	
     protected void btnUpload_Click(object sender, EventArgs e)
     {
         try
         {
-            if (fileuploadpdf_dokumen_nasabah.HasFile)
-                finalPathDokumenNasabah = UploadPdf(fileuploadpdf_dokumen_nasabah,
-                    "~/Files/Kresun/FileKunjunganMarketing/DokumenNasabah/", "Dokumen");
+            // ===== VALIDASI WAJIB UPLOAD =====
+            if (!fileuploadpdf_dokumen_nasabah.HasFile)
+                throw new Exception("Dokumen Nasabah WAJIB di-upload.");
 
-            if (fileuploadpdf_dokumen_aplikasi.HasFile)
-                finalPathAplikasiNasabah = UploadPdf(fileuploadpdf_dokumen_aplikasi,
-                    "~/Files/Kresun/FileKunjunganMarketing/AplikasiNasabah/", "Aplikasi");
+            //if (!fileuploadpdf_dokumen_aplikasi.HasFile)
+            //    throw new Exception("Dokumen Aplikasi WAJIB di-upload.");
 
+            // ===== PROSES UPLOAD =====
+            finalPathDokumenNasabah = UploadPdf(
+                fileuploadpdf_dokumen_nasabah,
+                "~/Files/Kresun/FileKunjunganMarketing/DokumenNasabah/",
+                "Dokumen"
+            );
+
+            if (string.IsNullOrEmpty(finalPathDokumenNasabah))
+                throw new Exception("Gagal upload Dokumen Nasabah.");
+
+            finalPathAplikasiNasabah = UploadPdf(
+                fileuploadpdf_dokumen_aplikasi,
+                "~/Files/Kresun/FileKunjunganMarketing/AplikasiNasabah/",
+                "Aplikasi"
+            );
+
+            //if (string.IsNullOrEmpty(finalPathAplikasiNasabah))
+            //    throw new Exception("Gagal upload Dokumen Aplikasi.");
+
+            // ===== SIMPAN KE DATABASE =====
             SaveData();
 
             SweetAlert("File berhasil disimpan.");
         }
         catch (Exception ex)
         {
-            SweetAlert(ex.Message.ToString());
-            gb.SaveErroLog(ex.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
+            SweetAlert(ex.Message);
+            gb.SaveErroLog(
+                ex.Message,
+                Path.GetFileName(Request.Path),
+                SessLoginID,
+                Server.MapPath("~/ErrorLog/ErrorLog" +
+                    DateTime.Now.ToString("MMyyyy") + ".xml")
+            );
         }
         finally
         {
-            //Response.Redirect("CreateSimulasi.aspx");
             BindData(no_simulasi);
         }
     }
 
+
+
+    // private string UploadPdf(FileUpload uploader, string relativeFolder, string suffix)
+    // {
+        // try
+        // {
+            // if (!IsPdf(uploader))
+            // {
+                // SweetAlert("File harus PDF!");
+                // return null;
+            // }
+
+            // if (uploader.PostedFile.ContentLength > MaxSize)
+            // {
+                // SweetAlert("Ukuran file maksimal 2 MB!");
+                // return null;
+            // }
+
+            // string folderPath = Server.MapPath(relativeFolder);
+            // if (!Directory.Exists(folderPath))
+                // Directory.CreateDirectory(folderPath);
+
+            // string fileBaseName = no_pensiun + "_" + no_simulasi + "_" + DateTime.Now.ToString("ddMMyyyyHHmmss") + "_" + suffix;
+            // string finalFileName = fileBaseName + ".pdf";
+            // string uploadedFile = Path.Combine(folderPath, finalFileName);
+            // string compressedFile = Path.Combine(folderPath, fileBaseName + "_tmp.pdf");
+
+            // uploader.SaveAs(uploadedFile);
+            // PdfHelper.CompressPdf(uploadedFile, compressedFile);
+            // File.Delete(uploadedFile);
+            // File.Move(compressedFile, uploadedFile);
+
+            // return relativeFolder + finalFileName;
+        // }
+        // catch (Exception ex)
+        // {
+            // throw ex;
+        // }
+    // }
+	
+	
     private string UploadPdf(FileUpload uploader, string relativeFolder, string suffix)
     {
         try
         {
             if (!IsPdf(uploader))
-            {
-                SweetAlert("File harus PDF!");
-                return null;
-            }
+                throw new Exception("File harus PDF!");
 
             if (uploader.PostedFile.ContentLength > MaxSize)
-            {
-                SweetAlert("Ukuran file maksimal 2 MB!");
-                return null;
-            }
+                throw new Exception("Ukuran file maksimal 2 MB!");
 
             string folderPath = Server.MapPath(relativeFolder);
             if (!Directory.Exists(folderPath))
                 Directory.CreateDirectory(folderPath);
 
-            string fileBaseName = no_pensiun + "_" + no_simulasi + "_" + DateTime.Now.ToString("ddMMyyyyHHmmss") + "_" + suffix;
+            string fileBaseName = no_pensiun + "_" + no_simulasi + "_" +
+                                  DateTime.Now.ToString("ddMMyyyyHHmmss") + "_" + suffix;
+
             string finalFileName = fileBaseName + ".pdf";
             string uploadedFile = Path.Combine(folderPath, finalFileName);
             string compressedFile = Path.Combine(folderPath, fileBaseName + "_tmp.pdf");
 
             uploader.SaveAs(uploadedFile);
             PdfHelper.CompressPdf(uploadedFile, compressedFile);
+
             File.Delete(uploadedFile);
             File.Move(compressedFile, uploadedFile);
 
@@ -225,7 +316,8 @@ public partial class MI_Master_UploadDokumenKunjunganAO : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            throw ex;
+            SweetAlert(ex.Message);
+            return null;
         }
     }
 

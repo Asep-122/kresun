@@ -599,9 +599,9 @@ public partial class Report_viewlistterbayar : System.Web.UI.Page
 
 
                     string report = "";
-                    if (ddlproduk.SelectedValue == "3C")
+                    if (ddlproduk.SelectedValue == "35")
                     {
-                        report = "Report List Pembayaran Mingguan " + ddlmarketing.SelectedItem.Text.ToString() + ".xlsx";
+                        report = "Report List Pembayaran Pinjaman Pensiun " + ddlmarketing.SelectedItem.Text.ToString() + ".xlsx";
                     }
                     else if (ddlproduk.SelectedValue == "3B")
                     {

@@ -32,6 +32,7 @@ public partial class AR_Process_PencairanKreditSumberDana: System.Web.UI.Page
 
     Global gb = new DefaultClass.Global();
     GlobalEntities ge = new GlobalEntities();
+    GlobalEntities gtx = new GlobalEntities();
 
     Global gbx = new DefaultClass.Global();
     GlobalEntities gex = new GlobalEntities();
@@ -2231,6 +2232,28 @@ public partial class AR_Process_PencairanKreditSumberDana: System.Web.UI.Page
 
     }
 
+    protected void GRData_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            var drv = (DataRowView)e.Row.DataItem;
+
+            // ganti 5 dengan index kolom Action kamu
+            int actionColumnIndex = 10;
+
+            if (drv["file_sumberdana"] != DBNull.Value &&
+                !string.IsNullOrEmpty(drv["file_sumberdana"].ToString()))
+            {
+                e.Row.Cells[actionColumnIndex].BackColor = System.Drawing.Color.LightGreen;
+            }
+            else
+            {
+                e.Row.Cells[actionColumnIndex].BackColor = System.Drawing.Color.Pink;
+            }
+        }
+    }
+
+
 
     //protected void btnSimpanTolakan_Click(object sender, EventArgs e)
     //{
@@ -3083,17 +3106,16 @@ public partial class AR_Process_PencairanKreditSumberDana: System.Web.UI.Page
                         txtPdfSumberDana.Attributes["onclick"] =
                             "window.open(this.href, 'pdfWindow', 'toolbar=yes,scrollbars=yes,resizable=yes,width=900,height=850'); return false;";
 
+                        string folderPath3 = ge.ListDataset.Tables[0].Rows[0]["file_path_sumberdana"].ToString();
 
-                        /*                        // tampilkan nama file atau path di link
-                                                txtPdfSumberDana.Text = ge.ListDataset.Tables[0].Rows[0]["file_sumberdana"].ToString();
-                                                txtPdfSumberDana.NavigateUrl = "#";
+                        string encrypted3 = gb.Encrypt(folderPath3);
 
-                                                // pakai window.open agar buka popup
-                                                txtPdfSumberDana.Attributes["onclick"] = string.Format(
-                                                    "window.open('{0}', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,width=900,height=850');",
-                                                    secureUrl
-                                                );*/
+                        string secureUrl3 = ResolveUrl("~/SecurePdf.ashx?f=" + encrypted3);
+                        txtPdfSumberDana.Text = ge.ListDataset.Tables[0].Rows[0]["file_sumberdana"].ToString();
+                        txtPdfSumberDana.NavigateUrl = secureUrl3;
 
+                        txtPdfSumberDana.Attributes["onclick"] =
+                            "window.open(this.href, 'pdfWindow', 'toolbar=yes,scrollbars=yes,resizable=yes,width=900,height=850'); return false;";
 
                         var kodeasuransi = ge.ListDataset.Tables[0].Rows[0]["kodeasuransi"].ToString();
                       
@@ -3118,7 +3140,11 @@ public partial class AR_Process_PencairanKreditSumberDana: System.Web.UI.Page
 
                         DdlAngsurandimuka();
                         ddlmaterai.SelectedValue = kodematerai;
-                        ddlprovisi.SelectedValue = string.Format("{0:N0}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["provisi"].ToString()));
+                        string provisi = ge.ListDataset.Tables[0].Rows[0]["provisi"]
+                                          .ToString()
+                                          .Replace(".", ",");
+
+                        ddlprovisi.SelectedValue = provisi;
                         ddlangsurandimuka.SelectedValue = txtangsurandimukakali.Text;
                         ddlangsurandimukablokir.SelectedValue = txtangsuranblokirkali.Text;
                         txtmateraipcs.Text = kodematerai;
@@ -3188,7 +3214,7 @@ public partial class AR_Process_PencairanKreditSumberDana: System.Web.UI.Page
 
                         ge.ListDataset = gb.GetDataJustOutPut("KP_MASTER_PERMOHONAN_NEW", var, "constrmf");
 
-                        DefaultClass.Global.SqlHelper[] varSD = new DefaultClass.Global.SqlHelper[9];
+                        DefaultClass.Global.SqlHelper[] varSD = new DefaultClass.Global.SqlHelper[10];
                         varSD[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
                         varSD[1] = gb.CreateSPParameter("@jangka", ParameterDirection.Input, SqlDbType.Int, 0, int.Parse(ddljangkawaktu.SelectedValue), typeof(int));
                         varSD[2] = gb.CreateSPParameter("@statuspensiun", ParameterDirection.Input, SqlDbType.Int, 0, int.Parse(ddlpensiun.SelectedValue), typeof(int));
@@ -3198,6 +3224,7 @@ public partial class AR_Process_PencairanKreditSumberDana: System.Web.UI.Page
                         varSD[6] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTBUNGASD", typeof(string));
                         varSD[7] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
                         varSD[8] = gb.CreateSPParameter("@plafon", ParameterDirection.Input, SqlDbType.Money, 0, txtplafon.Text, typeof(decimal));
+                        varSD[9] = gb.CreateSPParameter("@umur", ParameterDirection.Input, SqlDbType.VarChar, 0, txtusiapinjaman.Text, typeof(string));
                         ge.ListDataset = gb.GetDataJustOutPut("KP_MASTER_PERMOHONAN_NEW", varSD, "constrmf");
                         float bungabank = 0;
                         decimal angsuranperbulanbank = 0;
@@ -3697,15 +3724,23 @@ public partial class AR_Process_PencairanKreditSumberDana: System.Web.UI.Page
             }
             ddlmaterai.Items.Insert(0, new ListItem("Pilih Materai", "0"));
 
-
-
             ddlprovisi.Items.Clear();
-            for (int i = 3; i <= 8; i++)
-            {
-                ddlprovisi.Items.Add(new ListItem(i.ToString(), i.ToString()));
 
-            }
+            DefaultClass.Global.SqlHelper[] var = new DefaultClass.Global.SqlHelper[4];
+            var[0] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LISTPROVISI", typeof(string));
+            var[1] = gb.CreateSPParameter("@KdPersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+            var[2] = gb.CreateSPParameter("@kodebank", ParameterDirection.Input, SqlDbType.VarChar, 50, txtkodesimulasi.Text, typeof(string));
+            var[3] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+
+            gtx.ListDataset = gb.GetDataJustOutPut("SI_Request", var, "constrmf");
+
+
+            ddlprovisi.DataSource = gtx.ListDataset.Tables[0].DefaultView.ToTable();
+            ddlprovisi.DataTextField = "provisi";
+            ddlprovisi.DataValueField = "provisi";
+            ddlprovisi.DataBind();
             ddlprovisi.Items.Insert(0, new ListItem("Pilih Provisi", "0"));
+
 
             ddlangsurandimuka.Items.Clear();
             for (int i = 1; i <= 30; i++)

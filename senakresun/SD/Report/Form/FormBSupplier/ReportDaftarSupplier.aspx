@@ -57,7 +57,7 @@
                                              <label for="inputCity" class="col-form-label">Choice Category Report</label>
                                              <asp:radiobuttonlist id="rdbtnType" runat="server" repeatdirection="Horizontal"  AutoPostBack="true" CellPadding="10" CellSpacing="2" OnSelectedIndexChanged="rdbtnType_Click">
                                                 <asp:listitem  Text="&nbsp; Daftar Sumber Dana Tanpa Saldo" Value="TanpaSaldo" />
-                                                <asp:listitem  Text="&nbsp; Daftar Sumber Dana Dengan Saldo" Value="DenganSaldo"/>
+<%--                                                <asp:listitem  Text="&nbsp; Daftar Sumber Dana Dengan Saldo" Value="DenganSaldo"/>--%>
                                              </asp:radiobuttonlist>
                                             </div>
                                         </div>

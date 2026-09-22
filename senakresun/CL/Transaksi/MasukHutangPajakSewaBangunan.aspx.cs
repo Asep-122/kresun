@@ -177,8 +177,9 @@ public partial class CL_Process_MasukHutangPajakSewaBangunan : System.Web.UI.Pag
                 gb.FillDDL(ge.ListDataset.Tables[0].DefaultView.ToTable(), ddlteller, "None", "");
                 ddlteller.Items.Insert(0, new ListItem("ALL", "ALL"));
 
-                ddlteller.SelectedValue = SessLoginID;
-                if (SessLoginID.Substring(3, 3) == "TL1")
+                string tempuser = (SessBranchID == "000" ? "000TL1" : SessLoginID);
+                ddlteller.SelectedValue = tempuser;
+                if (tempuser.Substring(3, 3) == "TL1")
                 {
                     ddlteller.Enabled = true;
                 }
@@ -832,7 +833,13 @@ public partial class CL_Process_MasukHutangPajakSewaBangunan : System.Web.UI.Pag
     }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect(Request.Url.AbsoluteUri);
+        ScriptManager.RegisterStartupScript(
+            this,
+            this.GetType(),
+            "redirect",
+            "window.location.href='MasukHutangPajakSewaBangunan.aspx';",
+            true
+        );
 
     }
     protected string btnreload()

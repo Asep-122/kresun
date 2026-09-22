@@ -295,7 +295,7 @@
                                                         <HeaderStyle CssClass="align-center" Width="10%"></HeaderStyle>
                                                         <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                                         <ItemTemplate>
-                                                            <asp:LinkButton ID="btnView" runat="server" data-toggle="tooltip" data-placement="left" title="View Surat" CommandName='<%#DataBinder.Eval(Container.DataItem, "kantor_bayar_id")%>' CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"><i class="mdi mdi-printer icon-md"></i></asp:LinkButton>
+                                                            <asp:LinkButton ID="btnView" runat="server" data-toggle="tooltip" data-placement="left" title="View Surat" CommandName='<%#DataBinder.Eval(Container.DataItem, "sumber_dana_id")%>' CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"><i class="mdi mdi-printer icon-md"></i></asp:LinkButton>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
                                                 </Columns>

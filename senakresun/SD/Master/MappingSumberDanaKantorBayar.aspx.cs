@@ -128,7 +128,7 @@ public partial class MappingSumberDanaKantorBayar : System.Web.UI.Page
 
         ge.ListDataset.Tables[0].DefaultView.Sort = "KodeBank asc";
         ddlKantorBayar.DataSource = ge.ListDataset.Tables[0].DefaultView.ToTable();
-        ddlKantorBayar.DataTextField = "NamaBank";
+        ddlKantorBayar.DataTextField = "NamaBank2";
         ddlKantorBayar.DataValueField = "KodeBank";
         ddlKantorBayar.DataBind();
         ddlKantorBayar.Items.Insert(0, new ListItem("Pilih KantorBayar Dana", "-"));

@@ -491,7 +491,62 @@ public partial class AS_Process_MasukTrnClaim : System.Web.UI.Page
                 }
 
                 break;
+            case "PDFJURNAL":
 
+                try
+                {
+
+                    string nobukti;
+                    nobukti = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnobukti")).Text;
+
+                    //hdnnourut.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnobukti")).Text;
+
+                    DefaultClass.Global.SqlHelper[] Paramsc = new DefaultClass.Global.SqlHelper[6];
+                    Paramsc[0] = gb.CreateSPParameter("@noBukti", ParameterDirection.Input, SqlDbType.VarChar, 50, nobukti, typeof(string));
+                    Paramsc[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "ReportJournal", typeof(string));
+                    Paramsc[2] = gb.CreateSPParameter("@kodesumber", ParameterDirection.Input, SqlDbType.VarChar, 50, kodesumber, typeof(string));
+                    Paramsc[3] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
+                    Paramsc[4] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(string));
+                    Paramsc[5] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+                    ge.ListDataTable = gb.GetDataJustOutPut("dbo.CL_Trn_PIUTANG_AS", Paramsc, "constrmf").Tables[0];
+
+                    if (ge.ListDataTable.Rows.Count > 0)
+                    {
+
+
+                        rprt.Load(Server.MapPath("~/GL/Process/Report/GL.STD.RPT.010.rpt"));
+                        rprt.SetDataSource(ge.ListDataTable);
+                        Response.Buffer = false;
+                        // Clear the response content and headers
+                        Response.ClearContent();
+                        Response.ClearHeaders();
+                        Response.ContentType = "application/pdf";
+                        rprt.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "ExportedFile");
+
+
+                    }
+
+
+                }
+
+                catch (Exception X)
+                {
+
+                    if (X.Message != "Thread was being aborted.")
+                    {
+
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+                    }
+                    else
+                    {
+                        rprt.Close();
+                        rprt.Dispose();
+                    }
+
+
+                }
+
+                break;
         }
     }
     protected void btndelete_click(object sender,EventArgs e)
@@ -850,7 +905,7 @@ public partial class AS_Process_MasukTrnClaim : System.Web.UI.Page
                 Params[12] = gb.CreateSPParameter("@keterangan", ParameterDirection.Input, SqlDbType.VarChar, 150, txtKeterangan.Text, typeof(string));
                 Params[13] = gb.CreateSPParameter("@Nobukti", ParameterDirection.Input, SqlDbType.VarChar, 30, txtnobukti.Text, typeof(string));
                 Params[14] = gb.CreateSPParameter("@kodejournal", ParameterDirection.Input, SqlDbType.VarChar, 30, "AS002", typeof(string));
-                Params[15] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 30, "INSERT", typeof(string));
+                Params[15] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 30, "c", typeof(string));
                 Params[16] = gb.CreateSPParameter("@Norekening", ParameterDirection.Input, SqlDbType.VarChar, 30, Txtnorekening.Text, typeof(string));
                 Params[17] = gb.CreateSPParameter("@tgljthtmp", ParameterDirection.Input, SqlDbType.SmallDateTime, 0, txttgljthtmp.Text, typeof(DateTime));
                 //Params[18] = gb.CreateSPParameter("@angsuranke", ParameterDirection.Input, SqlDbType.VarChar, 30, txtangske.Text, typeof(string));

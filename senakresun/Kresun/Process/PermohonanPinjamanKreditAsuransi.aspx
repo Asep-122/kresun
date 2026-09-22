@@ -820,6 +820,11 @@
                                                                               
                                                             </div> 
                                                             <div class="form-group">
+                                                                <asp:label ID="lblnopen" runat="server" class="col-form-label">No Pensiun</asp:label>
+																<asp:TextBox ID="txtnopen" Enabled="false" CssClass="form-control"  MaxLength="16" onkeypress="return isnumerickey(event);"     runat="server" Width="219px" ></asp:TextBox>
+                                                                              
+                                                            </div> 
+                                                            <div class="form-group">
                                                                 <asp:label ID="Label1" runat="server" class="col-form-label">Nama Lengkap</asp:label>
 																<asp:TextBox CssClass="form-control" ID="txtnamanasabah" Enabled="false" MaxLength="70"   runat="server" Text="" ></asp:TextBox>
                                                             </div>
@@ -1410,7 +1415,9 @@
                                                                         <asp:DropDownList ID="ddldatasimulasi" runat="server" CssClass="selectpicker show-tick" data-style="btn-custom" AutoPostBack="true" >
                                                                         <asp:ListItem Value="0">Tanpa Data Simulasi</asp:ListItem>
                                                                         <asp:ListItem Value="A">Data Simulasi Universal</asp:ListItem>              
-                                                                        <asp:ListItem Value="B">Data Simulasi Capital</asp:ListItem>        
+                                                                        <asp:ListItem Value="B">Data Simulasi Capital</asp:ListItem> 
+                                                                        <asp:ListItem Value="C">Data Simulasi Dana Lestari</asp:ListItem>    
+                                                                        <asp:ListItem Value="D">Data Simulasi THT</asp:ListItem>                                                                             
                                                                         </asp:DropDownList> 
                                                              <asp:TextBox CssClass="form-control"  Visible="false" ID="txtidpermohonan" text="0" MaxLength="50"  runat="server" ></asp:TextBox> 
                                                                </div>
@@ -1474,16 +1481,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class ="form-row">
-                                                                <div class="col-md-6">
-                                                                    <p class="form-control">No Pensiun</p>
-                                                                        <%--<asp:TextBox ID="TextBox6" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Tunjangan Makan" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
-                                                                </div>
-                                                                <div class="col-md-6">
 
-                                                                     <asp:TextBox CssClass="form-control" ID="txtnopen" text="0" MaxLength="50"  runat="server"  ></asp:TextBox> 
-                                                                </div>
-                                                            </div>
 
 
                                                             <div class ="form-row">
@@ -1527,7 +1525,6 @@
                                                                         <%--<asp:TextBox ID="TextBox6" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Tunjangan Makan" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
                                                                 </div>
                                                                 <div class="col-md-6">
-
                                                                      <asp:TextBox CssClass="form-control" ID="txtnosk" text="0" MaxLength="50"  runat="server"  ></asp:TextBox> 
                                                                 </div>
                                                             </div>
@@ -2834,7 +2831,7 @@
                                  
                                                                  <div class="row">
 
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6" style="display:none;">
                                         <div class="col-lg-12">
                                             <div class="card-box ribbon-box">
                                                 <div class="ribbon ribbon-custom">Data Asuransi</div>
