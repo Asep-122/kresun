@@ -2489,6 +2489,16 @@
                                                                 </div>
                                                                
                                                             </div>
+                                                  <div class ="form-row">
+                                                    <div class="col-md-4">
+                                                        <p class="form-control">Grace Periode Rp</p>
+                                                            <%--<asp:TextBox ID="TextBox1" CssClass="form-control" required="required" runat="server" MaxLength="20" Enabled ="false" Text="Gaji Pokok/Bln" OnTextChanged="TextBox6_TextChanged" ></asp:TextBox>--%> 
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                            <asp:TextBox ID="txtgraceperiode" Enabled="false" CssClass="form-control"  runat="server" text="0,00"  onkeyup="javascript:this.value=Comma(this.value);" onblur="checkTextField1(this);" onkeypress="return isnumerickey(event);" ></asp:TextBox> 
+                                                    </div>
+                                                               
+                                                </div>
 
                                                   <div class ="form-row">
                                                                 <div class="col-md-4">

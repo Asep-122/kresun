@@ -7,6 +7,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using CrystalDecisions.Shared;
 using CrystalDecisions.CrystalReports.Engine;
+using System.Collections.Generic;
+using System.Web.Script.Serialization;
+using System.Web.Services;
 
 
 
@@ -32,7 +35,7 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
         set { ViewState["SessBranchID"] = value; }
     }
 
-    private string SessKdpersh
+    public string SessKdpersh
     {
         get { return Session["SessKdpersh"].ToString(); }
         set { ViewState["SessKdpersh"] = value; }
@@ -98,6 +101,23 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
 
         GRData.UseAccessibleHeader = true;
         GRData.HeaderRow.TableSection = TableRowSection.TableHeader;
+
+
+
+
+        DefaultClass.Global.SqlHelper[] xi = new DefaultClass.Global.SqlHelper[4];
+        xi[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 50, SessKdpersh, typeof(string));
+        xi[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "LISTPURPOSE", typeof(string));
+        xi[2] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 50, SessBranchID, typeof(string));
+        xi[3] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
+        gex.ListDataset = gb.GetDataJustOutPut("KP_Deviasi", xi, "constrmf");
+
+        ddlPurpose.DataSource = gex.ListDataset.Tables[0].DefaultView.ToTable();
+        ddlPurpose.DataTextField = "Purpose";
+        ddlPurpose.DataValueField = "KodePurpose";
+        ddlPurpose.DataBind();
+
+
     }
 
     protected void btnAdd_Click(object sender, EventArgs e)
@@ -105,6 +125,7 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
         pnlHeader.Visible = false;
         PnlFront.Visible = false;
         pnlData.Visible = true;
+        pnlNasabah.Visible = true;
         btnDelete.Visible = false;
         pnlUploadDokument.Visible = true;
     }
@@ -119,6 +140,7 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
                 try
                 {
                     //string register
+                    txtnonasabah.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnonasabah")).Text;
                     txtNamaDebitur.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnamadebitur")).Text;
                     txtNoPen.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnopensiun")).Text;
                     txtTo.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblto")).Text;
@@ -146,6 +168,7 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
 
                     PnlFront.Visible = false;
                     pnlData.Visible = true;
+                    pnlNasabah.Visible = true;
                     pnlUploadDokument.Visible = true;
                     pnlHeader.Visible = false;
 
@@ -248,7 +271,9 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
             case "SETDELETE":
                 try
                 {
-
+                    txtnonasabah.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnonasabah")).Text;
+                    txtNamaDebitur.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnamadebitur")).Text;
+                    txtNoPen.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblnopensiun")).Text;
                     txtTo.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lblto")).Text;
                     txtTitle.Text = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbltitle")).Text;
                     ddlDept.SelectedValue = ((Label)GRData.Rows[Convert.ToInt32(e.CommandArgument)].FindControl("lbldept")).Text;
@@ -275,7 +300,9 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
 
                     PnlFront.Visible = false;
                     pnlData.Visible = true;
-                    pnlData.Enabled = false;
+                    pnlData.Enabled = false;                    
+                    pnlNasabah.Visible = true;
+                    pnlNasabah.Enabled = false;
                     pnlUploadDokument.Visible = true;
                     pnlHeader.Visible = false;
                     btnSimpan.Visible = false;
@@ -329,7 +356,7 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
 
             string nobukti = (string.IsNullOrEmpty(txtNoBukti.Text) ? bukti : txtNoBukti.Text);
 
-            DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[15];
+            DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[16];
             var1[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
             var1[1] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, STATE, typeof(string));
             var1[2] = gb.CreateSPParameter("@ErrMsg", ParameterDirection.Output, SqlDbType.VarChar, 8000, ParameterDirection.Output, typeof(string));
@@ -344,8 +371,9 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
             var1[10] = gb.CreateSPParameter("@UserLogin", ParameterDirection.Input, SqlDbType.VarChar, 50, SessLoginID, typeof(string));
             var1[11] = gb.CreateSPParameter("@NoBukti", ParameterDirection.Input, SqlDbType.VarChar, 50, nobukti, typeof(string));
             var1[12] = gb.CreateSPParameter("@Reason", ParameterDirection.Input, SqlDbType.VarChar, 100, txtReason.Text, typeof(string));
-            var1[13] = gb.CreateSPParameter("@NamaDebitur", ParameterDirection.Input, SqlDbType.VarChar, 100, txtNamaDebitur.Text, typeof(string));
-            var1[14] = gb.CreateSPParameter("@NoPensiun", ParameterDirection.Input, SqlDbType.VarChar, 100, txtNoPen.Text, typeof(string));
+            var1[13] = gb.CreateSPParameter("@NoNasabah", ParameterDirection.Input, SqlDbType.VarChar, 100, HDNoNasabah.Value, typeof(string));
+            var1[14] = gb.CreateSPParameter("@NamaDebitur", ParameterDirection.Input, SqlDbType.VarChar, 100, txtNamaDebitur.Text, typeof(string));
+            var1[15] = gb.CreateSPParameter("@NoPensiun", ParameterDirection.Input, SqlDbType.VarChar, 100, txtNoPen.Text, typeof(string));
             ge.ListDataset = gb.GetDataJustOutPut("KP_Deviasi", var1, "constrmf");
             if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Success"))
             {
@@ -387,5 +415,33 @@ public partial class KP_Process_CreateDeviasi : System.Web.UI.Page
             ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:Alertfailed('Error!','" + ge.ListDataset.Tables[0].Rows[0][0].ToString() + "','success','true');", true);
 
         }
+    }
+
+
+    [WebMethod]
+    public static string GetNoNasabah(string InputText, string SessionBranchID)
+    {
+        List<string[]> listResult = new List<string[]>();
+
+        string no_nasabah = InputText;
+
+        // empResult.Add(KDBRG);
+        DefaultClass.Global gb = new DefaultClass.Global();
+        EntitiesClass.GlobalEntities ge = new EntitiesClass.GlobalEntities();
+
+        DefaultClass.Global.SqlHelper[] Params = new DefaultClass.Global.SqlHelper[2];
+        //Params[0] = gb.CreateSPParameter("@WhereCond", ParameterDirection.Input, SqlDbType.VarChar, 0, InputText, typeof(String));
+        Params[0] = gb.CreateSPParameter("@kodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 3, SessionBranchID, typeof(String));
+        Params[1] = gb.CreateSPParameter("@no_nasabah", ParameterDirection.Input, SqlDbType.VarChar, 50, no_nasabah, typeof(String));
+
+        ge.ListDataset = gb.GetDataJustOutPut("dbo.KP_getCustomer_Disposisi", Params, "constrmf");
+
+        listResult = gb.ConvertTable(ge.ListDataset.Tables[0]);
+
+        var jsonSerialiser = new JavaScriptSerializer();
+        var json = jsonSerialiser.Serialize(listResult);
+
+        return json;
+
     }
 }

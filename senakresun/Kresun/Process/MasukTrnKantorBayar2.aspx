@@ -735,13 +735,12 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                              <label for="inputState" class="col-2 col-form-label">Filter</label> 
                                             <div class="col-8">
                                                 <asp:DropDownList ID="ddlfilter" CssClass="selectpicker show-tick col-12" runat="server" data-style="btn-custom" OnSelectedIndexChanged="ddlfilter_SelectedIndexChanged" AutoPostBack="true">
-                                                    <asp:ListItem Text="ALL" Value="ALL"></asp:ListItem>
                                                     <asp:ListItem Text="Periode" Value="Periode"></asp:ListItem>
                                                 </asp:DropDownList>
                                             </div>
                                         </div>
                                      </div>                              
-                                    <div class="form-group row" id="DivPeriode" runat="server" visible="false"> 
+                                    <div class="form-group row" id="DivPeriode" runat="server"> 
                                          <div class="form-inline col-sm-5">
                                              <label for="inputState" class="col-2 col-form-label">Periode</label> 
                                             <div class="col-4">

@@ -3000,6 +3000,7 @@ public partial class AR_Process_PencairanKreditSumberDana: System.Web.UI.Page
 
                         txtplafon.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["permohonan_plafon"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["permohonan_plafon"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
                         txtpelunasan.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["permohonan_pelunasan"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["permohonan_pelunasan"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
+                        txtgraceperiode.Text = string.Format("{0:N2}", decimal.Parse(ge.ListDataset.Tables[0].Rows[0]["graceperiode"].ToString()));//Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["permohonan_pelunasan"].ToString()).ToString().Replace(".00", "").Replace(",0000", "").Replace(",00", "")));
                         txtjangkatahun.Text = ge.ListDataset.Tables[0].Rows[0]["permohonan_jangka_tahun"].ToString();
                         //                    txttunjangananak.Text = ge.ListDataset.Tables[0].Rows[0]["TunjAnak"].ToString() == "" ? "0,00" : string.Format("{0:N2}", Convert.ToInt32((ge.ListDataset.Tables[0].Rows[0]["TunjAnak"].ToString()).ToString().Replace(",0000", "").Replace(",00", "")));
                         var rtjangkawaktu = "0";

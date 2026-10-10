@@ -557,4 +557,488 @@ Parameter name: value</ErrorText>
     <FromUser>SUPERADMIN</FromUser>
     <TglError>2026-09-21 16.16.02</TglError>
   </ErrorLog>
+  <ErrorLog>
+    <ID>76</ID>
+    <ErrorText>String was not recognized as a valid DateTime.</ErrorText>
+    <FileError>PencairanKreditNasabah.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-22 11.42.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>77</ID>
+    <ErrorText>'ddlSektorUsahaKtp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.13.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>78</ID>
+    <ErrorText>'ddlkodejiwa' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.24.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>79</ID>
+    <ErrorText>0100 - Pensiun Janda/Duda                                </ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.24.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>80</ID>
+    <ErrorText>AR0701178000006 - Angel</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.24.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>81</ID>
+    <ErrorText>'ddlkodejiwa' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.26.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>82</ID>
+    <ErrorText>0100 - Pensiun Janda/Duda                                </ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.26.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>83</ID>
+    <ErrorText>AR0701178000006 - Angel</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.27.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>84</ID>
+    <ErrorText>'ddlkodejiwa' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.29.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>85</ID>
+    <ErrorText>0100 - Pensiun Janda/Duda                                </ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.29.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>86</ID>
+    <ErrorText>'ddlkodejiwa' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.32.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>87</ID>
+    <ErrorText>0100 - Pensiun Janda/Duda                                </ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.32.48</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>88</ID>
+    <ErrorText>'ddlkodejiwa' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.38.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>89</ID>
+    <ErrorText>0100 - Pensiun Janda/Duda                                </ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.39.33</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>90</ID>
+    <ErrorText>'ddlkodejiwa' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.41.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>91</ID>
+    <ErrorText>0100 - Pensiun Janda/Duda                                </ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.41.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>92</ID>
+    <ErrorText>'ddlkodejiwa' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.41.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>93</ID>
+    <ErrorText>0100 - Pensiun Janda/Duda                                </ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.41.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>94</ID>
+    <ErrorText>'ddlkodejiwa' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.41.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>95</ID>
+    <ErrorText>0100 - Pensiun Janda/Duda                                </ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.41.44</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>96</ID>
+    <ErrorText>'ddlkodejiwa' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.47.26</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>97</ID>
+    <ErrorText>0100 - Pensiun Janda/Duda                                </ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.47.51</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>98</ID>
+    <ErrorText>'ddlkodejiwa' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.51.42</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>99</ID>
+    <ErrorText>0100 - Pensiun Janda/Duda                                </ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-23 15.51.47</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>100</ID>
+    <ErrorText>'ddlSektorUsahaKtp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-24 11.52.45</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>101</ID>
+    <ErrorText>'ddlSektorUsahaKtp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-24 11.53.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>102</ID>
+    <ErrorText>'ddlSektorUsahaKtp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-24 12.01.11</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>103</ID>
+    <ErrorText>'ddlSektorUsahaKtp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-24 12.09.24</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>104</ID>
+    <ErrorText>'ddlSektorUsahaKtp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultiguna_Outstanding.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-24 12.16.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>105</ID>
+    <ErrorText>'ddlSektorUsahaKtp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-24 12.59.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>106</ID>
+    <ErrorText>'ddlSektorUsahaKtp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-24 12.59.59</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>107</ID>
+    <ErrorText>'ddlSektorUsahaKtp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-24 15.06.03</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>108</ID>
+    <ErrorText>'ddlSektorUsahaKtp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-24 15.20.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>109</ID>
+    <ErrorText>'ddlSektorUsahaKtp' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-24 15.21.07</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>110</ID>
+    <ErrorText>startIndex cannot be larger than length of string.
+Parameter name: startIndex</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 10.06.25</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>111</ID>
+    <ErrorText>There is no row at position 0.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 10.28.12</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>112</ID>
+    <ErrorText>Unable to cast object of type 'ASP.ck_transaksi_penghapusansd_aspx' to type 'System.Web.UI.WebControls.GridViewRow'.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.12.02</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>113</ID>
+    <ErrorText>Unable to cast object of type 'ASP.ck_transaksi_penghapusansd_aspx' to type 'System.Web.UI.WebControls.GridViewRow'.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.13.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>114</ID>
+    <ErrorText>Unable to cast object of type 'ASP.ck_transaksi_penghapusansd_aspx' to type 'System.Web.UI.WebControls.GridViewRow'.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.20.14</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>115</ID>
+    <ErrorText>Unable to cast object of type 'ASP.ck_transaksi_penghapusansd_aspx' to type 'System.Web.UI.WebControls.GridViewRow'.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.24.29</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>116</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.25.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>117</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.26.17</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>118</ID>
+    <ErrorText>Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.27.22</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>119</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.33.56</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>120</ID>
+    <ErrorText>Object reference not set to an instance of an object.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.34.30</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>121</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.34.53</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>122</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.35.39</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>123</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.41.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>124</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.41.50</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>125</ID>
+    <ErrorText>Input string was not in a correct format.</ErrorText>
+    <FileError>PenghapusanSD.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 11.43.01</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>126</ID>
+    <ErrorText>Cannot insert the value NULL into column 'kodecabang', table 'SENAKRESUN.dbo.Gltrnsm'; column does not allow nulls. INSERT fails.</ErrorText>
+    <FileError>Pelunasandipercepatnew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 15.01.08</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>127</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 15.02.34</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>128</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 15.02.54</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>129</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 15.03.27</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>130</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 15.04.35</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>131</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 15.06.21</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>132</ID>
+    <ErrorText>'ddlkodeasuransi' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditApprovalSena1.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 15.10.00</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>133</ID>
+    <ErrorText>'ddlangsurandimuka' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditAsuransi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 15.21.43</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>134</ID>
+    <ErrorText>'ddlangsurandimuka' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditAsuransi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 15.21.58</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>135</ID>
+    <ErrorText>'ddlangsurandimuka' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditAsuransi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 15.23.04</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>136</ID>
+    <ErrorText>'ddlangsurandimuka' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditAsuransi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 15.24.40</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>137</ID>
+    <ErrorText>Note Approval tidak boleh kosong!</ErrorText>
+    <FileError>TransaksiPerjalananDinasKembaliPusat.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-28 17.33.55</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>138</ID>
+    <ErrorText>'ddlstatuskawinupload' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value</ErrorText>
+    <FileError>PermohonanPinjamanKreditMultigunaNew.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-29 10.09.18</TglError>
+  </ErrorLog>
+  <ErrorLog>
+    <ID>139</ID>
+    <ErrorText>Procedure or function KP_HITUNG_KANTOR_BAYAR_CAPITAL has too many arguments specified.</ErrorText>
+    <FileError>CreateSimulasi.aspx</FileError>
+    <FromUser>SUPERADMIN</FromUser>
+    <TglError>2026-09-29 12.21.42</TglError>
+  </ErrorLog>
 </DocumentElement>

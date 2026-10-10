@@ -605,7 +605,8 @@ public partial class CL_Process_PenghapusanSD : System.Web.UI.Page
             SetDetailBayar();
 
             var getkdsupplier = ddlkdsup.SelectedValue;
-            string ambilnasabah = txtnasabah.Text.Substring(11, 12);
+            //string ambilnasabah = txtnasabah.Text.Substring(11, 12);
+			string ambilnasabah = txtnasabah.Text.Split('|')[0].Split(':').Last().Trim();
             DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[6];
             var1[0] = gb.CreateSPParameter("@Kodelgn", ParameterDirection.Input, SqlDbType.VarChar, 30, getkdsupplier, typeof(string));
             var1[1] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(String));
@@ -645,7 +646,7 @@ public partial class CL_Process_PenghapusanSD : System.Web.UI.Page
         }
         catch (System.Exception X)
         {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert('" + X.Message.ToString() + "');", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Javascript", "javascript:SweetAlert(`" + X.Message.ToString() + "`);", true);
             gb.SaveErroLog(X.Message.ToString(), Path.GetFileName(Request.Path), SessLoginID, Server.MapPath("~/ErrorLog/" + "ErrorLog" + DateTime.Now.ToString("MM") + DateTime.Now.ToString("yyyy") + ".xml"));
         }
     }
@@ -879,7 +880,9 @@ public partial class CL_Process_PenghapusanSD : System.Web.UI.Page
                    // }
                 }
 
-                DefaultClass.Global.SqlHelper[] Params = new DefaultClass.Global.SqlHelper[27];
+
+
+                DefaultClass.Global.SqlHelper[] Params = new DefaultClass.Global.SqlHelper[30];
 
                 Params[0] = gb.CreateSPParameter("@Typejournal", ParameterDirection.Input, SqlDbType.VarChar, 50, '1', typeof(string));
                 Params[1] = gb.CreateSPParameter("@KodeKonter", ParameterDirection.Input, SqlDbType.VarChar, 50, KodeKonter, typeof(string));
@@ -908,6 +911,9 @@ public partial class CL_Process_PenghapusanSD : System.Web.UI.Page
                 Params[24] = gb.CreateSPParameter("@KursAkhir", ParameterDirection.Input, SqlDbType.Money, 0, txtkursbank.Text, typeof(decimal));
                 Params[25] = gb.CreateSPParameter("@NamaBank", ParameterDirection.Input, SqlDbType.VarChar, 30, txtNmBank.Text, typeof(string));
                 Params[26] = gb.CreateSPParameter("@penalty", ParameterDirection.Input, SqlDbType.Decimal, 0, decimal.Parse(txtpenalty.Text), typeof(decimal));
+                Params[27] = gb.CreateSPParameter("@totalpokok", ParameterDirection.Input, SqlDbType.Decimal, 0, decimal.Parse(HDPokok.Value), typeof(decimal));
+                Params[28] = gb.CreateSPParameter("@totalbunga", ParameterDirection.Input, SqlDbType.Decimal, 0, decimal.Parse(HDBUnga.Value), typeof(decimal));
+                Params[29] = gb.CreateSPParameter("@totalangsuran", ParameterDirection.Input, SqlDbType.Decimal, 0, decimal.Parse(HDTotalAngsuran.Value), typeof(decimal));
 
                 ge.ListDataset = gb.GetDataJustOutPut("CL_Delete_SD_Insert", Params, "constrmf");
                 //if (ge.ListDataset.Tables[0].Rows[0][0].ToString().Contains("Closing"))
@@ -1190,9 +1196,9 @@ public partial class CL_Process_PenghapusanSD : System.Web.UI.Page
                 //Label lbltotaldenda = (Label)e.Row.FindControl("lbltotaldenda");
                 //lbltotaldenda.Text = string.Format("{0:N2}", denda); 
                 //total = pokok + bunga + fee;
-                //HDBUnga.Value = lbltotalBunga.Text;
-                //HDPokok.Value = lbltotalPokok.Text;
-                //HDFee.Value = lbltotalfeec.Text;
+                HDBUnga.Value = lbltotalBunga.Text;
+                HDPokok.Value = lbltotalPokok.Text;
+                HDTotalAngsuran.Value = lbltotalAngsuran.Text;
                 //txtTotTO1.Text = lbltotalAngsuran.Text;
                 //txtTotTO.Text = lbltotalAngsuran.Text;
                 //txtJlhPenerimaan.Text = lbltotalAngsuran.Text;

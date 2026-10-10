@@ -577,7 +577,7 @@
         </script>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
         <ContentTemplate> 
-            
+
             <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"></asp:LinkButton>   <!-- delete  -->
              <div class="container-fluid">
                  <div class="row">
@@ -596,10 +596,12 @@
                     </div>
                 </div>
 
-
+            <div id="divSuccess" runat="server" class="alert alert-primary" role="alert" visible="false">
+                <asp:Label ID="lblMessage" runat="server"></asp:Label>
+            </div>
 
                  <!-- Panel Filter -->
-            <asp:Panel ID="pnlFilter" Visible="true" runat="server">
+                <asp:Panel ID="pnlFilter" Visible="true" runat="server">
                      <div class="row">
                         <div class="col-lg-12">
                             <div class="card-box ribbon-box">
@@ -619,6 +621,9 @@
                                                                         <asp:DropDownList ID="ddlcabang" Enabled="false" CssClass="selectpicker show-tick" runat="server" data-style="btn-custom" ></asp:DropDownList>
                                                                         </div>
                                                                     <asp:HiddenField ID="hdnZipCode" runat="server" />
+                                                                    <asp:HiddenField ID="hdnNoDeviasi" runat="server" />
+                                                                    <asp:HiddenField ID="hdnKodePurposeDeviasi" runat="server" />
+                                                                    <asp:HiddenField ID="hdnKeteranganDeviasi" runat="server" />
 
                                                                      <div class="form-group">
                                                                         <label for="inputState" class="col-form-label">No Anggota E.R.P</label>

@@ -98,6 +98,17 @@ public partial class CL_Process_MasukTrnKantorBayar2 : System.Web.UI.Page
                 ge.ListDataset = gb.GetDataJustOutPut("gettglsekarang", varT, "constrmf");
                 DateTime xtanggal = DateTime.Parse(ge.ListDataset.Tables[0].Rows[0]["tanggal"].ToString());
                 txttgltrn.Text = xtanggal.ToString("dd-MM-yyyy");
+
+                DateTime today = DateTime.Today;
+                DateTime maxDate = new DateTime(
+                   today.Year,
+                   today.Month,
+                   1
+               ).AddMonths(2).AddDays(-1);
+
+                StartDate.Attributes["max"] = maxDate.ToString("yyyy-MM-dd");
+                EndDate.Attributes["max"] = maxDate.ToString("yyyy-MM-dd");
+
                 StartDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 EndDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
@@ -1183,7 +1194,7 @@ public partial class CL_Process_MasukTrnKantorBayar2 : System.Web.UI.Page
             var Cabang = ddlKdBank.SelectedValue;
 
 
-            DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[7];
+            DefaultClass.Global.SqlHelper[] var1 = new DefaultClass.Global.SqlHelper[8];
             var1[0] = gb.CreateSPParameter("@kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(String));
             var1[1] = gb.CreateSPParameter("@kdBank", ParameterDirection.Input, SqlDbType.VarChar, 50, Cabang, typeof(String));
             var1[2] = gb.CreateSPParameter("@STATE", ParameterDirection.Input, SqlDbType.VarChar, 50, "SELECTLISTTAGIHANKANTORBAYAR", typeof(string));
@@ -1191,6 +1202,7 @@ public partial class CL_Process_MasukTrnKantorBayar2 : System.Web.UI.Page
             var1[4] = gb.CreateSPParameter("@kodecabang", ParameterDirection.Input, SqlDbType.VarChar, 10, SessBranchID, typeof(String));
             var1[5] = gb.CreateSPParameter("@StartDate", ParameterDirection.Input, SqlDbType.SmallDateTime, 8000, paramStartDate, typeof(DateTime));
             var1[6] = gb.CreateSPParameter("@EndDate", ParameterDirection.Input, SqlDbType.SmallDateTime, 8000, paramEndtDate, typeof(DateTime));
+            var1[7] = gb.CreateSPParameter("@tglTrn", ParameterDirection.Input, SqlDbType.SmallDateTime, 8000, txttgltrn.Text, typeof(DateTime));
 
             ge.ListDataTable = gb.GetDataJustOutPut("dbo.KP_Trn_KANTOR_BAYAR", var1, "constrmf").Tables[0];
 

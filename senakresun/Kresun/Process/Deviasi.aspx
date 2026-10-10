@@ -745,7 +745,7 @@
                                   </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Purpose">
                                       <ItemTemplate>
-                                          <asp:Label ID="lblpurpose" Visible="true" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Purpose")%>'></asp:Label>
+                                          <asp:Label ID="lblpurpose" Visible="true" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "KeteranganPurpose")%>'></asp:Label>
                                        </ItemTemplate>
                                       <HeaderStyle Height="30px" CssClass="text-center"></HeaderStyle>
                                       <ItemStyle HorizontalAlign="Left"></ItemStyle>

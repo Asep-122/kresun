@@ -684,6 +684,9 @@
                                                     <asp:HiddenField ID="HDNoSebelumnya" runat="server" />
                                                     <asp:HiddenField ID="HDNlasttransaksiap" runat="server" />
                                                     <asp:HiddenField ID="HDNlasttransaksicl" runat="server" />
+                                                    <asp:HiddenField ID="HDBUnga" runat="server" />
+                                                    <asp:HiddenField ID="HDPokok" runat="server" />
+                                                    <asp:HiddenField ID="HDTotalAngsuran" runat="server" />
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputpid" class="col-9 col-form-label">Tanggal Transaksi</label>

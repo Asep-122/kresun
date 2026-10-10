@@ -913,11 +913,6 @@ function sweetAlertsave(btnSimpan,errMsg) {
                                                          </FooterTemplate>
                                                     </asp:TemplateField>
 											
-
-                                               
-                            
-                                                    
-                                                     
                                                 </Columns>
                                                 <FooterStyle Font-Bold="True" HorizontalAlign="Right" />
                                             </asp:GridView>

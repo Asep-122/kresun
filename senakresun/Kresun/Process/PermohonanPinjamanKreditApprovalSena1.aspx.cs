@@ -163,7 +163,7 @@ public partial class AR_Process_PermohonanPinjamanKreditApprovalSena1: System.We
         {
             var SP = ddlproduk.SelectedValue == "5" ? "CL_Trn_KP_Insert_Cair_Kresun_tht" : "CL_Trn_KP_Insert_Cair_Kresun";
 
-            DefaultClass.Global.SqlHelper[] var88 = new DefaultClass.Global.SqlHelper[17];
+            DefaultClass.Global.SqlHelper[] var88 = new DefaultClass.Global.SqlHelper[18];
             var88[0] = gb.CreateSPParameter("@userlogin", ParameterDirection.Input, SqlDbType.VarChar, 30, SessLoginID, typeof(string));
             var88[1] = gb.CreateSPParameter("@Kdpersh", ParameterDirection.Input, SqlDbType.VarChar, 10, SessKdpersh, typeof(string));
             var88[2] = gb.CreateSPParameter("@KodeCabang", ParameterDirection.Input, SqlDbType.VarChar, 10, Hdnkodecabang.Value, typeof(string));
@@ -181,7 +181,8 @@ public partial class AR_Process_PermohonanPinjamanKreditApprovalSena1: System.We
             var88[14] = gb.CreateSPParameter("@adminbankxrp", ParameterDirection.Input, SqlDbType.Money, 0, txtadminbanktf.Text, typeof(string));
             var88[15] = gb.CreateSPParameter("@adminbankxpersen", ParameterDirection.Input, SqlDbType.Decimal, 0, txtadminbanktfpsn.Text, typeof(string));
             var88[16] = gb.CreateSPParameter("@terimabersihsumberdana", ParameterDirection.Input, SqlDbType.Decimal, 0, txtterimabersihtf.Text, typeof(string));
-
+            var88[17] = gb.CreateSPParameter("@graceperiode", ParameterDirection.Input, SqlDbType.Decimal, 0, txtgraceperiode.Text, typeof(decimal));
+            
             ge.ListDataset = gb.GetDataJustOutPut(SP, var88, "constrmf");
 
 

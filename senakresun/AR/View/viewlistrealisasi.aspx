@@ -226,37 +226,8 @@
 <body>
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-        <script type="text/javascript">
-            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(InIEvent);
-            var prm = Sys.WebForms.PageRequestManager.getInstance();
-            prm.add_beginRequest(BeginRequestHandler);
-            prm.add_endRequest(EndRequestHandler);
-            function BeginRequestHandler(sender, args) {
-                //Shows the modal popup - the update progress
-                //alert("1");
-                var popup = $find('<%= modalPopup.ClientID %>');
-                if (popup != null) {
-                    popup.show();
-                }
-            }
-            function EndRequestHandler(sender, args) {
-                //Hide the modal popup - the update progress
-                //alert("2");
-                var popup = $find('<%= modalPopup.ClientID %>');
-                if (popup != null) {
-                    popup.hide();
-                }
-            }
-        </script>
-        <asp:UpdateProgress ID="UpdateProgress" runat="server">
-            <ProgressTemplate>
-                <div class="xcenter">
-                    <asp:Image ID="Image1" ImageUrl="/assets/images/loadx.gif" AlternateText="Processing" runat="server" Width="136px" />
-                </div>
-            </ProgressTemplate>
-        </asp:UpdateProgress>
-        <ajaxToolkit:ModalPopupExtender ID="modalPopup" runat="server" TargetControlID="UpdateProgress"
-            PopupControlID="UpdateProgress" BackgroundCssClass="modalPopup" />
+
+
         <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
                 <div class="container-fluid">
